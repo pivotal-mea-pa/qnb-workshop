@@ -14,4 +14,4 @@
 
 ## Using Content
 
-Use (PACE Builder)[https://github.com/Pivotal-Field-Engineering/pace-builder] to build a workshop with this content.
+Use [PACE Builder](https://github.com/Pivotal-Field-Engineering/pace-builder) to build a workshop with this content.
