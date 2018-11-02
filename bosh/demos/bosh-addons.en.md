@@ -50,7 +50,7 @@ Adding specific software agents, monitors, and policies to specific BOSH dmakes 
 ## Create a BOSH Runtime Config
 
 1. BOSH has a way to specify global configuration for all VMs in all deployments, it is called the Runtime-Config.
-1. To update our zookeeper deployment from [Deploy BOSH Release]({{< relref "Deploy-BOSH-Release.md" >}}) by adding an SSH banner, we first have to create a runtime-config.
+1. To update our zookeeper deployment from [Deploy BOSH Release]({{< relref "demos/deploy-bosh-release.en.md" >}}) by adding an SSH banner, we first have to create a runtime-config.
 
   - `nano runtime-config.yml`
 
@@ -93,7 +93,7 @@ Adding specific software agents, monitors, and policies to specific BOSH dmakes 
 
 ## Test the SSH Banner
 
-1. To test the SSH Banner lets SSH to a BOSH instance. Review [Releases]({{< relref "Releases.md" >}}) for understanding access to BOSH instances.
+1. To test the SSH Banner lets SSH to a BOSH instance. Review [Releases]({{< relref "slides/releases.en.md" >}}) for understanding access to BOSH instances.
 
   - `bosh -e my-bosh -d zookeeper instances`
   - `bosh -e my-bosh -d zookeeper ssh zookeeper/185f9261-e51f-46b5-87f4-38e3e56f61a9`

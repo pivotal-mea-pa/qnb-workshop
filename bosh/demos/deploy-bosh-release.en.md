@@ -6,7 +6,7 @@ As you can see there are many different ways to deploy the release. With BOSH we
 ## Prerequisites
 
 1. Obtain your workshop jumpbox public IP, Username, and Password 
-1. Completed [Upload Stemcell]({{< relref "Upload-Stemcell.md" >}})
+1. Completed [Upload Stemcell]({{< relref "demos/upload-steamcell.en.md" >}})
 
 ## Part 1: Create the manifest
 

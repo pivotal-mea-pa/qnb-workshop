@@ -70,7 +70,7 @@ BOSH makes day 2 operations easy! Lets upgrade our zookeeper cluster to the late
 
 ## Update our zookeeper deployment
 
-1. To update our zookeeper deployment from [Deploy BOSH Release]({{< relref "Deploy-BOSH-Release.md" >}}) utilize the BOSH CLI to Redeploy.
+1. To update our zookeeper deployment from [Deploy BOSH Release]({{< relref "demos/deploy-bosh-release.en.md" >}}) utilize the BOSH CLI to Redeploy.
 
   - `bosh -e my-bosh -d zookeeper deploy ~/zookeeper-manifest.yml`
 

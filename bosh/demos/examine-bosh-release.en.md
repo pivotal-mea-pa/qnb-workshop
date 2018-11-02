@@ -12,7 +12,7 @@ Deploying software systems with BOSH is done with BOSH Releases. Releases abstra
 
   - `ssh username@jumpbox-ip`
 
-1. Download the [sample-bosh-release](https://github.com/Oskoss/bosh-release) using `wget` - You might already have this from [Upload Stemcell]({{< relref "Upload-Stemcell.md" >}})
+1. Download the [sample-bosh-release](https://github.com/Oskoss/bosh-release) using `wget` - You might already have this from [Upload Stemcell]({{< relref "demos/upload-stemcell.en.md" >}})
 
   - `wget https://github.com/Oskoss/bosh-release/releases/download/v1.1/sample_release.tgz`
 
