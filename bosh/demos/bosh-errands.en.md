@@ -4,7 +4,7 @@ BOSH Errands enable on demand execution of tasks within the deployment. This cou
 
 ## Prerequisites
 
-1. Completed [Real Life - Deploy Zookeeper Demo](./deploy-zookeeper)
+1. Completed [Real Life - Deploy Zookeeper Demo](../deploy-zookeeper)
 
 ## Ensure our zookeeper is deployed:
 

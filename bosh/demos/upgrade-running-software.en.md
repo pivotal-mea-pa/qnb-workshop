@@ -4,7 +4,7 @@ BOSH makes day 2 operations easy! Lets upgrade our zookeeper cluster to the late
 
 ## Prerequisites
 
-1. Completed [Deploy Zookeeper Demo](./deploy-zookeeper)
+1. Completed [Deploy Zookeeper Demo](../deploy-zookeeper)
 
 ## Ensure our zookeeper is deployed:
 
