@@ -93,7 +93,7 @@ Adding specific software agents, monitors, and policies to specific BOSH dmakes 
 
 ## Test the SSH Banner
 
-1. To test the SSH Banner lets SSH to a BOSH instance. Review [Releases]({{< relref "concepts/releases.en.md" >}}) for understanding access to BOSH instances.
+1. To test the SSH Banner lets SSH to a BOSH instance. Review [Releases]({{< relref "../concepts/releases.en.md" >}}) for understanding access to BOSH instances.
 
   - `bosh -e my-bosh -d zookeeper instances`
   - `bosh -e my-bosh -d zookeeper ssh zookeeper/185f9261-e51f-46b5-87f4-38e3e56f61a9`

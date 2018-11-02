@@ -8,7 +8,7 @@ BOSH runs software systems on virtual machines referred to as BOSH instances. Si
 
   - `ssh username@jumpbox-ip`
 
-1. Ensure you have run through [Cloud Providers]({{< relref "concepts/cloud-providers.en.md" >}}) and have a sample-bosh-deployment running.
+1. Ensure you have run through [Cloud Providers]({{< relref "../concepts/cloud-providers.en.md" >}}) and have a sample-bosh-deployment running.
 
   - `bosh -e my-bosh deployments`
 
