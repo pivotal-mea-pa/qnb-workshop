@@ -2,18 +2,33 @@
 
 ## Get Service Broker Skeleton Project
 
-1. Install Golang, setup $GOPATH and $GOROOT. Golang has great documentation on how to do this [here](https://golang.org/doc/install).
+1. Install Golang, setup $GOROOT. Golang has great documentation on how to do this [here](https://golang.org/doc/install).
 
-1. Create a local copy of the service broker API by cloning https://github.com/Pivotal-Field-Engineering/service-broker.
-    - `git clone https://github.com/Pivotal-Field-Engineering/service-broker`.
+1. Create a working directory to store our service broker in. We will use `/tmp` for the rest of this workshop.
+
+    ``` 
+    mkdir -p /tmp/service-broker
+    ```
+
+1. Set the working directory($GOPATH) for the `go` cli.
+
+    ```
+    export GOPATH=$(pwd)
+    ```
+
+1. Get the skeleton service broker code using `go get`.
+
+    ```
+    go get github.com/Pivotal-Field-Engineering/service-broker
+    ```
 
 ## Run the Service Broker
 
-1. Change directory into the `service-broker` folder.
-    - `cd service-broker`
+1. Run the service broker using `go run`.
 
-1. Run the Service Broker with golang.
-    - `go run main.go`.
+    ```
+    go run src/github.com/Pivotal-Field-Engineering/service-broker/main.go
+    ```
 
 **Note:** By default the service broker runs on port `8080` and with basic authentication credentials of `pivotal`/`pivotal`
 
