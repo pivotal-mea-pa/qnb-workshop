@@ -1,0 +1,81 @@
+{
+    "workshopSubject":"Cloud Native Java",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Going Cloud Native",
+                    "filename":"cnd-java/concepts/going-cloud-native"
+                },
+                {
+                    "name":"Cloud Native Development",
+                    "filename":"cnd-java/concepts/cloud-native-development"
+                },
+                {
+                    "name":"Ops Friendly Apps",
+                    "filename":"cnd-java/concepts/ops-friendly-apps"
+                },
+                {
+                    "name":"Enterprise Microservices with Spring Cloud",
+                    "filename":"cnd-java/concepts/enterprise-microservices-with-spring-cloud"
+                },
+                {
+                    "name":"Spring Cloud Contracts",
+                    "filename":"cnd-java/concepts/spring-cloud-contracts"
+                },
+                {
+                    "name":"Spring Cloud Pipelines",
+                    "filename":"cnd-java/concepts/spring-cloud-pipelines"
+                },
+                {
+                    "name":"Reactive Microservices",
+                    "filename":"cnd-java/concepts/reactive-microservices"
+                },
+                {
+                    "name":"Cloud Native Platform",
+                    "filename":"cnd-java/concepts/cloud-native-platform"
+                }
+
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name":"Going Cloud Native",
+                    "filename":"cnd-java/demos/going-cloud-native"
+                },
+                {
+                    "name":"Cloud Native Development",
+                    "filename":"cnd-java/demos/cloud-native-development"
+                },
+                {
+                    "name":"Ops Friendly Apps",
+                    "filename":"cnd-java/demos/ops-friendly-apps"
+                },
+                {
+                    "name":"Enterprise Microservices with Spring Cloud",
+                    "filename":"cnd-java/demos/enterprise-microservices-with-spring-cloud"
+                },
+                {
+                    "name":"Spring Cloud Contracts",
+                    "filename":"cnd-java/demos/spring-cloud-contracts"
+                },
+                {
+                    "name":"Spring Cloud Pipelines",
+                    "filename":"cnd-java/demos/spring-cloud-pipelines"
+                },
+                {
+                    "name":"Reactive Microservices",
+                    "filename":"cnd-java/demos/reactive-microservices"
+                },
+                {
+                    "name":"Cloud Native Platform",
+                    "filename":"cnd-java/demos/cloud-native-platform"
+                }
+            ]
+        }
+    ]
+}
