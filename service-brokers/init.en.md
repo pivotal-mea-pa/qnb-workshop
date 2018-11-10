@@ -43,7 +43,7 @@ Choose one of the following:
     - *HEADER* - `X-Broker-API-Version`: `2.14`
     - *HTTP TYPE* - `GET`
     - *ADDRESS* - `http://localhost:8080/v2/catalog`
-    - ![catalog1](https://raw.githubusercontent.com/Pivotal-Field-Engineering/pace-workshop-content/master/service-brokers/postman_catalog1.png)
+    - ![catalog1](postman_catalog1.png)
     - ![catalog2](https://raw.githubusercontent.com/Pivotal-Field-Engineering/pace-workshop-content/master/service-brokers/postman_catalog2.png)
 
 
