@@ -44,6 +44,6 @@ Choose one of the following:
     - *HTTP TYPE* - `GET`
     - *ADDRESS* - `http://localhost:8080/v2/catalog`
     - ![catalog1](postman_catalog1.png)
-    - ![catalog2](https://raw.githubusercontent.com/Pivotal-Field-Engineering/pace-workshop-content/master/service-brokers/postman_catalog2.png)
+    - ![catalog2](postman_catalog2.png)
 
 
