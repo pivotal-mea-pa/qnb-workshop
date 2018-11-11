@@ -1,4 +1,4 @@
-# Pivotal Ops Manager
+# Pivotal Ops Manager Install
 
 ## Goal
 Bring up the PCF Ops Manager VM within vCenter. This will be the operational console we will use to deploy PKS.
