@@ -66,7 +66,17 @@ It will store all clusters this PKS install will deploy, how many workers each o
 and which plan each one was created with. Ensure your `PKS` environment has been configured with the `small` plan
 otherwise choose the correct plan names for your `PKS` environment.
 
-    {{codebase-file codebase="pks-workshop" path="desired_1.json" lang="json" ref="master" hidden="false"}}
+    ```JSON
+    [
+        {
+            "name": "dev-cluster",
+            "plan_name": "small",
+            "parameters": {
+            "kubernetes_worker_instances": 3
+            }
+        }
+    ]
+    ```
 
 *Note: The JSON format complies with the format determined from the PKS CLI: `pks clusters --json`*
 
@@ -112,7 +122,24 @@ otherwise choose the correct plan names for your `PKS` environment.
 1. The end result should look similar to the following. Ensure your `PKS` environment has been configured with `small` and `medium` plans 
 otherwise rename them to the correct plan names for your `PKS` environment.
 
-    {{codebase-file codebase="pks-workshop" path="desired_2.json" lang="json" ref="master" hidden="false"}}
+    ```JSON
+    [    
+        {
+            "name": "dev-cluster",
+            "plan_name": "small",
+            "parameters": {
+            "kubernetes_worker_instances": 3
+            }
+        },
+        {
+            "name": "prod-cluster",
+            "plan_name": "medium",
+            "parameters": {
+            "kubernetes_worker_instances": 5
+            }
+        }
+    ]
+    ```
 
 1. Commit, and push the new `desired.json` file.
 
@@ -134,7 +161,17 @@ otherwise rename them to the correct plan names for your `PKS` environment.
 1. The end result should look similar to the following. Ensure your `PKS` environment has been configured with the `small` plan
 otherwise rename it to the correct plan name for your `PKS` environment.
 
-    {{codebase-file codebase="pks-workshop" path="desired_3.json" lang="json" ref="master" hidden="false"}}
+    ```JSON
+    [
+        {
+            "name": "dev-cluster",
+            "plan_name": "small",
+            "parameters": {
+            "kubernetes_worker_instances": 3
+            }
+        }
+    ]
+    ```
 
 1. Commit, and push the new `desired.json` file.
 
