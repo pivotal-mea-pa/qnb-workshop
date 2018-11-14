@@ -7,31 +7,31 @@
             "content": [
                 {
                     "name":"Intro / Value Proposition",
-                    "filename":"cloud-ops/concepts/intro-value-proposition"
+                    "filename":"cloud-ops/intro-value-proposition-slide"
                 },
                 {
                     "name":"Day In Life",
-                    "filename":"cloud-ops/concepts/day-in-life"
+                    "filename":"cloud-ops/day-in-life-slide"
                 },
                 {
                     "name":"Platform Overview",
-                    "filename":"cloud-ops/concepts/platform-overview"
+                    "filename":"cloud-ops/platform-overview-slide"
                 },
                 {
                     "name":"BOSH Overview",
-                    "filename":"cloud-ops/concepts/bosh-overview"
+                    "filename":"cloud-ops/bosh-overview-slide"
                 },
                 {
                     "name":"Ops Manager",
-                    "filename":"cloud-ops/concepts/ops-manager"
+                    "filename":"cloud-ops/ops-manager-slide"
                 },
                 {
                     "name":"Services Marketplace",
-                    "filename":"cloud-ops/concepts/services-marketplace"
+                    "filename":"cloud-ops/services-marketplace-slide"
                 },
                 {
                     "name":"Automation Pipelines",
-                    "filename":"cloud-ops/concepts/automation-pipelines"
+                    "filename":"cloud-ops/automation-pipelines-slide"
                 }
 
             ]
@@ -41,23 +41,23 @@
             "content": [
                 {
                     "name":"Platform Overview",
-                    "filename":"cloud-ops/demos/platform-overview"
+                    "filename":"cloud-ops/platform-overview-demo"
                 },
                 {
                     "name":"Deploy Concourse with BOSH",
-                    "filename":"cloud-ops/demos/deploy-concourse-bosh"
+                    "filename":"cloud-ops/deploy-concourse-bosh-demo"
                 },
                 {
                     "name":"Day 2 Operations with BOSH",
-                    "filename":"cloud-ops/demos/day-2-operations-bosh"
+                    "filename":"cloud-ops/day-2-operations-bosh-demo"
                 },
                 {
                     "name":"PAS Command Tour",
-                    "filename":"cloud-ops/demos/paas-paap"
+                    "filename":"cloud-ops/paas-paap-demo"
                 },
                 {
                     "name":"Buildpack Upgrade Command Tour",
-                    "filename":"cloud-ops/demos/upgrade-buildpacks"
+                    "filename":"cloud-ops/upgrade-buildpacks-demo"
                 }
             ]
         }

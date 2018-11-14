@@ -7,27 +7,27 @@
             "content": [
                 {
                     "name":"Story of BOSH",
-                    "filename":"bosh/concepts/story-of-bosh"
+                    "filename":"bosh/story-of-bosh-slide"
                 },
                 {
                     "name":"What is It",
-                    "filename":"bosh/concepts/what-is-it"
+                    "filename":"bosh/what-is-it-slide"
                 },
                 {
                     "name":"Stemcells",
-                    "filename":"bosh/concepts/stemcells"
+                    "filename":"bosh/stemcells-slide"
                 },
                 {
                     "name":"Cloud Providers",
-                    "filename":"bosh/concepts/cloud-providers"
+                    "filename":"bosh/cloud-providers-slide"
                 },
                 {
                     "name":"Releases",
-                    "filename":"bosh/concepts/releases"
+                    "filename":"bosh/releases-slide"
                 },
                 {
                     "name":"Manifests",
-                    "filename":"bosh/slides/manifests"
+                    "filename":"bosh/manifests-slide"
                 }
             ]
         },
