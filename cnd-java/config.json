@@ -11,7 +11,7 @@
                 },
                 {
                     "name":"Cloud Native Development",
-                    "filename":"cnd-java/concepts/cloud-native-development"
+                    "filename":"cnd-java/concepts/cloud-native-development/demo"
                 },
                 {
                     "name":"Ops Friendly Apps",
@@ -19,7 +19,7 @@
                 },
                 {
                     "name":"Enterprise Microservices with Spring Cloud",
-                    "filename":"cnd-java/concepts/enterprise-microservices-with-spring-cloud"
+                    "filename":"cnd-java/concepts/enterprise-microservices-with-spring-cloud/demo"
                 },
                 {
                     "name":"Spring Cloud Contracts",
