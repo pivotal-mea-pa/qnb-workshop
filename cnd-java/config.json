@@ -18,7 +18,7 @@
                     "filename":"cnd-java/concepts/ops-friendly-apps"
                 },
                 {
-                    "name":"Enterprise Microservices with Spring Cloud",
+                    "name":"Microservices with Spring Cloud",
                     "filename":"cnd-java/concepts/enterprise-microservices-with-spring-cloud"
                 },
                 {
@@ -56,7 +56,7 @@
                     "filename":"cnd-java/demos/ops-friendly-apps"
                 },
                 {
-                    "name":"Enterprise Microservices with Spring Cloud",
+                    "name":"Microservices with Spring Cloud",
                     "filename":"cnd-java/demos/enterprise-microservices-with-spring-cloud/demo"
                 },
                 {
