@@ -1,7 +1,6 @@
 Spring Security Advanced
 ========================================
 
-###Goal
 This demo showcases several OAuth2 protocol patterns on your local development environment.
 
 ### Prerequites
