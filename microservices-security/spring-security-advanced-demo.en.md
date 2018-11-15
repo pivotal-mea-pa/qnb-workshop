@@ -3,7 +3,7 @@ Spring Security Advanced
 
 This demo showcases several OAuth2 protocol patterns on your local development environment.
 
-### Prerequites
+### Requirements
 1. Java 8
 1. IntelliJ or Eclipse or Terminal Window
 1. git client 
