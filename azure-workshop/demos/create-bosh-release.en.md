@@ -29,7 +29,7 @@ Inside the src folder make a new dir called sample_app
     $ mkdir sample_app
     $ cd sample_app/
         
-Using your favorite editor, create the `app`, add the source code for the script, and make it executable
+Using your favorite editor, create the `app`, add the source code for the script.
 
     #!/bin/bash
     while true
@@ -37,8 +37,6 @@ Using your favorite editor, create the `app`, add the source code for the script
         echo "Sample APP STDOUT!!!"
         sleep 1
     done        
-        
-- `$ chmod +x app`
 
 ### Create the Job
 Navigate back to the release directory create the job skeleton
