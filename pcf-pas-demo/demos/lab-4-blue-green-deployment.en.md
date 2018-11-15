@@ -2,7 +2,7 @@
 
 In this lab, we'll learn about how Pivotal Application Service uses name based routing and load balancing to help you implment blue green deployments.
 
-[Lab Instructions](https://github.com/Pivotal-Field-Engineering/pcf-ers-demo/blob/master/Labs/Services/lab_services.adoc)
+[Lab Instructions](https://github.com/Pivotal-Field-Engineering/pcf-ers-demo/blob/master/Labs/Blue_Green/lab_blue_green.adoc)
 
 Notes:
 

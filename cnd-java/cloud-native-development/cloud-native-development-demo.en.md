@@ -39,7 +39,7 @@ Spring Boot via a code demo/tour.
 1.  Run the application from the IDE, navigate to
     <http://localhost:8080>.
 
-    ![](img/greeting-lang.png)
+    ![](greeting-lang.png)
 
 1.  From the IDE, right-click on the `SbBasicDemoApplicationTests` class
     and run it as a J-Unit test. The test should pass.
@@ -96,7 +96,7 @@ Properties and Profiles
     java -jar target/cloud-native-development-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
     ```
 
-    ![](img/dev-profile.png)
+    ![](dev-profile.png)
 
 Add a Database Repository
 =========================
@@ -114,7 +114,7 @@ Add a Database Repository
 1.  Hit the <http://localhost:8080/greeting> endpoint, you’ll see that
     we don’t have any greetings yet.
 
-    ![](img/greeting-not-found.png)
+    ![](greeting-not-found.png)
 
 1.  Let’s add some greetings. Run the `create-greeting.sh`
     shell script. 
@@ -126,14 +126,14 @@ Add a Database Repository
 1.  Now, let’s see if we have any greetings by hitting the
     <http://localhost:8080/greeting> endpoint again.
 
-    ![](img/greeting-hola.png)
+    ![](greeting-hola.png)
 
 1.  Finally, since we are using Spring Data Rest, we can query the
     repository as a native REST endpoint. From the browser, navigate to
     `http://localhost:8080/greetings`. Note that all the entries are
     visible in the greetings repository.
 
-    ![](img/rest-repo-local-populated.png)
+    ![](rest-repo-local-populated.png)
 
 Running on PCF
 ==============
@@ -196,7 +196,7 @@ Create and Bind a MySQL Service
 1.  Hit the REST repository endpoint to demonstrate no greetings are
     currently in the database.
 
-    ![](img/rest-no-greetings.png)
+    ![](rest-no-greetings.png)
 
 1.  Run the script to populate the greeting entries in the MySQL
     database, substituting your app URL endpoint accordingly.
@@ -208,7 +208,7 @@ Create and Bind a MySQL Service
 1.  Refresh the browser page to demonstrate the repository has now been
     populated.
 
-    ![](img/rest-repo-populated.png)
+    ![](rest-repo-populated.png)
 
 1.  Restart the application and verify that the repository is still
     being populated from the persistent MySQL service.

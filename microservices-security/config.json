@@ -1,0 +1,56 @@
+{
+    "workshopSubject":"Microservices Security",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Introduction",
+                    "filename":"microservices-security/introduction-slide"
+                },
+                {
+                    "name":"OpenID Connect Overview",
+                    "filename":"microservices-security/openid-connect-overview-slide"
+                },
+                {
+                    "name":"JWA & JWK",
+                    "filename":"microservices-security/jwa-and-jwk-slide"
+                },
+                {
+                    "name":"JWS & JWE",
+                    "filename":"microservices-security/jws-and-jwe-slide"
+                },
+                {
+                    "name":"OAuth 2 & OIDC",
+                    "filename":"microservices-security/oath2-and-oidc-slide"
+                },
+                {
+                    "name":"Spring Security Simple",
+                    "filename":"microservices-security/spring-security-simple-slide"
+                },
+                {
+                    "name":"Spring Security Advanced",
+                    "filename":"microservices-security/spring-security-advanced-slide"
+                },
+                {
+                    "name":"PCF and Microservice Security",
+                    "filename":"microservices-security/pcf-slide"
+                }
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name":"OpenID Connect Playground",
+                    "filename":"microservices-security/openid-connect-overview-demo"
+                },
+                {
+                    "name":"Spring Security Advanced",
+                    "filename":"microservices-security/spring-security-advanced-demo"
+                }
+            ]
+        }
+    ]
+}
