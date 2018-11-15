@@ -1,7 +1,7 @@
 ## Goal
 Use the bosh bootloader to stand up our control plane (bosh director, concourse, docker hub)
 
-![BOSH Control Plane](cpmcpirse-single-plane.png "BOSH Control Plane")
+![BOSH Control Plane](concourse-single-plane.png "BOSH Control Plane")
 
 ### Director Setup
     $ mkdir workspace
