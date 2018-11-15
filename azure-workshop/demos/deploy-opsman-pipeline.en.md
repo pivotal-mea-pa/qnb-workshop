@@ -4,7 +4,7 @@ Utilizing Concourse and PCF Pipelines we are going to configure and deploy OpsMa
 ### PCF Pipelines
 Download the latest PCF-Pipeline from [PivNet](https://network.pivotal.io/products/pcf-automation/). If you can't access this...raise your hand and wait quietly.
 
-Extract the `.tgz` file to our bbl-workshop directory set our Azure storage container.
+Extract the `.tgz` file to our bbl-workshop directory and set our Azure storage container.
 
     $ export AZURE_STORAGE_ACCOUNT=$(bbl outputs | grep storage_account_name | cut -d " " -f2)
     $ export AZURE_STORAGE_ACCOUNT_KEY=$(az storage account keys list --account-name $AZURE_STORAGE_ACCOUNT| jq -r .[0].value)
@@ -14,7 +14,7 @@ Pause, move into the PCF Azure version of the pipeline.
 
     $ cd pcf-pipelines/install-pcf/azure
     
- Now get ready for awhole bunch of Credhub copy/pasta.
+ Now get ready for a whole bunch of Credhub copy/pasta.
  
     $ env -u CREDHUB_PROXY -u CREDHUB_SERVER -u CREDHUB_CLIENT -u CREDHUB_SECRET -u CREDHUB_CA_CERT bash
     $ credhub login -s https://$EXTERNAL_HOST:8844 -u admin -p $UAA_USERS_ADMIN_PASSWORD --skip-tls-validation 

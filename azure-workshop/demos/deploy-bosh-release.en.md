@@ -5,38 +5,34 @@ As you can see there are many different ways to deploy the release. With BOSH we
 
 ## Part 1: Create the manifest
 
-1. Using your favorite command-line text editor to create a `sample-bosh-manifest.yml` text file. (We will use `nano`, but `vi` works as well!)
+Using your favorite command-line text editor to create a `sample-bosh-manifest.yml` text file.
 
-  - `nano sample-bosh-manifest.yml`
-
-1. Paste the following into the `sample-bosh-manifest.yml`.
-
-        name: sample-bosh-deployment
-        
-        releases:
-        - {name: bosh-release, version: latest}
-        
-        stemcells:
-        - alias: trusty
-          os: ubuntu-trusty
-          version: latest
-        
-        instance_groups:
-        - name: sample_vm
-          instances: 1
-          networks:
-          - name: default
-          azs: [z1]
-          jobs:
-          - name: sample_job
-            release: bosh-release
-          stemcell: trusty
-          vm_type: default
-        update:
-          canaries: 1
-          max_in_flight: 10
-          canary_watch_time: 1000-100000
-          update_watch_time: 1000-100000
+    name: sample-bosh-deployment
+    
+    releases:
+    - {name: bosh-release, version: latest}
+    
+    stemcells:
+    - alias: trusty
+      os: ubuntu-trusty
+      version: latest
+    
+    instance_groups:
+    - name: sample_vm
+      instances: 1
+      networks:
+      - name: default
+      azs: [z1]
+      jobs:
+      - name: sample_job
+        release: bosh-release
+      stemcell: trusty
+      vm_type: default
+    update:
+      canaries: 1
+      max_in_flight: 10
+      canary_watch_time: 1000-100000
+      update_watch_time: 1000-100000
 
 
   - The goal of this deployment is to deploy a single VM that runs our sample_job.
@@ -53,9 +49,7 @@ As you can see there are many different ways to deploy the release. With BOSH we
 
 1. Here is where all the magic happens! By BOSH `deploy`ing we combine the Stemcells, Releases, and Manifest to create our software system. This can take a few minutes.
 
-  - `bosh -d sample-bosh-deployment deploy sample-bosh-manifest.yml`
-
-  - Double check the changes and type `y` followed by ENTER.
+    `$ bosh -d sample-bosh-deployment deploy sample-bosh-manifest.yml`
 
   - If successful, you should see something similar to the following:
 
