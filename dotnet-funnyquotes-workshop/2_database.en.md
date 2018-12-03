@@ -41,14 +41,14 @@
 
 1. Change `FunnyQuotesCookieDatabase.FunnyQuote` class to add a new field:
 
-```csharp
- public class FunnyQuote
- {
-    public int Id { get; set; }
-    public string Quote { get; set; }
-    public long Views { get; set; }
- }
-```
+    ```csharp
+     public class FunnyQuote
+     {
+        public int Id { get; set; }
+        public string Quote { get; set; }
+        public long Views { get; set; }
+     }
+    ```
 
 1. From Visual Studio Package Manager console, run 
 
@@ -65,7 +65,7 @@
     ```
 1. Run FunnyQuotesServiceOwin again and hit endpoint that uses the database to force migration to be applied
 
-   http://localhost:61111/api/funnyquotes/random
+    http://localhost:61111/api/funnyquotes/random
 
 1. Confirm that new migration is applied on the database.
 
