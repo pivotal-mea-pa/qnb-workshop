@@ -2,14 +2,14 @@
 
 ### Run App locally and show db initialization via EF code first
 
-. Run MySQL locally via docker
+1. Run MySQL locally via docker
 
-	```
-	 > docker pull mysql
-	 > docker run --name mysql -p 3306:3306/tcp -d -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:5.7
-	```
+    ```
+    > docker pull mysql
+    > docker run --name mysql -p 3306:3306/tcp -d -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:5.7
+    ```
 
-. Connect to MySQL via CLI 
+1. Connect to MySQL via CLI 
 
  > docker run -it --link mysql:mysql --rm mysql sh -c "exec mysql -h$MYSQL_PORT_3306_TCP_ADDR -P$MYSQL_PORT_3306_TCP_PORT -uroot -p$MYSQL_ENV_MYSQL_ROOT_PASSWORD"
     
