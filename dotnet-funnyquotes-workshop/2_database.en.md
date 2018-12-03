@@ -4,8 +4,10 @@
 
 . Run MySQL locally via docker
 
- > docker pull mysql
- > docker run --name mysql -p 3306:3306/tcp -d -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:5.7
+	```
+	 > docker pull mysql
+	 > docker run --name mysql -p 3306:3306/tcp -d -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:5.7
+	```
 
 . Connect to MySQL via CLI 
 
