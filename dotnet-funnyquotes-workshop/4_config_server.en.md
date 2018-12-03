@@ -73,6 +73,7 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
     ```     
     
     1. Startup.cs in FunnyQuotesServicesOwin
+    
     ```csharp
     if(funnyQuotesConfig.EnableSecurity)
       app.UseCloudFoundryJwtBearerAuthenticationconfig); 
