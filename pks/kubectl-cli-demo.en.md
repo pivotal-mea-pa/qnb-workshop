@@ -77,6 +77,7 @@ Connect to a Kubernetes cluster and view the Kubernetes Dashboard.
   ```
 
   - Once we know the kubernetes cluster we want to communicate with, we need to setup a local `~/.kube/config` for the `kubectl` CLI using:
+  
   ```
   pks get-credentials <CLUSTER-NAME>
   ```
@@ -87,6 +88,7 @@ _Note: If OIDC/LDAP is enabled, you must use the following flow_
   - Execute the script as `./get-pks-k8s-config.sh --API=api.pks.<domain-name> --CLUSTER=<cluster-master-ip> --USER=<ldap-user>`
     - <cluster-master-ip> is the IP address or hostname of PKS Cluster deployed
     - <ldap-user> is the AD userid 
+
   ```
   ./get-pks-k8s-config.sh --API=api.pks.<domain-name> --CLUSTER=10.195.1.128 --USER=euler                                                                                                                                                                     ⏎
   Password:Cluster "10.195.1.128" set.
@@ -99,7 +101,7 @@ _Note: If OIDC/LDAP is enabled, you must use the following flow_
 
   1. Congratulations! You now are in control of a kubernetes cluster!
   
-   - To view the cluster info and list of available worker nodes in your terminal type `kubectl cluster-info`:
+   - To view the cluster info in your terminal type `kubectl cluster-info`:
 	
    ```
    $ kubectl cluster-info                                                                                                                                                                                                                                                 ⏎
