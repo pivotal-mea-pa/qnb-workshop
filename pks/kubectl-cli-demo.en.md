@@ -53,7 +53,7 @@ Connect to a Kubernetes cluster and view the Kubernetes Dashboard.
     ```
 
 	  
-## Authenticate to the PKS Cluster
+## Login to Kubernetes as a developer 
 
   - Now that we have the CLI we must authenticate to our cluster. **Note: Only users with roles pks.clusters.admin or pks.clusters.manage can login to PKS**
     
@@ -97,24 +97,27 @@ _Note: If OIDC/LDAP is enabled, you must use the following flow_
   User "euler" set.
   ``` 
 
-## Viewing Kubernetes Internals
+## Use Kubernetes as a Developer!
 
-  1. Congratulations! You now are in control of a kubernetes cluster!
+  1. Attempt to access resources in the `default` and `kube-system` namespaces. Notice we are allowed access to the `default` namespace (or any other namespace that the cluster admin gave the permissions for) but not the `kube-system` namespace as expected!
   
-   - To view the cluster info in your terminal type `kubectl cluster-info`:
-	
-   ```
-   $ kubectl cluster-info                                                                                                                                                                                                                                                 ⏎
-   Kubernetes master is running at https://pks-wmt.pks.<domain-name>:8443
-   Heapster is running at https://pks-wmt.pks.<domain-name>:8443/api/v1/namespaces/kube-system/services/heapster/proxy
-   KubeDNS is running at https://pks-wmt.pks.<domain-name>:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-   kubernetes-dashboard is running at https://pks-wmt.pks.<domain-name>:8443/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy
-   monitoring-influxdb is running at https://pks-wmt.pks.<domain-name>:8443/api/v1/namespaces/kube-system/services/monitoring-influxdb/proxy
-   
-   To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-   ```
-      
-   - 
+  ```
+   $ kubectl get all --all-namespaces 
+     Error from server (Forbidden): pods is forbidden: User "tesla" cannot list pods at the cluster scope
+     Error from server (Forbidden): replicationcontrollers is forbidden: User "tesla" cannot list replicationcontrollers at the cluster scope
+     Error from server (Forbidden): services is forbidden: User "tesla" cannot list services at the cluster scope
+     Error from server (Forbidden): daemonsets.apps is forbidden: User "tesla" cannot list daemonsets.apps at the cluster scope
+     Error from server (Forbidden): deployments.apps is forbidden: User "tesla" cannot list deployments.apps at the cluster scope
+     Error from server (Forbidden): replicasets.apps is forbidden: User "tesla" cannot list replicasets.apps at the cluster scope
+     Error from server (Forbidden): statefulsets.apps is forbidden: User "tesla" cannot list statefulsets.apps at the cluster scope
+     Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden: User "tesla" cannot list horizontalpodautoscalers.autoscaling at the cluster scope
+     Error from server (Forbidden): jobs.batch is forbidden: User "tesla" cannot list jobs.batch at the cluster scope
+     Error from server (Forbidden): cronjobs.batch is forbidden: User "tesla" cannot list cronjobs.batch at the cluster scope
+
+   $ kubectl get all -n default                                                                                                                                                                                                                                           ⏎
+     NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+     service/kubernetes   ClusterIP   10.100.200.1   <none>        443/TCP   1d
+  ```
    
    
 	
