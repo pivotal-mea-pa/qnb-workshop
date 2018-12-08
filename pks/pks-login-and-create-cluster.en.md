@@ -39,6 +39,7 @@ While external identity resources are supported for backing UAA this demo is foc
     - `PKS-API-HOSTNAME` comes from Step `Determine PKS Management API IP` above
     - `UAA-USERNAME` is `admin`
     - `UAA-USER-PASSWORD` is the secret looked up previously
+
   ```
   $ pks login -a api.pks.<domain-name> -u admin -p <admin_secret> -k
   API Endpoint: api.pks.home.<domain-name>
@@ -48,6 +49,7 @@ While external identity resources are supported for backing UAA this demo is foc
 ## Create a Kubernetes Cluster
 
   1. Lookup the PKS plans configured in the PKS Tile using `pks plans`
+ 
   ```
   $ pks plans
   Name    ID                                    Description
@@ -75,6 +77,7 @@ While external identity resources are supported for backing UAA this demo is foc
   Use 'pks cluster pks-wmt' to monitor the state of your cluster
   ```
   1. Watch the status of our cluster. It can take up to 10 minutes to create the cluster.
+ 
   ```
   $ pks cluster pks-wmt
   Name:                     pks-wmt
@@ -103,6 +106,7 @@ While external identity resources are supported for backing UAA this demo is foc
   $kubectl config use-context <cluster-name>
   ```
   1. Confirm `kubectl` is working by invoking a command such as `kubectl get nodes`
+ 
   ```
   $ kubectl get nodes -o wide                                                           
   NAME                                   STATUS   ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
