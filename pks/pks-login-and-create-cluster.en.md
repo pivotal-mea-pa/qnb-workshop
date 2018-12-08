@@ -89,7 +89,7 @@ While external identity resources are supported for backing UAA this demo is foc
   Kubernetes Master Host:   pks-wmt.pks.<domain-name>
   Kubernetes Master Port:   8443
   Worker Nodes:             3
-  Kubernetes Master IP(s):  192.168.0.231
+  Kubernetes Master IP(s):  10.195.1.128
   Network Profile Name:  
   ```
   - Once cluster if finished creating, you need to create a DNS entry for the Master IP shown in the status output to point to the `external-hostname` you indicated while creating the cluster
@@ -108,10 +108,10 @@ While external identity resources are supported for backing UAA this demo is foc
   - Confirm `kubectl` is working by invoking a command such as `kubectl get nodes`
  
   ```
-  $ kubectl get nodes -o wide                                                           
-  NAME                                   STATUS   ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
-  087b6975-43aa-4100-8fb3-5aa029a1461f   Ready    <none>   4d    v1.11.5   192.168.0.232   192.168.0.232   Ubuntu 16.04.5 LTS   4.15.0-39-generic   docker://17.12.1-ce
-  1a1e955c-38bc-4773-95ae-c6546a179c7d   Ready    <none>   4d    v1.11.5   192.168.0.234   192.168.0.234   Ubuntu 16.04.5 LTS   4.15.0-39-generic   docker://17.12.1-ce
-  6e39f1fa-0bdf-42df-95db-6e6fd90a80b3   Ready    <none>   4d    v1.11.5   192.168.0.233   192.168.0.233   Ubuntu 16.04.5 LTS   4.15.0-39-generic   docker://17.12.1-ce
+  $ kubectl get nodes -o wide
+  NAME                                   STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+  38d045a2-2f3f-4ad1-a8aa-acc622e8ac99   Ready    <none>   1d    v1.11.3   172.24.0.3    172.24.0.3    Ubuntu 16.04.5 LTS   4.15.0-33-generic   docker://17.12.1-ce
+  6663dac2-ff16-4a73-909f-4a1f10be3c4a   Ready    <none>   1d    v1.11.3   172.24.0.4    172.24.0.4    Ubuntu 16.04.5 LTS   4.15.0-33-generic   docker://17.12.1-ce
+  b0b26691-62ac-42ea-84ed-234cce7deea4   Ready    <none>   1d    v1.11.3   172.24.0.5    172.24.0.5    Ubuntu 16.04.5 LTS   4.15.0-33-generic   docker://17.12.1-ce
   ```
   
