@@ -42,7 +42,7 @@ While external identity resources are supported for backing UAA this demo is foc
 
   ```
   $ pks login -a api.pks.<domain-name> -u admin -p <admin_secret> -k
-  API Endpoint: api.pks.home.<domain-name>
+  API Endpoint: api.pks.<domain-name>
   User: admin
   ```
   
@@ -56,7 +56,7 @@ While external identity resources are supported for backing UAA this demo is foc
   small   8A0E21A8-8072-4D80-B365-D1F502085560  Example: This plan will configure a lightweight kubernetes cluster. Not recommended for production workloads.
   medium  58375a45-17f7-4291-acf1-455bfdc8e371  Example: This plan will configure a medium sized kubernetes cluster, suitable for more pods.
   ```
-  1. Provision a Kubernetes Cluster by typing `pks create-cluster <CLUSTER-NAME> --external-hostname <cluster-name.domain-name> --plan <plan-name>`
+  2. Provision a Kubernetes Cluster by typing `pks create-cluster <CLUSTER-NAME> --external-hostname <cluster-name.domain-name> --plan <plan-name>`
     - The `CLUSTER-NAME` can be replaced with any name you choose
     - Note: The `--external-hostname` flag determines which hostname PKS will add to the certificate to authenticate to the Kubernetes cluster with. The hostname you place here will have to be resolved and load-balanced to the Kubernetes Master IP.
 
@@ -76,7 +76,7 @@ While external identity resources are supported for backing UAA this demo is foc
   
   Use 'pks cluster pks-wmt' to monitor the state of your cluster
   ```
-  1. Watch the status of our cluster. It can take up to 10 minutes to create the cluster.
+  3. Watch the status of our cluster. It can take up to 10 minutes to create the cluster.
  
   ```
   $ pks cluster pks-wmt
@@ -92,8 +92,8 @@ While external identity resources are supported for backing UAA this demo is foc
   Kubernetes Master IP(s):  192.168.0.231
   Network Profile Name:  
   ```
-  1. Once cluster if finished creating, you need to create a DNS entry for the Master IP shown in the status output to point to the `external-hostname` you indicated while creating the cluster
-  1. Finally, you can issue `pks get-credentials <CLUSTER-NAME>`, which creates an entry in your local `~/.kube/config` file to be able to interact with Kubernetes cluster
+  4. Once cluster if finished creating, you need to create a DNS entry for the Master IP shown in the status output to point to the `external-hostname` you indicated while creating the cluster
+  5. Finally, you can issue `pks get-credentials <CLUSTER-NAME>`, which creates an entry in your local `~/.kube/config` file to be able to interact with Kubernetes cluster
     - Enter the `UAA-USER-PASSWORD` that we looked up previously when prompted for Password.
 
   ```
@@ -105,7 +105,7 @@ While external identity resources are supported for backing UAA this demo is foc
   You can now switch between clusters by using:
   $kubectl config use-context <cluster-name>
   ```
-  1. Confirm `kubectl` is working by invoking a command such as `kubectl get nodes`
+  6. Confirm `kubectl` is working by invoking a command such as `kubectl get nodes`
  
   ```
   $ kubectl get nodes -o wide                                                           
