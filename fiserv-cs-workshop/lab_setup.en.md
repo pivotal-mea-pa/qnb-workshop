@@ -30,32 +30,42 @@ You can obtain the CLI for multiple OS [here](https://github.com/cloudfoundry/cl
 ## 5. Cloning the repository
 
 Clone the GIT repository to your local machine. On the command line issue the following command:
-```git clone https://github.com/vrusso-pivotal/fiserv-workshop.git```
+```
+git clone https://github.com/vrusso-pivotal/fiserv-workshop.git
+```
 
 This command will copy the code in the repository to your local machine, creating a directory named `fiserv-workshop`. All actions will now be done inside this directory.
 
 Once you have cloned the repository, it is important to build it to create the application artifacts.
 
 The projects use [gradle](http://gradle.org) as the build tool with gradle wrapper. Thus, all it is required to build all the microservices is:
-```./gradlew assemble```
+```
+./gradlew assemble
+```
 
 
 ## 6. Login to Cloud Foundry
 
 Using your PCF credentials run the following command on the command line
-```cf login```
+```
+cf login
+```
 
 When prompted enter your email (login) and password. There should be a known org and space to be used for this workshop, go ahead and select those when prompted.
 
 ## 7. Creating the services
 
 Now that you hav logged into Cloud Foundry, we want to begin to install a few services that we will be using later. Use the marketplace command to see the services that you can install
-```cf marketplace```
+```
+cf marketplace
+```
 
 The first column contains the names of the services, we want `Service Registry`, `Circuit Breaker Dashboard`, and `MySQL`. The second column is the plan, generally speaking each service will have a free plan, we will be using that.
 
 With the name of the service and the plan we can install and instance of that service to our space by using the following command:
-```cf create-service NAME_OF_SERVICE PLAN myServiceName```
+```
+cf create-service NAME_OF_SERVICE PLAN myServiceName
+```
 
 Go ahead and make the the three services described above. These take some to create so don't worry if they don't finish immediately.
 

@@ -50,8 +50,8 @@ Now that we have all the required services created, let's push all the services.
 
 1. Push each of the services to the platform.
 
-  > How could you push all the services in one go?
-  > The **Cloud Foundry** manifest file allows us to [define multiple applications in a single file](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html#multi-apps)
+    > How could you push all the services in one go?
+    > The **Cloud Foundry** manifest file allows us to [define multiple applications in a single file](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html#multi-apps)
 
 2. (Optional if you are using cloud foundry with self-signed certificates) When the script has finished, set the `TRUST_CERTS` environment variable in each application to the API endpoint of your Pivotal Application Services instance (as in `api.example.com`), then restage the applications so that the changes will take effect.
 
