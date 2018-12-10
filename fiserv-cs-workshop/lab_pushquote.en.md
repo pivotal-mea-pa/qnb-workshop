@@ -15,7 +15,7 @@ First off, let's look at our Quote Service class found in the **quotes/service**
 
 Based on the principles of domain driven design, we can assume that our controller will be leveraging some or all of these main methods. (NOTE: The fallback methods are internal use only.) Looking at our QuoteV1Controller you will find the getCompanies method is already completed (1 down two to go). Let's use that method as a template for filling the missing information to our getQuotes method.
 
- - Another hint: We will be calling both getQuote and getQuotes from the service class inside the getQuotes controller method)
+ - Another hint: We will be calling both **getQuote** and **getQuotes** inside the getQuotes controller.
 
 We will want to do several things:
 
