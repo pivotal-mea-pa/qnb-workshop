@@ -55,7 +55,7 @@ Luckily, Pivotal Cloud Foundry allows us to assign a [random-route](http://docs.
 1. *Push* the **quote service** to the cloud by [specifying the specific manifest file](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html#find-manifest) to the `cf push` command.
 1. When the app has completed pushing, make sure to note down the URL from the output. We wll be using that to test our application below.
 
-# Summary
+## Summary
 
 Ensure you have a working quote service application by sending HTTP requests to it, put the below into your browser:
 

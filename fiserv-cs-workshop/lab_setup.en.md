@@ -1,4 +1,4 @@
-## Environment Setup
+# Environment Setup
 
 In this exercise, we will be setting up the environment and all the tools required.
 
@@ -62,13 +62,12 @@ cf marketplace
 
 The first column contains the names of the services, we want `Service Registry`, `Circuit Breaker Dashboard`, and `MySQL`. The second column is the plan, generally speaking each service will have a free plan, we will be using that.
 
-With the name of the service and the plan we can install and instance of that service to our space by using the following command:
+We have the mareketplace name of the service from the first column and the plan from the second column. Now we will give our services instances names, this is what our applications will use to connect to them. For the purpooses of this lab we have already picked out names for you, however you may use whatever names you'd like the future.
 ```
-cf create-service NAME_OF_SERVICE PLAN myServiceName
+cf create-service p-mysql free traderdb
+cf create-service p-service-registry standard discovery-service
+cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboard
 ```
-
-Go ahead and make the the three services described above. These take some to create so don't worry if they don't finish immediately.
-
 
 ## Summary
 
