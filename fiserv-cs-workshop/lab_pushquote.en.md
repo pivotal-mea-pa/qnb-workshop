@@ -5,7 +5,7 @@ For this lab we have provided most of the code that makes up the Quote service, 
 Go ahead and open the quotes-service project in your favorite IDE and navitgate down to the directory `src/main/java/io/pivotal/quotes`. Here you can see the pieces that make up the Quotes Service we are going to edit the **QuoteV1Controller.java**.
 
 
-## Quotes Controller
+### Quotes Controller
 
 As you can see here most of the code for the **getQuotes** method is missing. Our task for this section is to use the pieces we already have, and some knowledge about Spring annotations to complete the method.
   - If at any time you want to skip ahead, you can find the completed code [here](https://github.com/Pivotal-Field-Engineering/pivotal-bank-demo/blob/master/quotes-service/src/main/java/io/pivotal/quotes/controller/QuoteV1Controller.java)
@@ -28,7 +28,7 @@ java -jar build/libs/quotes.jar
 ```
 If we have completed the **getQuotes** correctly, we can navigate to `http://localhost:8080/v1/quotes?q=FISV` and we should receive a plan txt JSON response with Fiserv's stock trading data.
 
-## Pushing the controller
+### Pushing the controller
 
 In **Cloud Foundry** vocabulary, deploying an application is referred to as *pushing* the application since we are uploading the application artifact to the cloud.
 
