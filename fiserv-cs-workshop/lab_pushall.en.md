@@ -3,7 +3,7 @@
 In this exercise, we will be deploying all the applications in the project to the cloud and create all required services.
 
 ### 1. Quote service
-We have already deployed the quote service in the [previous lab](lab_pushquote.md), so nothing to do here.
+We have already deployed the quote service in the [previous lab](demos/lab_pushquote.md), so nothing to do here.
 
 ### 2. Accounts service
 The accounts service has a dependency on a RDBMS database.
