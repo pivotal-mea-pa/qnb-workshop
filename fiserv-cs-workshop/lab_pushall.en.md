@@ -6,7 +6,7 @@ In this exercise, we will be deploying all the applications in the project to th
 We have already deployed the quote service in the previous lab, so nothing to do here.
 
 ### 2. Accounts service
-Navigate to the `accounts-service` directory, run the gradle wrapper assemble command, then **cf push**
+Navigate to the **accounts-service** directory, run the gradle wrapper assemble command, then `cf push`.
 
 ### 3. Portfolio service
 
@@ -28,14 +28,13 @@ Similarly to above, we will be using the registry service to retrieve informatio
 ### 5. User service
 The User service is the provides a user repository and authorization api.
 
-### Exercises
+## Summary
 
- - Push each of the services to the platform.
+You just pushed each application individually, however they are all designed to work with each other, so wouldn't it be nice to be able to deployment them all together, at the same time?
 
-    > How could you push all the services in one go?
-    > The **Cloud Foundry** manifest file allows us to [define multiple applications in a single file](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html#multi-apps)
+> How could you push all the services in one go?
+> The **Cloud Foundry** manifest file allows us to [define multiple applications in a single file](http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html#multi-apps)
 
 Once completed, go to the URL of the Web service in your browser.
 
-## Summary
 Congratulations! You have now deployed a set of microservices to the cloud that interact with each other.
