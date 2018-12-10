@@ -16,10 +16,10 @@ Based on the principles of domain driven design, we can assume that our controll
  - Another hint: We will be calling both getQuote and getQuotes from the service class inside the getQuotes controller method)
 
 We will want to do several things:
- - Add the RequestMapping annotation
- - Change the return value from null to more resemble our neighbor **getCompanies**
- - Use the Request Parameter **query** captured in the method argument to build our calls to the service methods, again referencing **getCompanies** and the above null case.
- - Remember that our one controller is going to handle either a single quote, or multiple quotes where the quotes will be comma separated.
+ * Add the RequestMapping annotation
+ * Change the return value from null to more resemble our neighbor **getCompanies**
+ * Use the Request Parameter **query** captured in the method argument to build our calls to the service methods, again referencing **getCompanies** and the above null case.
+ * Remember that our one controller is going to handle either a single quote, or multiple quotes where the quotes will be comma separated.
 
 To test your quote service, use the provided gradle wrapper and assemble it, then run it locally
 ```
