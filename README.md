@@ -1,5 +1,11 @@
 # PACE Workshop Content
 
+## Using Content
+
+1. Determine what content would be of interest in your workshop by browsing this repo.
+
+1. Use [PACE Builder](https://github.com/Pivotal-Field-Engineering/pace-builder) to build a workshop with this content.
+
 ## Adding Content
 
 1. Determine if a folder exisits for the content you want to add. If not create one.
@@ -12,6 +18,8 @@
 
 **Note:** If only adding english content that will be the only language available in your workshop!
 
-## Using Content
 
-Use [PACE Builder](https://github.com/Pivotal-Field-Engineering/pace-builder) to build a workshop with this content.
+***Give More Than You Take...***
+
+<img src="https://amp.businessinsider.com/images/51c4bb22eab8ea4f5d000021-960-720.jpg" width="300">
+
