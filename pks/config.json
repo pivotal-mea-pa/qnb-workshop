@@ -1,0 +1,60 @@
+{
+    "workshopSubject":"PACE",
+    "workshopHomepage":"",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+            {
+            "name":"introduction",
+            "filename":"pks/introduction-slide"
+            },
+            {
+            "name":"architecture",
+            "filename":"pks/architecture-slide"
+            },
+            {
+            "name":"backup-recovery",
+            "filename":"pks/backup-recovery-slide"
+            },
+            {
+            "name":"pks-pipelines",
+            "filename":"pks/pks-pipelines-slide"
+            },
+            {
+            "name":"uaa-integrations",
+            "filename":"pks/uaa-integrations-slide"
+            },
+            {
+            "name":"upgrades",
+            "filename":"pks/upgrades-slide"
+            }
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+            "name":"install-tile",
+            "filename":"pks/install-tile-demo"
+            },
+            {
+            "name":"pks-cli",
+            "filename":"pks/pks-cli-demo"
+            },
+            {
+            "name":"kubectl-cli",
+            "filename":"pks/kubectl-cli-demo"
+            },
+            {
+            "name":"pks-login-and-create-cluster",
+            "filename":"pks/pks-login-and-create-cluster"
+            },
+            {
+            "name":"pipelines",
+            "filename":"pks/pipelines-demo"
+            }
+        ]
+    }
+  ]
+}
