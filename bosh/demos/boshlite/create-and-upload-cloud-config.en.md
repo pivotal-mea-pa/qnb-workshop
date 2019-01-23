@@ -16,47 +16,47 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
 
 1. Paste the following into the `cloud-config.yml`.
 
-  azs:
-  - name: z1
-  - name: z2
-  - name: z3
+        azs:
+        - name: z1
+        - name: z2
+        - name: z3
 
-  vm_types:
-  - name: default
-  - name: large
+        vm_types:
+        - name: default
+        - name: large
 
-  disk_types:
-  - name: default
-    disk_size: 3000
+        disk_types:
+        - name: default
+          disk_size: 3000
 
-  networks:
-  - name: default
-    type: manual
-    subnets:
-    - range:   10.244.0.0/24
-      gateway: 10.244.0.1
-      dns:     [8.8.8.8, 8.8.4.4]
-      reserved: [10.244.0.0-10.244.0.10]
-      azs:     [z1, z2]
-      cloud_properties:
-      name: vboxnet0
-  - name: vip
-    type: manual
-    subnets:
-    - range:   10.244.0.0/24
-      gateway: 10.244.0.1
-      dns:     [8.8.8.8, 8.8.4.4]
-      reserved: [10.244.0.10-10.244.0.255]
-      azs:     [z1, z2]
-      cloud_properties:
-      name: vboxnet0
+        networks:
+        - name: default
+          type: manual
+          subnets:
+          - range:   10.244.0.0/24
+            gateway: 10.244.0.1
+            dns:     [8.8.8.8, 8.8.4.4]
+            reserved: [10.244.0.0-10.244.0.10]
+            azs:     [z1, z2]
+            cloud_properties:
+            name: vboxnet0
+        - name: vip
+          type: manual
+          subnets:
+          - range:   10.244.0.0/24
+            gateway: 10.244.0.1
+            dns:     [8.8.8.8, 8.8.4.4]
+            reserved: [10.244.0.10-10.244.0.255]
+            azs:     [z1, z2]
+            cloud_properties:
+            name: vboxnet0
 
-  compilation:
-      workers: 3
-      reuse_compilation_vms: true
-      az: z1
-      vm_type: default
-      network: default
+        compilation:
+            workers: 3
+            reuse_compilation_vms: true
+            az: z1
+            vm_type: default
+            network: default
 
 1. Change the value of the `subnetwork_name: <YOUR_GCP-SUBNET-NAME>` and `network_name: <YOUR-GCP-NETWORK-NAME>` tags to your GCP subnet and GCP network name provided earlier 
 
