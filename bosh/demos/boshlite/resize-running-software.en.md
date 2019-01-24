@@ -1,5 +1,7 @@
 ## Goal
 
+NOTE: This lab is not setup for BOSH lite but was left in for discussion.  BOSH Lite uses Warden containers instead of virtual machines.
+
 There are many tools that attempt to concur automating infrastructure, but BOSH was designed not only with this in mind but also what we call "day 2 operations". Lets take a quick look at how easy it is to expand a BOSH instance.
 
 ## Expand the BOSH Instance Size:
@@ -7,11 +9,11 @@ There are many tools that attempt to concur automating infrastructure, but BOSH 
 
 1. Utilize the BOSH CLI to show how much
 
-  - `bosh -e vbox-d sample-bosh-deployment instances --vitals`
+  - `bosh -e my-bosh -d sample-bosh-deployment instances --vitals`
 
 1. SSH into the BOSH instance in our `sample-bosh-deployment`.
 
-  - `bosh -e vbox -d sample-bosh-deployment ssh sample_vm/3f361ef3-7a9d-4e7d-a167-9bf5ad033c02`
+  - `bosh -e my-bosh -d sample-bosh-deployment ssh sample_vm/3f361ef3-7a9d-4e7d-a167-9bf5ad033c02`
 
 1. Check the number of CPU cores via the `nproc` utility. Note this down.
 
@@ -35,7 +37,7 @@ There are many tools that attempt to concur automating infrastructure, but BOSH 
 
 1. Have BOSH apply the changes to the deployment.
 
-  - `bosh -e vbox -d sample-bosh-deployment deploy sample-bosh-manifest.yml`
+  - `bosh -e my-bosh -d sample-bosh-deployment deploy sample-bosh-manifest.yml`
 
   - Notice BOSH always will show the difference between what is currently deployed and what you are asking to be changed:
 
@@ -64,7 +66,7 @@ There are many tools that attempt to concur automating infrastructure, but BOSH 
 
 1. Once back on the jumpbox use the BOSH CLI to show the overall vitals for the BOSH instance. This is handy when determining if instances are overloaded.
 
-  - `bosh -e vbox -d sample-bosh-deployment instances --vitals`
+  - `bosh -e my-bosh -d sample-bosh-deployment instances --vitals`
 
               Using environment '10.0.0.6' as user 'admin' (openid, bosh.admin)
 

@@ -58,15 +58,15 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
             vm_type: default
             network: default
 
-1. Change the value of the `subnetwork_name: <YOUR_GCP-SUBNET-NAME>` and `network_name: <YOUR-GCP-NETWORK-NAME>` tags to your GCP subnet and GCP network name provided earlier 
+
 
 ## Part 2: Understanding the Cloud Config
 
 When deploying services we have to define the following:
 
-  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create 2 zones, z1, and z2.
+  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create 3 zones, z1, z2, and z3.
 
-  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH.
+  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH. In public clouds, we would list the machine type, see Reference section below.
 
   1. `disk_types` describe what type disks can be attached as a persistent disk to the vms that make up our services deployed with BOSH. In this case we create a 3GB disk.
 
@@ -82,4 +82,8 @@ When deploying services we have to define the following:
 
 ## Reference
 
-1. https://bosh.io/docs/virtualbox-cpi/
+1. [vSphere CPI](https://bosh.io/docs/vsphere-cpi/#cloud-config)
+2. [Google CPI](https://bosh.io/docs/google-cpi/#cloud-config)
+3. [AWS CPI](https://bosh.io/docs/aws-cpi/#cloud-config)
+4. [Azure CPI](https://bosh.io/docs/azure-cpi/#cloud-config)
+5. 

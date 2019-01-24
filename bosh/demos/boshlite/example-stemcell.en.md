@@ -13,11 +13,10 @@ BOSH Stemcells contain both metadata and the raw image. Lets take some time to e
 
 ## Part 1: Extracting the stemcell image
 
-1. Download the latest vSphere Stemcell [here](https://bosh.io/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent)
-
+1. Download the latest vSphere Stemcell [here](http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go_agent)
 2. Extract the downloaded stemcell
 
-    `tar -xvf bosh-stemcell-*-warden-boshlite-ubuntu-trusty-go_agent.tgz`
+    `tar -xvf bosh-stemcell-*-vsphere-esxi-ubuntu-trusty-go_agent.tgz`
 3. Take a look at the contents of the `stemcell.MF` file
 
     `cat stemcell.MF`

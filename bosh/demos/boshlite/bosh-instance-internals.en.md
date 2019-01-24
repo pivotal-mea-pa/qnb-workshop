@@ -61,7 +61,7 @@ Persistence and monitoring are two of the most important pieces of a BOSH releas
 
 1. Once `SSH`ed into the BOSH instance lets understand how BOSH monitors running BOSH jobs in a BOSH release.
 
-    - `sudo su`
+    - `sudo -i`
     - `monit summary`
 
     - You should see something like the following:
