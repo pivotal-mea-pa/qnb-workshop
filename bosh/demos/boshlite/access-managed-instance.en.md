@@ -42,4 +42,4 @@ BOSH runs software systems on virtual machines referred to as BOSH instances. Si
 
     - `bosh -e vbox -d sample-bosh-deployment ssh sample_vm/71160b1a-faaa-487c-b107-7d4ed8fce7ce`
 
-    - If successful you should now be inside the instance and have full `root` access via `sudo su`.
+    - If successful you should now be inside the instance and have full `root` access via `sudo -i`.

@@ -39,7 +39,7 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
             reserved: [10.244.0.0-10.244.0.10]
             azs:     [z1, z2]
             cloud_properties:
-            name: vboxnet0
+              name: vboxnet0
         - name: vip
           type: manual
           subnets:
@@ -49,7 +49,7 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
             reserved: [10.244.0.10-10.244.0.255]
             azs:     [z1, z2]
             cloud_properties:
-            name: vboxnet0
+              name: vboxnet0
 
         compilation:
             workers: 3
