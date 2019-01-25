@@ -8,13 +8,10 @@ BOSH Errands enable on demand execution of tasks within the deployment. This cou
 
 ## Ensure our zookeeper is deployed:
 
-1. Utilize your SSH Client to connect to your jumpbox.
-
-  - `ssh username@jumpbox-ip`
 
 1. Utilize the BOSH CLI to check the status of the deployment.
 
-  - `bosh -e my-bosh -d zookeeper instances -p`
+  - `bosh -e vbox -d zookeeper instances -p`
 
   - You should see something similar to the following:
 
@@ -45,7 +42,7 @@ BOSH Errands enable on demand execution of tasks within the deployment. This cou
 
 1. Utilize the BOSH CLI to check the possible errands we could run on this deployment.
 
-  - `bosh -e my-bosh -d zookeeper errands`
+  - `bosh -e vbox -d zookeeper errands`
 
   - You should see something similar to the following:
 
@@ -64,7 +61,7 @@ BOSH Errands enable on demand execution of tasks within the deployment. This cou
 
 1. While the BOSH CLI can tell us if the deployment is running successful it is important to have a smoke-test which can use a dedicated new instance to perform some sort of tests, probably upon the running cluster. Lets run it with the BOSH CLI.
 
-  - `bosh -e my-bosh -d zookeeper run-errand smoke-tests`
+  - `bosh -e vbox -d zookeeper run-errand smoke-tests`
 
   - You should see something similar to the following:
 
