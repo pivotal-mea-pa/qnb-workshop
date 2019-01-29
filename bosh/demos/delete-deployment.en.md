@@ -7,7 +7,7 @@ Delete the sample-release deployment.
 
 1. Utilize the BOSH CLI to delete the sample deployment:
 
-  - `bosh -e vbox -d sample-bosh-deployment delete-deployment`
+  - `bosh -e my-bosh -d sample-bosh-deployment delete-deployment`
 
 
             Using environment '192.168.50.6' as client 'admin'

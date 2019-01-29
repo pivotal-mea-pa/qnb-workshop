@@ -16,48 +16,49 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
 
 1. Paste the following into the `cloud-config.yml`.
 
-        azs:
-        - name: z1
-        - name: z2
-        - name: z3
+````yaml
+azs:
+- name: z1
+- name: z2
+- name: z3
 
-        vm_types:
-        - name: default
-        - name: large
+vm_types:
+- name: default
+- name: large
 
-        disk_types:
-        - name: default
-          disk_size: 3000
+disk_types:
+- name: default
+  disk_size: 3000
 
-        networks:
-        - name: default
-          type: manual
-          subnets:
-          - range:   10.244.0.0/24
-            gateway: 10.244.0.1
-            dns:     [8.8.8.8, 8.8.4.4]
-            reserved: [10.244.0.0-10.244.0.10]
-            azs:     [z1, z2]
-            cloud_properties:
-              name: vboxnet0
-        - name: vip
-          type: manual
-          subnets:
-          - range:   10.244.0.0/24
-            gateway: 10.244.0.1
-            dns:     [8.8.8.8, 8.8.4.4]
-            reserved: [10.244.0.10-10.244.0.255]
-            azs:     [z1, z2]
-            cloud_properties:
-              name: vboxnet0
+networks:
+- name: default
+  type: manual
+  subnets:
+  - range:   10.244.0.0/24
+    gateway: 10.244.0.1
+    dns:     [8.8.8.8, 8.8.4.4]
+    reserved: [10.244.0.0-10.244.0.10]
+    azs:     [z1, z2]
+    cloud_properties:
+      name: vboxnet0
+- name: vip
+  type: manual
+  subnets:
+  - range:   10.244.0.0/24
+    gateway: 10.244.0.1
+    dns:     [8.8.8.8, 8.8.4.4]
+    reserved: [10.244.0.10-10.244.0.255]
+    azs:     [z1, z2]
+    cloud_properties:
+      name: vboxnet0
 
-        compilation:
-            workers: 3
-            reuse_compilation_vms: true
-            az: z1
-            vm_type: default
-            network: default
-
+compilation:
+    workers: 3
+    reuse_compilation_vms: true
+    az: z1
+    vm_type: default
+    network: default
+````
 
 
 ## Part 2: Understanding the Cloud Config
@@ -78,7 +79,7 @@ When deploying services we have to define the following:
 
 1. Upload the `cloud-config.yml` to the BOSH director. All services we deploy with BOSH will use this from now on.
 
-  - `bosh -e vbox update-cloud-config cloud-config.yml`
+  - `bosh -e my-bosh update-cloud-config cloud-config.yml`
 
 ## Reference
 
