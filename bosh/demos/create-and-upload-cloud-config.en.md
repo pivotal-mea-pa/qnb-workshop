@@ -19,51 +19,53 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
 
 1. Paste the following into the `cloud-config.yml`.
 
-        azs:
-        - name: z1
-          cloud_properties: {zone: us-central1-a}
-        - name: z2
-          cloud_properties: {zone: us-central1-f}
+````yaml
+azs:
+- name: z1
+  cloud_properties: {zone: us-central1-a}
+- name: z2
+  cloud_properties: {zone: us-central1-f}
 
-        vm_types:
-        - name: default
-          cloud_properties:
-            machine_type: n1-standard-1
-            root_disk_size_gb: 20
-            root_disk_type: pd-ssd
-        - name: large
-          cloud_properties:
-            machine_type: n1-standard-2
-            root_disk_size_gb: 20
-            root_disk_type: pd-ssd
-        disk_types:
-        - name: default
-          disk_size: 3000
+vm_types:
+- name: default
+  cloud_properties:
+    machine_type: n1-standard-1
+    root_disk_size_gb: 20
+    root_disk_type: pd-ssd
+- name: large
+  cloud_properties:
+    machine_type: n1-standard-2
+    root_disk_size_gb: 20
+    root_disk_type: pd-ssd
+disk_types:
+- name: default
+  disk_size: 3000
 
-        networks:
-        - name: default
-          type: manual
-          subnets:
-          - range:   10.0.0.0/16
-            gateway: 10.0.0.1
-            dns:     [8.8.8.8, 8.8.4.4]
-            reserved: [10.0.0.0-10.0.0.10]
-            azs:     [z1, z2]
-            cloud_properties:
-              ephemeral_external_ip: true
-              subnetwork_name: <YOUR_GCP-SUBNET-NAME>
-              network_name: <YOUR-GCP-NETWORK-NAME>
-              ephemeral_external_ip: true
-              tags: [bosh]
-        - name: vip
-          type: vip
+networks:
+- name: default
+  type: manual
+  subnets:
+  - range:   10.0.0.0/16
+    gateway: 10.0.0.1
+    dns:     [8.8.8.8, 8.8.4.4]
+    reserved: [10.0.0.0-10.0.0.10]
+    azs:     [z1, z2]
+    cloud_properties:
+      ephemeral_external_ip: true
+      subnetwork_name: <YOUR_GCP-SUBNET-NAME>
+      network_name: <YOUR-GCP-NETWORK-NAME>
+      ephemeral_external_ip: true
+      tags: [bosh]
+- name: vip
+  type: vip
 
-        compilation:
-          workers: 3
-          reuse_compilation_vms: true
-          az: z1
-          vm_type: default
-          network: default
+compilation:
+  workers: 3
+  reuse_compilation_vms: true
+  az: z1
+  vm_type: default
+  network: default
+````
 
 1. Change the value of the `subnetwork_name: <YOUR_GCP-SUBNET-NAME>` and `network_name: <YOUR-GCP-NETWORK-NAME>` tags to your GCP subnet and GCP network name provided earlier 
 
