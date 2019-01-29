@@ -73,9 +73,9 @@ compilation:
 
 When deploying services we have to define the following:
 
-  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create 2 zones, z1, and z2.
+  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create 2 zones, z1 and z2.
 
-  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH. Here we create a default vm_type that contains a Standard machine with 4 virtual CPUs, 15 GB of memory, and a 20GB SSD disk.
+  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH. Here we create a default vm_type based on *n1-standard-2* that contains a Standard machine with 2 virtual CPUs, 7.5GB GB of memory, and a 20GB SSD disk.
 
   1. `disk_types` describe what type disks can be attached as a persistent disk to the vms that make up our services deployed with BOSH. In this case we create a 3GB disk.
 

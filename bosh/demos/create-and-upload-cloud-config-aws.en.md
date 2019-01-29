@@ -19,49 +19,48 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
 
 1. Paste the following into the `cloud-config.yml`.
 
-        azs:
-        - name: z1
-          cloud_properties:
-            availability_zone: us-east-2a
-        - name: z2
-          cloud_properties:
-            availability_zone: us-east-2b
-        - name: z3
-          cloud_properties:
-            availability_zone: us-east-2c
-        vm_types:
-        - name: default
-          cloud_properties:
-          instance_type: t2.micro
-          ephemeral_disk: {size: 3000, type: gp2}
-        - name: large
-          cloud_properties:
-          instance_type: m3.large
-          ephemeral_disk: {size: 30000, type: gp2}
-        networks:
-        - name: default
-          type: manual
-          subnets:
-          - az: z2
-            cloud_properties:
-              security_groups:
-              - <SG-NAME>
-              subnet: <SUBNET-NAME>
-            gateway: 10.0.32.1
-            range: 10.0.32.0/24
-            reserved:
-            - 10.0.32.2-10.0.32.3
-            static:
-            - 10.0.32.190-10.0.32.254
-        - name: vip
-          type: vip
+````yaml
+azs:
+- name: z1
+  cloud_properties:
+    availability_zone: us-east-2a
+- name: z2
+  cloud_properties:
+    availability_zone: us-east-2b
+vm_types:
+- name: default
+  cloud_properties:
+  instance_type: t2.medium
+  ephemeral_disk: {size: 3000, type: gp2}
+- name: large
+  cloud_properties:
+  instance_type: m3.large
+  ephemeral_disk: {size: 30000, type: gp2}
+networks:
+- name: default
+  type: manual
+  subnets:
+  - az: z2
+    cloud_properties:
+      security_groups:
+      - <SG-NAME>
+      subnet: <SUBNET-NAME>
+    gateway: 10.0.32.1
+    range: 10.0.32.0/24
+    reserved:
+    - 10.0.32.2-10.0.32.3
+    static:
+    - 10.0.32.190-10.0.32.254
+- name: vip
+  type: vip
 
-        compilation:
-          workers: 3
-          reuse_compilation_vms: true
-          az: z1
-          vm_type: default
-          network: default
+compilation:
+  workers: 3
+  reuse_compilation_vms: true
+  az: z1
+  vm_type: default
+  network: default
+````
 
 1. Change the value of the `security_groups: <SG-NAME>` and `subnet: <SUBNET-NAME>` tags to your AWS security group and AWS subnet provided earlier. 
 
@@ -69,13 +68,13 @@ In order for BOSH to communicate with specific infrastructures (GCP/AWS/vSphere/
 
 When deploying services we have to define the following:
 
-  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create 2 zones, z1, and z2.
+  1. `azs` or availability zones allow us to provide high availability to our services deployed with BOSH. Here we create two zones--z1 and z2.
 
-  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH. Here we create a default vm_type that contains a Standard machine with 4 virtual CPUs, 15 GB of memory, and a 20GB SSD disk.
+  1. `vm_types` allow us to t-shirt size the vms that make up our services deployed with BOSH. Here we create a default vm_type based on *t2.medium* that contains a machine with 2 virtual CPUs, 4 GB of memory, and a 20GB SSD disk.
 
   1. `disk_types` describe what type disks can be attached as a persistent disk to the vms that make up our services deployed with BOSH. In this case we create a 3GB disk.
 
-  1. `networks` define what ips, gateways, dns, and specific cloud provider networking properties are needed. Here we will use the `10.0.0.0 - 10.0.255.255` subnet with google dns `8.8.8.8`, and the GCP network that you replaced.
+  1. `networks` define what ips, gateways, dns, and specific cloud provider networking properties are needed. Here we will use the `10.0.0.0 - 10.32.255.255` subnet.
 
   1. `compilation` specifies which of all the above resources BOSH should use when compiling code.
 

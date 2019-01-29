@@ -87,4 +87,3 @@ When deploying services we have to define the following:
 2. [Google CPI](https://bosh.io/docs/google-cpi/#cloud-config)
 3. [AWS CPI](https://bosh.io/docs/aws-cpi/#cloud-config)
 4. [Azure CPI](https://bosh.io/docs/azure-cpi/#cloud-config)
-5. 
