@@ -2,7 +2,7 @@
 
 Workshop to introduce the basics of PAS to a .NET savvy group. The workshop creates and pushes a .NET Core app to PASW. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
 
-##Prerequisites
+## Pre-requisites
 
 The foundation to run the demo on must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
 
@@ -42,13 +42,10 @@ Using App Manager the Student is guided through attaching a new route to their a
 
 ````json
 {
-	"workshopSubject":"Pivotal Application Services for Windows Workshop",
+	"workshopSubject":"Pivotal Application Services for Windows",
 	"workshopHomepage":"",
+	"workshopHostname":"pasw-workshop",
 	"modules": [
-		{
-			"type": "concepts",
-			"content": []
-		},
 		{
 			"type": "demos",
 			"content": [

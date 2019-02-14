@@ -34,7 +34,7 @@ Understand the tools needed to create and push a microservice app.
 
 ## Load your creds and API URL in environment variables
 
-1. Open a powershell window and type in the following commands. Remember to replace the values below with your student creds assigned in the [Sheet](/intro-creds).
+1. Open a powershell window and type in the following commands. Remember to replace the values below with your student creds assigned in the [Sheet](/demo/intro-creds).
 
   ```bash
   $env:cf_api = "<PAS API URL>"
@@ -49,4 +49,4 @@ Understand the tools needed to create and push a microservice app.
 1. With Visual Studio closed, double click the downloaded file to install the templates.
 
 1. Once complete, open Visual Studio and choose `File > New > Project > C#` there should be additional Steeltoe and Cloud Foundry template listed.
-  ![VS Steeltoe Templates](a_visual-studio-templates.PNG)
+  <img src="a_visual-studio-templates.PNG" alt="VS Steeltoe Templates" width="400"/>
