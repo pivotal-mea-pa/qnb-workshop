@@ -1,0 +1,43 @@
+{
+	"workshopSubject":"Pivotal Application Services for Windows Workshop",
+	"workshopHomepage":"",
+	"modules": [
+		{
+			"type": "concepts",
+			"content": []
+		},
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/intro-creds"
+				},
+				{
+					"name":"Setup Environment",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Create .NET Microservice",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/create-microservice"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/push-microservice"
+				},
+				{
+					"name":"Explore Applications Manager",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/explore-appmanager"
+				},
+				{
+					"name":"Attach an autoscaler",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/attach-autoscaler"
+				},
+				{
+					"name":"Add a new route",
+					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/add-route"
+				}
+			]
+		}
+	]
+}
