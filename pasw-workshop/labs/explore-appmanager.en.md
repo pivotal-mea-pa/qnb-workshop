@@ -12,12 +12,12 @@ Now that you've pushed an app, log in to App Manager and explore the many option
 ## Log in to App Manager
 
 1. Open PAS Apps Manager web site provided in the [Introduction](xxxx) slide.
-![AppManager Login](resources/appmanager-login.PNG)
+  ![AppManager Login](a_appmanager-login.PNG)
 
 1. Log in with the student account creds assigned from the [Sheet](xxxx).
 
 1. Once logged in, notice your Org and Space is automatically loaded.
-![Org and Space](resources/org-space.PNG)
+  ![Org and Space](a_org-space.PNG)
 
 
 ## Locate the home page of your app

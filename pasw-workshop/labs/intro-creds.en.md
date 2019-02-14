@@ -14,3 +14,5 @@ Details you'll need to complete the exercises:
 An existing PAS foundation has been created for the workshop. Use the Google Sheets link below to claim one of the student log-in's.
 
 * **Environment Credentials:** [Google Sheet](https://docs.google.com/spreadsheets/d/XXXXXXX)
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRAptFgkBBhr1OfDPeL9IxvNYmxSKMubxyrIBC1zXBIQvYB8CBiulLoKSdN973GAbrXH9FOZnvgfua4/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>

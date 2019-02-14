@@ -9,7 +9,7 @@ Using the installed Visual Studio templates, create a new app based on Steeltoe 
 - Visual Studio (min 2015)
 - Internet Access
 
-## Load the Steeltoe for Cloud Foundry template
+## Load the Steeltoe Template for Cloud Foundry
 
 1. From the Visual Studio homepage, choose `File` then `New` then `Project`. This will bring up the "New Project" window. 
 

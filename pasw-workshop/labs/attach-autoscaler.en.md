@@ -24,7 +24,7 @@ From the home page of your app, in App Manager, attache an autoscaler service to
  - Bind To App: [do not bind]
 
 1. Once completed, click the "Create" button to create the service instance. You should see a green confirmation message at the top.
-![Autoscaler Success](resources/autoscaler-created.PNG)
+![Autoscaler Success](a_autoscaler-created.PNG)
 
 1. The window refreshed to the services listing for your chosen Space.
 
@@ -41,7 +41,7 @@ From the home page of your app, in App Manager, attache an autoscaler service to
 1. Now your newly bound service is listed but it has not been activated.
 
 1. Click the "Overview" tab and now you should see an "Autoscaling" slider in the "web" panel.
-![Autoscaler Slider](resources/autoscaler-slider.PNG)
+![Autoscaler Slider](a_autoscaler-slider.PNG)
 
 ## Activate the autoscaler and set a scaling rule
 
