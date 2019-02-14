@@ -10,7 +10,7 @@ From the home page of your app, in App Manager, attache an autoscaler service to
 - Internet Access
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
 
-## Find the autoscaler serivce and bind to a space
+## Find the autoscaler service and bind to a space
 
 1. Open the "Markeplace" of services within App Manager.
 

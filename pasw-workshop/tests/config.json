@@ -1,41 +1,42 @@
 {
-	"workshopSubject":"Pivotal Application Services for Windows Workshop",
+	"workshopSubject":"Pivotal Application Services for Windows",
 	"workshopHomepage":"",
+	"workshopHostname":"pasw-workshop",
 	"modules": [
-		{
-			"type": "concepts",
-			"content": []
-		},
 		{
 			"type": "demos",
 			"content": [
 				{
 					"name":"Introduction & Credentials",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/intro-creds"
+					"filename":"pasw-workshop/labs/intro-creds"
 				},
 				{
 					"name":"Setup Environment",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/setup-environment"
+					"filename":"pasw-workshop/labs/setup-environment"
 				},
 				{
 					"name":"Create .NET Microservice",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/create-microservice"
+					"filename":"pasw-workshop/labs/create-microservice"
 				},
 				{
 					"name":"Push Microservice to PASW",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/push-microservice"
+					"filename":"pasw-workshop/labs/push-microservice"
 				},
 				{
 					"name":"Explore Applications Manager",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/explore-appmanager"
+					"filename":"pasw-workshop/labs/explore-appmanager"
 				},
 				{
 					"name":"Attach an autoscaler",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/attach-autoscaler"
+					"filename":"pasw-workshop/labs/attach-autoscaler"
 				},
 				{
 					"name":"Add a new route",
-					"filename":"C:/Users/ddieruf/Source/pace-workshop-content/pasw-101-workshop/labs/add-route"
+					"filename":"pasw-workshop/labs/add-route"
+				},
+				{
+					"name":"Next Steps",
+					"filename":"pasw-workshop/labs/next-steps"
 				}
 			]
 		}
