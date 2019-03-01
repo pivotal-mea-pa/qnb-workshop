@@ -1,8 +1,8 @@
-## Pushing basic app
+## Pushing an app
  
 #### Goals 
-1. Show how pushing 4.x apps and Core apps works the same
-1. Targeting different stacks
+1. Show how pushing 4.x apps and Core apps works the same.
+1. Target both Linux and Windows stacks.
 
 #### Steps
 
@@ -13,8 +13,8 @@
      > cf push FunnyQuotesUICore
     ``` 
     
-1. While pushing, explain buildpack output
-1. Access the app URL, get a few funny quotes, get some laughs
+1. Explain output while app is being pushed.
+1. Access the app URL, get a few funny quotes, get some laughs. :)
 1. Show log output
 
     ```
@@ -27,7 +27,7 @@
      > cf push FunnyQuotesUIForms -s windows2016
     ```
 
-   * _Explain Hosted Web Core buildpack (kernel of IIS)_
+   * _Explain Hosted Web Core buildpack (kernel of IIS)
 
 1. Show log tailing while pushing / starting up
 
