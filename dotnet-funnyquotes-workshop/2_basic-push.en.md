@@ -1,7 +1,7 @@
 ## Pushing basic app
  
 #### Goals 
-1. Show how to pushing 4.x apps and Core apps works the same
+1. Show how pushing 4.x apps and Core apps works the same
 1. Targeting different stacks
 
 #### Steps
