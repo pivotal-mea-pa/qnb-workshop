@@ -32,9 +32,11 @@ It also features a Kill command to simulate application failure.
 * Publish each product using supplied publish profile.
 * Compiled assemblies are output to `\publish\` folder.
 * Run `create-services.bat` in `\scripts` folder to create marketplace services.
-* Copy `manifest.yml` file into each publish folder, making necessary changes per respective app.
-  Alternatively, add manifest file to each project, make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published. 
+* Copy `manifest.yml` file into each publish folder, making necessary changes per respective apps.
 * Push all apps.
+
+*NOTE: An alternative to copying the manifest into each publish folder if the apps will be built more than a few times.
+* Add manifest file to each project, make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
 
 ### Prerequisites
 * Visual Studio 2017 with .NET core support
