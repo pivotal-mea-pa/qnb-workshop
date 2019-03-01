@@ -33,7 +33,7 @@ It also features a Kill command to simulate application failure.
 * Compiled assemblies are output to `\publish\` folder.
 * Run `create-services.bat` in `\scripts` folder to create marketplace services.
 * Copy `manifest.yml` file into each publish folder, making necessary changes per respective apps.
-* Push all apps.
+* Push both FunnyQuotesLegacyService and FunnyQuotesServicesOwin.
 
 NOTE: If there is a need to build and publish more than once, it is easier to add the manifest file to each project and make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
 
