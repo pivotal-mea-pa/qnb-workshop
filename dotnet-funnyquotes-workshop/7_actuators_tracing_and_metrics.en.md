@@ -2,7 +2,7 @@
 1. Launch FunnyQuotesUICore locally
 1. Access http://localhost:60420/cloudfoundryapplication and show different actuator endpoints and data within them
 
-(https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-endpoints.png)
+![actuator-endpoints](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-endpoints.png)
 
 1. Hit the same endpoint on PCF to highlight that it's secured when running on the platform
 1. Open up apps manager. (Ensure that app has been opened at least once over https if using self signed certs).
