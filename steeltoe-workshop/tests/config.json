@@ -1,0 +1,12 @@
+{
+	"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
+	"workshopHomepage":"",
+	"workshopHostname":"steeltoe-workshop",
+	"modules": [
+		{
+			"type": "demos",
+			"content": [
+			]
+		}
+	]
+}

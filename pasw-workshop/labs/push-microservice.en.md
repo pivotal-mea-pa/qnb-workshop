@@ -33,7 +33,7 @@ Using Visual Studio, compile the app to create an artifact. Then push the artifa
      ========== Publish: 1 succeeded, 0 failed, 0 skipped ==========
      ```
 
-1. In the output window, note the location of the newly created artifact `C:/tmp/Steeltoe-CloudFoundry-Template1/bin/Release/Publish`. This folder has the compiled DLL, runtime dependencies, and the PAS manifest. Thats your artifact!
+1. In the output window, note the location of the newly created artifact. Yours will be a little different, but in the above example it's `C:/tmp/Steeltoe-CloudFoundry-Template1/bin/Release/Publish`. This folder has the compiled DLL, runtime dependencies, and the PAS manifest. Thats your artifact!
 
 ## Log in to PAS
 
@@ -43,7 +43,7 @@ Using Visual Studio, compile the app to create an artifact. Then push the artifa
 
 1. Then you will prompted to choose an Org and Space. Choose the number corresponding to your student account.
 
-1. To confirm you have targeted the correct area, type `cf target`. This is confirm the Org and Space your app will be pushed to.
+1. To confirm you have targeted the correct area, type `cf target`. This is the Org and Space your app will be pushed to.
 
 ## Push the Artifact
 
