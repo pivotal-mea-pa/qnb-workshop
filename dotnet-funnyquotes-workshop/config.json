@@ -14,33 +14,37 @@
     {
         "type": "demos",
         "content": [
+			{
+			"name":"1. Overview",
+			"filename":"dotnet-funnyquotes-workshop/1_overview"
+			},
             {
-            "name":"1. Basic Push",
-            "filename":"dotnet-funnyquotes-workshop/1_basic-push"
+            "name":"2. Basic Push",
+            "filename":"dotnet-funnyquotes-workshop/2_basic-push"
             },
             {
-            "name":"2. Database",
-            "filename":"dotnet-funnyquotes-workshop/2_database"
+            "name":"3. Database",
+            "filename":"dotnet-funnyquotes-workshop/3_database"
             },
             {
-            "name":"3. Service Discovery",
-            "filename":"dotnet-funnyquotes-workshop/3_service_discovery"
+            "name":"4. Service Discovery",
+            "filename":"dotnet-funnyquotes-workshop/4_service_discovery"
             },
             {
-            "name":"4. Config Server",
-            "filename":"dotnet-funnyquotes-workshop/4_config_server"
+            "name":"5. Config Server",
+            "filename":"dotnet-funnyquotes-workshop/5_config_server"
             },
             {
-            "name":"5. Hystrix",
-            "filename":"dotnet-funnyquotes-workshop/5_hystrix"
+            "name":"6. Hystrix",
+            "filename":"dotnet-funnyquotes-workshop/6_hystrix"
             },
             {
-            "name":"6. Actuators, Tracing & Metrics",
-            "filename":"dotnet-funnyquotes-workshop/6_actuators_tracing_and_metrics"
+            "name":"7. Actuators, Tracing & Metrics",
+            "filename":"dotnet-funnyquotes-workshop/7_actuators_tracing_and_metrics"
             },
             {
-            "name":"7. Security",
-            "filename":"dotnet-funnyquotes-workshop/7_security"
+            "name":"8. Security",
+            "filename":"dotnet-funnyquotes-workshop/8_security"
             }
         ]
     }

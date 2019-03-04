@@ -6,10 +6,10 @@ Spring Boot via a code demo/tour.
 
 1. Open a terminal and clone workshop demo github repo: <https://github.com/Pivotal-Field-Engineering/pace-cnd-java>
 
-1. Change to the "pace-cloud-native-development" folder
+1. Change to the "cloud-native-development" folder
 
 ```
-    cd ./pace-cloud-native-development
+    cd ./cloud-native-development
 ```
 
 1.  Navigate to <http://start.spring.io/>, and provide a general
