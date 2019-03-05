@@ -62,14 +62,22 @@ Examples of logging within a .NET Core application and how to retrieve those log
 
 A "congrats" for completing the workshop and a reminder to continue learning through Pivotal Education's cloud native .NET developer course. There is also a reminder to experience all the examples in the Steeltoe public repo on Pivotal Web Services.
 
-## Config.json with all labs
-
-	````json
+## Config.json with all slides and labs
+	```json
 	{
 		"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
 		"workshopHomepage":"",
 		"workshopHostname":"steeltoe-workshop",
 		"modules": [
+			{
+				"type": "concepts",
+				"content": [
+					{
+						"name":"Advanced Features of Steeltoe",
+						"filename":"steeltoe-workshop/slides/advanced-steeltoe"
+					}
+				]
+			},
 			{
 				"type": "demos",
 				"content": [
@@ -117,4 +125,4 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 			}
 		]
 	}
-	````
+	```
