@@ -2,13 +2,14 @@
 
 ## Goal
 
-Understand the tools needed to create and push a microservice app.
+The labs in this workshop make use of Powershell, the Cloud Foundry cli (cf cli), and local environment variables. The following steps will confirm you have the correct configuration.
 
 ## Prerequisites
 
 - Visual Studio (min 2015)
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
 - Powershell
+- Internet connection
 
 ## Download and Validate cf cli
 
@@ -20,7 +21,7 @@ Understand the tools needed to create and push a microservice app.
 
 1. When prompted, click **Install**, then **Finish**
 
-1. To verify your installation, open powershell and type cf. If your installation was successful, the cf CLI help listing appears. You may need to restart the powershell window to see the cf cli help listing appear.
+1. To verify your installation, open powershell and type `cf --version`. If your installation was successful, the cf cli version is returned. You may need to restart your powershell window for the cli to work properly.
 
 #### If you don't have permission to install the cli, download the cli executable
 
@@ -32,9 +33,9 @@ Understand the tools needed to create and push a microservice app.
 
 1. To verify your installation, open powershell and type `cf`. If your installation was successful, the cf CLI help listing appears. You may need to restart the powershell window to see the cf cli help listing appear.
 
-## Load your creds and API URL in environment variables
+## Save your creds and API URL to environment variables
 
-1. Open a powershell window and type in the following commands. Remember to replace the values below with your student creds assigned in the [Sheet](/demo/intro-creds).
+1. Open a powershell window and type in the following commands. Remember to replace the values below with your student creds that were assigned to you.
 
   ```bash
   $env:cf_api = "<PAS API URL>"
@@ -50,3 +51,7 @@ Understand the tools needed to create and push a microservice app.
 
 1. Once complete, open Visual Studio and choose `File > New > Project > C#` there should be additional Steeltoe and Cloud Foundry template listed.
   <img src="a_visual-studio-templates.PNG" alt="VS Steeltoe Templates" width="400"/>
+
+## Complete
+
+With the cf cli installed, your foundation credentials saved, and the Visual Studio templates loaded, you are ready to get started. Head on to the next lab.

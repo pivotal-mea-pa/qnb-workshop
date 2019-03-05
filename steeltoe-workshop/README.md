@@ -92,7 +92,7 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 					},
 					{
 						"name":"Setup Environment",
-						"filename":"steeltoe-workshop/labs/setup-environment"
+						"filename":"pasw-workshop/labs/setup-environment"
 					},
 					{
 						"name":"Environment Variables",
@@ -123,7 +123,7 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 						"filename":"steeltoe-workshop/labs/logging"
 					},
 					{
-						"name":"Next Steps",
+						"name":"Continuing Your .NET Cloud Native Journey",
 						"filename":"steeltoe-workshop/labs/next-steps"
 					}
 				]
