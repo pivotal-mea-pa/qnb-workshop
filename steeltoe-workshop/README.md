@@ -71,19 +71,6 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 		"workshopHostname":"steeltoe-workshop",
 		"modules": [
 			{
-				"type": "concepts",
-				"content": [
-					{
-							"name":"About The Workshop",
-							"filename":"steeltoe-workshop/slides/about-the-workshop"
-					},
-					{
-							"name":"Advanced Steeltoe",
-							"filename":"steeltoe-workshop/slides/advanced-steeltoe"
-					}
-				]
-			},
-			{
 				"type": "demos",
 				"content": [
 					{
