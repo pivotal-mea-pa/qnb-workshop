@@ -1,12 +1,29 @@
 ## Actuators
-1. Launch FunnyQuotesUICore locally
-1. Access http://localhost:60421/cloudfoundryapplication and show different actuator endpoints and data within them
-1. Hit the same endpoint on PCF to highlight that it's secured when running on the platform
+1. Launch FunnyQuotesUICore locally.
+1. Access http://localhost:60420/cloudfoundryapplication and show different actuator endpoints and data within them. The following screenshot illustrates the output.
+
+	![actuator-endpoints](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-endpoints.png)
+
+1. Navigate to the same endpoint on PCF to highlight that it's secured when running on the platform.
+
+	![actuator-secure-endpoints](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-secure-endpoints.png)
+
 1. Open up apps manager. (Ensure that app has been opened at least once over https if using self signed certs).
-	1. Highlight special Steeltoe icon (actuators were detected in the app)
-	1. Highlight health check for each instance
-	1. Show dynamic log levels
-	1. Show request tracing
+	1. Highlight special Steeltoe icon (actuators were detected in the app).
+	
+		![actuator-steeltoe-icon](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-steeltoe-icon.png)
+		
+	1. Highlight health check for each instance.
+	
+		![actuator-health-check](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-health-check.png)
+				
+	1. Show dynamic log levels.
+	
+		![actuator-log-levels](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-log-levels.png)
+			
+	1. Show request tracing.
+	
+		![actuator-tracing](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/actuator-tracing.png)
 
 ## Metrics
 1. View the Metrics link of the app. Highlight the following:
