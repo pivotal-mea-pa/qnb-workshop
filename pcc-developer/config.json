@@ -1,19 +1,19 @@
 {
     "workshopSubject":"Pivotal Cloud Cache",
-    "workshopHomepage":"pcc-developer/homepage",
+    "workshopHomepage":"",
     "modules": [
         {
             "type": "concepts",
             "content": [
                 {
                     "name":"PCC Developer Workshop",
-                    "filename":"pcc-developer/pcc-developer-developer-workshop-slide"
+                    "filename":"pcc-developer/pcc-developer-workshop-slide"
                 }
 
             ]
         },
         {
-            "type": "labs",
+            "type": "demos",
             "content": [
                 {
                     "name":"Environment Setup",
