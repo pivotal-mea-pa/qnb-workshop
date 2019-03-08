@@ -2,7 +2,7 @@
 
 This workshop will provide developers with hands on experience in building Pivotal Cloud Cache(PCC) clients using Spring Data GemFire (SDG), Spring Data REST, Spring Cloud and Spring Boot. In this session we'll be implementing a pizza store app for ordering pizza backed by PCC. Session includes presentations, demos and hands on labs.
 
-![](look_aside.png)
+![](../demos/04_enable_lookaside_caching/look_aside.png)
 
 ## Demo App 
 
