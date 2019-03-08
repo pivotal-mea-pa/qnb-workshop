@@ -4,13 +4,13 @@ Let's incrementally build pizza store app which will showcase various features s
 
 Note: All the boilerplate code required for this demo app has been provided in Pizza-store-initial. We'll not be covering spring-data-jpa concepts in this workshop.
 
-#### Step 1: Create Skeleton PCC Client project
+### Step 1: Create Skeleton PCC Client project
 
 Download and extract the [Pizza-store-initial](./source-code.zip) project. 
    For convenience we have configured the POM with required dependencies for 
    mysql and we'll be adding only dependencies required for PCC.
 
-###### Pivotal Cloud Cache Dependency
+#### Pivotal Cloud Cache Dependency
 
 ```
 <dependency>
@@ -21,7 +21,7 @@ Download and extract the [Pizza-store-initial](./source-code.zip) project.
 
 ```
 
-###### Spring Data REST Dependencies
+#### Spring Data REST Dependencies
 
 ```
 <dependency>
@@ -31,7 +31,7 @@ Download and extract the [Pizza-store-initial](./source-code.zip) project.
 
 ```
 
-#### Step 2: configure PCC client with Spring Data GemFire(SDG) annotations
+### Step 2: configure PCC client with Spring Data GemFire(SDG) annotations
 
 a. Create a configuration file which transforms this boot app into PCC Client cache. `spring-geode-starter` enables autoreconfiguration support for PCC and creates PCC client connection pool.
 
