@@ -1,0 +1,58 @@
+{
+    "workshopSubject":"Pivotal Cloud Cache",
+    "workshopHomepage":"pcc-developer/homepage",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"PCC Developer Workshop",
+                    "filename":"pcc-developer/pcc-developer-developer-workshop-slide"
+                }
+
+            ]
+        },
+        {
+            "type": "labs",
+            "content": [
+                {
+                    "name":"Environment Setup",
+                    "filename":"pcc-developer/labs/01_environment_setup"
+                },
+                {
+                    "name":"Connectivity Setup",
+                    "filename":"pcc-developer/labs/02_pcc_connectivity_setup"
+                },
+                {
+                    "name":"Customer Search Setup",
+                    "filename":"pcc-developer/labs/03_customer_search_setup"
+                },
+                {
+                    "name":"Enable Look Aside Caching",
+                    "filename":"pcc-developer/labs/04_enable_lookaside_caching"
+                },
+                {
+                    "name":"Implement Pizza Store API",
+                    "filename":"pcc-developer/labs/05_implement_pizzastore_api"
+                },
+                {
+                    "name":"Run Pizza Store Application Locally",
+                    "filename":"pcc-developer/labs/06a_run_app_local"
+                },
+                {
+                    "name":"Run Pizza Store Application in PCF",
+                    "filename":"pcc-developer/labs/06_run_app"
+                },
+                {
+                    "name":"Implement PCC Query",
+                    "filename":"pcc-developer/labs/07_implement_pcc_query"
+                },
+                {
+                    "name":"Enable Session Caching",
+                    "filename":"pcc-developer/labs/08_enable_session_caching"
+                }
+
+            ]
+        }
+    ]
+}
