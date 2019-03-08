@@ -1,6 +1,6 @@
 {
     "workshopSubject":"Pivotal Cloud Cache",
-    "workshopHomepage":"",
+    "workshopHomepage":"index.en.md",
     "modules": [
         {
             "type": "concepts",
