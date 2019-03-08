@@ -17,39 +17,39 @@
             "content": [
                 {
                     "name":"Environment Setup",
-                    "filename":"pcc-developer/labs/01_environment_setup"
+                    "filename":"pcc-developer/demos/01_environment_setup"
                 },
                 {
                     "name":"Connectivity Setup",
-                    "filename":"pcc-developer/labs/02_pcc_connectivity_setup"
+                    "filename":"pcc-developer/demos/02_pcc_connectivity_setup"
                 },
                 {
                     "name":"Customer Search Setup",
-                    "filename":"pcc-developer/labs/03_customer_search_setup"
+                    "filename":"pcc-developer/demos/03_customer_search_setup"
                 },
                 {
                     "name":"Enable Look Aside Caching",
-                    "filename":"pcc-developer/labs/04_enable_lookaside_caching"
+                    "filename":"pcc-developer/demos/04_enable_lookaside_caching"
                 },
                 {
                     "name":"Implement Pizza Store API",
-                    "filename":"pcc-developer/labs/05_implement_pizzastore_api"
+                    "filename":"pcc-developer/demos/05_implement_pizzastore_api"
                 },
                 {
                     "name":"Run App Locally",
-                    "filename":"pcc-developer/labs/06a_run_app_local"
+                    "filename":"pcc-developer/demos/06a_run_app_local"
                 },
                 {
                     "name":"Run App in PCF",
-                    "filename":"pcc-developer/labs/06_run_app"
+                    "filename":"pcc-developer/demos/06_run_app"
                 },
                 {
                     "name":"Implement PCC Query",
-                    "filename":"pcc-developer/labs/07_implement_pcc_query"
+                    "filename":"pcc-developer/demos/07_implement_pcc_query"
                 },
                 {
                     "name":"Enable Session Caching",
-                    "filename":"pcc-developer/labs/08_enable_session_caching"
+                    "filename":"pcc-developer/demos/08_enable_session_caching"
                 }
 
             ]

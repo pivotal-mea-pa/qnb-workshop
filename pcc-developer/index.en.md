@@ -4,7 +4,7 @@ This workshop will provide developers with hands on experience in building Pivot
 
 ![](look_aside.png)
 
-## Demo App: 
+## Demo App 
 
 http://pizza-store-pcc-client.xyz.numerounocloud.com/pizzas
 
