@@ -15,39 +15,39 @@
             "type": "demos",
             "content": [
                 {
-                    "name":"Environment Setup",
+                    "name":"1. Environment Setup",
                     "filename":"pcc-developer/demos/01_environment_setup"
                 },
                 {
-                    "name":"Connectivity Setup",
+                    "name":"2. Connectivity Setup",
                     "filename":"pcc-developer/demos/02_pcc_connectivity_setup"
                 },
                 {
-                    "name":"Customer Search Setup",
+                    "name":"3. Customer Search Setup",
                     "filename":"pcc-developer/demos/03_customer_search_setup"
                 },
                 {
-                    "name":"Enable Look Aside Caching",
+                    "name":"4. Enable Look Aside Caching",
                     "filename":"pcc-developer/demos/04_enable_lookaside_caching"
                 },
                 {
-                    "name":"Implement Pizza Store API",
+                    "name":"5. Implement Pizza Store API",
                     "filename":"pcc-developer/demos/05_implement_pizzastore_api"
                 },
                 {
-                    "name":"Run App Locally",
+                    "name":"6a. Run App Locally",
                     "filename":"pcc-developer/demos/06a_run_app_local"
                 },
                 {
-                    "name":"Run App in PCF",
+                    "name":"6b. Run App in PCF",
                     "filename":"pcc-developer/demos/06_run_app"
                 },
                 {
-                    "name":"Implement PCC Query",
+                    "name":"7. Implement PCC Query",
                     "filename":"pcc-developer/demos/07_implement_pcc_query"
                 },
                 {
-                    "name":"Enable Session Caching",
+                    "name":"8. Enable Session Caching",
                     "filename":"pcc-developer/demos/08_enable_session_caching"
                 }
 
