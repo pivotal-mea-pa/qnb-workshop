@@ -1,5 +1,7 @@
 ## Look-aside caching
 
+![](look_aside.png)
+
 #### Step 1: Annotate getCustomerByEmail service with @Cacheable annotation for enabling lookaside caching backed by Pivotal Cloud Cache
 
 ```
