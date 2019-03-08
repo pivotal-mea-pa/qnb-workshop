@@ -36,11 +36,11 @@
                     "filename":"pcc-developer/labs/05_implement_pizzastore_api"
                 },
                 {
-                    "name":"Run Pizza Store Application Locally",
+                    "name":"Run App Locally",
                     "filename":"pcc-developer/labs/06a_run_app_local"
                 },
                 {
-                    "name":"Run Pizza Store Application in PCF",
+                    "name":"Run App in PCF",
                     "filename":"pcc-developer/labs/06_run_app"
                 },
                 {

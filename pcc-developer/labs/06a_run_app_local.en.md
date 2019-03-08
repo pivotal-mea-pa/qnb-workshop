@@ -68,7 +68,7 @@ http://localhost:8080/orderPizza?email=XXX&type=fancy
 
 Note: find a customer email address from `/showdb` API
 
-###### Result
+##### Result
 
 Cache Miss Scenario
 
