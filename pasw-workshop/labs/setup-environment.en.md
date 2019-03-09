@@ -12,6 +12,9 @@ The labs in this workshop make use of Powershell, the Cloud Foundry cli (cf cli)
 - Internet connection
 
 ## Download and Validate cf cli
+<!--
+Another option for downloading the CF CLI would be to have them login to apps manager, click on "Tools" and download. This would ensure the CLI version is lined up with the platform they are working on. 
+-->
 
 1. Download [the cli](https://cli.run.pivotal.io/stable?release=windows64&source=github).
 
@@ -34,6 +37,9 @@ The labs in this workshop make use of Powershell, the Cloud Foundry cli (cf cli)
 1. To verify your installation, open powershell and type `cf`. If your installation was successful, the cf CLI help listing appears. You may need to restart the powershell window to see the cf cli help listing appear.
 
 ## Save your creds and API URL to environment variables
+<!--
+If the user were to retrieve and install the CLI from app manager tools, then this step could be revised to retrieve the API URL from the same location. The user would also assured that thier credentials worked because the have already logged into the applicatino manager.
+-->
 
 1. Open a powershell window and type in the following commands. Remember to replace the values below with your student creds that were assigned to you.
 
@@ -46,11 +52,15 @@ The labs in this workshop make use of Powershell, the Cloud Foundry cli (cf cli)
 ## Install the Steeltoe Visual Studio project templates
 
 1. Download the VSIX [templates installer](https://github.com/SteeltoeOSS/Tooling/releases/download/templates-0.0.1/App-Templates-VSIX.vsix).
+<!--
+In my opinion it is always nice to start with the page containing the download so that I can read and/or reference any documentation. It also provides you some visual clues that you are downloading what you expect.
+https://github.com/SteeltoeOSS/Tooling/releases/tag/templates-0.0.1
+-->
 
 1. With Visual Studio closed, double click the downloaded file to install the templates.
 
 1. Once complete, open Visual Studio and choose `File > New > Project > C#` there should be additional Steeltoe and Cloud Foundry template listed.
-  <img src="a_visual-studio-templates.PNG" alt="VS Steeltoe Templates" width="400"/>
+    <img src="a_visual-studio-templates.PNG" alt="VS Steeltoe Templates" width="400"/>
 
 ## Complete
 
