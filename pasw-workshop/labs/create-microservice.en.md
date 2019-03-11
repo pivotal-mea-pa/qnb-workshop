@@ -37,5 +37,10 @@ Using the installed Visual Studio templates, create a new app based on Steeltoe 
   - env: are environment variables the app should use during execution.
 
 1. In the manifest, change the value of `name:` and `host:` to be something authentic (like your name). Keep it alpha-numeric and use `-`(dash) as a space.
-
 1. Save the manifest file. The app is ready to be published and deployed to PASW!
+
+<!--
+My initial thought is that I want to deploy to validate that everything is working okay. Otherwise, I am left hanging.
+
+In my opinion, each step of workshop content should have an objective and then each page should succinctly achieve that objective. This will give the customer the feeling of accomplishment and satisfaction. This will also make the content reusable.
+-->
