@@ -6,35 +6,35 @@
             "type": "concepts",
             "content": [
                 {
-                    "name":"PCC Essentials",
+                    "name":"1. PCC Essentials",
                     "filename":"pcc-developer/01-pcc-developer-essentials-slide"
                 },
                 {
-                    "name":"Provision and Access",
+                    "name":"2. Provision and Access",
                     "filename":"pcc-developer/02-pcc-developer-provision-access-slide"
                 },
                 {
-                    "name":"Developer Essentials",
+                    "name":"3. Developer Essentials",
                     "filename":"pcc-developer/03-pcc-developer-essentials-slide"
                 },
                 {
-                    "name":"PCC Access Patterns",
+                    "name":"4. PCC Access Patterns",
                     "filename":"pcc-developer/04-pcc-access-patterns-slide"
                 },
                 {
-                    "name":"Effective Querying",
+                    "name":"5. Effective Querying",
                     "filename":"pcc-developer/05-effective-querying-slide"
                 },
                 {
-                    "name":"Server Side JAR Deploy",
+                    "name":"6. Server Side JAR Deploy",
                     "filename":"pcc-developer/06-server-side-jar-slide"
                 },
                 {
-                    "name":"PCC Design Patterns",
+                    "name":"7. PCC Design Patterns",
                     "filename":"pcc-developer/07-design-patterns-slide"
                 },
                 {
-                    "name":"Active/Active Replication",
+                    "name":"8. Active/Active Replication",
                     "filename":"pcc-developer/08-active-active-replication-slide"
                 }
             ]
