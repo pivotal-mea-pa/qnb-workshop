@@ -4,9 +4,7 @@ This workshop will provide developers with hands on experience in building Pivot
 
 ![](../demos/04_enable_lookaside_caching/look_aside.png)
 
-## Demo App 
-
-http://pizza-store-pcc-client.xyz.numerounocloud.com/pizzas
+## [Demo App](http://pizza-store-pcc-client.xyz.numerounocloud.com/pizzas)
 
 ```
 Lets Order Some Pizza 
@@ -18,9 +16,7 @@ GET /orders?email={emailId} - get specific value
 
 ```
 
-http://pizza-store-pcc-client.xyz.numerounocloud.com/orderPizza?email=lucynorton@gmail.com&type=fancy
-
-## Result
+## [Result](http://pizza-store-pcc-client.xyz.numerounocloud.com/orderPizza?email=lucynorton@gmail.com&type=fancy)
 
 #### Cache Miss Scenario
 

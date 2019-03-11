@@ -6,7 +6,7 @@ Note: All the boilerplate code required for this demo app has been provided in P
 
 ### Step 1: Create Skeleton PCC Client project
 
-Download and extract the [Pizza-store-initial](./source-code.zip) project. 
+Clone the [Pizza-store](https://github.com/Pivotal-Field-Engineering/PivotalCloudCache-Workshop) project. 
    For convenience we have configured the POM with required dependencies for 
    mysql and we'll be adding only dependencies required for PCC.
 
