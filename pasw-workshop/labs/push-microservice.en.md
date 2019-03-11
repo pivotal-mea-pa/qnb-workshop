@@ -45,13 +45,13 @@ Using Visual Studio, compile the app to create an artifact. Then push the artifa
    cf login -a $env:cf_api -u $env:cf_username -p $env:cf_password
    ```
 
-   If necessary, you can validate the existence of environment variables with the following commands:
+    If necessary, you can validate the existence of environment variables with the following commands:
 
-   ```powershell
+    ```powershell
    Get-ChildItem env:cf_api
    Get-ChildItem env:cf_username
    Get-ChildItem env:cf_password
-   ```
+    ```
 
 3. You may be prompted to choose an Org and Space. Choose the organization and space specified by your proctor. If you are not prompted, by default your Org and Space have already been set.
 
