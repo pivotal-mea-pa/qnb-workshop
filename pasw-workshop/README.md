@@ -4,7 +4,7 @@ Workshop to introduce the basics of PAS to a .NET savvy group. The workshop crea
 
 ## Pre-requisites
 
-The foundation to run the demo on must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
+The foundation to run the demo must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
 
 The Workshop assumes the Students have been given the following:
  - **API URL** of the Workshop foundation
@@ -50,49 +50,50 @@ Using App Manager the Student is guided through attaching a new route to their a
 A "congrats" note to the student for completing the workshop, and a reminder to continue learning about cloud native .NET with the Steeltoe Workshop. There is also an offer to experience all the examples in the Steeltoe public repo on Pivotal Web Services
 
 ## Config.json with all labs
-	```json
-	{
-		"workshopSubject":"Pivotal Application Services for Windows",
-		"workshopHomepage":"",
-		"workshopHostname":"pasw-workshop",
-		"modules": [
-			{
-				"type": "demos",
-				"content": [
-					{
-						"name":"Introduction & Credentials",
-						"filename":"pasw-workshop/labs/intro-creds"
-					},
-					{
-						"name":"Setup Environment",
-						"filename":"pasw-workshop/labs/setup-environment"
-					},
-					{
-						"name":"Create .NET Microservice",
-						"filename":"pasw-workshop/labs/create-microservice"
-					},
-					{
-						"name":"Push Microservice to PASW",
-						"filename":"pasw-workshop/labs/push-microservice"
-					},
-					{
-						"name":"Explore Applications Manager",
-						"filename":"pasw-workshop/labs/explore-appmanager"
-					},
-					{
-						"name":"Attach an autoscaler",
-						"filename":"pasw-workshop/labs/attach-autoscaler"
-					},
-					{
-						"name":"Add a new route",
-						"filename":"pasw-workshop/labs/add-route"
-					},
-					{
-						"name":"Next Steps",
-						"filename":"pasw-workshop/labs/next-steps"
-					}
-				]
-			}
-		]
-	}
-	```
+
+```json
+{
+	"workshopSubject":"Pivotal Application Services for Windows",
+	"workshopHomepage":"",
+	"workshopHostname":"pasw-workshop",
+	"modules": [
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"pasw-workshop/labs/intro-creds"
+				},
+				{
+					"name":"Setup Desktop Environment",
+					"filename":"pasw-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Create .NET Microservice",
+					"filename":"pasw-workshop/labs/create-microservice"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"Explore Applications Manager",
+					"filename":"pasw-workshop/labs/explore-appmanager"
+				},
+				{
+					"name":"Setup Auto-Scaling",
+					"filename":"pasw-workshop/labs/attach-autoscaler"
+				},
+				{
+					"name":"Add a New Route",
+					"filename":"pasw-workshop/labs/add-route"
+				},
+				{
+					"name":"Next Steps",
+					"filename":"pasw-workshop/labs/next-steps"
+				}
+			]
+		}
+	]
+}
+```
