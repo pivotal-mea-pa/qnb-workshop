@@ -44,39 +44,39 @@
             "content": [
                 {
                     "name":"1. Environment Setup",
-                    "filename":"pcc-developer/demos/01-environment-setup"
+                    "filename":"pcc-developer/01-environment-setup"
                 },
                 {
                     "name":"2. Connectivity Setup",
-                    "filename":"pcc-developer/demos/02-pcc-connectivity-setup"
+                    "filename":"pcc-developer/02-pcc-connectivity-setup"
                 },
                 {
                     "name":"3. Customer Search Setup",
-                    "filename":"pcc-developer/demos/03-customer-search-setup"
+                    "filename":"pcc-developer/03-customer-search-setup"
                 },
                 {
                     "name":"4. Enable Look Aside Caching",
-                    "filename":"pcc-developer/demos/04-enable-lookaside-caching"
+                    "filename":"pcc-developer/04-enable-lookaside-caching"
                 },
                 {
                     "name":"5. Implement Pizza Store API",
-                    "filename":"pcc-developer/demos/05-implement-pizzastore-api"
+                    "filename":"pcc-developer/05-implement-pizzastore-api"
                 },
                 {
                     "name":"6a. Run App Locally",
-                    "filename":"pcc-developer/demos/06a-run-app-local"
+                    "filename":"pcc-developer/06a-run-app-local"
                 },
                 {
                     "name":"6b. Run App in PCF",
-                    "filename":"pcc-developer/demos/06-run-app"
+                    "filename":"pcc-developer/06-run-app"
                 },
                 {
                     "name":"7. Implement PCC Query",
-                    "filename":"pcc-developer/demos/07-implement-pcc-query"
+                    "filename":"pcc-developer/07-implement-pcc-query"
                 },
                 {
                     "name":"8. Enable Session Caching",
-                    "filename":"pcc-developer/demos/08-enable-session-caching"
+                    "filename":"pcc-developer/08-enable-session-caching"
                 }
 
             ]
