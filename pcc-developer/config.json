@@ -6,8 +6,36 @@
             "type": "concepts",
             "content": [
                 {
-                    "name":"PCC Developer Workshop",
-                    "filename":"pcc-developer/pcc-developer-workshop-slide"
+                    "name":"PCC Essentials",
+                    "filename":"pcc-developer/01-pcc-developer-essentials-slide"
+                },
+                {
+                    "name":"Provision and Access",
+                    "filename":"pcc-developer/02-pcc-developer-provision-access-slide"
+                },
+                {
+                    "name":"Developer Essentials",
+                    "filename":"pcc-developer/03-pcc-developer-essentials-slide"
+                },
+                {
+                    "name":"PCC Access Patterns",
+                    "filename":"pcc-developer/04-pcc-access-patterns-slide"
+                },
+                {
+                    "name":"Effective Querying",
+                    "filename":"pcc-developer/05-effective-querying-slide"
+                },
+                {
+                    "name":"Server Side JAR Deploy",
+                    "filename":"pcc-developer/06-server-side-jar-slide"
+                },
+                {
+                    "name":"PCC Design Patterns",
+                    "filename":"pcc-developer/07-design-patterns-slide"
+                },
+                {
+                    "name":"Active/Active Replication",
+                    "filename":"pcc-developer/08-active-active-replication-slide"
                 }
             ]
         },
@@ -16,39 +44,39 @@
             "content": [
                 {
                     "name":"1. Environment Setup",
-                    "filename":"pcc-developer/demos/01_environment_setup"
+                    "filename":"pcc-developer/demos/01-environment-setup"
                 },
                 {
                     "name":"2. Connectivity Setup",
-                    "filename":"pcc-developer/demos/02_pcc_connectivity_setup"
+                    "filename":"pcc-developer/demos/02-pcc-connectivity-setup"
                 },
                 {
                     "name":"3. Customer Search Setup",
-                    "filename":"pcc-developer/demos/03_customer_search_setup"
+                    "filename":"pcc-developer/demos/03-customer-search-setup"
                 },
                 {
                     "name":"4. Enable Look Aside Caching",
-                    "filename":"pcc-developer/demos/04_enable_lookaside_caching"
+                    "filename":"pcc-developer/demos/04-enable-lookaside-caching"
                 },
                 {
                     "name":"5. Implement Pizza Store API",
-                    "filename":"pcc-developer/demos/05_implement_pizzastore_api"
+                    "filename":"pcc-developer/demos/05-implement-pizzastore-api"
                 },
                 {
                     "name":"6a. Run App Locally",
-                    "filename":"pcc-developer/demos/06a_run_app_local"
+                    "filename":"pcc-developer/demos/06a-run-app-local"
                 },
                 {
                     "name":"6b. Run App in PCF",
-                    "filename":"pcc-developer/demos/06_run_app"
+                    "filename":"pcc-developer/demos/06-run-app"
                 },
                 {
                     "name":"7. Implement PCC Query",
-                    "filename":"pcc-developer/demos/07_implement_pcc_query"
+                    "filename":"pcc-developer/demos/07-implement-pcc-query"
                 },
                 {
                     "name":"8. Enable Session Caching",
-                    "filename":"pcc-developer/demos/08_enable_session_caching"
+                    "filename":"pcc-developer/demos/08-enable-session-caching"
                 }
 
             ]
