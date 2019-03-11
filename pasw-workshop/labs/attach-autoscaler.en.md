@@ -1,4 +1,4 @@
-# Explore Application Manager
+# Setup Auto-scaling
 
 ## Goal
 
