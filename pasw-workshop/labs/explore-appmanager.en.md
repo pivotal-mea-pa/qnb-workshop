@@ -14,10 +14,10 @@ Now that you've pushed an app, log in to App Manager and explore the many option
 1. Open PAS Apps Manager web site provided in the [Introduction](/demos/intro-creds) slide.
     <img src="a_appmanager-login.PNG" alt="AppManager Login" width="300"/>
 
-1. Log in with the student account creds assigned from the [Sheet](/demo/intro-creds).
+1. Log in with the student account creds assigned workshop proctor..
 
 1. Once logged in, notice your Org and Space is automatically loaded.
-    <img src="a_org-space.PNG" alt="Org and Space" width="400"/>
+    <img src="a_org-space.png" alt="Org and Space" width="400"/>
 
 ## Locate the home page of your app
 
@@ -33,4 +33,5 @@ Now that you've pushed an app, log in to App Manager and explore the many option
 
 1. This is a listing of all the services available to bind with your app. [When applicable] a service has plans associated with them. You choose a plan, name the instance, and bind.
 
-1. You don't have to bind a service directly to an app. Alternatly you can bind a sevice to a Space. This makes the service available for binding to all apps within, but lets the service settings be managed in one place.
+1. You don't have to bind a service directly to an app. Alternately, you can bind a service to a Space. This makes the service available for binding to all apps within, but lets the service settings be managed in one place.
+
