@@ -11,7 +11,7 @@ Now that you've pushed an app, log in to App Manager and explore the many option
 
 ## Log in to App Manager
 
-1. Open PAS Apps Manager web site provided in the [Introduction](/intro-creds) slide.
+1. Open PAS Apps Manager web site provided in the [Introduction](/demos/intro-creds) slide.
     <img src="a_appmanager-login.PNG" alt="AppManager Login" width="300"/>
 
 1. Log in with the student account creds assigned from the [Sheet](/demo/intro-creds).
