@@ -1,4 +1,4 @@
-# Explore Application Manager
+# Explore Applications Manager
 
 ## Goal
 
