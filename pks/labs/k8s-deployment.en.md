@@ -2,7 +2,7 @@
 This exercise builds upon the [Kubernetes Declarative Configuration](k8s-pod-declarative.en.md) exercise. We will pull the fortune teller frontend and backend apps out and deploy them as a separate `Deployment` while still connecting to the Redis we deployed in [Fortune Pod](fortune-pod.yml)
 
 1. Create an additional empty *yml* file named `fortune-deploy.yml`.  This file will be used to deploy the fortune apps as a _Deployment_, a Kubernetes primitive for highly available and scalable applications. As before, add the api version, kind, and basic metadata to the empty yml file:
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -10,7 +10,7 @@ metadata:
 ```
 
 2. Next, add the beginning of the spec for the _Deployment_.  This will include the number of replicas, a label selector, and the declaration of the the template and metadata for the spec:
-```
+```yaml
 spec:
   replicas: 2
   selector:
@@ -25,15 +25,16 @@ spec:
 ```
 3. Continue adding to the Deployment template by defining the spec for the containers that are part of the deployment template.  Refer to the `spec` section of the completed [yaml](fortune-deploy.yml)
 
-4. Lastly, add an environment variable that defines how the backend will connect to the redis server.  This is required since the backend app and redis are no longer colocated in the same pod (and referenceable via localhost).  This value references the DNS entry created in kube-DNS for the original fortune-pod-service created during the initial pod deployment. Generally the DNS for service is like `<service name>.<namespace>.svc.cluster.local`. Make sure to replace with your namespace:
-```
+4. Lastly, add an environment variable that defines how the backend will connect to the redis server.  This is required since the backend app and redis are no longer colocated in the same pod (and referenceable via localhost).  This value references the DNS entry created in kube-DNS for the original fortune-pod-service created during the initial pod deployment. Generally the DNS for service is like `<service name>.<namespace>.svc.cluster.local`. Make sure to replace with your namespace.
+
+```yaml
 env:
 - name: REDIS_HOST
   value: "fortune-pod-service.default.svc.cluster.local"
 ```
 
 5. The completed pod declaration should look like this:
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -73,14 +74,14 @@ spec:
 1. Within the same yml file, create a loadBalancer service for the deployment like what we did in the previous lab. The completed configuration for the API objects should appear as [this](fortune-deploy.yml). Make sure updating the value of environment variable `REDIS_HOST` with your namespace before applying changes.
 
 2. Deploy the API objects to your Kubernetes cluster using the kubectl _create_ command, using the declarative configuration you just created:
-```
+```shell
 $ kubectl create -f fortune-deploy.yml
 service "fortune-deploy-service" created
 deployment "fortune-deploy" created
 ```
 
 3. Inspect the output of the kubectl get command.  You'll see the newly deployed Deployment, associated Pods, and Service appear and startup.  Take note of the external IP address that is assigned to the new fortune-deploy-service as that can be used to access the application.
-```
+```shell
 $ kubectl get all -l deployment=pks-workshop
 NAME                                  READY   STATUS    RESTARTS   AGE
 pod/fortune-deploy-7c98869fbd-scvq2   2/2     Running   0          29m
@@ -108,7 +109,7 @@ deployment.apps/fortune-deploy scaled
 ```
 ## Update and rollout the deployment
 1. Update the deployment definition within `fortune-deploy.yml` with an addition to the container spec adding a resource request and limit section.  We'll request 1GB of memory and .5 cpu and limit our container so as to not use more than 2GBs of memory and 1 cpu.  As with the env var, make sure this value is part of the first element in the *containers* array in the data structure:
-```
+```yaml
 resources:
   requests:
     memory: "1G"
@@ -123,14 +124,14 @@ resources:
 _* NOTE: A Deployment’s rollout is triggered if and only if the Deployment’s pod template (that is, .spec.template) is changed, for example if the labels or container images of the template are updated. Other updates, such as scaling the Deployment, do not trigger a rollout._
 
 3. The deployment API object already exists within the Kubernetes cluster.  Use the kubectl _apply_ command to update the existing objects, passing in the yml description of the api objects:
-```
+```shell
 $ kubectl apply -f fortune-deploy.yml
 service/fortune-deploy-service unchanged
 deployment.apps/fortune-deploy configured
 ```
 
 4. Watch the updates being rolled out to pods
-```
+```shell
 $ kubectl rollout status deployment.apps/fortune-deploy
 Waiting for deployment "fortune-deploy" rollout to finish: 1 out of 2 new replicas have been updated...
 Waiting for deployment "fortune-deploy" rollout to finish: 1 out of 2 new replicas have been updated...
@@ -139,8 +140,10 @@ Waiting for deployment "fortune-deploy" rollout to finish: 1 old replicas are pe
 Waiting for deployment "fortune-deploy" rollout to finish: 1 old replicas are pending termination...
 deployment "fortune-deploy" successfully rolled out
 ```
+
   Kubernetes will create 2 new pods governed by the new resource locations and destroy the old pods.  This can be seen by viewing the age of the fortune-backend pods displayed in the output from our watch command on kubectl, which now indicate they are under 1 min old:
-```
+
+```shell
 $ kubectl get all -l deployment=pks-workshop
 NAME                                  READY   STATUS    RESTARTS   AGE
 pod/fortune-deploy-5fbb98594c-6cns4   2/2     Running   0          20s
