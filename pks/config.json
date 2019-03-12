@@ -7,27 +7,51 @@
         "content": [
             {
             "name":"introduction",
-            "filename":"pks/introduction-slide"
+            "filename":"pks/slides/introduction-slide"
+            },
+            {
+            "name":"pks-intro",
+            "filename":"pks/slides/pks-intro-slide"
             },
             {
             "name":"architecture",
-            "filename":"pks/architecture-slide"
+            "filename":"pks/slides/architecture-slide"
+            },
+            {
+            "name":"kubernetes-pod-and-namespace",
+            "filename":"pks/slides/k8s-pod-and-namespace-slide"
+            },
+            {
+            "name":"kubernetes-declarative-and-services",
+            "filename":"pks/slides/k8s-declarative-config-and-svc-slide"
+            },
+            {
+            "name":"kubernetes-persistent-volume",
+            "filename":"pks/slides/k8s-persistent-volume-slide"
+            },
+            {
+            "name":"harbor",
+            "filename":"pks/slides/pks-vmware-harbor"
             },
             {
             "name":"backup-recovery",
-            "filename":"pks/backup-recovery-slide"
+            "filename":"pks/slides/backup-recovery-slide"
             },
             {
             "name":"pks-pipelines",
-            "filename":"pks/pks-pipelines-slide"
+            "filename":"pks/slides/pks-pipelines-slide"
+            },
+            {
+            "name":"uaa-overview",
+            "filename":"pks/slides/pks-uaa-overview-slide"
             },
             {
             "name":"uaa-integrations",
-            "filename":"pks/uaa-integrations-slide"
+            "filename":"pks/slides/uaa-integrations-slide"
             },
             {
             "name":"upgrades",
-            "filename":"pks/upgrades-slide"
+            "filename":"pks/slides/upgrades-slide"
             }
         ]
     },
@@ -36,23 +60,43 @@
         "content": [
             {
             "name":"install-tile",
-            "filename":"pks/install-tile-demo"
+            "filename":"pks/labs/install-tile-demo"
             },
             {
             "name":"pks-cli",
-            "filename":"pks/pks-cli-demo"
+            "filename":"pks/labs/pks-cli-demo"
             },
             {
             "name":"kubectl-cli",
-            "filename":"pks/kubectl-cli-demo"
+            "filename":"pks/labs/kubectl-cli-demo"
             },
             {
             "name":"pks-login-and-create-cluster",
-            "filename":"pks/pks-login-and-create-cluster"
+            "filename":"pks/labs/pks-login-and-create-cluster"
+            },
+            {
+            "name":"kubernetes-deploy-1st-container",
+            "filename":"pks/labs/k8s-deploy-1st-container"
+            },
+            {
+            "name":"kubernetes-declarative-config",
+            "filename":"pks/labs/k8s-pod-declarative"
+            },
+            {
+            "name":"kubernetes-deployment",
+            "filename":"pks/labs/k8s-deployment"
+            },
+            {
+            "name":"kubernetes-persistent-volume",
+            "filename":"pks/labs/k8s-statefulset-pv"
+            },
+            {
+            "name":"monitoring-and-logging",
+            "filename":"pks/labs/monitoring-logging-demo"
             },
             {
             "name":"pipelines",
-            "filename":"pks/pipelines-demo"
+            "filename":"pks/labs/pipelines-demo"
             }
         ]
     }
