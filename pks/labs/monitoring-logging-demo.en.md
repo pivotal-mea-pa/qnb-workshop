@@ -18,10 +18,10 @@ In this section, we'll drain logs to a very simple provider called `Papertrail`.
 - Visit https://papertrailapp.com and create a free account.
 
 - Login to your account and add your first system:
-![Papertrail Add System](images/papertrail-1.png)
+![Papertrail Add System](papertrail-1.png)
 
 - Click on `Add your first system`:
-![Papertrail Syslog Endpoint](images/papertrail-2.png)
+![Papertrail Syslog Endpoint](papertrail-2.png)
 
 - We'll use sink resources to configure destinations for logs transported following the Syslog Protocol. 
     - create sink resource configuration for clusters and name file as `cluster_sink.yml`
@@ -59,7 +59,7 @@ In this section, we'll drain logs to a very simple provider called `Papertrail`.
     ```
 
 - Go back to papertrail site and check the Events page. We should be able to see logs being streamed in.
-![Papertrail Streaming](images/papertrail-3.png)
+![Papertrail Streaming](papertrail-3.png)
 
 ## All sink log entries use the following format:
 

@@ -345,7 +345,7 @@ spec:
     app: demo-redis
 ```
 The whole yaml configuration should look like 
-[demo-redis-persist.yml](yamls/demo-redis-persist.yml)
+[demo-redis-persist.yml](demo-redis-persist.yml)
 
 ## Create the API Resource Object.
 - Since there are updates made to the stateful set outside the template (the volumeClaimTemplates) the update cannot simply be made using the `kubectl apply`.  First delete the existing StatefulSet and recreate using the delete and create commands:
