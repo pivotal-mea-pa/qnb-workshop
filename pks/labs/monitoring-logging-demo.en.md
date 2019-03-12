@@ -1,6 +1,6 @@
 # Monitoring and Logging
 
-## command line
+### command line
 `kubectl logs` command can be used to dump or stream stdout logs. Try some commands:
 ```
 $ kubectl logs pod-name                        # dump pod logs (stdout)
@@ -10,7 +10,7 @@ $ kubectl logs -f pod-name                     # stream pod logs (stdout)
 $ kubectl logs -f pod-name -c container-name   # stream pod container logs (stdout, multi-container case)
 ```
 
-## Ingest logs to a third-party log management service
+### Ingest logs to a third-party log management service
 Application operators are often interested in long-term retention, indexing, and analysis of logs.
 
 In this section, we'll drain logs to a very simple provider called `Papertrail`.
@@ -61,7 +61,7 @@ In this section, we'll drain logs to a very simple provider called `Papertrail`.
 - Go back to papertrail site and check the Events page. We should be able to see logs being streamed in.
 ![Papertrail Streaming](papertrail-3.png)
 
-## All sink log entries use the following format:
+### All sink log entries use the following format:
 
 `APP-NAME/NAMESPACE/POD-ID/CONTAINER-NAME`
 
