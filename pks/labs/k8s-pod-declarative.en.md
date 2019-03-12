@@ -2,9 +2,9 @@
 
 Lets deploy the initial version of our demo application, PKS Fortune Teller.  This is a 3 tier application that contains a HTML/JavaScript app served from Nginx, a Spring Boot REST backend, and a Redis persistent data service.
 
-![Fortune Teller Architecture](images/fortune-arch.png)
+![Fortune Teller Architecture](fortune-arch.png)
 
-![Fortune Teller UI](images/fortune-ui-default.png)
+![Fortune Teller UI](fortune-ui-default.png)
 
 ## Create declarative resource definition for demo application
 1. Create an empty *.yml* file named fortune_pod.yml.  We will use this file to create the declarative configuration of the API objects required to deploy the demo application in a single pod.
@@ -153,7 +153,7 @@ spec:
  watch kubectl get all -l deployment=pks-workshop --show-labels
 ```
 
-2. Deploy the demo application to your Kubernetes cluster using the kubectl _create_ command, using the declarative configuration you just created (or you can use the yml we pre-created for you [here](yamls/fortune-pod.yml)
+2. Deploy the demo application to your Kubernetes cluster using the kubectl _create_ command, using the declarative configuration you just created (or you can use the yml we pre-created for you [here](fortune-pod.yml)
 )
 ```
 $ kubectl create -f fortune-pod.yml
@@ -162,19 +162,19 @@ pod "fortune" created
 ```
 3. Inspect the output of your watch of the kubectl get command.  You'll see the newly deployed Pod and Service appear and startup.  Take note of the external IP address that is assigned to the fortune-service as that can be used to access the application in the next step.
 ```
-Every 2.0s: kubectl get all -l deployment=pks-workshop --show-labels                                                                               Wed Dec 17 09:11:31 2018
+  Every 2.0s: kubectl get all -l deployment=pks-workshop --show-labels                                                                               Wed Dec 17 09:11:31 2018
 
-NAME         READY     STATUS    RESTARTS   AGE       LABELS
-po/fortune   3/3       Running   0          2m        app=fortune,deployment=pks-workshop
+  NAME         READY     STATUS    RESTARTS   AGE       LABELS
+  po/fortune   3/3       Running   0          2m        app=fortune,deployment=pks-workshop
 
-NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                                      AGE       LABELS
-svc/fortune-service   LoadBalancer   10.100.200.249   35.229.79.31   80:30828/TCP,9080:30049/TCP,6379:31123/TCP   2m        app=fortune-service,deployment=pks-workshop
+  NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)                                      AGE       LABELS
+  svc/fortune-service   LoadBalancer   10.100.200.249   35.229.79.31   80:30828/TCP,9080:30049/TCP,6379:31123/TCP   2m        app=fortune-service,deployment=pks-workshop
 ```
 4. Open a web browser and access the application using the external IP on port 80.  E.G. http://35.229.79.31
-![Fortune Teller UI](images/fortune-ui-default.png)
+![Fortune Teller UI](fortune-ui-default.png)
 
 5. Right now we receive the default fortune of "Your future is murky" because the Redis backend doesn't have any fortunes loaded.  Click on the _All Fortunes_ link and type a fortune in the text box.  Upon hitting return the fortune will be stored into Redis.  Add multiple fortunes.
-![Fortune Teller UI](images/fortune-ui-fortunes.png)
+![Fortune Teller UI](fortune-ui-fortunes.png)
 
 6. Additionally, you may recall we exposed a service on port 9080.  This represents the backend Java JEE application exposing a JAX-RS service endpoint.  Access the /fortune-backend-jee/app/fortune/all endpoint using the external IP address but specify port 9080 this time.  E.G. http://35.229.79.31:9080/fortune-backend-jee/app/fortune/all  This can be done in a web browser or using a tool such as Curl:
 ```
