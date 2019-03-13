@@ -32,15 +32,15 @@ spring:
     hibernate: 
       ddl-auto: update
  
-greetingLanguage: English
+greetingLanguage: English / Spring Config
 ---
 spring: 
   profiles: dev
-greetingLanguage: French
+greetingLanguage: French / Spring Config
 ---
 spring: 
   profiles: prod
-greetingLanguage: Spanish
+greetingLanguage: Spanish / Spring Config
 ```
 
 1. Open the application.yml in the `config-server/src/main/resources` 
