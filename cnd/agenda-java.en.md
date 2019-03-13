@@ -3,6 +3,7 @@
 # Cloud Native Development Workshop
 This workshop will provide developers with an introduction to cloud native development concepts and best practices.  Users will learn how to create a cloud native application and deploy it to the cloud, and connect their application to cloud services to leverage advanced cloud capabilities.
 
+<div style="text-align:left">
 #### Prerequisites
 
 * **Laptop with IDE** (We are not opinionated on IDE used however Spring Tools for Eclipse or Visual Studio Code w/ Spring Tools extension is helpful and common or Intellij)
@@ -47,3 +48,4 @@ Spring Cloud Config, Spring Cloud Circuit Breaker
 
 **12:15 – 12:30**
 Conclusion and Q&A
+</div>
