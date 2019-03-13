@@ -1,4 +1,4 @@
-![](cnd.png)
+![](../concepts/00-cnd-intro-slide/cnd.png)
 
 # Cloud Native Development Workshop
 This workshop will provide developers with an introduction to cloud native development concepts and best practices.  Users will learn how to create a cloud native application and deploy it to the cloud, and connect their application to cloud services to leverage advanced cloud capabilities.
