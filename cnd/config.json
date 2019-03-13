@@ -31,19 +31,19 @@
         "type": "demos",
         "content": [
             {
-            "name":"Create a Spring Boot Application",
+            "name":"1. Create a Spring Boot Application",
             "filename":"cnd/01-cnd-java-spring-boot-demo"
             },
             {
-            "name":"Spring Cloud Config, Spring Cloud Circuit Breaker",
+            "name":"2. Spring Cloud Config, Spring Cloud Circuit Breaker",
             "filename":"cnd/02-cnd-java-spring-cloud-services-demo"
             },
             {
-            "name":"Running a .NET Application on the Cloud",
+            "name":"1. Running a .NET Application on the Cloud",
             "filename":"cnd/01-cnd-dotnet-deploy-app-demo"
             },
             {
-            "name":"Connecting a .NET Cloud Application to Services",
+            "name":"2. Connecting a .NET Cloud Application to Services",
             "filename":"cnd/02-cnd-dotnet-app-services-demo"
             }
         ]
