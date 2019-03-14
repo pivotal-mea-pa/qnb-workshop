@@ -32,15 +32,6 @@ Locate the Azure SQL in the Marketplace and make an instance of it available for
 
 1. There is no further configuration required! You are ready to consume the database in an application.
 
-## Bind the SQL service to your application
-
-1. Back in Visual Studio, open the `manifest.yml` file by double clicking and add the following to the services section. (create that section if it's not there)
-  ```yml
-  ...
-  services:
-    - my-azure-db
-  ```
-
 ## Complete
 
 You have taken a service offered in the Marketplace and associated an instance of it, with your space. Now apps within the space can bind to the service and this consume it. Let's say you had a "Dev" space and a "QA" space. If you bound the Azure SQL Database Service to each space and named each instance the same, your app could move to either space with no config changes! All it depends on is the serivce to be available for binding, no evironment or web.config dependencies.

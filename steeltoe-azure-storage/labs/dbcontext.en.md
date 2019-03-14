@@ -9,6 +9,17 @@ With the Azure SQL service available for binding, create the necessary DBContext
 - Visual Studio (min 2015)
 - Internet Access
 
+## Bind the SQL service to your application
+
+1. Back in Visual Studio, open the `manifest.yml` file by double clicking and add the following to the services section (create that section if it's not there).
+  ```yml
+  
+    ...
+
+    services:
+      - my-azure-db
+  ```
+
 ## Add SQL DBContext
 
 1. Open `Program.cs` and confirm the Cloud Foundry provider has been added. This provider gives your app the ability to locate the VCAP environment variables that are created by Cloud Foundry, and parse them.
@@ -27,13 +38,11 @@ With the Azure SQL service available for binding, create the necessary DBContext
   ```
 
 1. Create a new class file named `TestContext.cs` and replace the default class with the following code.
-
   ```cs
   using Microsoft.EntityFrameworkCore;
   using System.ComponentModel.DataAnnotations;
   using System.ComponentModel.DataAnnotations.Schema;
   ```
-
   ```cs
   public class TestContext : DbContext {
     public TestContext(DbContextOptions options) : base(options){ }
@@ -51,14 +60,12 @@ With the Azure SQL service available for binding, create the necessary DBContext
   ```
 
 1. Create a new class file named `SampleData.cs` and replace the default class with the following code. This will initialize the a database table using the TestData schema and fill it with 2 rows of data, if none exists.
-
   ```cs
   using Microsoft.EntityFrameworkCore;
   using Microsoft.Extensions.DependencyInjection;
   using System;
   using System.Linq;
   ```
-  
   ```cs
   public class SampleData {
     internal static void InitializeMyContexts(IServiceProvider serviceProvider) {
@@ -101,13 +108,11 @@ With the Azure SQL service available for binding, create the necessary DBContext
   ```
 
 1. You may need to add the dependency
-
   ```cs
   using System.Collections.Generic;
   ```
 
 1. Open `Startup.cs` and locate the `ConfigureServices` method. Add our newly created database context.
-
   ```cs
   public void ConfigureServices(IServiceCollection services) {
     ...
@@ -118,7 +123,6 @@ With the Azure SQL service available for binding, create the necessary DBContext
   ```
 
 1. You may need to add the dependency
-
   ```cs
   using Steeltoe.CloudFoundry.Connector.SqlServer.EFCore;
   ```
