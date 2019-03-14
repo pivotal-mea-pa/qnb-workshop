@@ -85,6 +85,7 @@ Environment variables are a staple of cloud native best practices, but if you've
     return new string[] { myConnectionString };
   }
     ```
+    
 ## Complete
 
 Now instead of the app's connection string being saved in its web.config or being hard coded in the app, it's being provided at run time. This opens quite a few cloud native "doors" for us. We can build the app once and move it through different spaces (or environments), each providing a different backing data store (in the form of a connection string).
