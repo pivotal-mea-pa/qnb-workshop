@@ -1,5 +1,3 @@
-#THIS IS NOT READY - STILL REFINING CONTENT
-
 # Steeltoe Cloud Native .NET Microservices Workshop 
 
 Workshop to introduce cloud native .NET with the Steeltoe Framework. The workshop creates and pushes a .NET Core app to PASW. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
@@ -67,14 +65,14 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 	{
 		"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
 		"workshopHomepage":"",
-		"workshopHostname":"steeltoe-workshop",
+		"workshopHostname":"steeltoe-basics",
 		"modules": [
 			{
 				"type": "concepts",
 				"content": [
 					{
 						"name":"Advanced Features of Steeltoe",
-						"filename":"steeltoe-workshop/slides/advanced-steeltoe"
+						"filename":"steeltoe-basics/slides/advanced-steeltoe"
 					}
 				]
 			},
@@ -83,7 +81,7 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 				"content": [
 					{
 						"name":"Introduction & Credentials",
-						"filename":"steeltoe-workshop/labs/intro-creds"
+						"filename":"steeltoe-basics/labs/intro-creds"
 					},
 					{
 						"name":"Setup Environment",
@@ -91,7 +89,7 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 					},
 					{
 						"name":"Environment Variables",
-						"filename":"steeltoe-workshop/labs/env-vars"
+						"filename":"steeltoe-basics/labs/env-vars"
 					},
 					{
 						"name":"Push Microservice to PASW",
@@ -99,11 +97,11 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 					},
 					{
 						"name":"User Provided Services with Steeltoe",
-						"filename":"steeltoe-workshop/labs/cups"
+						"filename":"steeltoe-basics/labs/cups"
 					},
 					{
 						"name":"Include Steeltoe Actuators and Create a Custom Health Check",
-						"filename":"steeltoe-workshop/labs/actuators"
+						"filename":"steeltoe-basics/labs/actuators"
 					},
 					{
 						"name":"Push Microservice to PASW",
@@ -111,15 +109,15 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 					},
 					{
 						"name":"App Manager with Management Actuators",
-						"filename":"steeltoe-workshop/labs/using-actuators"
+						"filename":"steeltoe-basics/labs/using-actuators"
 					},
 					{
 						"name":"Steeltoe Dynamic Logging",
-						"filename":"steeltoe-workshop/labs/logging"
+						"filename":"steeltoe-basics/labs/logging"
 					},
 					{
 						"name":"Continuing Your .NET Cloud Native Journey",
-						"filename":"steeltoe-workshop/labs/next-steps"
+						"filename":"steeltoe-basics/labs/next-steps"
 					}
 				]
 			}
