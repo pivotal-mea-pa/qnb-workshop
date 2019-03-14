@@ -1,0 +1,85 @@
+{
+    "workshopSubject":"Pivotal Cloud Cache",
+    "workshopHomepage":"index.en.md",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"1. PCC Essentials",
+                    "filename":"pcc-developer/01-pcc-developer-essentials-slide"
+                },
+                {
+                    "name":"2. Provision and Access",
+                    "filename":"pcc-developer/02-pcc-developer-provision-access-slide"
+                },
+                {
+                    "name":"3. Developer Essentials",
+                    "filename":"pcc-developer/03-pcc-developer-essentials-slide"
+                },
+                {
+                    "name":"4. PCC Access Patterns",
+                    "filename":"pcc-developer/04-pcc-access-patterns-slide"
+                },
+                {
+                    "name":"5. Effective Querying",
+                    "filename":"pcc-developer/05-effective-querying-slide"
+                },
+                {
+                    "name":"6. Server Side JAR Deploy",
+                    "filename":"pcc-developer/06-server-side-jar-slide"
+                },
+                {
+                    "name":"7. PCC Design Patterns",
+                    "filename":"pcc-developer/07-design-patterns-slide"
+                },
+                {
+                    "name":"8. Active/Active Replication",
+                    "filename":"pcc-developer/08-active-active-replication-slide"
+                }
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name":"1. Environment Setup",
+                    "filename":"pcc-developer/01-environment-setup"
+                },
+                {
+                    "name":"2. Connectivity Setup",
+                    "filename":"pcc-developer/02-pcc-connectivity-setup"
+                },
+                {
+                    "name":"3. Customer Search Setup",
+                    "filename":"pcc-developer/03-customer-search-setup"
+                },
+                {
+                    "name":"4. Enable Look Aside Caching",
+                    "filename":"pcc-developer/04-enable-lookaside-caching"
+                },
+                {
+                    "name":"5. Implement Pizza Store API",
+                    "filename":"pcc-developer/05-implement-pizzastore-api"
+                },
+                {
+                    "name":"6a. Run App Locally",
+                    "filename":"pcc-developer/06a-run-app-local"
+                },
+                {
+                    "name":"6b. Run App in PCF",
+                    "filename":"pcc-developer/06-run-app"
+                },
+                {
+                    "name":"7. Implement PCC Query",
+                    "filename":"pcc-developer/07-implement-pcc-query"
+                },
+                {
+                    "name":"8. Enable Session Caching",
+                    "filename":"pcc-developer/08-enable-session-caching"
+                }
+
+            ]
+        }
+    ]
+}
