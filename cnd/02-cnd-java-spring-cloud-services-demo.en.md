@@ -1,6 +1,6 @@
 # Enterprise Microservices with Spring Cloud Workshop
 
-The purpose of this workshop is demonstrate how Spring Cloud can help 
+The purpose of this workshop is demonstrate how Spring Cloud can help
 developers create robust cloud native microservice applications.
 
 1. Open a terminal and clone workshop demo github repo: <https://github.com/Pivotal-Field-Engineering/pace-cnd-java>
@@ -23,31 +23,31 @@ management:
     web:
       exposure:
         include: "*"
- 
-spring: 
-  jpa: 
-    properties: 
-      hibernate: 
+
+spring:
+  jpa:
+    properties:
+      hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
-    hibernate: 
+    hibernate:
       ddl-auto: update
- 
-greetingLanguage: English / Spring Config
+
+greetingLanguage: English
 ---
-spring: 
+spring:
   profiles: dev
-greetingLanguage: French / Spring Config
+greetingLanguage: French
 ---
-spring: 
+spring:
   profiles: prod
-greetingLanguage: Spanish / Spring Config
+greetingLanguage: Spanish
 ```
 
-1. Open the application.yml in the `config-server/src/main/resources` 
-directory, and change the  `spring.cloud.config.server.git.uri` to point to the new 
+1. Open the application.yml in the `config-server/src/main/resources`
+directory, and change the  `spring.cloud.config.server.git.uri` to point to the new
 repository you just created above.
 
-1. In a command window, build and run the local `config-server`. 
+1. In a command window, build and run the local `config-server`.
 Leave it running for the duration of the demo:
 
 ```
@@ -56,8 +56,8 @@ mvn clean package -DskipTests spring-boot:run
 
 ```
 
-1. In a browser, navigate to the local Config Server endpoint for the application properties, 
-<http://localhost:8888/sb-service/default>, to verify the properties are now 
+1. In a browser, navigate to the local Config Server endpoint for the application properties,
+<http://localhost:8888/sb-service/default>, to verify the properties are now
 being read from the Github repository.
 
 ![Local Config Server](local-config-server.png)
@@ -72,13 +72,13 @@ mvn clean package -DskipTests spring-boot:run
 
 ```
 
-1. Hit <http://localhost:8080> and verify you are 
+1. Hit <http://localhost:8080> and verify you are
 seeing the correct greeting language, which should be `English / Spring Config`.
 
 ![Greeting Browser](greeting-lang.png)
 
 1. The fallback local setting is `English` and it can be verified by stopping `config-server`
-and restarting `sb-service`. 
+and restarting `sb-service`.
 
 1. Explain the @RefreshScope annotation to our app in the `SBController.java` class.
 
@@ -88,7 +88,7 @@ and restarting `sb-service`.
 curl -X POST http://localhost:8080/actuator/refresh
 ```
 
-1. Hit <http://localhost:8080> and verify you are 
+1. Hit <http://localhost:8080> and verify you are
 seeing the correct greeting language, which should be `English / Spring Config`.
 We just refreshed our spring configuration without restarting the application!
 
@@ -96,7 +96,7 @@ We just refreshed our spring configuration without restarting the application!
 
 ### Use Spring Cloud Services Config Server in PCF
 
-Now that we’ve seen how the config server works locally, let’s deploy the app to PWS 
+Now that we’ve seen how the config server works locally, let’s deploy the app to PWS
 and use the SCS config server.
 
 1. Package the application for deployment to PCF.
@@ -144,7 +144,7 @@ cf push
 
 1. Open Apps Manager and show `sb-service` is bound to the service registry
 
-![Registry Browser](service-registry.png) 
+![Registry Browser](service-registry.png)
 
 
 1. Open the `ClientController.java` class in `sb-service-client` application and
@@ -164,20 +164,20 @@ cf push
 
 1. Open Apps Manager and show `sb-service-client` is bound to the service registry
 
-![Registry Browser](service-registry2.png) 
+![Registry Browser](service-registry2.png)
 
 1. From the browser, hit the client endpoint URL.
 
-![Client Endpoint](service-client.png) 
+![Client Endpoint](service-client.png)
 
 ### Use Spring Cloud Circuit Breaker
 
 1. Show the `spring-cloud-services-starter-circuit-breaker` dependency in `sb-service-client/pom.xml`
 
-1. Open `ClientController.java` in `sb-service-client` and uncomment `@HystrixCommand(fallbackMethod = "fallbackPhrase")`. 
+1. Open `ClientController.java` in `sb-service-client` and uncomment `@HystrixCommand(fallbackMethod = "fallbackPhrase")`.
 This will enable Hystrix for this controller.
 
-1. Open `ClientApplication.java` in `sb-service-client` and uncomment `@EnableCircuitBreaker`. This 
+1. Open `ClientApplication.java` in `sb-service-client` and uncomment `@EnableCircuitBreaker`. This
 will enable Hysrix for the client application
 
 1. Create the Circuit Breaker Dashboard service instance in PWS.
@@ -201,13 +201,13 @@ mvn clean package
 cf push
 ```
 
-1. In a browser, hit the home URL of the client app a few times (refresh the page). Make sure it shows the 
+1. In a browser, hit the home URL of the client app a few times (refresh the page). Make sure it shows the
 text Greeting language is English.
 
-1. In the Apps Manager, navigate to the list of services, select the Circuit Breaker Dashboard, and click the manage 
+1. In the Apps Manager, navigate to the list of services, select the Circuit Breaker Dashboard, and click the manage
 button in the upper right corner.
 
-![Hystrix Dashboard](circuit-breaker-closed.png) 
+![Hystrix Dashboard](circuit-breaker-closed.png)
 
 Note that the circuit should show Closed at this time.
 
@@ -217,15 +217,9 @@ Note that the circuit should show Closed at this time.
 cf stop sb-service
 ```
 
-Now go back and try to hit the URL of the client app. You should now see Greeting Language is gibberish!!, 
+Now go back and try to hit the URL of the client app. You should now see Greeting Language is gibberish!!,
 with the number of service call failures in red on the dashboard.
 
-![Hystrix Dashboard](circuit-breaker-open.png) 
+![Hystrix Dashboard](circuit-breaker-open.png)
 
 The service is unreachable, so the default message is shown.
-
-
-
-
-
-

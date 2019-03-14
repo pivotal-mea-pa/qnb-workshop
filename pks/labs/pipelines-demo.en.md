@@ -147,7 +147,7 @@ otherwise rename them to the correct plan names for your `PKS` environment.
 
 1. Once all clusters have been created examine the git log of the `PKS State` git repository. It should look similar to the below.
 
-  ![git-history](git-history.png)
+  ![git-history](images/git-history.png)
 
   - Notice our commit adding the `prod-cluster` to the `desired.json` file. Followed by a commit that added a `runPKS.sh` script, 
   and finally by a commit that removed that script. While the first commit was our commit the second and third commits were done by our pipeline!
