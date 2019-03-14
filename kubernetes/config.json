@@ -1,0 +1,44 @@
+{
+    "workshopSubject":"PACE",
+    "workshopHomepage":"",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+            {
+            "name":"kubernetes-pod-and-namespace",
+            "filename":"kubernetes/slides/k8s-pod-and-namespace-slide"
+            },
+            {
+            "name":"kubernetes-declarative-and-services",
+            "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
+            },
+            {
+            "name":"kubernetes-persistent-volume",
+            "filename":"kubernetes/slides/k8s-persistent-volume-slide"
+            }
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+            "name":"kubernetes-deploy-1st-container",
+            "filename":"kubernetes/labs/k8s-deploy-1st-container"
+            },
+            {
+            "name":"kubernetes-declarative-config",
+            "filename":"kubernetes/labs/k8s-pod-declarative"
+            },
+            {
+            "name":"kubernetes-deployment",
+            "filename":"kubernetes/labs/k8s-deployment"
+            },
+            {
+            "name":"kubernetes-persistent-volume",
+            "filename":"pks/labs/k8s-statefulset-pv"
+            }
+        ]
+    }
+  ]
+}
