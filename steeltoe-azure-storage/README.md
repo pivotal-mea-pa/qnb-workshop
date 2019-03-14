@@ -1,8 +1,4 @@
-#THIS IS NOT READY - STILL REFINING CONTENT
-
 # Azure Storage with Pivotal Application Services for Windows and Steeltoe
-
-YYYYYYYY
 
 ## Pre-requisites
 
@@ -26,9 +22,13 @@ An initial step for the Student to gather needed PAS info
 
 A step to verify the Student has the correct software and cli's loaded, provides some workarounds for Student's with limited desktop permissions, and set a few local environment variables with their creds (that are used in future labs).
 
-### Bind the broker
+### Bind the Microsoft Azure Service Broker
 
-xxxxxx
+Using AppManager guide the workshop student through the Marketplace to find the Azure SQL Service Broker and bind to their space.
+
+### Consume the Microsoft Azure Service Broker in your application
+
+Using the .NET Core template application, add in Steeltoe config dependencies to retrieve VCAP, create the DBContext for data storage, and watch the magic happen.
 
 ### Next Steps
 
@@ -39,7 +39,7 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 	{
 		"workshopSubject":"Azure Storage with Pivotal Application Services for Windows and Steeltoe",
 		"workshopHomepage":"",
-		"workshopHostname":"azure-workshop",
+		"workshopHostname":"steeltoe-azure-storage",
 		"modules": [
 			{
 				"type": "demos",
