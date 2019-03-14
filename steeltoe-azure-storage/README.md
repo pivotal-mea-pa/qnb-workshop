@@ -53,12 +53,12 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 						"filename":"pasw-workshop/labs/setup-environment"
 					},
 					{
-						"name":"Bind Microsoft Azure Sevice Broker",
-						"filename":"steeltoe-azure-storage/labs/xxxxx"
+						"name":"Bind the Microsoft Azure Service Broker",
+						"filename":"steeltoe-azure-storage/labs/bind-sb"
 					},
 					{
-						"name":"Add CosmosDB as data store",
-						"filename":"steeltoe-azure-storage/labs/xxxxx"
+						"name":"Consume the Microsoft Azure Service Broker in your application",
+						"filename":"steeltoe-azure-storage/labs/dbcontext"
 					},
 					{
 						"name":"Push Microservice to PASW",

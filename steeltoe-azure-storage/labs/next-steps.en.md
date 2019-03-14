@@ -1,6 +1,6 @@
 # Continuing Your .NET Cloud Native Journey
 
-<p style="text-align:center"><h4 style="text-align:center">Congratulations you've completed Steeltoe .NET Microservices Workshop!</h4></p>
+<p style="text-align:center"><h4 style="text-align:center">Congratulations you've completed Steeltoe Azure Storage Workshop!</h4></p>
 <p style="line-height:180%;font-size:larger;text-align:center;padding-top:25px">Continue to learn and experience more about cloud native best practices, with Pivotal.</p>
 <table class="table">
   <thead>
