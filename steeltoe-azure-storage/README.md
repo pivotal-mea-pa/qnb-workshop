@@ -35,41 +35,42 @@ Using the .NET Core template application, add in Steeltoe config dependencies to
 A "congrats" for completing the workshop and a reminder to continue learning through Pivotal Education's cloud native .NET developer course. There is also a reminder to experience all the examples in the Steeltoe public repo on Pivotal Web Services.
 
 ## Config.json with all slides and labs
-	```json
-	{
-		"workshopSubject":"Azure Storage with Pivotal Application Services for Windows and Steeltoe",
-		"workshopHomepage":"",
-		"workshopHostname":"steeltoe-azure-storage",
-		"modules": [
-			{
-				"type": "demos",
-				"content": [
-					{
-						"name":"Introduction & Credentials",
-						"filename":"pasw-workshop/labs/intro-creds"
-					},
-					{
-						"name":"Setup Environment",
-						"filename":"pasw-workshop/labs/setup-environment"
-					},
-					{
-						"name":"Bind the Microsoft Azure Service Broker",
-						"filename":"steeltoe-azure-storage/labs/bind-sb"
-					},
-					{
-						"name":"Consume the Microsoft Azure Service Broker in your application",
-						"filename":"steeltoe-azure-storage/labs/dbcontext"
-					},
-					{
-						"name":"Push Microservice to PASW",
-						"filename":"pasw-workshop/labs/push-microservice"
-					},
-					{
-						"name":"Continuing Your .NET Cloud Native Journey",
-						"filename":"steeltoe-azure-storage/labs/next-steps"
-					}
-				]
-			}
-		]
-	}
-	```
+
+```json
+{
+	"workshopSubject":"Azure Storage with Pivotal Application Services for Windows and Steeltoe",
+	"workshopHomepage":"",
+	"workshopHostname":"steeltoe-azure-storage",
+	"modules": [
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"pasw-workshop/labs/intro-creds"
+				},
+				{
+					"name":"Setup Environment",
+					"filename":"pasw-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Bind the Microsoft Azure Service Broker",
+					"filename":"steeltoe-azure-storage/labs/bind-sb"
+				},
+				{
+					"name":"Consume the Microsoft Azure Service Broker in your application",
+					"filename":"steeltoe-azure-storage/labs/dbcontext"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"Continuing Your .NET Cloud Native Journey",
+					"filename":"steeltoe-azure-storage/labs/next-steps"
+				}
+			]
+		}
+	]
+}
+```

@@ -61,66 +61,66 @@ Examples of logging within a .NET Core application and how to retrieve those log
 A "congrats" for completing the workshop and a reminder to continue learning through Pivotal Education's cloud native .NET developer course. There is also a reminder to experience all the examples in the Steeltoe public repo on Pivotal Web Services.
 
 ## Config.json with all slides and labs
-	```json
-	{
-		"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
-		"workshopHomepage":"",
-		"workshopHostname":"steeltoe-basics",
-		"modules": [
-			{
-				"type": "concepts",
-				"content": [
-					{
-						"name":"Advanced Features of Steeltoe",
-						"filename":"steeltoe-basics/slides/advanced-steeltoe"
-					}
-				]
-			},
-			{
-				"type": "demos",
-				"content": [
-					{
-						"name":"Introduction & Credentials",
-						"filename":"steeltoe-basics/labs/intro-creds"
-					},
-					{
-						"name":"Setup Environment",
-						"filename":"pasw-workshop/labs/setup-environment"
-					},
-					{
-						"name":"Environment Variables",
-						"filename":"steeltoe-basics/labs/env-vars"
-					},
-					{
-						"name":"Push Microservice to PASW",
-						"filename":"pasw-workshop/labs/push-microservice"
-					},
-					{
-						"name":"User Provided Services with Steeltoe",
-						"filename":"steeltoe-basics/labs/cups"
-					},
-					{
-						"name":"Include Steeltoe Actuators and Create a Custom Health Check",
-						"filename":"steeltoe-basics/labs/actuators"
-					},
-					{
-						"name":"Push Microservice to PASW",
-						"filename":"pasw-workshop/labs/push-microservice"
-					},
-					{
-						"name":"App Manager with Management Actuators",
-						"filename":"steeltoe-basics/labs/using-actuators"
-					},
-					{
-						"name":"Steeltoe Dynamic Logging",
-						"filename":"steeltoe-basics/labs/logging"
-					},
-					{
-						"name":"Continuing Your .NET Cloud Native Journey",
-						"filename":"steeltoe-basics/labs/next-steps"
-					}
-				]
-			}
-		]
-	}
-	```
+```json
+{
+	"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
+	"workshopHomepage":"",
+	"workshopHostname":"steeltoe-basics",
+	"modules": [
+		{
+			"type": "concepts",
+			"content": [
+				{
+					"name":"Advanced Features of Steeltoe",
+					"filename":"steeltoe-basics/slides/advanced-steeltoe"
+				}
+			]
+		},
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"steeltoe-basics/labs/intro-creds"
+				},
+				{
+					"name":"Setup Environment",
+					"filename":"pasw-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Environment Variables",
+					"filename":"steeltoe-basics/labs/env-vars"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"User Provided Services with Steeltoe",
+					"filename":"steeltoe-basics/labs/cups"
+				},
+				{
+					"name":"Include Steeltoe Actuators and Create a Custom Health Check",
+					"filename":"steeltoe-basics/labs/actuators"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"App Manager with Management Actuators",
+					"filename":"steeltoe-basics/labs/using-actuators"
+				},
+				{
+					"name":"Steeltoe Dynamic Logging",
+					"filename":"steeltoe-basics/labs/logging"
+				},
+				{
+					"name":"Continuing Your .NET Cloud Native Journey",
+					"filename":"steeltoe-basics/labs/next-steps"
+				}
+			]
+		}
+	]
+}
+```
