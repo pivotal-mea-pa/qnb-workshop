@@ -6,8 +6,8 @@
         "type": "concepts",
         "content": [
             {
-            "name":"example-slide",
-            "filename":"sre/01-sre-concepts-slide"
+            "name":"pcfs-sre-SLI-SLO-slide",
+            "filename":"sre/pcfs-sre-sli-slo-slide"
             }
         ]
     },
