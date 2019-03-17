@@ -1,0 +1,65 @@
+{
+    "workshopSubject":"PACE",
+    "workshopHomepage":"",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+            {
+            "name":"1. Spring Boot Primer",
+            "filename":"scdf/sildes/01-spring-boot-primer"
+            },
+            {
+            "name":"2. Spring Integration",
+            "filename":"scdf/sildes/02-spring-integration"
+            },
+			{
+			"name":"3. Spring Batch",
+			"filename":"scdf/slides/03-spring-batch"	
+			},
+			{
+			"name":"4. Spring Cloud Stream App Starters",
+			"filename":"scdf/slides/04-spring-cloud-stream-app-starters"	
+			},
+			{
+			"name":"5. Spring Cloud Stream Custom Apps",
+			"filename":"scdf/slides/05-spring-cloud-stream-custom-apps"	
+			},
+			{
+			"name":"6. Spring Cloud Data Flow - Local",
+			"filename":"scdf/slides/06-spring-cloud-dataflow-local"	
+			}
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+            "name":"1. Spring Boot Primer",
+            "filename":"scdf/labs/01-spring-boot-primer"
+            },
+			{
+			"name":"2. Spring Integration",
+			"filename":"scdf/labs/02-spring-integration"	
+			},
+			{
+			"name":"3. Spring Batch",
+			"filename":"scdf/labs/03-spring-batch"	
+			},
+			{
+			"name":"4. Spring Cloud Stream App Starters",
+			"filename":"scdf/labs/04-spring-cloud-stream-app-starters"	
+			},
+			{
+			"name":"5. Spring Cloud Stream Custom Apps",
+			"filename":"scdf/labs/05-spring-cloud-stream-custom-apps"	
+			},
+			{
+			"name":"6. Spring Cloud Data Flow - Local",
+			"filename":"scdf/labs/06-spring-cloud-dataflow-local"	
+			}
+
+        ]
+    }
+  ]
+}
