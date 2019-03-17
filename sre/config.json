@@ -1,24 +1,28 @@
 {
-    "workshopSubject":"Site Reliability Engineering",
-    "workshopHomepage":"",
-    "modules": [
+  "workshopSubject": "Site Reliability Engineering",
+  "workshopHomepage": "",
+  "modules": [
     {
-        "type": "concepts",
-        "content": [
-            {
-            "name":"pcfs-sre-SLI-SLO-slide",
-            "filename":"sre/pcfs-sre-sli-slo-slide"
-            }
-        ]
+      "type": "concepts",
+      "content": [
+        {
+          "name": "O'Reilly Google SRE Book Series",
+          "filename": "sre/google-oreilly-sre-books-slide"
+        },
+        {
+          "name": "PCFS SLI/SLO Deck",
+          "filename": "sre/pcfs-sre-sli-slo-slide"
+        }
+      ]
     },
     {
-        "type": "demos",
-        "content": [
-            {
-            "name":"example-demo",
-            "filename":"example/example-demo"
-            }
-        ]
+      "type": "demos",
+      "content": [
+        {
+          "name": "example-demo",
+          "filename": "example/example-demo"
+        }
+      ]
     }
   ]
 }
