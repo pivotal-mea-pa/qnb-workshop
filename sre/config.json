@@ -1,0 +1,24 @@
+{
+    "workshopSubject":"Site Reliability Engineering",
+    "workshopHomepage":"",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+            {
+            "name":"example-slide",
+            "filename":"sre/01-sre-concepts-slide"
+            }
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+            "name":"example-demo",
+            "filename":"example/example-demo"
+            }
+        ]
+    }
+  ]
+}
