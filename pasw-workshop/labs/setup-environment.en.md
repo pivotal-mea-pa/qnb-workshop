@@ -51,12 +51,10 @@ If the user were to retrieve and install the CLI from app manager tools, then th
 
 ## Install the Steeltoe Visual Studio project templates
 
-1. Download the VSIX [templates installer](https://github.com/SteeltoeOSS/Tooling/releases/download/templates-0.0.1/App-Templates-VSIX.vsix).
-  <!--
-  In my opinion it is always nice to start with the page containing the download so that I can read and/or reference any documentation. It also provides you some visual clues that you are downloading what you expect.
-  https://github.com/SteeltoeOSS/Tooling/releases/tag/templates-0.0.1
-  -->
+1. Download the VSIX [templates installer](https://github.com/SteeltoeOSS/Tooling/releases/tag/templates-0.0.1).
+
 1. With Visual Studio closed, double click the downloaded file to install the templates.
+
 1. Once complete, open Visual Studio and choose `File > New > Project > C#` there should be additional Steeltoe and Cloud Foundry template listed.
 
 <img src="a_visual-studio-templates.PNG" alt="VS Steeltoe Templates" width="400"/>
