@@ -32,12 +32,11 @@ It also features a Kill command to simulate application failure.
 * Publish each product using supplied publish profile.
 * Compiled assemblies are output to `\publish\` folder.
 * Copy `manifest.yml` file into each publish folder, making necessary changes per respective apps.
+* Optional. Fork the funny-quote-config repository (see link below), change the url in gitconfig.json to point to the forked url. This will allow demonstrating different client types from the front end, for example, rest, wcf, etc...
 * For each lab, there are two options for creating services: 1) Run `create-services.bat` in `\scripts` folder to create all marketplace services needed for all labs, or 2) Create same services as you progress through each lab that requires their use.
-* For each lab, there are two options for pushing the code: 1) Push each app from each publish folder, or 2) Only push the apps as you progress through each lab.
 
 ### NOTES
 * If there is a need to build and publish more than once, it is easier to add the manifest file to each project and make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
-* If each app is pushed progressively through the labs rather than all upfront, fork the funny-quote-config repository, change the url in gitconfig.json to point to the forked url, and change the ClientType attribute within the yaml file(s) to local for the respective app, whether UICore or UIForms. This is to ensure quotes are fetched internal to the app if the backend service has not been pushed.
 
 ### Prerequisites
 * Visual Studio 2017 with .NET core support
