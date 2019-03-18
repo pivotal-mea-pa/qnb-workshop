@@ -37,7 +37,7 @@ It also features a Kill command to simulate application failure.
 
 ### NOTES
 * If there is a need to build and publish more than once, it is easier to add the manifest file to each project and make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
-* If each app is pushed progressively through the labs rather than all upfront, fork the funny-quote-config repository, change the url in gitconfig.json to point to the forked url, and change the ClientType to local for the respective app, whether UICore or UIForms. This is to ensure quotes are fetched internal to the app if the backend service has not been pushed.
+* If each app is pushed progressively through the labs rather than all upfront, fork the funny-quote-config repository, change the url in gitconfig.json to point to the forked url, and change the ClientType attribute within the yaml file(s) to local for the respective app, whether UICore or UIForms. This is to ensure quotes are fetched internal to the app if the backend service has not been pushed.
 
 ### Prerequisites
 * Visual Studio 2017 with .NET core support
