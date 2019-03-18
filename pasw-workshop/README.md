@@ -51,7 +51,7 @@ A "congrats" note to the student for completing the workshop, and a reminder to 
 
 ### Join Workshops
 
-Alternately to the Next Steps lab, if you are combining this workshop with another (like steeloe-basics), this page can be the transition.
+If you would like to remove the Next Steps lab and join this workshop to another, look in the transition-pages PACE content.
 
 ## Config.json with labs for Windows Diego
 ```json

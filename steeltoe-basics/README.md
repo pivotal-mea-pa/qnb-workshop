@@ -61,6 +61,10 @@ Examples of logging within a .NET Core application and how to retrieve those log
 
 A "congrats" for completing the workshop and a reminder to continue learning through Pivotal Education's cloud native .NET developer course. There is also a reminder to experience all the examples in the Steeltoe public repo on Pivotal Web Services.
 
+### Join Workshops
+
+If you would like to remove the Next Steps lab and join this workshop to another, look in the transition-pages PACE content.
+
 ## Config.json with labs for Windows Diego
 
 ```json
