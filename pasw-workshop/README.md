@@ -49,6 +49,10 @@ Using App Manager the Student is guided through attaching a new route to their a
 
 A "congrats" note to the student for completing the workshop, and a reminder to continue learning about cloud native .NET with the Steeltoe Workshop. There is also an offer to experience all the examples in the Steeltoe public repo on Pivotal Web Services
 
+### Join Workshops
+
+Alternately to the Next Steps lab, if you are combining this workshop with another (like steeloe-basics), this page can be the transition.
+
 ## Config.json with labs for Windows Diego
 ```json
 {
