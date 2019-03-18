@@ -21,8 +21,9 @@
     > CREATE DATABASE funnyquotes;
     ````
 
-1. Launch FunnyQuotesServiceOwin locally, either from Visual Studio or Rider (must be on Windows)
-1. Demonstrate database initialization by app startup by querying the database. From MySQL CLI:
+1. Launch FunnyQuotesServiceOwin locally, either from Visual Studio or Rider (must be on Windows).
+1. Navigate to http://localhost:61111/api/funnyquotes/random to initialize database.
+1. Demonstrate database initialization by querying the database. From MySQL CLI:
 
     ```
     > USE funnyquotes;
@@ -58,12 +59,12 @@
 
 1. Highlight that startup project argument is used to determine the connection to the database in order to compare the schema. Web.Config must have ConnectionString section even if it's not used in normal course of the application to run this command.
     1. Show the new migration that was added under `FunnyQuotesCookieDatabase\Migrations`.
-    1. Show that at this point the database is still based on old schema
+    1. Show that at this point the database is still based on old schema.
 
     ```
     > DESCRIBE FunnyQuotes;
     ```
-1. Run FunnyQuotesServiceOwin again and hit endpoint that uses the database to force migration to be applied
+1. Run FunnyQuotesServiceOwin again and hit endpoint that uses the database to force migration to be applied.
 
     http://localhost:61111/api/funnyquotes/random
 
@@ -74,10 +75,10 @@
     select MigrationId, ContextKey, ProductVersion From __MigrationHistory;
     ```
 
-  Extract column should now be visible and new record in migration table
+  The Views column should now be visible and new record in migration table.
 
 ### Push to PCF
-1. Provision a MySQL instance from marketplace. Use `mysql-funnyquotes` as name
+1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
 1. Push Owin backend
 
     ```
@@ -85,9 +86,11 @@
     > cf push FunnyQuotesServicesOwin -s windows2016 -b hwc_buildpack
     ```
 
-1. Bind to MySQL service and restart
-1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint
-1. Open up `FunnyQuotesServicesOwin.Startup` class and explain use of Steeltoe Connectors to initialize db context. Highlight the following lines of code
+1. Bind to MySQL service and restart.
+1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
+1. Open up `FunnyQuotesServicesOwin.Startup` class and explain use of Steeltoe Connectors to initialize db context.
+
+Highlight the following lines of code.
 
     ```csharp
     builder.RegisterMySqlConnection(config);
@@ -97,6 +100,6 @@
         return new FunnyQuotesCookieDbContext(connString);
     });
     ```                
-  Explain that helper methods exist when registering EF Core, but for EF 6.x IDbConnection get's auto configured, and we can feed it into EF registration as per above
+  Explain that helper methods exist when registering EF Core, but EF 6.x IDbConnection gets auto configured, and we can feed it into EF registration as per above.
 
-1. Push FunnyQuotesLegacyService using manifest and how things can bind to services without needing to restart
+1. Push FunnyQuotesLegacyService using manifest and explain a restart is not necessary.
