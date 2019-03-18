@@ -35,7 +35,7 @@
 1. Note: Automatic log correlation only works in .NET core apps, but you can get Gantt charts out of the box. Will be added in future version of Steeltoe. Manual correlation can be done right now by prefixing all logs with traceid/spanid in incoming headers
 
 ## Highlight Code
-1. Adding actuators and enabling them in code. See startup.cs or global.asmx.cs and search for `Actuator`. It has to be registered and activated.
-1. When using legacy stack with autofac, adding actuators automatically registers dynamic console logger which is needed to change log levels at runtime
-	1. For .NET core app, open up Program.cs and highlight explicit registration of dynamic console
-1. Show  `services.AddDistributedTracing(Configuration);` and how it automatically appends headers to any `HttpClient` invocations (.NET core only)
+1. Adding Actuators and enabling them in code. See Startup.cs or Global.asax.cs and search for `Actuator`. It has to be registered and activated.
+1. When using legacy stack with Autofac, adding actuators automatically registers dynamic console logger which is needed to change log levels at runtime.
+	1. For .NET core app, open up Program.cs and highlight explicit registration of dynamic console.
+1. Show  `services.AddDistributedTracing(Configuration);` and how it automatically appends headers to any `HttpClient` invocations (.NET core only).
