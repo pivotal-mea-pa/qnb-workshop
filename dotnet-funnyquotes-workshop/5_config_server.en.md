@@ -61,7 +61,7 @@ Highlight that new provider is picked up without restart of the app.
       {
           var quotesConfig = c.Resolve<IOptionsSnapshot<FunnyQuotesConfiguration>>();
           return c.ResolveNamed<IFunnyQuoteService>(quotesConfig.Value.ClientType);
-                    })
+      })
     ```                
                 
 ### Feature toggles
