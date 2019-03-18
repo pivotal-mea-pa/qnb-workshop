@@ -46,6 +46,7 @@ NOTE: If there is a need to build and publish more than once, it is easier to ad
   * MySQL
 
 **Source Repo:** https://github.com/Pivotal-Field-Engineering/funny-quotes-demo
+
 **Config Repo:** https://github.com/Pivotal-Field-Engineering/funny-quotes-config
 
 # How to present
