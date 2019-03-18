@@ -35,7 +35,7 @@ It also features a Kill command to simulate application failure.
 * For each lab, there are two options for creating services: 1) Run `create-services.bat` in `\scripts` folder to create all marketplace services needed for all labs, or 2) Create same services as you progress through each lab that requires their use.
 * For each lab, there are two options for pushing the code: 1) Push each app from each publish folder, or 2) Only push the apps as you progress through each lab.
 
-# NOTES
+### NOTES
 * If there is a need to build and publish more than once, it is easier to add the manifest file to each project and make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
 * If each app is pushed progressively through the labs rather than all upfront, fork the funny-quote-config repository, change the url in gitconfig.json to point to the forked url, and change the ClientType to local for the respective app, whether UICore or UIForms. This is to ensure quotes are fetched internal to the app if the backend service has not been pushed.
 
