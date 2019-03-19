@@ -29,8 +29,8 @@ For our project, we'll be using [Pomelo.EntityFrameworkCore.MySql](https://githu
 
 <details>
   <summary>Add the <b>Pomelo.EntityFrameworkCore.MySql</b> from NuGet to <b>NotesApp</b> project.</summary>
-  <a href="../Adding-a-Persistence-Layer/pomelo-dependency.png" target="_blank">
-    ![pomelo-dependency.png](../Adding-a-Persistence-Layer/pomelo-dependency.png)
+  <a href="pomelo-dependency.png" target="_blank">
+    ![pomelo-dependency.png](pomelo-dependency.png)
   </a>
 </details>
 
@@ -42,8 +42,8 @@ To simplify connecting to databases, make use of [Steeltoe](http://steeltoe.io/)
 
 <details>
     <summary>Add dependencies for <b>Steeltoe.CloudFoundry.ConnectorCore</b> and <b>Steeltoe.CloudFoundry.Connector.EFCore</b></summary>
-    <a href="../Adding-a-Persistence-Layer/steeltoe-mysql-connector.png" target="_blank">
-        ![steeltoe-mysql-connector.png](../Adding-a-Persistence-Layer/steeltoe-mysql-connector.png)
+    <a href="steeltoe-mysql-connector.png" target="_blank">
+        ![steeltoe-mysql-connector.png](steeltoe-mysql-connector.png)
     </a>
 </details>
 

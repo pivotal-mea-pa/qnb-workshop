@@ -49,8 +49,8 @@ At this point, you'll probably encounter some errors from the IDE, complaining a
 **Rider:**
 <details>
     <summary>To resolve this, follow the suggestion provided on the <strong>ALT+ENTER</strong> menu, and add a reference to the main project.</summary>
-    <a href="../Creating-a-RESTful-API/restapi-rider-reference-project.png" target="_blank">
-        ![restapi-rider-reference-project.png](../Creating-a-RESTful-API/restapi-rider-reference-project.png)
+    <a href="restapi-rider-reference-project.png" target="_blank">
+        ![restapi-rider-reference-project.png](restapi-rider-reference-project.png)
     </a>
 </details>
 
@@ -59,11 +59,11 @@ At this point, you'll probably encounter some errors from the IDE, complaining a
 **Visual Studio:**
 <details>
     <summary>To resolve this, right-click on the <strong>Dependencies</strong> section and select <strong>Add Reference</strong>. From there, select the <strong>NotesApp</strong> project and hit <strong>OK</strong>.</summary>
-    <a href="../Creating-a-RESTful-API/restapi-visual-studio-add-reference-menu.png" target="_blank">
-        ![restapi-visual-studio-add-reference-menu.png](../Creating-a-RESTful-API/restapi-visual-studio-add-reference-menu.png)
+    <a href="restapi-visual-studio-add-reference-menu.png" target="_blank">
+        ![restapi-visual-studio-add-reference-menu.png](restapi-visual-studio-add-reference-menu.png)
     </a>
-    <a href="../Creating-a-RESTful-API/restapi-visual-studio-add-reference-dialog.png" target="_blank">
-        ![restapi-visual-studio-add-reference-dialog.png](../Creating-a-RESTful-API/restapi-visual-studio-add-reference-dialog.png)
+    <a href="restapi-visual-studio-add-reference-dialog.png" target="_blank">
+        ![restapi-visual-studio-add-reference-dialog.png](restapi-visual-studio-add-reference-dialog.png)
     </a>
 </details>
 
@@ -73,8 +73,8 @@ There's a bit of a quirk that occurs when our `NotesApp.Tests` project reference
 
 <details>
     <summary>To do this, make the following changes:</summary>
-    <a href="../Creating-a-RESTful-API/restapi-dependency-version.png" target="_blank">
-        ![restapi-dependency-version.png](../Creating-a-RESTful-API/restapi-dependency-version.png)
+    <a href="restapi-dependency-version.png" target="_blank">
+        ![restapi-dependency-version.png](restapi-dependency-version.png)
     </a>
 </details>
 

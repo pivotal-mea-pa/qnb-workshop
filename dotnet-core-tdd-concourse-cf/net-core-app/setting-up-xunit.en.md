@@ -9,8 +9,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 **Rider:**
 <details>
     <summary>Select <strong>Unit Test Project</strong> under the <strong>.NET Core</strong> section.</summary>
-    <a href="../Setting-Up-xUnit/xunit-rider-setup-new-tests-project.png" target="_blank">
-        ![xunit-rider-setup-new-tests-project.png](../Setting-Up-xUnit/xunit-rider-setup-new-tests-project.png)
+    <a href="xunit-rider-setup-new-tests-project.png" target="_blank">
+        ![xunit-rider-setup-new-tests-project.png](xunit-rider-setup-new-tests-project.png)
     </a>
 </details>
 
@@ -19,8 +19,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 **Visual Studio:**
 <details>
     <summary>Select <strong>xUnit Test Project (.NET Core)</strong> from the <strong>Visual C# > .NET Core</strong> section.</summary>
-    <a href="../Setting-Up-xUnit/xunit-visual-studio-setup-new-tests-project.png" target="_blank">
-        ![xunit-visual-studio-setup-new-tests-project.png](../Setting-Up-xUnit/xunit-visual-studio-setup-new-tests-project.png)
+    <a href="xunit-visual-studio-setup-new-tests-project.png" target="_blank">
+        ![xunit-visual-studio-setup-new-tests-project.png](xunit-visual-studio-setup-new-tests-project.png)
     </a>
 </details>
 
@@ -28,8 +28,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 
 <details>
     <summary>Your project should now look like this (approximately the same in both Rider and Visual Studio):</summary>
-    <a href="../Setting-Up-xUnit/xunit-setup-project-structure.png" target="_blank">
-        ![xunit-setup-project-structure.png](../Setting-Up-xUnit/xunit-setup-project-structure.png)
+    <a href="xunit-setup-project-structure.png" target="_blank">
+        ![xunit-setup-project-structure.png](xunit-setup-project-structure.png)
     </a>
 </details>
 
