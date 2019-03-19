@@ -1,10 +1,10 @@
 # Pivotal Application Services for Windows Workshop 
 
-Workshop to introduce the basics of PAS to a .NET savvy group. The workshop creates and pushes a .NET Core app to PASW. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
+Workshop to introduce the basics of PAS to a .NET savvy group. The workshop creates and pushes a .NET Core app to either a Windows Cell or Linux Cell. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
 
 ## Pre-requisites
 
-The foundation to run the demo must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
+If you choose the labs using Windows Cell, the foundation to run the demo must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
 
 The Workshop assumes the Students have been given the following:
  - **API URL** of the Workshop foundation
@@ -49,13 +49,16 @@ Using App Manager the Student is guided through attaching a new route to their a
 
 A "congrats" note to the student for completing the workshop, and a reminder to continue learning about cloud native .NET with the Steeltoe Workshop. There is also an offer to experience all the examples in the Steeltoe public repo on Pivotal Web Services
 
-## Config.json with all labs
+### Join Workshops
 
+If you would like to remove the Next Steps lab and join this workshop to another, look in the transition-pages PACE content.
+
+## Config.json with labs for Windows Diego
 ```json
 {
-	"workshopSubject":"Pivotal Application Services for Windows",
+	"workshopSubject":"Pivotal Application Services for .NET",
 	"workshopHomepage":"",
-	"workshopHostname":"pasw-workshop",
+	"workshopHostname":"pasw-workshop-win",
 	"modules": [
 		{
 			"type": "demos",
@@ -69,8 +72,56 @@ A "congrats" note to the student for completing the workshop, and a reminder to 
 					"filename":"pasw-workshop/labs/setup-environment"
 				},
 				{
-					"name":"Create .NET Microservice",
-					"filename":"pasw-workshop/labs/create-microservice"
+					"name":"Create .NET Core Microservice for Windows",
+					"filename":"pasw-workshop/labs/create-microservice-win"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"Explore Applications Manager",
+					"filename":"pasw-workshop/labs/explore-appmanager"
+				},
+				{
+					"name":"Setup Auto-Scaling",
+					"filename":"pasw-workshop/labs/attach-autoscaler"
+				},
+				{
+					"name":"Add a New Route",
+					"filename":"pasw-workshop/labs/add-route"
+				},
+				{
+					"name":"Next Steps",
+					"filename":"pasw-workshop/labs/next-steps"
+				}
+			]
+		}
+	]
+}
+```
+
+## Config.json with labs for Linux Diego
+```json
+{
+	"workshopSubject":"Pivotal Application Services for .NET",
+	"workshopHomepage":"",
+	"workshopHostname":"pasw-workshop-linux",
+	"modules": [
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"pasw-workshop/labs/intro-creds"
+				},
+				{
+					"name":"Setup Desktop Environment",
+					"filename":"pasw-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Create .NET Core Microservice for Linux",
+					"filename":"pasw-workshop/labs/create-microservice-linux"
 				},
 				{
 					"name":"Push Microservice to PASW",
