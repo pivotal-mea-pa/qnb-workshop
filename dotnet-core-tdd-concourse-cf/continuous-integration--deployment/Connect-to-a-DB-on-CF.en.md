@@ -1,4 +1,4 @@
-**Previous:** [CF Deployment](../CF-Deployment)
+**Previous:** [CF Deployment](../cf-deployment)
 
 In this section, we'll configure our app to talk to a database on our Cloud Foundry instance.
 
@@ -122,4 +122,4 @@ That's it! Run a `GET` on `https://notes.dev.cfdev.sh/api/notes`. You should see
 
 **Git Tag:** [deploy-and-connect-to-db-on-cf](https://github.com/xtreme-steve-elliott/NotesApp/tree/deploy-and-connect-to-db-on-cf)
 
-**Up Next:** [Smoke Tests](../Smoke-Tests)
+**Up Next:** [Smoke Tests](../smoke-tests)
