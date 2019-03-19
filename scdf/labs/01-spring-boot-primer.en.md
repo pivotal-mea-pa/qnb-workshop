@@ -221,5 +221,7 @@ The following lab will show you how to create a Spring Boot project. The exampls
 
 ## Challenges
 
-- [ ] Add a POST for a ToDo
-- [ ] Add a find by Id request
+- [ ] Add new To-Do's using the *cURL* command.
+- [ ] Find by ID using the *cURL* command.
+- [ ] Implement the *DELETE* method in the ***ToDoController*** class.
+- [ ] Add a ***findByDescription*** that *contains* a certain text in the ***ToDoRepository*** interface.
