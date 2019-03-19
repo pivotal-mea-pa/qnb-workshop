@@ -1,4 +1,4 @@
-**Previous:** [[Connect to a DB on CF]]
+**Previous:** [Connect to a DB on CF](../Connect-to-a-DB-on-CF)
 
 In this section, we'll add smoke tests to run against our deployed app.
 
@@ -137,8 +137,8 @@ Update the pipeline and push up the code.
 
 <details>
   <summary>It should now look like this.</summary>
-  <a href="continuous-integration--deployment/pipeline-smoke-test.png" target="_blank">
-    [[pipeline-smoke-test.png]]
+  <a href="pipeline-smoke-test.png" target="_blank">
+    ![pipeline-smoke-test.png](pipeline-smoke-test.png)
   </a>
 </details>
 
@@ -146,7 +146,7 @@ Update the pipeline and push up the code.
 
 **Git Tag:** [smoke-tests](https://github.com/xtreme-steve-elliott/NotesApp/tree/smoke-tests)
 
-**Up Next:** [[Zero-Downtime Deployment]]
+**Up Next:** [Zero-Downtime Deployment](../Zero-Downtime-Deployment)
 
 **Resources**  
 [Postman Test Scripts](https://www.getpostman.com/docs/v6/postman/scripts/test_scripts)

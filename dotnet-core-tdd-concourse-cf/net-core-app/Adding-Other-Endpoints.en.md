@@ -1,4 +1,4 @@
-**Previous:** [[Introducing an In-Memory Database]]
+**Previous:** [Introducing an In-Memory Database](../Introducing-an-In-Memory-Database)
 
 In this section, we'll be building out three more endpoints, `GetAsync(long id)`, `PostAsync(Note note)` and `DeleteAsync(long id)`.
 
@@ -21,7 +21,7 @@ In this section, we'll be building out three more endpoints, `GetAsync(long id)`
 
 **Git Tag:** [adding-other-endpoints](https://github.com/xtreme-steve-elliott/NotesApp/tree/adding-other-endpoints)
 
-**Up Next:** [[Adding Integration Tests]]
+**Up Next:** [Adding Integration Tests](../Adding-Integration-Tests)
 
 **References**  
 [InMemory: Improve in-memory key generation (bug)](https://github.com/aspnet/EntityFrameworkCore/issues/6872)

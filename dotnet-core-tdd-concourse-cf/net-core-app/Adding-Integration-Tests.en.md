@@ -1,4 +1,4 @@
-**Previous:** [[Adding Other Endpoints]]
+**Previous:** [Adding Other Endpoints](../Adding-Other-Endpoints)
 
 ### Setup
 
@@ -69,4 +69,4 @@ Add tests for the remaining endpoints and test cases that we covered with our un
 
 **Git Tag:** [adding-integration-tests](https://github.com/xtreme-steve-elliott/NotesApp/tree/adding-integration-tests)
 
-**Up Next:** [[Adding a Persistence Layer]]
+**Up Next:** [Adding a Persistence Layer](../Adding-a-Persistence-Layer)

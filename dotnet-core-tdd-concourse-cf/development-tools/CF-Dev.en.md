@@ -1,4 +1,4 @@
-**Previous:** [[Deploy Concourse]]
+**Previous:** [Deploy Concourse](../Deploy-Concourse)
 
 We will install CF Dev locally to simulate the Cloud Foundry environment. Prior to this, you must have the [CF CLI](https://github.com/cloudfoundry/cli#downloads) installed. Follow the instructions [here](https://github.com/cloudfoundry-incubator/cfdev) to install and run CF Dev.
 
@@ -34,4 +34,4 @@ Space:          cfdev-space
 
 ```
 
-**Up Next:** [.NET Core App](Home#net-core-app)
+**Up Next:** [.NET Core App](/#net-core-app)

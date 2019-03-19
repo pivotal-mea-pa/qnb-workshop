@@ -7,87 +7,87 @@
             "content": [
                 {
                     "name": "SDK for .NET Core and dotnet CLI",
-                    "filename": "development-tools/SDK-for-.NET-Core-and-dotnet-CLI"
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/SDK-for-.NET-Core-and-dotnet-CLI"
                 },
                 {
                     "name": "JetBrains Rider",
-                    "filename": "development-tools/JetBrains-Rider"
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/JetBrains-Rider"
                 },
                 {
                     "name": "Microsoft Visual Studio",
-                    "filename": "development-tools/Microsoft-Visual-Studio"
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/Microsoft-Visual-Studio"
                 },
                 {
                     "name": "Deploy Concourse",
-                    "filename": "development-tools/Deploy-Concourse"
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/Deploy-Concourse"
                 },
                 {
                     "name": "CF Dev",
-                    "filename": "development-tools/CF-Dev"
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/CF-Dev"
                 },
                 {
                     "name": "Setting Up the App in Rider",
-                    "filename": "net-core-app/Setting-Up-the-App-in-Rider"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Setting-Up-the-App-in-Rider"
                 },
                 {
                     "name": "Setting Up the App in Visual Studio",
-                    "filename": "net-core-app/Setting-Up-the-App-in-Visual-Studio"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Setting-Up-the-App-in-Visual-Studio"
                 },
                 {
                     "name": "Setting Up xUnit",
-                    "filename": "net-core-app/Setting-Up-xUnit"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Setting-Up-xUnit"
                 },
                 {
                     "name": "Creating a RESTful API",
-                    "filename": "net-core-app/Creating-a-RESTful-API"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Creating-a-RESTful-API"
                 },
                 {
                     "name": "Introducing Fluent Assertions",
-                    "filename": "net-core-app/Introducing-Fluent-Assertions"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Introducing-Fluent-Assertions"
                 },
                 {
                     "name": "Making the App Asynchronous",
-                    "filename": "net-core-app/Making-the-App-Asynchronous"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Making-the-App-Asynchronous"
                 },
                 {
                     "name": "Delegating Data Responsibility",
-                    "filename": "net-core-app/Delegating-Data-Responsibility"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Delegating-Data-Responsibility"
                 },
                 {
                     "name": "Introducing an In-Memory Database",
-                    "filename": "net-core-app/Introducing-an-In-Memory-Database"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Introducing-an-In-Memory-Database"
                 },
                 {
                     "name": "Adding Other Endpoints",
-                    "filename": "net-core-app/Adding-Other-Endpoints"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Adding-Other-Endpoints"
                 },
                 {
                     "name": "Adding Integration Tests",
-                    "filename": "net-core-app/Adding-Integration-Tests"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Adding-Integration-Tests"
                 },
                 {
                     "name": "Adding a Persistence Layer",
-                    "filename": "net-core-app/Adding-a-Persistence-Layer"
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/Adding-a-Persistence-Layer"
                 },
                 {
                     "name": "CI Setup",
-                    "filename": "continuous-integration--deployment/CI-Setup"
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/CI-Setup"
                 },
                 {
                     "name": "CF Deployment",
-                    "filename": "continuous-integration--deployment/CF-Deployment"
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/CF-Deployment"
                 },
                 {
                     "name": "Connect to a DB on CF",
-                    "filename": "continuous-integration--deployment/Connect-to-a-DB-on-CF"
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/Connect-to-a-DB-on-CF"
                 },
                 {
                     "name": "Smoke Tests",
-                    "filename": "continuous-integration--deployment/Smoke-Tests"
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/Smoke-Tests"
                 },
                 {
                     "name": "Zero-Downtime Deployment",
-                    "filename": "continuous-integration--deployment/Zero-Downtime-Deployment"
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/Zero-Downtime-Deployment"
                 }
             ]
         }
