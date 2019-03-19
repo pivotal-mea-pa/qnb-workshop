@@ -1,4 +1,4 @@
-**Previous:** [[Introducing Fluent Assertions]]
+**Previous:** [Introducing Fluent Assertions](../Introducing-Fluent-Assertions)
 
 As outlined briefly in [Asynchronous programming](https://docs.microsoft.com/en-us/dotnet/csharp/async), you should be writing asynchronous code when accessing a database. If operations may take a long time, you don't want to be locking up your threads.
 
@@ -17,7 +17,7 @@ As part of best practices, we'll also be renaming our asynchronous methods to ha
 
 **Git Tag:** [making-the-app-asynchronous](https://github.com/xtreme-steve-elliott/NotesApp/tree/making-the-app-asynchronous)
 
-**Up Next:** [[Delegating Data Responsibility]]
+**Up Next:** [Delegating Data Responsibility](../Delegating-Data-Responsibility)
 
 **References**   
 [Asynchronous Programming Advice](https://docs.microsoft.com/en-us/dotnet/csharp/async#important-info-and-advice)

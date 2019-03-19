@@ -1,4 +1,4 @@
-**Previous:** [[Setting Up the App in Rider]] or [[Setting Up the App in Visual Studio]]
+**Previous:** [Setting Up the App in Rider](../Setting-Up-the-App-in-Rider) or [Setting Up the App in Visual Studio](../Setting-Up-the-App-in-Visual-Studio)
 
 In this section, we'll be adding unit tests and running them from the command line and Rider/Visual Studio.
 
@@ -7,8 +7,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 **Rider:**
 <details>
     <summary>Select <strong>Unit Test Project</strong> under the <strong>.NET Core</strong> section.</summary>
-    <a href="net-core-app/xunit-rider-setup-new-tests-project.png" target="_blank">
-        [[xunit-rider-setup-new-tests-project.png]]
+    <a href="xunit-rider-setup-new-tests-project.png" target="_blank">
+        ![xunit-rider-setup-new-tests-project.png](xunit-rider-setup-new-tests-project.png)
     </a>
 </details>
 
@@ -17,8 +17,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 **Visual Studio:**
 <details>
     <summary>Select <strong>xUnit Test Project (.NET Core)</strong> from the <strong>Visual C# > .NET Core</strong> section.</summary>
-    <a href="net-core-app/xunit-visual-studio-setup-new-tests-project.png" target="_blank">
-        [[xunit-visual-studio-setup-new-tests-project.png]]
+    <a href="xunit-visual-studio-setup-new-tests-project.png" target="_blank">
+        ![xunit-visual-studio-setup-new-tests-project.png](xunit-visual-studio-setup-new-tests-project.png)
     </a>
 </details>
 
@@ -26,8 +26,8 @@ We'll be adding tests in a separate project called `NotesApp.Tests`. With a sepa
 
 <details>
     <summary>Your project should now look like this (approximately the same in both Rider and Visual Studio):</summary>
-    <a href="net-core-app/xunit-setup-project-structure.png" target="_blank">
-        [[xunit-setup-project-structure.png]]
+    <a href="xunit-setup-project-structure.png" target="_blank">
+        ![xunit-setup-project-structure.png](xunit-setup-project-structure.png)
     </a>
 </details>
 
@@ -91,7 +91,7 @@ Make sure to open a new terminal window after doing this. This setting allows th
 
 **Git Tag:** [setting-up-xunit](https://github.com/xtreme-steve-elliott/NotesApp/tree/setting-up-xunit)
 
-**Up Next:** [[Creating a RESTful API]]
+**Up Next:** [Creating a RESTful API](../Creating-a-RESTful-API)
 
 **References**  
 [Getting started with xUnit.net (.NET Core / ASP.NET Core)](https://xunit.github.io/docs/getting-started-dotnet-core)  

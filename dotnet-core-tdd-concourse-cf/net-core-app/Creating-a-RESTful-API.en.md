@@ -1,4 +1,4 @@
-**Previous:** [[Setting Up xUnit]]
+**Previous:** [Setting Up xUnit](../Setting-Up-xUnit)
 
 In this section, we'll build a RESTful endpoint for our project. When the new project was created, an auto-generated `ValuesController` class was created. This class has an attribute (similar to annotations in Java) of `[Route]` with a parameter of `api/[controller]`. This routes requests for `/api/values` through this class. In .NET Core 2.2, controllers are also annotated with `[ApiController]`, allowing them access to more functionality.
 
@@ -47,8 +47,8 @@ At this point, you'll probably encounter some errors from the IDE, complaining a
 **Rider:**
 <details>
     <summary>To resolve this, follow the suggestion provided on the <strong>ALT+ENTER</strong> menu, and add a reference to the main project.</summary>
-    <a href="net-core-app/restapi-rider-reference-project.png" target="_blank">
-        [[restapi-rider-reference-project.png]]
+    <a href="restapi-rider-reference-project.png" target="_blank">
+        ![restapi-rider-reference-project.png](restapi-rider-reference-project.png)
     </a>
 </details>
 
@@ -57,11 +57,11 @@ At this point, you'll probably encounter some errors from the IDE, complaining a
 **Visual Studio:**
 <details>
     <summary>To resolve this, right-click on the <strong>Dependencies</strong> section and select <strong>Add Reference</strong>. From there, select the <strong>NotesApp</strong> project and hit <strong>OK</strong>.</summary>
-    <a href="net-core-app/restapi-visual-studio-add-reference-menu.png" target="_blank">
-        [[restapi-visual-studio-add-reference-menu.png]]
+    <a href="restapi-visual-studio-add-reference-menu.png" target="_blank">
+        ![restapi-visual-studio-add-reference-menu.png](restapi-visual-studio-add-reference-menu.png)
     </a>
-    <a href="net-core-app/restapi-visual-studio-add-reference-dialog.png" target="_blank">
-        [[restapi-visual-studio-add-reference-dialog.png]]
+    <a href="restapi-visual-studio-add-reference-dialog.png" target="_blank">
+        ![restapi-visual-studio-add-reference-dialog.png](restapi-visual-studio-add-reference-dialog.png)
     </a>
 </details>
 
@@ -71,8 +71,8 @@ There's a bit of a quirk that occurs when our `NotesApp.Tests` project reference
 
 <details>
     <summary>To do this, make the following changes:</summary>
-    <a href="net-core-app/restapi-dependency-version.png" target="_blank">
-        [[restapi-dependency-version.png]]
+    <a href="restapi-dependency-version.png" target="_blank">
+        ![restapi-dependency-version.png](restapi-dependency-version.png)
     </a>
 </details>
 
@@ -137,7 +137,7 @@ If you run the main app and open `http://localhost:5000/api/notes` in your brows
 
 **Git Tag:** [creating-a-restful-api](https://github.com/xtreme-steve-elliott/NotesApp/tree/creating-a-restful-api)
 
-**Up Next:** [[Introducing Fluent Assertions]]
+**Up Next:** [Introducing Fluent Assertions](../Introducing-Fluent-Assertions)
 
 **References**  
 [Comparing xUnit.net to other frameworks](https://xunit.github.io/docs/comparisons.html#assertions)  

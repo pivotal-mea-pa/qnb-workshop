@@ -1,4 +1,4 @@
-**Previous:** [[Adding Integration Tests]]
+**Previous:** [Adding Integration Tests](../Adding-Integration-Tests)
 
 In this section we'll integrate MySQL with the app.
 
@@ -27,8 +27,8 @@ For our project, we'll be using [Pomelo.EntityFrameworkCore.MySql](https://githu
 
 <details>
   <summary>Add the <b>Pomelo.EntityFrameworkCore.MySql</b> from NuGet to <b>NotesApp</b> project.</summary>
-  <a href="net-core-app/pomelo-dependency.png" target="_blank">
-    [[pomelo-dependency.png]]
+  <a href="pomelo-dependency.png" target="_blank">
+    ![pomelo-dependency.png](pomelo-dependency.png)
   </a>
 </details>
 
@@ -40,8 +40,8 @@ To simplify connecting to databases, make use of [Steeltoe](http://steeltoe.io/)
 
 <details>
     <summary>Add dependencies for <b>Steeltoe.CloudFoundry.ConnectorCore</b> and <b>Steeltoe.CloudFoundry.Connector.EFCore</b></summary>
-    <a href="net-core-app/steeltoe-mysql-connector.png" target="_blank">
-        [[steeltoe-mysql-connector.png]]
+    <a href="steeltoe-mysql-connector.png" target="_blank">
+        ![steeltoe-mysql-connector.png](steeltoe-mysql-connector.png)
     </a>
 </details>
 
@@ -119,4 +119,4 @@ If we had not made the integration tests use an in-memory database, we would see
 
 **Git Tag:** [adding-a-persistence-layer](https://github.com/xtreme-steve-elliott/NotesApp/tree/adding-a-persistence-layer)
 
-**Up Next:** [Continuous Integration / Deployment](Home#continuous-integration--deployment)
+**Up Next:** [Continuous Integration / Deployment](/#continuous-integration--deployment)

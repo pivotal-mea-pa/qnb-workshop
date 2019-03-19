@@ -1,4 +1,4 @@
-**Previous:** [[Making the App Asynchronous]]
+**Previous:** [Making the App Asynchronous](../Making-the-App-Asynchronous)
 
 In the previous sections, we setup a bare-bones controller that simply returned a constructed list of notes from its endpoint. We want to get our app to the point where it can create and retrieve records. Soon a means to store said records will make sense, but for the moment, let's consider the responsibilities of a our controller.
 
@@ -131,7 +131,7 @@ Running this test will fail on the response verification because we are not yet 
 
 **Git Tag:** [delegating-data-responsibility](https://github.com/xtreme-steve-elliott/NotesApp/tree/delegating-data-responsibility)
 
-**Up Next:** [[Introducing an In-Memory Database]]
+**Up Next:** [Introducing an In-Memory Database](../Introducing-an-In-Memory-Database)
 
 **References**  
 [The Repository Pattern Explained](http://blog.sapiensworks.com/post/2014/06/02/The-Repository-Pattern-For-Dummies.aspx)  
