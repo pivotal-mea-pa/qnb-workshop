@@ -1,3 +1,5 @@
+# Creating a RESTful API
+
 **Previous:** [Setting Up xUnit](../setting-up-xunit)
 
 In this section, we'll build a RESTful endpoint for our project. When the new project was created, an auto-generated `ValuesController` class was created. This class has an attribute (similar to annotations in Java) of `[Route]` with a parameter of `api/[controller]`. This routes requests for `/api/values` through this class. In .NET Core 2.2, controllers are also annotated with `[ApiController]`, allowing them access to more functionality.

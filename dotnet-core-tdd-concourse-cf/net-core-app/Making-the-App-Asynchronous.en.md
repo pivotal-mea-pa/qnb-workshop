@@ -1,3 +1,5 @@
+# Making the App Asynchronous
+
 **Previous:** [Introducing Fluent Assertions](../introducing-fluent-assertions)
 
 As outlined briefly in [Asynchronous programming](https://docs.microsoft.com/en-us/dotnet/csharp/async), you should be writing asynchronous code when accessing a database. If operations may take a long time, you don't want to be locking up your threads.

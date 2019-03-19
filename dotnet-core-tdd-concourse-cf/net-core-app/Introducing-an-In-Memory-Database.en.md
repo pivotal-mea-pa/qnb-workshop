@@ -1,3 +1,5 @@
+# Introducing an In-Memory Database
+
 **Previous:** [Delegating Data Responsibility](../delegating-data-responsibility)
 
 In this section, we'll make use of an in-memory database to store our `Note` objects.

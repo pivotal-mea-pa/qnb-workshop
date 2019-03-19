@@ -1,4 +1,6 @@
-**Previous:** [Continuous Integration / Deployment](/workshop/#continuous-integration--deployment)
+# CI Setup
+
+**Previous:** [Continuous Integration / Deployment](/workshop/#continuous-integration-deployment)
 
 In this section, we'll make a Concourse pipeline to test our app. If you have not deployed Concourse locally yet, follow the instructions on [Deploy Concourse](../deploy-concourse).
 

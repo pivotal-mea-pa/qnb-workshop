@@ -1,3 +1,5 @@
+# Adding Other Endpoints
+
 **Previous:** [Introducing an In-Memory Database](../introducing-an-in-memory-database)
 
 In this section, we'll be building out three more endpoints, `GetAsync(long id)`, `PostAsync(Note note)` and `DeleteAsync(long id)`.
