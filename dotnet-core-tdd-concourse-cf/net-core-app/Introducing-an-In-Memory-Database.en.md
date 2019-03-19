@@ -1,4 +1,4 @@
-**Previous:** [Delegating Data Responsibility](../Delegating-Data-Responsibility)
+**Previous:** [Delegating Data Responsibility](../delegating-data-responsibility)
 
 In this section, we'll make use of an in-memory database to store our `Note` objects.
 
@@ -83,7 +83,7 @@ At this point, run your tests again. They should pass.
 
 **Git Tag:** [introducing-an-in-memory-database](https://github.com/xtreme-steve-elliott/NotesApp/tree/introducing-an-in-memory-database)
 
-**Up Next:** [Adding Other Endpoints](../Adding-Other-Endpoints)
+**Up Next:** [Adding Other Endpoints](../adding-other-endpoints)
 
 **References**  
 [Configuring DbContext](https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext)  

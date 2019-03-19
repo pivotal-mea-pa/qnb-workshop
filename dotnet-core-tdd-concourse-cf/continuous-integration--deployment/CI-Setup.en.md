@@ -1,6 +1,6 @@
-**Previous:** [Continuous Integration / Deployment](/#continuous-integration--deployment)
+**Previous:** [Continuous Integration / Deployment](/workshop/#continuous-integration--deployment)
 
-In this section, we'll make a Concourse pipeline to test our app. If you have not deployed Concourse locally yet, follow the instructions on [[Deploy Concourse]].
+In this section, we'll make a Concourse pipeline to test our app. If you have not deployed Concourse locally yet, follow the instructions on [Deploy Concourse](../deploy-concourse).
 
 First, make a `ci` directory at the root of our repository. Create a `pipeline.yml` file.
 
@@ -87,12 +87,12 @@ Now, using the `fly` cli from the `ci` directory, deploy the pipeline:
 ```bash
 fly -t targetname set-pipeline -p pipeline -c pipeline.yml -l variables.yml
 ```
-Where `targetname` is the name of the target you setup in [Deploy Concourse](../Deploy-Concourse). This creates a pipeline called `pipeline` using the configuration at `ci/pipeline.yml` and loads variables from `ci/variables.yml` Unpause the pipeline to start it.
+Where `targetname` is the name of the target you setup in [Deploy Concourse](../deploy-concourse). This creates a pipeline called `pipeline` using the configuration at `ci/pipeline.yml` and loads variables from `ci/variables.yml` Unpause the pipeline to start it.
 
 <details>
   <summary>Your pipeline should look like this:</summary>
-  <a href="pipeline-test.png" target="_blank">
-    ![pipeline-test.png](pipeline-test.png)
+  <a href="../CI-Setup/pipeline-test.png" target="_blank">
+    ![pipeline-test.png](../CI-Setup/pipeline-test.png)
   </a>
 </details>
 
@@ -100,4 +100,4 @@ Where `targetname` is the name of the target you setup in [Deploy Concourse](../
 
 **Git Tag:**  [ci-setup](https://github.com/xtreme-steve-elliott/NotesApp/tree/ci-setup)
 
-**Up Next:** [CF Deployment](../CF-Deployment)
+**Up Next:** [CF Deployment](../cf-deployment)

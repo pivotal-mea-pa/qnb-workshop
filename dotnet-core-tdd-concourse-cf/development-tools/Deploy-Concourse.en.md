@@ -1,4 +1,4 @@
-**Previous:** [JetBrains Rider](../JetBrains-Rider) or [Microsoft Visual Studio](../Microsoft-Visual-Studio)
+**Previous:** [JetBrains Rider](../jetbrains-rider) or [Microsoft Visual Studio](../microsoft-visual-studio)
 
 In this section, you'll install Concourse, a Continuous Integration tool, on your local machine using Docker. We'll use this to build, test, and deploy the .NET app to Cloud Foundry.
 
@@ -36,7 +36,7 @@ where `targetname` is whatever you want your target name to be.
 
 **Note:** The last two arguments (`-u` and `-p`) are the credentials of the default account installed with Concourse.
 
-**Up Next:** [CF Dev](../CF-Dev)
+**Up Next:** [CF Dev](../cf-dev)
 
 **References**  
 [Concourse Setup and Operations docs](https://concourse-ci.org/setup-and-operations.html)  

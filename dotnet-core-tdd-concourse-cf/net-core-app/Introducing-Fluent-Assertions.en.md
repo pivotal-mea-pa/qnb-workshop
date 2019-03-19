@@ -1,4 +1,4 @@
-**Previous:** [Creating a RESTful API](../Creating-a-RESTful-API)
+**Previous:** [Creating a RESTful API](../creating-a-restful-api)
 
 You may have heard of the concept of fluent assertions before with [AssertJ](http://joel-costigliola.github.io/assertj/) for Java. The underlying goal is to make your testing assertions read like a sentence, as this greatly improves the speed at which someone can understand exactly what you're trying to test.
 
@@ -42,4 +42,4 @@ Tells it that `x` should be equivalent to `y` except for the `Id` property.
 
 **Git Tag:** [introducing-fluent-assertions](https://github.com/xtreme-steve-elliott/NotesApp/tree/introducing-fluent-assertions)
 
-**Up Next:** [Making the App Asynchronous](../Making-the-App-Asynchronous)
+**Up Next:** [Making the App Asynchronous](../making-the-app-asynchronous)

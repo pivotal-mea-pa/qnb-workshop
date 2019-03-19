@@ -1,6 +1,6 @@
-**Previous:** [CI Setup](../CI-Setup)
+**Previous:** [CI Setup](../ci-setup)
 
-In this section, we'll update the pipeline to deploy to our local instance of CF Dev. If you have not installed it, follow the instructions [here](../CF-Dev).
+In this section, we'll update the pipeline to deploy to our local instance of CF Dev. If you have not installed it, follow the instructions [here](../cf-dev).
 
 ***
 
@@ -73,7 +73,7 @@ resources:
         space: {{cf-space}}
         skip_cert_check: true
 ```
-Refer to [CF Dev](../CF-Dev) for credential information for your CF Dev instance. Place the substitutions in your `credentials.yml`. Also note that `skip_cert_check` is set to `true`. This is because we're running CF Dev locally without a cert. For production, remove this line.
+Refer to [CF Dev](../cf-dev) for credential information for your CF Dev instance. Place the substitutions in your `credentials.yml`. Also note that `skip_cert_check` is set to `true`. This is because we're running CF Dev locally without a cert. For production, remove this line.
 
 Add a task to the `build-deploy` job for deploying the app, using the `published` directory as the source:
 ```yaml
@@ -122,8 +122,8 @@ Then push up the changes to GitHub.
 
 <details>
   <summary>Your pipeline should look like this:</summary>
-  <a href="continuous-integration--deployment/pipeline-deploy.png" target="_blank">
-    [[pipeline-deploy.png]]
+  <a href="../CF-Deployment/continuous-integration--deployment/pipeline-deploy.png" target="_blank">
+    ![pipeline-deploy.png](../CF-Deployment/pipeline-deploy.png)
   </a>
 </details>
 
@@ -140,4 +140,4 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of 
 ```
 We need to update our hosted app, since it can't talk to our local mySQL database.
 
-**Up Next:** [Connect to a DB on CF](../Connect-to-a-DB-on-CF)
+**Up Next:** [Connect to a DB on CF](../connect-to-a-db-on-cf)
