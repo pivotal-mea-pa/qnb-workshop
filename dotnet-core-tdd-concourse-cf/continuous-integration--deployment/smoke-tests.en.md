@@ -18,8 +18,8 @@ A decent way to get started with Postman is to download the API JSON file from S
 
 <details>
     <summary>It should look something like this:</summary
-    <a href="../Smoke-Tests/smoke-tests-postman-import-result.png" target="_blank">
-        ![smoke-tests-postman-import-result.png](../Smoke-Tests/smoke-tests-postman-import-result.png)
+    <a href="smoke-tests-postman-import-result.png" target="_blank">
+        ![smoke-tests-postman-import-result.png](smoke-tests-postman-import-result.png)
     </a>
 </details>
 
@@ -139,8 +139,8 @@ Update the pipeline and push up the code.
 
 <details>
   <summary>It should now look like this.</summary>
-  <a href="../Smoke-Tests/pipeline-smoke-test.png" target="_blank">
-    ![pipeline-smoke-test.png](../Smoke-Tests/pipeline-smoke-test.png)
+  <a href="pipeline-smoke-test.png" target="_blank">
+    ![pipeline-smoke-test.png](pipeline-smoke-test.png)
   </a>
 </details>
 

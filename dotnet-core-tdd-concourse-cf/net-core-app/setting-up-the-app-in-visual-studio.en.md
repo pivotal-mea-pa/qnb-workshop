@@ -6,8 +6,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>Run <strong>Visual Studio</strong> and select the <strong>File</strong> menu.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-menus.png" target="_blank">
-        ![intro-visual-studio-new-menus.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-menus.png)
+    <a href="intro-visual-studio-new-menus.png" target="_blank">
+        ![intro-visual-studio-new-menus.png](intro-visual-studio-new-menus.png)
     </a>
 </details>
 
@@ -15,8 +15,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>Click <strong>New > Project</strong>. The template for an <strong>Empty Solution</strong> can be found until the <strong>Other Project Types</strong> section. Select it and name the solution <strong>NotesApp</strong>.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-solution.png" target="_blank">
-        ![intro-visual-studio-new-solution.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-solution.png)
+    <a href="intro-visual-studio-new-solution.png" target="_blank">
+        ![intro-visual-studio-new-solution.png](intro-visual-studio-new-solution.png)
     </a>
 </details>
 
@@ -24,8 +24,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>Right-click on the solution and add a new project.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project-menu.png" target="_blank">
-        ![intro-visual-studio-new-project-menu.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project-menu.png)
+    <a href="intro-visual-studio-new-project-menu.png" target="_blank">
+        ![intro-visual-studio-new-project-menu.png](intro-visual-studio-new-project-menu.png)
     </a>
 </details>
 
@@ -33,8 +33,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>Select <strong>ASP.NET Core Web Application</strong> template and name the project <strong>NotesApp</strong>.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project.png" target="_blank">
-        ![intro-visual-studio-new-project.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project.png)
+    <a href="intro-visual-studio-new-project.png" target="_blank">
+        ![intro-visual-studio-new-project.png](intro-visual-studio-new-project.png)
     </a>
 </details>
 
@@ -42,8 +42,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>You'll be presented with another dialog at this point, giving you different setups for an <strong>ASP.NET Core Web Application</strong>. Select <strong>API</strong> and hit <strong>OK</strong>.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project-2.png" target="_blank">
-        ![intro-visual-studio-new-project-2.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-new-project-2.png)
+    <a href="intro-visual-studio-new-project-2.png" target="_blank">
+        ![intro-visual-studio-new-project-2.png](intro-visual-studio-new-project-2.png)
     </a>
 </details>
 
@@ -51,8 +51,8 @@ In this section, we'll describe how to start your first app using [[Microsoft Vi
 
 <details>
     <summary>Let's take a look at the generated project in the <strong>Solution Explorer</strong>.</summary>
-    <a href="../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-solution-explorer.png" target="_blank">
-        ![intro-visual-studio-solution-explorer.png](../Setting-Up-the-App-in-Visual-Studio/intro-visual-studio-solution-explorer.png)
+    <a href="intro-visual-studio-solution-explorer.png" target="_blank">
+        ![intro-visual-studio-solution-explorer.png](intro-visual-studio-solution-explorer.png)
     </a>
 </details>
 
