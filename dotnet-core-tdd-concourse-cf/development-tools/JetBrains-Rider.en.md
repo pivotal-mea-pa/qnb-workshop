@@ -1,3 +1,5 @@
+# JetBrains Rider
+
 **Previous:** [SDK for .NET Core and dotnet CLI](../sdk-for-.net-core-and-dotnet-cli)
 
 JetBrains provides an IDE for .NET Core development called Rider. It can be downloaded [here](https://www.jetbrains.com/rider/download/).

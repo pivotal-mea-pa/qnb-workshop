@@ -1,3 +1,5 @@
+# Connect to a DB on CF
+
 **Previous:** [CF Deployment](../cf-deployment)
 
 In this section, we'll configure our app to talk to a database on our Cloud Foundry instance.

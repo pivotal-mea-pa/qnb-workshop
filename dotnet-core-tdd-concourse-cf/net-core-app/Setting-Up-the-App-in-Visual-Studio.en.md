@@ -1,3 +1,5 @@
+# Setting Up the App in Visual Studio
+
 **Previous:** [.NET Core App](/workshop/#net-core-app)
 
 In this section, we'll describe how to start your first app using [[Microsoft Visual Studio]]. We'll be building a Notes RESTful API where multiple users can add and retrieve notes.

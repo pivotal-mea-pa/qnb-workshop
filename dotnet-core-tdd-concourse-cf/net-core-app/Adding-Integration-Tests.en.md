@@ -1,3 +1,5 @@
+# Adding Integration Tests
+
 **Previous:** [Adding Other Endpoints](../adding-other-endpoints)
 
 ### Setup

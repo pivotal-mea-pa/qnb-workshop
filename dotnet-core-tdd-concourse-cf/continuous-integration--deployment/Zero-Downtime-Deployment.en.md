@@ -1,3 +1,5 @@
+# Zero-Downtime Deployment
+
 **Previous:** [Smoke Tests](../smoke-tests)
 
 When backend apps need to be upgraded, it would be disadvantageous for the server to be unavailable during this time. Users would be unable to access the app, which leads to less traffic and frustration for the website and the company. However there are ways around this, with the idea of zero downtime deployment.

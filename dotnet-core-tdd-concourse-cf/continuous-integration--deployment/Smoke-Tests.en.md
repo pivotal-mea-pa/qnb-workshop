@@ -1,3 +1,5 @@
+# Smoke Tests
+
 **Previous:** [Connect to a DB on CF](../connect-to-a-db-on-cf)
 
 In this section, we'll add smoke tests to run against our deployed app.

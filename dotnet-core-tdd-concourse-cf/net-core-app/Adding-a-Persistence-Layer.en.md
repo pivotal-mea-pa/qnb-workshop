@@ -1,3 +1,5 @@
+# Adding a Persistence Layer
+
 **Previous:** [Adding Integration Tests](../adding-integration-tests)
 
 In this section we'll integrate MySQL with the app.
@@ -119,4 +121,4 @@ If we had not made the integration tests use an in-memory database, we would see
 
 **Git Tag:** [adding-a-persistence-layer](https://github.com/xtreme-steve-elliott/NotesApp/tree/adding-a-persistence-layer)
 
-**Up Next:** [Continuous Integration / Deployment](/workshop/#continuous-integration--deployment)
+**Up Next:** [Continuous Integration / Deployment](/workshop/#continuous-integration-deployment)

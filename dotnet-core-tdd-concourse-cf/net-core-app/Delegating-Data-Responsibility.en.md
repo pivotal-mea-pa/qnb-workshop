@@ -1,3 +1,5 @@
+# Delegating Data Responsibility
+
 **Previous:** [Making the App Asynchronous](../making-the-app-asynchronous)
 
 In the previous sections, we setup a bare-bones controller that simply returned a constructed list of notes from its endpoint. We want to get our app to the point where it can create and retrieve records. Soon a means to store said records will make sense, but for the moment, let's consider the responsibilities of a our controller.
