@@ -17,6 +17,7 @@ The best way to start with a local development is to use the Docker Desktop or D
 1. To start the Spring Cloud Data Flow server create the following `docker-compose.yml` file:
 
     ```yaml
+    
    version: '3'
 
    services:

@@ -46,6 +46,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 4. Create the **ToDo** domain class:
 
     ```java
+
    package io.pivotal.workshop.todobatch;
 
    import lombok.*;
@@ -70,6 +71,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
 5. Create a **ToDoRowMapper** class that will hold each Database record
     ```java
+
    package io.pivotal.workshop.todobatch;
 
    import org.springframework.jdbc.core.RowMapper;
@@ -100,6 +102,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 6. Create the **ToDoJoBConfiguration** class. This class is the Spring Batch definition and delcaration for the different steps.
 
     ```java
+
    package io.pivotal.workshop.todobatch;
 
    import org.springframework.batch.core.Job;
@@ -208,6 +211,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 7. Add the ***schema.sql*** in the ***src/main/java/resources*** folder:
 
     ```sql
+
    drop table to_do if exists;
    create table to_do (
      id varchar(36) not null,
@@ -223,6 +227,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 8. Add the ***data.sql*** in the ***src/main/java/resources*** folder:
 
     ```sql
+
    insert into to_do (id, description, complete, created, modified, completed)
    values ('0deb1765-69ba-4038-b944-4a02284b47b2', 'Buy milk', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
    insert into to_do (id, description, complete, created, modified, completed)
@@ -247,6 +252,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
     and if you take a look at the content, you should see:
 
     ```xml
+    
    <?xml version="1.0" encoding="UTF-8"?>
    <todos>
    	<todo>
