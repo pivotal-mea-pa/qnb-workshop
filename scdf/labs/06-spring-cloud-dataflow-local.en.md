@@ -6,7 +6,7 @@ In this lab, you will use the Spring Cloud Data Flow as a Local Development.
 
 ## **Requirements**
 
-The best way to start with a local development is to use the Docker Desktop or Docker Engine (if you are using Linux). Is necessary to have the `docker-compose` command.
+The best way to start with a local development is to use the Docker Desktop or Docker Engine (if you are using Linux). Is necessary to have the *docker-compose* command.
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
@@ -14,7 +14,7 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 ## Start Spring Cloud Data Flow Server
 
-1. To start the Spring Cloud Data Flow server create the following `docker-compose.yml` file:
+1. To start the Spring Cloud Data Flow server create the following *docker-compose.yml* file:
 
     ```yaml
     
@@ -124,7 +124,7 @@ The best way to start with a local development is to use the Docker Desktop or D
 
     Click the "Deploy Stream" . This will create 3 micro services, the **http** app (running on port *9001*), the **filter** app and the **log** app.
 
-3. Take a look at the logs of the `docker-compose` and locate the **log** app log. Copy the whole path, because you will neded that in the next step. For example: `/tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1`
+3. Take a look at the logs of the *docker-compose* and locate the **log** app log. Copy the whole path, because you will neded that in the next step. For example: */tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1*
 4. Execute the following command to attach a tail to the log from previous step. Example:
 
     ```shell
@@ -142,4 +142,4 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 ## Challenges
 
-- [ ] Verify that if you send a different "**star**" value if will get filtered.
+- [ ] Verify that if you send a different ***stars*** value if will get filtered.
