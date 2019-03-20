@@ -47,162 +47,162 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
     ```java
 
-   package io.pivotal.workshop.todobatch;
+     package io.pivotal.workshop.todobatch;
 
-   import lombok.*;
+     import lombok.*;
 
-   import java.time.LocalDateTime;
+     import java.time.LocalDateTime;
 
 
-   @Data
-   @AllArgsConstructor
-   @NoArgsConstructor
-   public class ToDo {
+     @Data
+     @AllArgsConstructor
+     @NoArgsConstructor
+     public class ToDo {
 
-       private String id;
-       private  String description;
-       private boolean complete;
-       private LocalDateTime created;
-       private LocalDateTime modified;
-       private LocalDateTime completed;
-   }
+         private String id;
+         private  String description;
+         private boolean complete;
+         private LocalDateTime created;
+         private LocalDateTime modified;
+         private LocalDateTime completed;
+     }
 
     ```
 
 5. Create a **ToDoRowMapper** class that will hold each Database record
     ```java
 
-   package io.pivotal.workshop.todobatch;
+     package io.pivotal.workshop.todobatch;
 
-   import org.springframework.jdbc.core.RowMapper;
+     import org.springframework.jdbc.core.RowMapper;
 
-   import java.sql.ResultSet;
-   import java.sql.SQLException;
-   import java.time.LocalDateTime;
-   import java.time.format.DateTimeFormatter;
+     import java.sql.ResultSet;
+     import java.sql.SQLException;
+     import java.time.LocalDateTime;
+     import java.time.format.DateTimeFormatter;
 
-   public class ToDoRowMapper implements RowMapper<ToDo> {
+     public class ToDoRowMapper implements RowMapper<ToDo> {
 
-       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-       @Override
-       public ToDo mapRow(ResultSet resultSet, int i) throws SQLException {
+         @Override
+         public ToDo mapRow(ResultSet resultSet, int i) throws SQLException {
 
-           return new ToDo(
-                   resultSet.getString("id"),
-                   resultSet.getString("description"),
-                   resultSet.getBoolean("complete"),
-                   LocalDateTime.parse(resultSet.getString("created"),formatter),
-                   LocalDateTime.parse(resultSet.getString("modified"),formatter),
-                   LocalDateTime.parse(resultSet.getString("completed"),formatter));
-       }
-   }
+             return new ToDo(
+                     resultSet.getString("id"),
+                     resultSet.getString("description"),
+                     resultSet.getBoolean("complete"),
+                     LocalDateTime.parse(resultSet.getString("created"),formatter),
+                     LocalDateTime.parse(resultSet.getString("modified"),formatter),
+                     LocalDateTime.parse(resultSet.getString("completed"),formatter));
+         }
+    }
     ```
 
 6. Create the **ToDoJoBConfiguration** class. This class is the Spring Batch definition and delcaration for the different steps.
 
     ```java
 
-   package io.pivotal.workshop.todobatch;
+    package io.pivotal.workshop.todobatch;
 
-   import org.springframework.batch.core.Job;
-   import org.springframework.batch.core.Step;
-   import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-   import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
-   import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-   import org.springframework.batch.item.database.JdbcPagingItemReader;
-   import org.springframework.batch.item.database.Order;
-   import org.springframework.batch.item.database.support.H2PagingQueryProvider;
-   import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
-   import org.springframework.batch.item.file.FlatFileItemWriter;
-   import org.springframework.batch.item.xml.StaxEventItemWriter;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.context.annotation.Bean;
-   import org.springframework.context.annotation.Configuration;
-   import org.springframework.core.io.FileSystemResource;
-   import org.springframework.oxm.xstream.XStreamMarshaller;
+    import org.springframework.batch.core.Job;
+    import org.springframework.batch.core.Step;
+    import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+    import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+    import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+    import org.springframework.batch.item.database.JdbcPagingItemReader;
+    import org.springframework.batch.item.database.Order;
+    import org.springframework.batch.item.database.support.H2PagingQueryProvider;
+    import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
+    import org.springframework.batch.item.file.FlatFileItemWriter;
+    import org.springframework.batch.item.xml.StaxEventItemWriter;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.core.io.FileSystemResource;
+    import org.springframework.oxm.xstream.XStreamMarshaller;
 
-   import javax.sql.DataSource;
-   import java.io.File;
-   import java.util.HashMap;
-   import java.util.Map;
+    import javax.sql.DataSource;
+    import java.io.File;
+    import java.util.HashMap;
+    import java.util.Map;
 
-   @Configuration
-   @EnableBatchProcessing
-   public class ToDoJobConfiguration {
-
-
-       @Bean
-       public JdbcPagingItemReader<ToDo> pagingItemReader() {
-           JdbcPagingItemReader<ToDo> reader = new JdbcPagingItemReader<>();
-
-           reader.setDataSource(dataSource);
-           reader.setFetchSize(10);
-           reader.setRowMapper(new ToDoRowMapper());
-
-           H2PagingQueryProvider queryProvider = new H2PagingQueryProvider();
-           queryProvider.setSelectClause("id, description, complete, created, modified, completed");
-           queryProvider.setFromClause("from to_do");
-
-           Map<String, Order> sortKeys = new HashMap<>(1);
-           sortKeys.put("id", Order.ASCENDING);
-           queryProvider.setSortKeys(sortKeys);
-
-           reader.setQueryProvider(queryProvider);
-
-           return reader;
-       }
-
-       @Bean
-       public StaxEventItemWriter<ToDo> xmlItemWriter() throws Exception {
-
-           XStreamMarshaller marshaller = new XStreamMarshaller();
-
-           Map<String, Class> aliases = new HashMap<>();
-           aliases.put("todo", ToDo.class);
-
-           marshaller.setAliases(aliases);
-
-           StaxEventItemWriter<ToDo> itemWriter = new StaxEventItemWriter<>();
-
-           itemWriter.setRootTagName("todos");
-           itemWriter.setMarshaller(marshaller);
-           String customerOutputPath = File.createTempFile("toDoOutput", ".xml").getAbsolutePath();
-           System.out.println(">> Output Path: " + customerOutputPath);
-           itemWriter.setResource(new FileSystemResource(customerOutputPath));
-
-           itemWriter.afterPropertiesSet();
-
-           return itemWriter;
-       }
+    @Configuration
+    @EnableBatchProcessing
+    public class ToDoJobConfiguration {
 
 
-       @Autowired
-       StepBuilderFactory stepBuilderFactory;
+        @Bean
+        public JdbcPagingItemReader<ToDo> pagingItemReader() {
+            JdbcPagingItemReader<ToDo> reader = new JdbcPagingItemReader<>();
 
-       @Autowired
-       public JobBuilderFactory jobBuilderFactory;
+            reader.setDataSource(dataSource);
+            reader.setFetchSize(10);
+            reader.setRowMapper(new ToDoRowMapper());
 
-       @Autowired
-       public DataSource dataSource;
-
-       @Bean
-       public Step step1() throws Exception {
-           return this.stepBuilderFactory.get("step1")
-                   .<ToDo, ToDo>chunk(10)
-                   .reader(pagingItemReader())
-                   .writer(xmlItemWriter())
-                   .build();
-       }
-
-       @Bean
-       public Job job() throws Exception {
-           return this.jobBuilderFactory.get("job")
-                   .start(step1())
-                   .build();
-       }
-
-   }
+            H2PagingQueryProvider queryProvider = new H2PagingQueryProvider();
+            queryProvider.setSelectClause("id, description, complete, created,  modified, completed");
+            queryProvider.setFromClause("from to_do");
+ 
+            Map<String, Order> sortKeys = new HashMap<>(1);
+            sortKeys.put("id", Order.ASCENDING);
+            queryProvider.setSortKeys(sortKeys);
+ 
+            reader.setQueryProvider(queryProvider);
+ 
+            return reader;
+        }
+ 
+        @Bean
+        public StaxEventItemWriter<ToDo> xmlItemWriter() throws Exception {
+ 
+            XStreamMarshaller marshaller = new XStreamMarshaller();
+ 
+            Map<String, Class> aliases = new HashMap<>();
+            aliases.put("todo", ToDo.class);
+ 
+            marshaller.setAliases(aliases);
+ 
+            StaxEventItemWriter<ToDo> itemWriter = new StaxEventItemWriter<>();
+ 
+            itemWriter.setRootTagName("todos");
+            itemWriter.setMarshaller(marshaller);
+            String customerOutputPath = File.createTempFile("toDoOutput", ".xml" ).getAbsolutePath();
+            System.out.println(">> Output Path: " + customerOutputPath);
+            itemWriter.setResource(new FileSystemResource(customerOutputPath));
+ 
+            itemWriter.afterPropertiesSet();
+ 
+            return itemWriter;
+        }
+ 
+ 
+        @Autowired
+        StepBuilderFactory stepBuilderFactory;
+ 
+        @Autowired
+        public JobBuilderFactory jobBuilderFactory;
+ 
+        @Autowired
+        public DataSource dataSource;
+ 
+        @Bean
+        public Step step1() throws Exception {
+            return this.stepBuilderFactory.get("step1")
+                    .<ToDo, ToDo>chunk(10)
+                    .reader(pagingItemReader())
+                    .writer(xmlItemWriter())
+                    .build();
+        }
+ 
+        @Bean
+        public Job job() throws Exception {
+            return this.jobBuilderFactory.get("job")
+                    .start(step1())
+                    .build();
+        }
+ 
+    }
 
     ```
 
@@ -212,32 +212,32 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
     ```sql
 
-   drop table to_do if exists;
-   create table to_do (
-     id varchar(36) not null,
-     complete boolean not null,
-     completed timestamp,
-     created timestamp,
-     description varchar(255) not null,
-     modified timestamp,
-   primary key (id));
-
+    drop table to_do if exists;
+    create table to_do (
+      id varchar(36) not null,
+      complete boolean not null,
+      completed timestamp,
+      created timestamp,
+      description varchar(255) not null,
+      modified timestamp,
+    primary key (id));
+ 
     ```
 
 8. Add the ***data.sql*** in the ***src/main/java/resources*** folder:
 
     ```sql
 
-   insert into to_do (id, description, complete, created, modified, completed)
-   values ('0deb1765-69ba-4038-b944-4a02284b47b2', 'Buy milk', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
-   insert into to_do (id, description, complete, created, modified, completed)
-   values ('0deb1765-69ba-4038-b944-4a02284b47b3', 'Read a Book', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
-   insert into to_do (id, description, complete, created, modified, completed)
-   values ('0deb1765-69ba-4038-b944-4a02284b47b4', 'Clean the Living Room', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
-   insert into to_do (id, description, complete, created, modified, completed)
-   values ('0deb1765-69ba-4038-b944-4a02284b47b5', 'Buy ice cream', true, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
-   insert into to_do (id, description, complete, created, modified, completed)
-   values ('0deb1765-69ba-4038-b944-4a02284b47b6', 'Learn Kubernetes', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
+    insert into to_do (id, description, complete, created, modified, completed)
+    values ('0deb1765-69ba-4038-b944-4a02284b47b2', 'Buy milk', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
+    insert into to_do (id, description, complete, created, modified, completed)
+    values ('0deb1765-69ba-4038-b944-4a02284b47b3', 'Read a Book', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
+    insert into to_do (id, description, complete, created, modified, completed)
+    values ('0deb1765-69ba-4038-b944-4a02284b47b4', 'Clean the Living Room', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
+    insert into to_do (id, description, complete, created, modified, completed)
+    values ('0deb1765-69ba-4038-b944-4a02284b47b5', 'Buy ice cream', true, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
+    insert into to_do (id, description, complete, created, modified, completed)
+    values ('0deb1765-69ba-4038-b944-4a02284b47b6', 'Learn Kubernetes', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
 
     ```
 
@@ -253,47 +253,47 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
     ```xml
     
-   <?xml version="1.0" encoding="UTF-8"?>
-   <todos>
-   	<todo>
-   		<id>0deb1765-69ba-4038-b944-4a02284b47b2</id>
-   		<description>Buy milk</description>
-   		<complete>false</complete>
-   		<created>2019-03-19T11:14:20</created>
-   		<modified>2019-03-19T11:14:20</modified>
-   		<completed>2019-03-19T11:14:20</completed>
-   	</todo>
-   	<todo>
-   		<id>0deb1765-69ba-4038-b944-4a02284b47b3</id>
-   		<description>Read a Book</description>
-   		<complete>false</complete>
-   		<created>2019-03-19T11:14:20</created>
-   		<modified>2019-03-19T11:14:20</modified>
-   		<completed>2019-03-19T11:14:20</completed>
-   	</todo>
-   	<todo>
-   		<id>0deb1765-69ba-4038-b944-4a02284b47b4</id>
-   		<description>Clean the Living Room</description>
-   		<complete>false</complete>
-   		<created>2019-03-19T11:14:20</created>
-   		<modified>2019-03-19T11:14:20</modified>
-   		<completed>2019-03-19T11:14:20</completed>
-   	</todo>
-   	<todo>
-   		<id>0deb1765-69ba-4038-b944-4a02284b47b5</id>
-   		<description>Buy ice cream</description>
-   		<complete>true</complete>
-   		<created>2019-03-19T11:14:20</created>
-   		<modified>2019-03-19T11:14:20</modified>
-   		<completed>2019-03-19T11:14:20</completed>
-   	</todo>
-   	<todo>
-   		<id>0deb1765-69ba-4038-b944-4a02284b47b6</id>
-   		<description>Learn Kubernetes</description>
-   		<complete>false</complete>
-   		<created>2019-03-19T11:14:20</created>
-   		<modified>2019-03-19T11:14:20</modified>
-   		<completed>2019-03-19T11:14:20</completed>
-   	</todo>
-   </todos>
+     <?xml version="1.0" encoding="UTF-8"?>
+     <todos>
+     	<todo>
+     		<id>0deb1765-69ba-4038-b944-4a02284b47b2</id>
+     		<description>Buy milk</description>
+     		<complete>false</complete>
+     		<created>2019-03-19T11:14:20</created>
+     		<modified>2019-03-19T11:14:20</modified>
+     		<completed>2019-03-19T11:14:20</completed>
+     	</todo>
+     	<todo>
+     		<id>0deb1765-69ba-4038-b944-4a02284b47b3</id>
+     		<description>Read a Book</description>
+     		<complete>false</complete>
+     		<created>2019-03-19T11:14:20</created>
+     		<modified>2019-03-19T11:14:20</modified>
+     		<completed>2019-03-19T11:14:20</completed>
+     	</todo>
+     	<todo>
+     		<id>0deb1765-69ba-4038-b944-4a02284b47b4</id>
+     		<description>Clean the Living Room</description>
+     		<complete>false</complete>
+     		<created>2019-03-19T11:14:20</created>
+     		<modified>2019-03-19T11:14:20</modified>
+     		<completed>2019-03-19T11:14:20</completed>
+     	</todo>
+     	<todo>
+     		<id>0deb1765-69ba-4038-b944-4a02284b47b5</id>
+     		<description>Buy ice cream</description>
+     		<complete>true</complete>
+     		<created>2019-03-19T11:14:20</created>
+     		<modified>2019-03-19T11:14:20</modified>
+     		<completed>2019-03-19T11:14:20</completed>
+     	</todo>
+     	<todo>
+     		<id>0deb1765-69ba-4038-b944-4a02284b47b6</id>
+     		<description>Learn Kubernetes</description>
+     		<complete>false</complete>
+     		<created>2019-03-19T11:14:20</created>
+     		<modified>2019-03-19T11:14:20</modified>
+     		<completed>2019-03-19T11:14:20</completed>
+     	</todo>
+     </todos>
     ```
