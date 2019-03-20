@@ -10,6 +10,9 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
+There will be several services running: *RabbitMQ*, *Data Flow Server*, *Skipper Server*, *InFlux DB* and *Grafana*. The *Skipper Server* will be the main connection to the *Data Flow Server*, so the final interaction will be with the *Skipper Server*.
+
+**NOTES**: Is importat to know that once deploy a stream, takes several minutes to deploy.
 
 
 ## Start Spring Cloud Data Flow Server
@@ -19,37 +22,28 @@ The best way to start with a local development is to use the Docker Desktop or D
     ```yaml
     
     version: '3'
- 
+
     services:
-      kafka:
-        image: wurstmeister/kafka:2.11-0.11.0.3
+      rabbitmq:
+        image: rabbitmq:3.7
         expose:
-          - "9092"
-        environment:
-          - KAFKA_ADVERTISED_PORT=9092
-          - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-          - KAFKA_ADVERTISED_HOST_NAME=kafka
-        depends_on:
-          - zookeeper
-      zookeeper:
-        image: wurstmeister/zookeeper
-        expose:
-          - "2181"
+          - "5672"
       dataflow-server:
         image: springcloud/spring-cloud-dataflow-server:2.0.1.RELEASE
         container_name: dataflow-server
+        volumes:
+          - ~/.m2:/root/.m2
         ports:
           - "9393:9393"
         environment:
-          - spring.cloud.dataflow.applicationProperties.stream.spring.cloud.stre am.kafka.binder.brokers=kafka:9092
-          - spring.cloud.dataflow.applicationProperties.stream.spring.cloud.stre am.kafka.binder.zkNodes=zookeeper:2181
+          - spring.cloud.dataflow.applicationProperties.stream.spring.rabbitmq.host    =rabbitmq
           - spring.cloud.skipper.client.serverUri=http://skipper-server:7577/api
-          - spring.cloud.dataflow.applicationProperties.stream.management.metric s.export.influx.enabled=true
-          - spring.cloud.dataflow.applicationProperties.stream.management.metric s.export.influx.db=myinfluxdb
-          - spring.cloud.dataflow.applicationProperties.stream.management.metric s.export.influx.uri=http://influxdb:8086
+          - spring.cloud.dataflow.applicationProperties.stream.management.metrics.e    xport.influx.enabled=true
+          - spring.cloud.dataflow.applicationProperties.stream.management.metrics.e    xport.influx.db=myinfluxdb
+          - spring.cloud.dataflow.applicationProperties.stream.management.metrics.e    xport.influx.uri=http://influxdb:8086
           - spring.cloud.dataflow.grafana-info.url=http://localhost:3000
         depends_on:
-          - kafka
+          - rabbitmq
       app-import:
         image: springcloud/openjdk:latest
         depends_on:
@@ -60,23 +54,24 @@ The best way to start with a local development is to use the Docker Desktop or D
             do
               sleep 1;
             done;
-            wget -qO- 'http://dataflow-server:9393/apps'  --post-data='uri=http://bit.ly/ Einstein-GA-stream-applications-kafka-maven&force=true';
+            wget -qO- 'http://dataflow-server:9393/apps'     --post-data='uri=http://bit.ly/    Einstein-GA-stream-applications-rabbit-maven&force=true';
             echo 'Stream apps imported'
-            wget -qO- 'http://dataflow-server:9393/apps'  --post-data='uri=http://bit.ly/ Dearborn-SR1-task-applications-maven&force=true';
+            wget -qO- 'http://dataflow-server:9393/apps'     --post-data='uri=http://bit.ly/    Elston-GA-task-applications-maven&force=true';
             echo 'Task apps imported'"
+    
       skipper-server:
         image: springcloud/spring-cloud-skipper-server:2.0.0.RELEASE
         container_name: skipper
         ports:
         - "7577:7577"
         - "9000-9010:9000-9010"
- 
+    
       influxdb:
         image: influxdb:1.7.4
         container_name: 'influxdb'
         ports:
           - '8086:8086'
- 
+    
       grafana:
         image: springcloud/spring-cloud-dataflow-grafana-influxdb:2.0.1.RELEASE
         container_name: 'grafana'
@@ -86,8 +81,6 @@ The best way to start with a local development is to use the Docker Desktop or D
       scdf-targets:
 
     ```
-
-
 
 2. Execute:
 
@@ -128,7 +121,7 @@ The best way to start with a local development is to use the Docker Desktop or D
 4. Execute the following command to attach a tail to the log from previous step. Example:
 
     ```shell
-     docker exec -it dataflow-server tail -f  /tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1/stdout_0.log
+     docker exec -it skipper tail -f  /tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1/stdout_0.log
     ```
 
     Modify it accordingly.
