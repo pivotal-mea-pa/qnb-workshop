@@ -118,7 +118,7 @@ You can create a folder for every app and create an **application.properties** w
 
     ```
 
-   Start the **groovy-transform-processor-rabbit** app starter.
+    Start the **groovy-transform-processor-rabbit** app starter.
     ```shell
     cd transformer
     java -jar groovy-transform-processor-rabbit-2.1.0.RELEASE.jar
