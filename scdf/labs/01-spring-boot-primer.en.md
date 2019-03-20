@@ -84,7 +84,6 @@ The following lab will show you how to create a Spring Boot project. The exampls
     The ***ToDo*** class is using several annotations that play together with *JPA* and *Hibernate*. Also is using some of the *Lombok* library that created the setters, getters and the toString methods.
 
 5. Create the ***ToDoRepository*** interface.
-
     ```java
     package io.pivotal.workshop.todorest;
 
@@ -96,13 +95,12 @@ The following lab will show you how to create a Spring Boot project. The exampls
     This is a *Spring Data* interface that will have all the necessary CRUD actions needed.
 
 6. Create the ***ToDoController*** class.
-
     ```java
     package io.pivotal.workshop.todorest;
 
     import java.net.URI;
 
-   import org.springframework.http.ResponseEntity;
+    import org.springframework.http.ResponseEntity;
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.PathVariable;
     import org.springframework.web.bind.annotation.PostMapping;
