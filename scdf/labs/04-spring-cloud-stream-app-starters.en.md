@@ -50,12 +50,11 @@ These starters are based on RabbitMQ as transport layer.
 ## Adding a Filter
 
 1. Make sure you have RabbitMQ up and running.
-
 2. Start the **http-source-rabbit** app starter.
-    ```shell
+   ```shell
     java -jar http-source-rabbit-2.1.0.RELEASE.jar --spring.cloud.stream.bindings.output.destination=http --server.port=8081
     
-    ```
+   ```
 3. Start the **filter-processor-rabbit** app starter.
    ```shell
    java -jar filter-processor-rabbit-2.1.0.RELEASE.jar --filter.expression="#jsonPath(payload,'$.review.stars') >= 3" --spring.cloud.stream.bindings.input.destination=http --spring.cloud.stream.bindings.output.destination=log --server.port=8082
