@@ -85,7 +85,7 @@ There will be several services running: *RabbitMQ*, *Data Flow Server*, *Skipper
 2. Execute:
 
     ```shell
-    docker-compuse up
+    docker-compose up
     ```
 
 3. Open a Browser a navigate to: http://localhost:9393/dashboard
@@ -136,3 +136,12 @@ There will be several services running: *RabbitMQ*, *Data Flow Server*, *Skipper
 ## Challenges
 
 - [ ] Verify that if you send a different ***stars*** value if will get filtered.
+
+
+## Cleaning Up
+
+To stop the environment, just execute in another window and where is the *docker-compose.yml* file:
+
+```shell
+docker-compose down
+```
