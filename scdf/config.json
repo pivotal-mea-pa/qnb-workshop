@@ -7,11 +7,11 @@
         "content": [
             {
             "name":"1. Spring Boot Primer",
-            "filename":"scdf/sildes/01-spring-boot-primer"
+            "filename":"scdf/slides/01-spring-boot-primer"
             },
             {
             "name":"2. Spring Integration",
-            "filename":"scdf/sildes/02-spring-integration"
+            "filename":"scdf/slides/02-spring-integration"
             },
 			{
 			"name":"3. Spring Batch",
