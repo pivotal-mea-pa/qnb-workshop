@@ -64,33 +64,33 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 4. Create the ToDoTransformer class that will transform the message to a JSON format:
     ```java
 
-    package io.pivotal.workshop.todointegration;
-
-    import com.fasterxml.jackson.core.JsonProcessingException;
-    import com.fasterxml.jackson.databind.ObjectMapper;
-    import lombok.AllArgsConstructor;
-    import lombok.Data;
-    import org.springframework.integration.transformer.GenericTransformer;
-
-    public class ToDoTransformer implements GenericTransformer<String, String> {
-
-	@AllArgsConstructor
-	@Data
-	class ToDo {
-		private String description;
-	}
-
-   	@Override
-   	public String transform(String source) {
-   		ObjectMapper objectMapper = new ObjectMapper();
-   		try {
-   			return objectMapper.writeValueAsString(new ToDo(source));
-   		} catch (JsonProcessingException e) {
-   			e.printStackTrace();
-   			return null;
-   		}
-   	 }
-    }
+     package io.pivotal.workshop.todointegration;
+ 
+     import com.fasterxml.jackson.core.JsonProcessingException;
+     import com.fasterxml.jackson.databind.ObjectMapper;
+     import lombok.AllArgsConstructor;
+     import lombok.Data;
+     import org.springframework.integration.transformer.GenericTransformer;
+ 
+     public class ToDoTransformer implements GenericTransformer<String, String>{
+ 
+ 	      @AllArgsConstructor
+ 	      @Data
+ 	      class ToDo {
+ 		       private String description;
+ 	      }
+ 
+    	 @Override
+    	 public String transform(String source) {
+    	 	ObjectMapper objectMapper = new ObjectMapper();
+    	 	try {
+    	 		return objectMapper.writeValueAsString(new ToDo(source));
+    	 	} catch (JsonProcessingException e) {
+    	 		e.printStackTrace();
+    	 		return null;
+    	 	}
+    	 }
+     }
     ```
 
     This class implements the ***GenericTransformer*** interface that allows to add any custom code.
@@ -99,49 +99,49 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
     ```java
 
-    package io.pivotal.workshop.todointegration;
+     package io.pivotal.workshop.todointegration;
 
-   import org.springframework.beans.factory.annotation.Value;
-   import org.springframework.boot.ApplicationRunner;
-   import org.springframework.context.annotation.Bean;
-   import org.springframework.context.annotation.Configuration;
-   import org.springframework.http.HttpMethod;
-   import org.springframework.http.MediaType;
-   import org.springframework.integration.dsl.IntegrationFlow;
-   import org.springframework.integration.dsl.IntegrationFlows;
-   import org.springframework.integration.dsl.MessageChannels;
-   import org.springframework.integration.http.dsl.Http;
-   import org.springframework.integration.support.MessageBuilder;
-   import org.springframework.messaging.MessageChannel;
+    import org.springframework.beans.factory.annotation.Value;
+    import org.springframework.boot.ApplicationRunner;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.http.HttpMethod;
+    import org.springframework.http.MediaType;
+    import org.springframework.integration.dsl.IntegrationFlow;
+    import org.springframework.integration.dsl.IntegrationFlows;
+    import org.springframework.integration.dsl.MessageChannels;
+    import org.springframework.integration.http.dsl.Http;
+    import org.springframework.integration.support.MessageBuilder;
+    import org.springframework.messaging.MessageChannel;
 
-   @Configuration
-   public class ToDoIntegrationFlow {
+    @Configuration
+    public class ToDoIntegrationFlow {
 
-   	@Bean
-   	public ApplicationRunner init(MessageChannel input) {
-   		return args -> {
-   			input.send(MessageBuilder.withPayload("Clean my room today").build());
-   		};
-   	}
+    	@Bean
+    	public ApplicationRunner init(MessageChannel input) {
+    		return args -> {
+    			input.send(MessageBuilder.withPayload("Clean my room today").build());
+    		};
+    	}
 
-   	@Bean
-   	public MessageChannel input() {
-   		return MessageChannels.direct().get();
-   	}
+    	@Bean
+    	public MessageChannel input() {
+    		return MessageChannels.direct().get();
+    	}
 
-   	@Bean
-   	public IntegrationFlow simpleFlow(@Value("${todo.rest.url}")String url) {
-   		return IntegrationFlows.from("input")
-   		        .filter("payload.toUpperCase().contains('TODAY')")
-   	    			.transform(new ToDoTransformer())
-   	    			.enrichHeaders(c -> c.header("Content-Type", MediaType.APPLICATION_JSON))
-   	    	    .handle(Http.outboundGateway(url)
-                   .httpMethod(HttpMethod.POST)
-                   .expectedResponseType(String.class))
-   	    			.handle(System.out::println)
-   	    			.get();
-   	}
-   }
+    	@Bean
+    	public IntegrationFlow simpleFlow(@Value("${todo.rest.url}")String url) {
+    		return IntegrationFlows.from("input")
+    		        .filter("payload.toUpperCase().contains('TODAY')")
+    	    			.transform(new ToDoTransformer())
+    	    			.enrichHeaders(c -> c.header("Content-Type", MediaType.APPLICATION_JSON))
+    	    	    .handle(Http.outboundGateway(url)
+                    .httpMethod(HttpMethod.POST)
+                    .expectedResponseType(String.class))
+    	    			.handle(System.out::println)
+    	    			.get();
+    	}
+    }
 
     ```
 
@@ -150,9 +150,9 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 4. Add the following property to the application.yml file. (Remember to change the extension to .yml)
 
     ```yaml
-   todo:
-     rest:
-       url: http://localhost:8080/todos
+    todo:
+      rest:
+        url: http://localhost:8080/todos
     ```
 
 5. You can run your application and see that the message get posted. You should see in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
@@ -162,8 +162,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 ## Challenges
 
 - [ ] Send more than one message and see if the filter works as expected.
-
 - [ ] Create a JAR and use application arguments to send a To-Do. Example:
-   ```shell
-   $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
-   ```
+    ```shell
+    $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
+    ```
