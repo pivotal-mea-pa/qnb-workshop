@@ -2,6 +2,8 @@
 
 In this lab, you will use the Spring Cloud Data Flow as a Local Development.
 
+**Estimated Time**: 15 min.
+
 ## **Requirements**
 
 The best way to start with a local development is to use the Docker Desktop or Docker Engine (if you are using Linux). Is necessary to have the `docker-compose` command.

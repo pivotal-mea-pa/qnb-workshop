@@ -2,7 +2,7 @@
 
 The objective is to get an introduction on how Spring Batch works and how you can create in an easy way an enterprise ready ETL apps.
 
-
+**Estimated Time**: 15 min.
 
 ## Requirements
 
@@ -31,15 +31,15 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
    1. ```xml
       		<dependency>
-      			<groupId>org.springframework</groupId>
-      			<artifactId>spring-oxm</artifactId>
-      		</dependency>
-      
-      		<dependency>
-      			<groupId>com.thoughtworks.xstream</groupId>
-      			<artifactId>xstream</artifactId>
-      			<version>1.4.11.1</version>
-      		</dependency>
+         			<groupId>org.springframework</groupId>
+         			<artifactId>spring-oxm</artifactId>
+         		</dependency>
+         
+         		<dependency>
+         			<groupId>com.thoughtworks.xstream</groupId>
+         			<artifactId>xstream</artifactId>
+         			<version>1.4.11.1</version>
+         		</dependency>
       ```
 
       These dependencies will help to convert the ToDos into an **XML** format.

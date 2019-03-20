@@ -2,6 +2,8 @@
 
 The purpose of this lab is to show how easy it is to use the App Starters without re-inventing the wheel by creating clients or any other integration app.
 
+**Estimated Time**: 15 min.
+
 
 ## Requirements
 The following files are required for this lab.
