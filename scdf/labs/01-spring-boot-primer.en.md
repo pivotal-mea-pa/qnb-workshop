@@ -20,7 +20,7 @@ The following lab will show you how to create a Spring Boot project. The exampls
 
     ![pring Initializr](01-spring-boot-primer-01.png)
 
-   **IMPORTANT** Install the [Lombok](https://projectlombok.org/download) in your IDE.
+    **IMPORTANT** Install the [Lombok](https://projectlombok.org/download) in your IDE.
 
 3. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
 

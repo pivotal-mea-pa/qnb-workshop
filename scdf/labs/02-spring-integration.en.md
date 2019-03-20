@@ -36,51 +36,50 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
    Set the following values:
 
-   | Field        | Value                     |
-   | ------------ | ------------------------- |
-   | Group        | ***io.pivotal.workshop*** |
-   | Artifact     | ***todo-integration***    |
-   | Dependencies | ***Integration, Lombok*** |
+    | Field        | Value                     |
+    | ------------ | ------------------------- |
+    | Group        | ***io.pivotal.workshop*** |
+    | Artifact     | ***todo-integration***    |
+    | Dependencies | ***Integration, Lombok*** |
 
-   ![Spring Initializr](02-spring-integration-01.png)
+    ![Spring Initializr](02-spring-integration-01.png)
 
 2. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
-
 3. Add the following extra dependencies to the pom.xml file:
 
-1. ```xml
+    ```xml
    		<dependency>
    			<groupId>org.springframework.integration</groupId>
    			<artifactId>spring-integration-http</artifactId>
    		</dependency>
-   
+
    		<dependency>
    			<groupId>com.fasterxml.jackson.core</groupId>
    			<artifactId>jackson-databind</artifactId>
    		</dependency>
-   ```
+    ```
 
-   The first dependency will help to integrate and send messages to the ToDo Rest endpoint; and the second dependency will help for the convertion to JSON object.
+    The first dependency will help to integrate and send messages to the ToDo Rest endpoint; and the second dependency will help for the convertion to JSON object.
 
-2. Create the ToDoTransformer class that will transform the message to a JSON format
+4. Create the ToDoTransformer class that will transform the message to a JSON format
 
-   ```java
-   package io.pivotal.workshop.todointegration;
-   
-   import com.fasterxml.jackson.core.JsonProcessingException;
-   import com.fasterxml.jackson.databind.ObjectMapper;
-   import lombok.AllArgsConstructor;
-   import lombok.Data;
-   import org.springframework.integration.transformer.GenericTransformer;
-   
-   public class ToDoTransformer implements GenericTransformer<String, String> {
-   
-   	@AllArgsConstructor
-   	@Data
-   	class ToDo {
-   		private String description;
-   	}
-   
+    ```java
+    package io.pivotal.workshop.todointegration;
+
+    import com.fasterxml.jackson.core.JsonProcessingException;
+    import com.fasterxml.jackson.databind.ObjectMapper;
+    import lombok.AllArgsConstructor;
+    import lombok.Data;
+    import org.springframework.integration.transformer.GenericTransformer;
+
+    public class ToDoTransformer implements GenericTransformer<String, String> {
+
+	@AllArgsConstructor
+	@Data
+	class ToDo {
+		private String description;
+	}
+
    	@Override
    	public String transform(String source) {
    		ObjectMapper objectMapper = new ObjectMapper();
@@ -90,17 +89,17 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    			e.printStackTrace();
    			return null;
    		}
-   	}
-   }
-   ```
+   	 }
+    }
+    ```
 
-   This class implements the ***GenericTransformer*** interface that allows to add any custom code.
+    This class implements the ***GenericTransformer*** interface that allows to add any custom code.
 
-3. Create the ToDoIntegrationFlow class that will hold all the integration flow.
+5. Create the ToDoIntegrationFlow class that will hold all the integration flow.
 
-   ```java
+    ```java
    package io.pivotal.workshop.todointegration;
-   
+
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.boot.ApplicationRunner;
    import org.springframework.context.annotation.Bean;
@@ -113,22 +112,22 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    import org.springframework.integration.http.dsl.Http;
    import org.springframework.integration.support.MessageBuilder;
    import org.springframework.messaging.MessageChannel;
-   
+
    @Configuration
-   public class ToDoIntegrationFlow {	
-   
+   public class ToDoIntegrationFlow {
+
    	@Bean
    	public ApplicationRunner init(MessageChannel input) {
    		return args -> {
    			input.send(MessageBuilder.withPayload("Clean my room today").build());
    		};
-   	}	
-   
+   	}
+
    	@Bean
    	public MessageChannel input() {
    		return MessageChannels.direct().get();
    	}
-   	
+
    	@Bean
    	public IntegrationFlow simpleFlow(@Value("${todo.rest.url}")String url) {
    		return IntegrationFlows.from("input")
@@ -142,17 +141,17 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    	    			.get();
    	}
    }
-   ```
+    ```
 
-   The importat part is the last method that defines the *Integration Flow*. It will receive a message from the input channel, then it will get filtered, then it will be transformed to JSON, then it will add the content-type header (necessary for the Rest endpoint) and last it will send the JSON to the endpoint specied in the **todo.rest.url** properties (defined in the application.yml file).
+    The importat part is the last method that defines the *Integration Flow*. It will receive a message from the input channel, then it will get filtered, then it will be transformed to JSON, then it will add the content-type header (necessary for the Rest endpoint) and last it will send the JSON to the endpoint specied in the **todo.rest.url** properties (defined in the application.yml file).
 
 4. Add the following property to the application.yml file. (Remember to change the extension to .yml)
 
-   ```yaml
+    ```yaml
    todo:
      rest:
        url: http://localhost:8080/todos
-   ```
+    ```
 
 5. You can run your application and see that the message get posted. You should shee in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
 
@@ -169,5 +168,3 @@ The objective of this labs is to understand how Messages, Channels and Integrati
   ```shell
   $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
   ```
-
-  
