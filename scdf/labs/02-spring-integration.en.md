@@ -95,9 +95,8 @@ The objective of this labs is to understand how Messages, Channels and Integrati
     This class implements the ***GenericTransformer*** interface that allows to add any custom code.
 
 5. Create the ToDoIntegrationFlow class that will hold all the integration flow.
-
     ```java
-   package io.pivotal.workshop.todointegration;
+    package io.pivotal.workshop.todointegration;
 
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.boot.ApplicationRunner;
@@ -140,9 +139,10 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    	    			.get();
    	}
    }
+
     ```
 
-    The importat part is the last method that defines the *Integration Flow*. It will receive a message from the input channel, then it will get filtered, then it will be transformed to JSON, then it will add the content-type header (necessary for the Rest endpoint) and last it will send the JSON to the endpoint specied in the **todo.rest.url** properties (defined in the application.yml file).
+    The important part is the last method that defines the *Integration Flow*. It will receive a message from the input channel, then it will get filtered, then it will be transformed to JSON, then it will add the content-type header (necessary for the Rest endpoint) and last it will send the JSON to the endpoint specified in the **todo.rest.url** properties (defined in the application.yml file).
 
 4. Add the following property to the application.yml file. (Remember to change the extension to .yml)
 
@@ -152,9 +152,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
        url: http://localhost:8080/todos
     ```
 
-5. You can run your application and see that the message get posted. You should shee in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
-
-
+5. You can run your application and see that the message get posted. You should see in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
 
 
 
@@ -163,7 +161,6 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 - [ ] Send more than one message and see if the filter works as expected.
 
 - [ ] Create a JAR and use application arguments to send a To-Do. Example:
-
-  ```shell
-  $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
-  ```
+   ```shell
+   $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
+   ```
