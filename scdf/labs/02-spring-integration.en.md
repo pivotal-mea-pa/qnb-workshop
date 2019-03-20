@@ -63,6 +63,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
 4. Create the ToDoTransformer class that will transform the message to a JSON format:
     ```java
+
     package io.pivotal.workshop.todointegration;
 
     import com.fasterxml.jackson.core.JsonProcessingException;
@@ -95,7 +96,9 @@ The objective of this labs is to understand how Messages, Channels and Integrati
     This class implements the ***GenericTransformer*** interface that allows to add any custom code.
 
 5. Create the ToDoIntegrationFlow class that will hold all the integration flow.
+
     ```java
+
     package io.pivotal.workshop.todointegration;
 
    import org.springframework.beans.factory.annotation.Value;
