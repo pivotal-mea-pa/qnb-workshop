@@ -28,7 +28,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
 **Integration Diagram**:
 
-![Spring Integration Diagram](images/02-spring-integration-02.png)
+![Spring Integration Diagram](02-spring-integration-02.png)
 
 
 
@@ -42,7 +42,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    | Artifact     | ***todo-integration***    |
    | Dependencies | ***Integration, Lombok*** |
 
-   ![Spring Initializr](/Users/felipegutierrez/PivotalEDU/2019/pace-workshop-content/scdf/labs/images/02-spring-integration-01.png)
+   ![Spring Initializr](02-spring-integration-01.png)
 
 2. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
 
