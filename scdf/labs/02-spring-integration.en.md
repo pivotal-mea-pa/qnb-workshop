@@ -164,5 +164,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 - [ ] Send more than one message and see if the filter works as expected.
 - [ ] Create a JAR and use application arguments to send a To-Do. Example:
     ```shell
+    
     $ java -jar todo-integration-0.0.1-SNAPSHOT.jar --todo="Learn Spring today"
+
     ```
