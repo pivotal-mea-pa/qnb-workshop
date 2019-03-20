@@ -42,13 +42,13 @@ The objective of this labs is to understand how Messages, Channels and Integrati
    | Artifact     | ***todo-integration***    |
    | Dependencies | ***Integration, Lombok*** |
 
-   ![Spring Initializr](images/02-spring-integration-01.png)
+   ![Spring Initializr](/Users/felipegutierrez/PivotalEDU/2019/pace-workshop-content/scdf/labs/images/02-spring-integration-01.png)
 
-3. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
+2. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
 
-4. Add the following extra dependencies to the pom.xml file:
+3. Add the following extra dependencies to the pom.xml file:
 
-   ```xml
+1. ```xml
    		<dependency>
    			<groupId>org.springframework.integration</groupId>
    			<artifactId>spring-integration-http</artifactId>
@@ -62,7 +62,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
    The first dependency will help to integrate and send messages to the ToDo Rest endpoint; and the second dependency will help for the convertion to JSON object.
 
-5. Create the ToDoTransformer class that will transform the message to a JSON format
+2. Create the ToDoTransformer class that will transform the message to a JSON format
 
    ```java
    package io.pivotal.workshop.todointegration;
@@ -96,7 +96,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
    This class implements the ***GenericTransformer*** interface that allows to add any custom code.
 
-6. Create the ToDoIntegrationFlow class that will hold all the integration flow.
+3. Create the ToDoIntegrationFlow class that will hold all the integration flow.
 
    ```java
    package io.pivotal.workshop.todointegration;
@@ -146,7 +146,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
    The importat part is the last method that defines the *Integration Flow*. It will receive a message from the input channel, then it will get filtered, then it will be transformed to JSON, then it will add the content-type header (necessary for the Rest endpoint) and last it will send the JSON to the endpoint specied in the **todo.rest.url** properties (defined in the application.yml file).
 
-7. Add the following property to the application.yml file. (Remember to change the extension to .yml)
+4. Add the following property to the application.yml file. (Remember to change the extension to .yml)
 
    ```yaml
    todo:
@@ -154,7 +154,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
        url: http://localhost:8080/todos
    ```
 
-8. You can run your application and see that the message get posted. You should shee in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
+5. You can run your application and see that the message get posted. You should shee in the logs the "*Location*" header as response. Another way to check is to exectue a cURL command over the endpoint.
 
 
 
