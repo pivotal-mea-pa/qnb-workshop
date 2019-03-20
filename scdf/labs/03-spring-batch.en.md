@@ -15,50 +15,49 @@ The objective is to get an introduction on how Spring Batch works and how you ca
 
 1. Open a window browser and point to: [https://start.spring.io](https://start.spring.io)
 
-   Set the following values:
+    Set the following values:
 
-   | Field        | Value                         |
-   | ------------ | ----------------------------- |
-   | Group        | ***io.pivotal.workshop***     |
-   | Artifact     | ***todo-batch***              |
-   | Dependencies | ***Batch, JDBC, H2, Lombok*** |
+    | Field        | Value                         |
+    | ------------ | ----------------------------- |
+    | Group        | ***io.pivotal.workshop***     |
+    | Artifact     | ***todo-batch***              |
+    | Dependencies | ***Batch, JDBC, H2, Lombok*** |
 
-   ![Spring Initializr](03-spring-batch-01.png)
+    ![Spring Initializr](03-spring-batch-01.png)
 
 2. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
-
 3. Add the following extra dependencies to the pom.xml file:
 
-   1. ```xml
+    ```xml
       		<dependency>
          			<groupId>org.springframework</groupId>
          			<artifactId>spring-oxm</artifactId>
          		</dependency>
-         
+
          		<dependency>
          			<groupId>com.thoughtworks.xstream</groupId>
          			<artifactId>xstream</artifactId>
          			<version>1.4.11.1</version>
          		</dependency>
-      ```
+    ```
 
-      These dependencies will help to convert the ToDos into an **XML** format.
+    These dependencies will help to convert the ToDos into an **XML** format.
 
 4. Create the **ToDo** domain class:
 
-   ```java
+    ```java
    package io.pivotal.workshop.todobatch;
-   
+
    import lombok.*;
-   
+
    import java.time.LocalDateTime;
-   
-   
+
+
    @Data
    @AllArgsConstructor
    @NoArgsConstructor
    public class ToDo {
-   
+
        private String id;
        private  String description;
        private boolean complete;
@@ -66,28 +65,27 @@ The objective is to get an introduction on how Spring Batch works and how you ca
        private LocalDateTime modified;
        private LocalDateTime completed;
    }
-   
-   ```
+
+    ```
 
 5. Create a **ToDoRowMapper** class that will hold each Database record
-
-   ```java
+    ```java
    package io.pivotal.workshop.todobatch;
-   
+
    import org.springframework.jdbc.core.RowMapper;
-   
+
    import java.sql.ResultSet;
    import java.sql.SQLException;
    import java.time.LocalDateTime;
    import java.time.format.DateTimeFormatter;
-   
+
    public class ToDoRowMapper implements RowMapper<ToDo> {
-   
+
        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-   
+
        @Override
        public ToDo mapRow(ResultSet resultSet, int i) throws SQLException {
-   
+
            return new ToDo(
                    resultSet.getString("id"),
                    resultSet.getString("description"),
@@ -97,13 +95,13 @@ The objective is to get an introduction on how Spring Batch works and how you ca
                    LocalDateTime.parse(resultSet.getString("completed"),formatter));
        }
    }
-   ```
+    ```
 
 6. Create the **ToDoJoBConfiguration** class. This class is the Spring Batch definition and delcaration for the different steps.
 
-   ```java
+    ```java
    package io.pivotal.workshop.todobatch;
-   
+
    import org.springframework.batch.core.Job;
    import org.springframework.batch.core.Step;
    import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -120,71 +118,71 @@ The objective is to get an introduction on how Spring Batch works and how you ca
    import org.springframework.context.annotation.Configuration;
    import org.springframework.core.io.FileSystemResource;
    import org.springframework.oxm.xstream.XStreamMarshaller;
-   
+
    import javax.sql.DataSource;
    import java.io.File;
    import java.util.HashMap;
    import java.util.Map;
-   
+
    @Configuration
    @EnableBatchProcessing
    public class ToDoJobConfiguration {
-   
-   
+
+
        @Bean
        public JdbcPagingItemReader<ToDo> pagingItemReader() {
            JdbcPagingItemReader<ToDo> reader = new JdbcPagingItemReader<>();
-   
+
            reader.setDataSource(dataSource);
            reader.setFetchSize(10);
            reader.setRowMapper(new ToDoRowMapper());
-   
+
            H2PagingQueryProvider queryProvider = new H2PagingQueryProvider();
            queryProvider.setSelectClause("id, description, complete, created, modified, completed");
            queryProvider.setFromClause("from to_do");
-   
+
            Map<String, Order> sortKeys = new HashMap<>(1);
            sortKeys.put("id", Order.ASCENDING);
            queryProvider.setSortKeys(sortKeys);
-   
+
            reader.setQueryProvider(queryProvider);
-   
+
            return reader;
        }
-   
+
        @Bean
        public StaxEventItemWriter<ToDo> xmlItemWriter() throws Exception {
-   
+
            XStreamMarshaller marshaller = new XStreamMarshaller();
-   
+
            Map<String, Class> aliases = new HashMap<>();
            aliases.put("todo", ToDo.class);
-   
+
            marshaller.setAliases(aliases);
-   
+
            StaxEventItemWriter<ToDo> itemWriter = new StaxEventItemWriter<>();
-   
+
            itemWriter.setRootTagName("todos");
            itemWriter.setMarshaller(marshaller);
            String customerOutputPath = File.createTempFile("toDoOutput", ".xml").getAbsolutePath();
            System.out.println(">> Output Path: " + customerOutputPath);
            itemWriter.setResource(new FileSystemResource(customerOutputPath));
-   
+
            itemWriter.afterPropertiesSet();
-   
+
            return itemWriter;
        }
-   
-   
+
+
        @Autowired
        StepBuilderFactory stepBuilderFactory;
-   
+
        @Autowired
        public JobBuilderFactory jobBuilderFactory;
-   
+
        @Autowired
        public DataSource dataSource;
-   
+
        @Bean
        public Step step1() throws Exception {
            return this.stepBuilderFactory.get("step1")
@@ -193,23 +191,23 @@ The objective is to get an introduction on how Spring Batch works and how you ca
                    .writer(xmlItemWriter())
                    .build();
        }
-   
+
        @Bean
        public Job job() throws Exception {
            return this.jobBuilderFactory.get("job")
                    .start(step1())
                    .build();
        }
-   
-   }
-   
-   ```
 
-   Analyze the class. See that it defines 1 step that will read a chunk of 10 records at a time and it will write the result into an **XML** format. Take a look at the bean definitions like the ***pagingItemReader*** and the ***xmlItemWriter***, The importat part here it the usage of the **@EnableBatchProcessing** annotation, that will setup all the underlaying infrastructure so the ETL works.
+   }
+
+    ```
+
+    Analyze the class. See that it defines 1 step that will read a chunk of 10 records at a time and it will write the result into an **XML** format. Take a look at the bean definitions like the ***pagingItemReader*** and the ***xmlItemWriter***, The importat part here it the usage of the **@EnableBatchProcessing** annotation, that will setup all the underlaying infrastructure so the ETL works.
 
 7. Add the ***schema.sql*** in the ***src/main/java/resources*** folder:
 
-   ```sql
+    ```sql
    drop table to_do if exists;
    create table to_do (
      id varchar(36) not null,
@@ -219,12 +217,12 @@ The objective is to get an introduction on how Spring Batch works and how you ca
      description varchar(255) not null,
      modified timestamp,
    primary key (id));
-   
-   ```
+
+    ```
 
 8. Add the ***data.sql*** in the ***src/main/java/resources*** folder:
 
-   ```sql
+    ```sql
    insert into to_do (id, description, complete, created, modified, completed)
    values ('0deb1765-69ba-4038-b944-4a02284b47b2', 'Buy milk', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
    insert into to_do (id, description, complete, created, modified, completed)
@@ -235,20 +233,20 @@ The objective is to get an introduction on how Spring Batch works and how you ca
    values ('0deb1765-69ba-4038-b944-4a02284b47b5', 'Buy ice cream', true, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
    insert into to_do (id, description, complete, created, modified, completed)
    values ('0deb1765-69ba-4038-b944-4a02284b47b6', 'Learn Kubernetes', false, '2019-03-19T11:14:20', '2019-03-19T11:14:20', '2019-03-19T11:14:20');
-   
-   ```
 
-   This is just a dummy data, you can add more if needed.
+    ```
+
+    This is just a dummy data, you can add more if needed.
 
 9. Now, you can run the app. In the logs you shuld have something like:
 
-   ```shell
-   >> Output Path: /var/folders/50/64gwwq9n7yz8kfsg3_whrd7m0000gn/T/toDoOutput12231575617867408170.xml
-   ```
+    ```shell
+    >> Output Path: /var/folders/50/64gwwq9n7yz8kfsg3_whrd7m0000gn/T/toDoOutput12231575617867408170.xml
+    ```
 
-   and if you take a look at the content, you should see:
+    and if you take a look at the content, you should see:
 
-   ```xml
+    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <todos>
    	<todo>
@@ -292,8 +290,4 @@ The objective is to get an introduction on how Spring Batch works and how you ca
    		<completed>2019-03-19T11:14:20</completed>
    	</todo>
    </todos>
-   ```
-
-   
-
-   
+    ```

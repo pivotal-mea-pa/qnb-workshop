@@ -34,7 +34,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
 1. Open a window browser and point to: [https://start.spring.io](https://start.spring.io)
 
-   Set the following values:
+    Set the following values:
 
     | Field        | Value                     |
     | ------------ | ------------------------- |
@@ -61,8 +61,7 @@ The objective of this labs is to understand how Messages, Channels and Integrati
 
     The first dependency will help to integrate and send messages to the ToDo Rest endpoint; and the second dependency will help for the convertion to JSON object.
 
-4. Create the ToDoTransformer class that will transform the message to a JSON format
-
+4. Create the ToDoTransformer class that will transform the message to a JSON format:
     ```java
     package io.pivotal.workshop.todointegration;
 
