@@ -81,7 +81,7 @@ The following lab will show you how to create a Spring Boot project. The exampls
     }
     ```
 
-   The ***ToDo*** class is using several annotations that play together with *JPA* and *Hibernate*. Also is using some of the *Lombok* library that created the setters, getters and the toString methods.
+    The ***ToDo*** class is using several annotations that play together with *JPA* and *Hibernate*. Also is using some of the *Lombok* library that created the setters, getters and the toString methods.
 
 5. Create the ***ToDoRepository*** interface.
 
