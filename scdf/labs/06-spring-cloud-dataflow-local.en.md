@@ -16,9 +16,9 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 1. To start the Spring Cloud Data Flow server create the following `docker-compose.yml` file:
 
-   ```yaml
+    ```yaml
    version: '3'
-   
+
    services:
      kafka:
        image: wurstmeister/kafka:2.11-0.11.0.3
@@ -69,13 +69,13 @@ The best way to start with a local development is to use the Docker Desktop or D
        ports:
        - "7577:7577"
        - "9000-9010:9000-9010"
-   
+
      influxdb:
        image: influxdb:1.7.4
        container_name: 'influxdb'
        ports:
          - '8086:8086'
-   
+
      grafana:
        image: springcloud/spring-cloud-dataflow-grafana-influxdb:2.0.1.RELEASE
        container_name: 'grafana'
@@ -83,20 +83,20 @@ The best way to start with a local development is to use the Docker Desktop or D
          - '3000:3000'
    volumes:
      scdf-targets:
-   
-   ```
 
-   
+    ```
+
+
 
 2. Execute:
 
-   ```shell
+    ```shell
    docker-compuse up
-   ```
+    ```
 
 3. Open a Browser a navigate to: http://localhost:9393/dashboard
 
-   ![Dashboard](06-spring-cloud-dataflow-local-01.png)
+    ![Dashboard](06-spring-cloud-dataflow-local-01.png)
 
 
 
@@ -106,38 +106,36 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 2. In the text are add the following stream:
 
-   ```groovy
+    ```groovy
    http --port=9001 | filter --filter.expression="#jsonPath(payload,'$.review.stars') >= 3" | log
-   
-   ```
 
-   ![Stream](06-spring-cloud-dataflow-local-02.png)
+    ```
 
-   Click the "**Create Stream**" button, and add the name to the stream: ***simple***, then click "**Create the stream**" button. 
+    ![Stream](06-spring-cloud-dataflow-local-02.png)
 
-   ![Stream](06-spring-cloud-dataflow-local-03.png)
+    Click the "**Create Stream**" button, and add the name to the stream: ***simple***, then click "**Create the stream**" button.
 
-   Then click the ">" deploy stream button. This will show you the next screen:
+    ![Stream](06-spring-cloud-dataflow-local-03.png)
 
-   ![Stream](06-spring-cloud-dataflow-local-04.png) 
+    Then click the ">" deploy stream button. This will show you the next screen:
 
-   Click the "Deploy Stream" . This will create 3 micro services, the **http** app (running on port *9001*), the **filter** app and the **log** app.
+    ![Stream](06-spring-cloud-dataflow-local-04.png)
+
+    Click the "Deploy Stream" . This will create 3 micro services, the **http** app (running on port *9001*), the **filter** app and the **log** app.
 
 3. Take a look at the logs of the `docker-compose` and locate the **log** app log. Copy the whole path, because you will neded that in the next step. For example: `/tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1`
-
 4. Execute the following command to attach a tail to the log from previous step. Example:
 
-   ```shell
-   docker exec -it dataflow-server tail -f  /tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1/stdout_0.log
-   ```
+    ```shell
+    docker exec -it dataflow-server tail -f  /tmp/spring-cloud-deployer-726956403502997341/simple-1552966862875/simple.log-v1/stdout_0.log
+    ```
 
-   Modify it accordingly.
+    Modify it accordingly.
 
 5. Now, you can send some data using the cURL command and see the logs:
-
-   ```shell
-   curl -XPOST -H "Content-Type: application/json" -d '{"review":{"topic":"spring","comment":"this is amazing","stars":2}}' http://localhost:9001
-   ```
+    ```shell
+    curl -XPOST -H "Content-Type: application/json" -d '{"review":{"topic":"spring","comment":"this is amazing","stars":2}}' http://localhost:9001
+    ```
 
 
 
