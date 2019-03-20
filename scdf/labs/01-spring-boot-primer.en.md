@@ -18,7 +18,7 @@ The following lab will show you how to create a Spring Boot project. The exampls
    | Artifact     | ***todo-rest***            |
    | Dependencies | ***Web, JPA, H2, Lombok*** |
 
-   ![pring Initializr](images/01-spring-boot-primer-01.png)
+   ![pring Initializr](01-spring-boot-primer-01.png)
 
    **IMPORTANT** Install the [Lombok](https://projectlombok.org/download) in your IDE.
 

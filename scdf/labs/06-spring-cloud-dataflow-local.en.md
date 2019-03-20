@@ -94,7 +94,7 @@ The best way to start with a local development is to use the Docker Desktop or D
 
 3. Open a Browser a navigate to: http://localhost:9393/dashboard
 
-   ![Dashboard](images/06-spring-cloud-dataflow-local-01.png)
+   ![Dashboard](06-spring-cloud-dataflow-local-01.png)
 
 
 
@@ -109,15 +109,15 @@ The best way to start with a local development is to use the Docker Desktop or D
    
    ```
 
-   ![Stream](images/06-spring-cloud-dataflow-local-02.png)
+   ![Stream](06-spring-cloud-dataflow-local-02.png)
 
    Click the "**Create Stream**" button, and add the name to the stream: ***simple***, then click "**Create the stream**" button. 
 
-   ![Stream](images/06-spring-cloud-dataflow-local-03.png)
+   ![Stream](06-spring-cloud-dataflow-local-03.png)
 
    Then click the ">" deploy stream button. This will show you the next screen:
 
-   ![Stream](images/06-spring-cloud-dataflow-local-04.png) 
+   ![Stream](06-spring-cloud-dataflow-local-04.png) 
 
    Click the "Deploy Stream" . This will create 3 micro services, the **http** app (running on port *9001*), the **filter** app and the **log** app.
 

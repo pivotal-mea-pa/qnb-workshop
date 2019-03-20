@@ -23,7 +23,7 @@ The objective is to get an introduction on how Spring Batch works and how you ca
    | Artifact     | ***todo-batch***              |
    | Dependencies | ***Batch, JDBC, H2, Lombok*** |
 
-   ![Spring Initializr](/Users/felipegutierrez/PivotalEDU/2019/pace-workshop-content/scdf/labs/images/03-spring-batch-01.png)
+   ![Spring Initializr](03-spring-batch-01.png)
 
 2. Click "Generate Project" button. Unzip the code generated. Import it into your favorite IDE.
 
