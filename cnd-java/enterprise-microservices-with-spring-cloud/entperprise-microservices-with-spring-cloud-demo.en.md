@@ -200,7 +200,7 @@ cf push
 ```
 
 1. In a browser, hit the home URL of the client app a few times (refresh the page). Make sure it shows the 
-text Greeting language is English.
+text Greeting language is English / Spring Cloud.
 
 1. In the Apps Manager, navigate to the list of services, select the Circuit Breaker Dashboard, and click the manage 
 button in the upper right corner.
