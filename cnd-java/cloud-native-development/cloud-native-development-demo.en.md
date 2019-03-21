@@ -188,7 +188,7 @@ Create and Bind a MySQL Service
     terminal window, tail the logs of the app as you restart it.
 
     ```
-    cf create-service cleardb spark demo-db
+    cf create-service p.mysql db-small demo-db
     cf bind-service cloud-native-demo demo-db
     cf restage cloud-native-demo
     ```
