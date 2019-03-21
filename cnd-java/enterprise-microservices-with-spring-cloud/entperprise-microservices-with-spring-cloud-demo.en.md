@@ -108,7 +108,7 @@ mvn clean package
 1. Create config server instance and push app
 
 ```
-cf create-service -c '{"git": { "uri": "https://github.com/<my-repo>/app-config" }, "count": 2 }' p-config-server trial config-server
+cf create-service -c '{"git": { "uri": "https://github.com/<my-repo>/app-config" }, "count": 2 }' p-config-server standard config-server
 cf push
 ```
 
@@ -138,7 +138,7 @@ mvn clean package
 1. Create service registry instance and push app
 
 ```
-cf create-service p-service-registry trial service-registry
+cf create-service p-service-registry standard service-registry
 cf push
 ```
 
@@ -182,7 +182,7 @@ will enable Hysrix for the client application
 
 1. Create the Circuit Breaker Dashboard service instance in PWS.
 
-```cf create-service p-circuit-breaker-dashboard trial circuit-breaker-dashboard```
+```cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboard```
 
 1. Package the `sb-service-client` application for deployment to PCF.
 
