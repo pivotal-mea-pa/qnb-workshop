@@ -172,13 +172,11 @@ cf push
 
 ### Use Spring Cloud Circuit Breaker
 
-1. Show the `spring-cloud-services-starter-circuit-breaker` dependency in `sb-service-client/pom.xml`
+1. Show and uncomment the `spring-cloud-services-starter-circuit-breaker` dependency in `sb-service-client/pom.xml`
 
-1. Open `ClientController.java` in `sb-service-client` and uncomment `@HystrixCommand(fallbackMethod = "fallbackPhrase")`. 
-This will enable Hystrix for this controller.
+1. Open `ClientController.java` in `sb-service-client` and uncomment `@HystrixCommand(fallbackMethod = "fallbackPhrase")` and `import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;`. This will enable Hystrix for this controller.
 
-1. Open `ClientApplication.java` in `sb-service-client` and uncomment `@EnableCircuitBreaker`. This 
-will enable Hysrix for the client application
+1. Open `ClientApplication.java` in `sb-service-client` and uncomment `@EnableCircuitBreaker` and `import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;`. This will enable Hysrix for the client application
 
 1. Create the Circuit Breaker Dashboard service instance in PWS.
 
