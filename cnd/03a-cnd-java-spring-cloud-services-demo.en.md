@@ -60,7 +60,7 @@ mvn clean package -DskipTests spring-boot:run
 <http://localhost:8888/sb-service/default>, to verify the properties are now
 being read from the Github repository.
 
-![Local Config Server](03a-cnd-java-spring-cloud-services-demo/local-config-server.png)
+![Local Config Server](local-config-server.png)
 
 ### Create the Config Server Client
 
@@ -182,7 +182,9 @@ will enable Hysrix for the client application
 
 1. Create the Circuit Breaker Dashboard service instance in PWS.
 
-```cf create-service p-circuit-breaker-dashboard trial circuit-breaker-dashboard```
+```
+cf create-service p-circuit-breaker-dashboard trial circuit-breaker-dashboard
+```
 
 1. Package the `sb-service-client` application for deployment to PCF.
 
