@@ -17,7 +17,7 @@ For the purposes of .NET Core, a go-to library is [SwashBuckle.AspNetCore](https
 A decent way to get started with Postman is to download the API JSON file from Swagger. There should be a link on the page when viewing `https://notes.dev.cfdev.sh/swagger`. `swagger.json` can be imported into Postman to get a bare-bones setup of endpoints.
 
 <details>
-    <summary>It should look something like this:</summary
+    <summary>It should look something like this:</summary>
     <a href="smoke-tests-postman-import-result.png" target="_blank">
         ![smoke-tests-postman-import-result.png](smoke-tests-postman-import-result.png)
     </a>

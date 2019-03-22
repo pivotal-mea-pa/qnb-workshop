@@ -124,8 +124,8 @@ Then push up the changes to GitHub.
 
 <details>
   <summary>Your pipeline should look like this:</summary>
-  <a href="../CF-Deployment/continuous-integration--deployment/pipeline-deploy.png" target="_blank">
-    ![pipeline-deploy.png](../CF-Deployment/pipeline-deploy.png)
+  <a href="pipeline-deploy.png" target="_blank">
+    ![pipeline-deploy.png](pipeline-deploy.png)
   </a>
 </details>
 
