@@ -1,29 +1,29 @@
 {
-    "workshopSubject":"Cloud Native Development",
+    "workshopSubject":"Cloud Native",
     "workshopHomepage":"agenda-java.en.md",
     "modules": [
     {
         "type": "concepts",
         "content": [
             {
-            "name":"Introduction to Cloud Native Development",
-            "filename":"cnd/00-cnd-intro-slide"
+            "name":"1. Cloud Native Intro",
+            "filename":"cnd/01-cnd-intro-slide"
             },
             {
-            "name":"1. Cloud Native Development with Spring Boot",
-            "filename":"cnd/01-cnd-java-spring-boot-slide"
+            "name":"2a. CND with Spring Boot",
+            "filename":"cnd/02a-cnd-java-spring-boot-slide"
             },
             {
-            "name":"2. Enterprise Microservices with Spring Cloud",
-            "filename":"cnd/02-cnd-java-spring-cloud-services-slide"
+            "name":"2b. CND with .NET",
+            "filename":"cnd/02b-cnd-dotnet-deploy-app-slide"
             },
             {
-            "name":"1. Cloud Native Development with .NET",
-            "filename":"cnd/01-cnd-dotnet-deploy-app-slide"
+            "name":"3a. CND and Spring Cloud",
+            "filename":"cnd/03a-cnd-java-spring-cloud-services-slide"
             },
             {
-            "name":"2. Cloud Native Services with .NET",
-            "filename":"cnd/02-cnd-dotnet-app-services-slide"
+            "name":"3b. CND Services with .NET",
+            "filename":"cnd/03b-cnd-dotnet-app-services-slide"
             }
         ]
     },
@@ -31,20 +31,20 @@
         "type": "demos",
         "content": [
             {
-            "name":"1. Create a Spring Boot Application",
-            "filename":"cnd/01-cnd-java-spring-boot-demo"
+            "name":"2a. Create a Spring Boot Application",
+            "filename":"cnd/02a-cnd-java-spring-boot-demo"
             },
             {
-            "name":"2. Spring Cloud Config, Spring Cloud Circuit Breaker",
-            "filename":"cnd/02-cnd-java-spring-cloud-services-demo"
+            "name":"2b. Running a .NET Application on the Cloud",
+            "filename":"cnd/02b-cnd-dotnet-deploy-app-demo"
             },
             {
-            "name":"1. Running a .NET Application on the Cloud",
-            "filename":"cnd/01-cnd-dotnet-deploy-app-demo"
+            "name":"3a. Spring Cloud Services",
+            "filename":"cnd/03a-cnd-java-spring-cloud-services-demo"
             },
             {
-            "name":"2. Connecting a .NET Cloud Application to Services",
-            "filename":"cnd/02-cnd-dotnet-app-services-demo"
+            "name":"3b. .NET and Cloud Services",
+            "filename":"cnd/03b-cnd-dotnet-app-services-demo"
             }
         ]
     }
