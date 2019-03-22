@@ -89,4 +89,4 @@ At this point, run your tests again. They should pass.
 
 **References**  
 [Configuring DbContext](https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext)  
-[IDisposable Interface](https://msdn.microsoft.com/en-us/library/system.idisposable.aspx)
+[IDisposable Interface](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=netcore-2.2)
