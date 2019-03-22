@@ -60,7 +60,7 @@ mvn clean package -DskipTests spring-boot:run
 <http://localhost:8888/sb-service/default>, to verify the properties are now
 being read from the Github repository.
 
-![Local Config Server](local-config-server.png)
+![Local Config Server](03a-cnd-java-spring-cloud-services-demo/local-config-server.png)
 
 ### Create the Config Server Client
 
