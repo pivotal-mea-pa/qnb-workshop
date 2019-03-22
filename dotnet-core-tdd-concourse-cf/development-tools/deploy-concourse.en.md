@@ -41,4 +41,4 @@ where `targetname` is whatever you want your target name to be.
 **Up Next:** [CF Dev](../cf-dev)
 
 **References**  
-[Concourse Setup and Operations docs](https://concourse-ci.org/setup-and-operations.html)  
+[Concourse Docs](https://concourse-ci.org/docs.html)  
