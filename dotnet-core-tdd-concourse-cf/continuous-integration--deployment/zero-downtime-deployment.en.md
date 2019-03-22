@@ -41,4 +41,4 @@ Once the previous job is done, update the pipeline using `fly` and trigger the j
 **Git Tag:** [zero-downtime-deployment](https://github.com/xtreme-steve-elliott/NotesApp/tree/zero-downtime-deployment)
 
 **Resources:**  
-[Blue-Green Deployment](https://docs.pivotal.io/pivotalcf/1-12/devguide/deploy-apps/blue-green.html)
+[Blue-Green Deployment](https://docs.pivotal.io/pivotalcf/2-4/devguide/deploy-apps/blue-green.html)

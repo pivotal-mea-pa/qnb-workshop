@@ -93,8 +93,8 @@ Where `targetname` is the name of the target you setup in [Deploy Concourse](../
 
 <details>
   <summary>Your pipeline should look like this:</summary>
-  <a href="../CI-Setup/pipeline-test.png" target="_blank">
-    ![pipeline-test.png](../CI-Setup/pipeline-test.png)
+  <a href="pipeline-test.png" target="_blank">
+    ![pipeline-test.png](pipeline-test.png)
   </a>
 </details>
 
