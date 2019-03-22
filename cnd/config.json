@@ -31,11 +31,11 @@
         "type": "demos",
         "content": [
             {
-            "name":"2a. Create a Spring Boot Application",
+            "name":"2a. Create a Spring Boot App",
             "filename":"cnd/02a-cnd-java-spring-boot-demo"
             },
             {
-            "name":"2b. Running a .NET Application on the Cloud",
+            "name":"2b. Running .NET on the Cloud",
             "filename":"cnd/02b-cnd-dotnet-deploy-app-demo"
             },
             {
