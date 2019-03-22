@@ -1,4 +1,4 @@
-## Pushing an app
+## Pushing the apps
  
 #### Goals 
 1. Show how pushing 4.x apps and Core apps works the same.
@@ -6,7 +6,14 @@
 
 #### Steps
 
-1. Push .NET Core front end - FunnyQuotesUICore
+1. Push the backend - FunnyQuotesServicesOwin.
+
+    ```
+     > cd FunnyQuotesServicesOwin
+     > cf push FunnyQuotesServicesOwin
+    ``` 
+
+2.Push the .NET Core front end - FunnyQuotesUICore.
 
     ```
      > cd FunnyQuotesUICore
@@ -20,7 +27,15 @@
     ```
      > cf logs FunnyQuotesUICore --recent
     ```
-1. Push 4.x WebForms front end - FunnyQuotesUIForms
+
+1. Push the backend - FunnyQuotesLegacyService.
+
+    ```
+     > cd FunnyQuotesLegacyService
+     > cf push FunnyQuotesLegacyService -s windows2016
+    ```
+    
+1. Push the 4.x WebForms front end - FunnyQuotesUIForms.
 
     ```
      > cd FunnyQuotesUIForms
