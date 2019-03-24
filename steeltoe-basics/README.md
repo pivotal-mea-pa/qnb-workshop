@@ -1,10 +1,10 @@
 # Steeltoe Cloud Native .NET Microservices Workshop 
 
-Workshop to introduce cloud native .NET with the Steeltoe Framework. The workshop creates and pushes a .NET Core app to PASW. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
+Workshop to introduce cloud native .NET with the Steeltoe Framework. The workshop creates and pushes a .NET Core app to either Windows or Linux Cell. All labs are run on a Windows desktop and assume powershell is accessible (by default it is on Windows).
 
 ## Pre-requisites
 
-The foundation to run the demo on must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
+If you choose the labs using Windows Cell, the foundation to run the demo on must have PASW deployed. This gives you Windows Diego Cells which the manifests provided in the Visual Studio Templates assume are present.
 
 The Workshop assumes the Students have been given the following:
  - **API URL** of the Workshop foundation
@@ -15,14 +15,15 @@ The Workshop assumes the Students have been given the following:
 There is a sample worksheet in the [Field Collateral/Steeltoe Workshop](https://drive.google.com/open?id=1ajWGLFQ2aE0Ta7iN3hF0jGwDp73VZt9P) folder to use.
 
 ## SLIDES
-### About the Workshop
-
-This deck is an overview of what the labs will cover. The intention is for the Workshop Proctor to review these slides with the entire class, prior to letting everyone begin the hands-on labs individually.
-
 ### Advanced Steeltoe
 
-This deck covers advanced topics that will be relavant to a student once they have completed the labs. It is meant to be presented prior to the labs being completed.
-- Custom health contributors
+This deck is meant to be presented after the labs have been completed. It is an intorduction to the more advanced features of Steeltoe and cloud-native .NET. Topics discussed:
+
+	- A (quick) review of Connectors & Actuators
+	- Service Discovery
+	- External Config Server
+	- Security Providers
+	- Circuit Breakers
 
 ## LABS
 ### Intro & Creds Lab
@@ -38,7 +39,7 @@ A step to verify the Student has the correct software and cli's loaded, provides
 
 ### Environment Variables
 
-It is typical to find .NET developers that aren't too familar with using environment variables as a means for app settings. Tradaitionally this was done with web.*.config files. This lab aims to introduce them to the Steeltoe Cloud Foundry Provider, where they can consume env var values that have been set in an app manifest.
+It is typical to find .NET developers that aren't too familar with using environment variables as a means for app settings. Traditionally this was done with web.*.config files. This lab aims to introduce them to the Steeltoe Cloud Foundry Provider, where they can consume env var values that have been set in an app manifest.
 
 ### User Provided Services with Steeltoe Cloud Foundry Provider
 
@@ -60,12 +61,17 @@ Examples of logging within a .NET Core application and how to retrieve those log
 
 A "congrats" for completing the workshop and a reminder to continue learning through Pivotal Education's cloud native .NET developer course. There is also a reminder to experience all the examples in the Steeltoe public repo on Pivotal Web Services.
 
-## Config.json with all slides and labs
+### Join Workshops
+
+If you would like to remove the Next Steps lab and join this workshop to another, look in the transition-pages PACE content.
+
+## Config.json with labs for Windows Diego
+
 ```json
 {
-	"workshopSubject":"Steeltoe Cloud Native .NET Microservices Workshop ",
+	"workshopSubject":"Steeltoe Cloud Native .NET Microservices on Windows",
 	"workshopHomepage":"",
-	"workshopHostname":"steeltoe-basics",
+	"workshopHostname":"steeltoe-basics-win",
 	"modules": [
 		{
 			"type": "concepts",
@@ -89,7 +95,73 @@ A "congrats" for completing the workshop and a reminder to continue learning thr
 				},
 				{
 					"name":"Environment Variables",
-					"filename":"steeltoe-basics/labs/env-vars"
+					"filename":"steeltoe-basics/labs/env-vars-win"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"User Provided Services with Steeltoe",
+					"filename":"steeltoe-basics/labs/cups"
+				},
+				{
+					"name":"Include Steeltoe Actuators and Create a Custom Health Check",
+					"filename":"steeltoe-basics/labs/actuators"
+				},
+				{
+					"name":"Push Microservice to PASW",
+					"filename":"pasw-workshop/labs/push-microservice"
+				},
+				{
+					"name":"App Manager with Management Actuators",
+					"filename":"steeltoe-basics/labs/using-actuators"
+				},
+				{
+					"name":"Steeltoe Dynamic Logging",
+					"filename":"steeltoe-basics/labs/logging"
+				},
+				{
+					"name":"Continuing Your .NET Cloud Native Journey",
+					"filename":"steeltoe-basics/labs/next-steps"
+				}
+			]
+		}
+	]
+}
+```
+
+## Config.json with labs for Linux Diego
+
+```json
+{
+	"workshopSubject":"Steeltoe Cloud Native .NET Microservices on Linux",
+	"workshopHomepage":"",
+	"workshopHostname":"steeltoe-basics-linux",
+	"modules": [
+		{
+			"type": "concepts",
+			"content": [
+				{
+					"name":"Advanced Features of Steeltoe",
+					"filename":"steeltoe-basics/slides/advanced-steeltoe"
+				}
+			]
+		},
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"steeltoe-basics/labs/intro-creds"
+				},
+				{
+					"name":"Setup Environment",
+					"filename":"pasw-workshop/labs/setup-environment"
+				},
+				{
+					"name":"Environment Variables",
+					"filename":"steeltoe-basics/labs/env-vars-linux"
 				},
 				{
 					"name":"Push Microservice to PASW",

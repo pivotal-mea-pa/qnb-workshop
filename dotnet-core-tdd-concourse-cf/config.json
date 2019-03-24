@@ -1,0 +1,95 @@
+{
+    "workshopSubject": ".NET Core TDD/Concourse/CF",
+    "workshopHomepage": "home.en.md",
+    "modules": [
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name": "SDK for .NET Core and dotnet CLI",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/sdk-for-.net-core-and-dotnet-cli"
+                },
+                {
+                    "name": "JetBrains Rider",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/jetbrains-rider"
+                },
+                {
+                    "name": "Microsoft Visual Studio",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/microsoft-visual-studio"
+                },
+                {
+                    "name": "Deploy Concourse",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/deploy-concourse"
+                },
+                {
+                    "name": "CF Dev",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/cf-dev"
+                },
+                {
+                    "name": "Setting Up the App in Rider",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-the-app-in-rider"
+                },
+                {
+                    "name": "Setting Up the App in Visual Studio",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-the-app-in-visual-studio"
+                },
+                {
+                    "name": "Setting Up xUnit",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-xunit"
+                },
+                {
+                    "name": "Creating a RESTful API",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/creating-a-restful-api"
+                },
+                {
+                    "name": "Introducing Fluent Assertions",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/introducing-fluent-assertions"
+                },
+                {
+                    "name": "Making the App Asynchronous",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/making-the-app-asynchronous"
+                },
+                {
+                    "name": "Delegating Data Responsibility",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/delegating-data-responsibility"
+                },
+                {
+                    "name": "Introducing an In-Memory Database",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/introducing-an-in-memory-database"
+                },
+                {
+                    "name": "Adding Other Endpoints",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/adding-other-endpoints"
+                },
+                {
+                    "name": "Adding Integration Tests",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/adding-integration-tests"
+                },
+                {
+                    "name": "Adding a Persistence Layer",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/adding-a-persistence-layer"
+                },
+                {
+                    "name": "CI Setup",
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/ci-setup"
+                },
+                {
+                    "name": "CF Deployment",
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/cf-deployment"
+                },
+                {
+                    "name": "Connect to a DB on CF",
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/connect-to-a-db-on-cf"
+                },
+                {
+                    "name": "Smoke Tests",
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/smoke-tests"
+                },
+                {
+                    "name": "Zero-Downtime Deployment",
+                    "filename": "dotnet-core-tdd-concourse-cf/continuous-integration--deployment/zero-downtime-deployment"
+                }
+            ]
+        }
+    ]
+}
