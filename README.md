@@ -18,6 +18,7 @@
 
 **Note:** If only adding english content that will be the only language available in your workshop!
 
+**Note:** There's a bit of a quirk with Markdown file names and Hugo, which renders the pages. Hugo creates its page routing in lowercase, while the `pace-builder` will generate one directory per Markdown page detected, and will use whatever case the filename had. The result is that uppercase letters in Markdown filenames can cause relative links to images/other files break, and routing in general to have some issues. As such **please make your markdown filenames lowercase to avoid these issues**.
 
 ***Give More Than You Take...***
 

@@ -1,8 +1,8 @@
-# Push the Microservice to PASW
+# Push the Microservice to Pivotal Application Services Platform
 
 ## Goal
 
-Using Visual Studio, compile the app to create an artifact. Then push the artifact to PASW, for deployment.
+Using Visual Studio, compile the app to create an artifact. Then push the artifact to the Platform, for deployment.
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ Using Visual Studio, compile the app to create an artifact. Then push the artifa
 
 ## Push the Artifact
 
-With the app Artifact created, the appropriate Org and Space targeted in PAS, you are ready to push!
+With the app artifact created, the appropriate Org and Space targeted in PAS, you are ready to push!
 
 1. In the powershell window, `cd` into the directory holding the artifact. This is the directory you published into from Visual Studio. Example:
 
@@ -98,5 +98,8 @@ With the app Artifact created, the appropriate Org and Space targeted in PAS, yo
      ```
 
 1. Validate that the microservice is running. The microservice URL is the URL output in the previous step plus the suffix of `/api/values/5`. For example, the above output had the URL as `my-app-host-name.domain.com` and the associated microservice URL would be `https://my-app-host-name.domain.com/api/values/5`. Open this URL in your browser to see the microservice in action.
+
+
+## Complete
 
 Congratulations! You've pushed your first app! 

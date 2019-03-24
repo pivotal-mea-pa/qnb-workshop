@@ -1,0 +1,72 @@
+{
+    "workshopSubject":"BB&T Spring Workshop",
+    "workshopHomepage":"agenda.en.md",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Pivotal Education",
+                    "filename":"fiserv-cs-workshop/education-slide"
+                },
+                {
+                    "name":"Spring Boot",
+                    "filename":"bbt-workshop/spring-boot-slide"
+                },
+                {
+                    "name":"Reactive Spring",
+                    "filename":"cnd-java/reactive-microservices-slide"
+                },
+                {
+                    "name":"Reactive Spring",
+                    "filename":"cnd-java/reactive-microservices-slide"
+                },
+                {
+                    "name":"Developer Productivity",
+                    "filename":"bbt-workshop/spring-developer-productivity-slide"
+                },
+                {
+                    "name":"Spring Cloud Services",
+                    "filename":"cnd/03a-cnd-java-spring-cloud-services-slide"
+                }
+                ,
+                {
+                    "name":"Pivotal Gemfire/PCC",
+                    "filename":"pcc-developer/pcc-developer-workshop-slide"
+                }
+
+
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                  "name":"Reactive HTTP Client",
+                  "filename":"reactive-spring/webclient-demo"
+                },
+                {
+                  "name":"Make MVC Reactive Part 1",
+                  "filename":"reactive-spring/reservation-demo"
+                },
+                {
+                  "name":"Make MVC Reactive Part 2",
+                  "filename":"reactive-spring/reactive-reservation-demo"
+                },
+                {
+                  "name":"Spring Boot and Docker",
+                  "filename":"docker/boot-docker-demo"
+                },
+                {
+                  "name":"Docker deploy to Cloud Foundry",
+                  "filename":"docker/boot-docker-cf-demo"
+                },
+                {
+                  "name":"Spring Boot deploy to K8",
+                  "filename":"docker/boot-docker-k8-demo"
+                }
+            ]
+        }
+
+    ]
+}
