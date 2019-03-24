@@ -1,4 +1,4 @@
-# Make a Spring MVC REST service to be Reactive
+# Reactive MVC
 In this lab we will learn how to take a simple Spring MVC project and make it reactive.
 
 ## Download the reservation-demo project
