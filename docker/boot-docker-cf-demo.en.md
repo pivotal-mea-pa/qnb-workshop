@@ -11,7 +11,10 @@ In this lab we will learn to run a Spring MVC app using a embedded H2 database o
 1. Authenticate with docker hub using ```docker login```
 
 ## Build the reservation-demo project  
-
+1. Confirm it is running
+```
+cf apps
+```
 1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact  
 ```
 ./mvnw package
