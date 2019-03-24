@@ -46,11 +46,7 @@
                   "filename":"reactive-spring/webclient-demo"
                 },
                 {
-                  "name":"Make MVC Reactive Part 1",
-                  "filename":"reactive-spring/reservation-demo"
-                },
-                {
-                  "name":"Make MVC Reactive Part 2",
+                  "name":"Make MVC Reactive",
                   "filename":"reactive-spring/reactive-reservation-demo"
                 },
                 {

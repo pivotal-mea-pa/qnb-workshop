@@ -37,7 +37,6 @@ $ spring-boot:run
 1. Open a browser <http://localhost:8081> to see the UI.
 1. Notice there are no values. See the stacktrace in the terminal of the 'reservation-ui' and see if you can see how to fix it. Hint: The type of the id is different.
 
-
 ## Related Content
 1. [Josh Long SpringOne talk](https://youtu.be/l7VBdWhtl7A)
 1. [Another Josh Long SpringOne talk](https://youtu.be/1W5_tOiwEAc)
