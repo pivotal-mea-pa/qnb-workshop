@@ -1,7 +1,7 @@
 # Deploy Docker container to Cloud Foundry
 In this lab we will learn to run a Spring MVC app using a embedded H2 database on Docker
 
-## Requirements
+### Requirements
 1. Install Docker for Desktop for your platform from <https://www.docker.com/products/docker-desktop>
 1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>
 1. Install [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) on your desktop.
