@@ -62,7 +62,7 @@ cf marketplace
 
 The first column contains the names of the services, we want `Service Registry`, `Circuit Breaker Dashboard`, and `MySQL`. The second column is the plan, generally speaking each service will have a free plan, we will be using that.
 
-We have the mareketplace name of the service from the first column and the plan from the second column. Now we will give our services instances names, this is what our applications will use to connect to them. For the purpooses of this lab we have already picked out names for you, however you may use whatever names you'd like the future.
+We have the mareketplace name of the service from the first column and the plan from the second column. Now we will give our services instances names, this is what our applications will use to connect to them. For the purposes of this lab we have already picked out names for you, however you may use whatever names you'd like the future.
 ```
 cf create-service p-mysql 100mb traderdb
 cf create-service p-service-registry standard discovery-service
