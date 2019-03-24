@@ -6,8 +6,8 @@
       "type": "concepts",
       "content": [
         {
-          "name": "O'Reilly Google SRE Book Series",
-          "filename": "sre/google-oreilly-sre-books-slide"
+          "name": "Concept Summary",
+          "filename": "sre/sre-concept-summary-slide"
         },
         {
           "name": "PCFS SLI/SLO Deck",
