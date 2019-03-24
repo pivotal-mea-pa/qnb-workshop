@@ -17,13 +17,16 @@ In this lab we will learn to run a Spring MVC app using a embedded H2 database o
 ```
 ./mvnw package
 ```
+
 1. Create a file a text file called Dockerfile in the same directory and copy the following text to it and save it:  
 ```
 FROM openjdk:8-jdk-alpine
 COPY target/reservation-service-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["/usr/bin/java","-jar","/app.jar"]
 ```
+
 1. Run the command below to create docker image using the build artifact.
+
 ```
 docker build --rm -t foo/myfirst-boot-on-docker:latest .
 ```
@@ -31,24 +34,29 @@ docker build --rm -t foo/myfirst-boot-on-docker:latest .
 ```
 docker images
 ```
+
 1. Tag the local image created to match your docker repo name so it gets uploaded there
 ```
 docker tag foo/myfirst-boot-on-docker:latest your-docker-username/your-docker-repository:latest
 ```
+
 1. Deploy docker image to Docker hub
 ```
 docker push your-docker-username/your-docker-repository:latest
 ```
+
 1. Deploy docker image to Cloud Foundry (make sure Docker support is enabled in CF install).
 ```
 cf push uniquename-service --docker-image your-docker-username/your-docker-repository:latest
 ```
+
 1. Cloud Foundry will pull your docker image from your public repository.  
 
 1. Confirm it is running
 ```
 cf apps
 ```
+
 1. Let's save some data to the server using curl commands
 ```
 curl --request POST \
@@ -61,6 +69,7 @@ curl --request POST \
 }]
 '
 ```
+
 1. Confirm data is saved
 ```
 curl --request GET \
