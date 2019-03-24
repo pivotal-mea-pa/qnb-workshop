@@ -1,7 +1,7 @@
 # Reactive MVC
 In this lab we will learn to run a Spring MVC project. In Part 2 we will run the reactive version of it.
 
-## Download the reservation-demo project
+## Run the reservation-demo project
 
 1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>
 1. Open all the projects in your favorite IDE
@@ -29,6 +29,7 @@ curl --request POST \
 curl --request GET \
   --url http://localhost:8080/reservations
 ```
+## Run the reactive-reservation-service
 1. Open a terminal in the `reservation-ui` project. Run the UI
 ```
 $ spring-boot:run
