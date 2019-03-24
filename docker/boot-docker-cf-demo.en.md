@@ -10,15 +10,13 @@ In this lab we will learn to run a Spring MVC app using a embedded H2 database o
 1. Create an account on Docker hub and a repository.
 1. Authenticate with docker hub using ```docker login```
 
-## Build the reservation-demo project
+## Build the reservation-demo project  
 
-
-
-1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact
+1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact  
 ```
 ./mvnw package
 ```
-1. Create a file a text file called Dockerfile in the same directory and copy the following text to it and save it:
+1. Create a file a text file called Dockerfile in the same directory and copy the following text to it and save it:  
 ```
 FROM openjdk:8-jdk-alpine
 COPY target/reservation-service-0.0.1-SNAPSHOT.jar app.jar
@@ -44,7 +42,7 @@ docker push your-docker-username/your-docker-repository:latest
 ```
 cf push uniquename-service --docker-image your-docker-username/your-docker-repository:latest
 ```
-1. Cloud Foundry will pull your docker image from your public repository.
+1. Cloud Foundry will pull your docker image from your public repository.  
 
 1. Confirm it is running
 ```
