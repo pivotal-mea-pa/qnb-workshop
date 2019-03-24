@@ -61,7 +61,7 @@ curl --request GET \
   --url http://localhost:8080/reservations
 ```
 1. Notice the type of the Id is different.
-1. Let's stream some data! Run the following command to see simulated events for one of the reservations. Copy one of the values from the `id` field and run
+1. Let's stream some data! Run the following command to see simulated events for one of the reservations. Install HTTPie <https://httpie.org/> if you don't have it. Copy one of the values from the `id` field and run
 ```
 http --stream --json http://localhost:8080/reservations/id/events
 ```

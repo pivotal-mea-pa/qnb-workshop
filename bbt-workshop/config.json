@@ -46,8 +46,24 @@
                   "filename":"reactive-spring/webclient-demo"
                 },
                 {
-                  "name":"Make MVC Reactive",
-                  "filename":"reactive-spring/convert-reactive-demo"
+                  "name":"Make MVC Reactive Part 1",
+                  "filename":"reactive-spring/reservation-demo"
+                },
+                {
+                  "name":"Make MVC Reactive Part 2",
+                  "filename":"reactive-spring/reactive-reservation-demo"
+                },
+                {
+                  "name":"Spring Boot and Docker",
+                  "filename":"docker/boot-docker-demo"
+                },
+                {
+                  "name":"Docker deploy to Cloud Foundry",
+                  "filename":"docker/boot-docker-cf-demo"
+                },
+                {
+                  "name":"Spring Boot deploy to K8",
+                  "filename":"docker/boot-docker-k8-demo"
                 }
             ]
         }
