@@ -1,26 +1,25 @@
 
-
 # BB&T Spring workshop
 
 ## Day 1
-**9:00am – 9:30am**
-Introductions
-Agenda Review
+**9:00am – 9:30am**  
+Introductions  
+Agenda Review  
 
 **9:30am – 10:30am**
-Spring Boot Basics
-Spring Boot Demo
+Spring Boot Basics  
+Spring Boot Demo  
 
-**10:30am – 10:45am**
-Break
+**10:30am – 10:45am**  
+Break  
 
 **10:45am – Noon**
-Reactive Spring
-WebClient Demo
-How to make a Spring MVC REST service Reactive
+Reactive Spring    
+WebClient Demo  
+How to make a Spring MVC REST service Reactive  
 
 **Noon– 1:15pm**
-Lunch
+Lunch  
 
 **1:15pm – 2:00pm**
 Developer Productivity with Spring and Pivotal
