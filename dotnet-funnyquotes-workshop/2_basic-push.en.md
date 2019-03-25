@@ -6,13 +6,14 @@
 
 #### Steps
 
-1. From the publish folder in the FunnyQuotesServicesOwin project, push the assemblies.
+1. Push FunnyQuotesServicesOwin.
 
     ```
+     > cd FunnyQuotesServicesOwin
      > cf push FunnyQuotesServicesOwin
     ``` 
 
-2.Push the .NET Core front end - FunnyQuotesUICore.
+1.Push FunnyQuotesUICore.
 
     ```
      > cd FunnyQuotesUICore
