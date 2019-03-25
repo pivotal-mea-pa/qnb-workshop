@@ -33,13 +33,13 @@ It also features a Kill command to simulate application failure.
 * Update each file according to the requirements of its respective project. Optionally, these changes can be made in each lab.
 * Ensure that the file is output on every build.
   * In Visual Studio, right-click the file and select Properties. Set Copy to Output Directory to Copy Always.
-  * For those not using Visual Studio, open each .csproj file and search for the `'manifest.yml` file.
+  * For non-Visual Studio users, open each .csproj file and search for the `'manifest.yml` file.
   
   ```
     <Content Include="manifest.yml" />
   ```
   
-  * Make the following modification to the Xml element.
+  Make the following modification to the Xml element.
   
   ```
     <Content Include="manifest.yml">
@@ -49,13 +49,15 @@ It also features a Kill command to simulate application failure.
   
 * Publish each product using the supplied publish profile. The two options for publishing are as follows:
   * Open the solution in Visual Studio, right click each project and select Publish. 
-  * From a command prompt, execute the following command in the root folder each of the three .NET Framework projects.
+  * For non-Visual Studio users, publish each project from the command line from the root directory of each project.
+  
+    For each of the three .NET Framework projects:
   
     ```
     
     ```
   
-  * From a command prompt, execute the following command in the root folder of the one .NET Core project.
+    For the one .NET Core project.
   
     ```
       dotnet publish -c Release /p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
