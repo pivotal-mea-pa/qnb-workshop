@@ -1,7 +1,7 @@
 
 # BB&T Spring workshop
 
-## Day 1
+## Day 1  
 **9:00am – 9:30am**  
 Introductions  
 Agenda Review  
@@ -32,12 +32,11 @@ Docker deploy to Cloud Foundry
 **3:00pm – 3:15pm**  
 Break  
 
-**3:15pm – 5:00pm**
-Deploy to K8    
+**3:15pm – 5:00pm**  
+Deploy to K8      
 Buildpacks vs. Containers  
 
-## Day 2
-
+## Day 2  
 **9:00am – 10:30am**  
 Microservice Orchestration and Pivotal Bank  
 
