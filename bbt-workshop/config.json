@@ -26,10 +26,13 @@
                     "filename":"bbt-workshop/spring-developer-productivity-slide"
                 },
                 {
+                  "name":"Buildpacks Or Containers",
+                  "filename":"cnd-java/buildpacks-or-containers-slide"
+                },
+                {
                     "name":"Spring Cloud Services",
                     "filename":"cnd/03a-cnd-java-spring-cloud-services-slide"
-                }
-                ,
+                },
                 {
                     "name":"Pivotal Gemfire/PCC",
                     "filename":"pcc-developer/pcc-developer-workshop-slide"
@@ -50,6 +53,10 @@
                   "filename":"reactive-spring/reactive-reservation-demo"
                 },
                 {
+                  "name":"Spring Boot on Cloud Foundry",
+                  "filename":"bbt-workshop/reservation-service-cf-demo"
+                },
+                {
                   "name":"Spring Boot and Docker",
                   "filename":"docker/boot-docker-demo"
                 },
@@ -60,7 +67,12 @@
                 {
                   "name":"Spring Boot deploy to K8",
                   "filename":"docker/boot-docker-k8-demo"
+                },
+                {
+                  "name":"Microservice Orchestration and Pivotal Bank",
+                  "filename":"pivotal-bank-demo/pivotal-bank-setup"
                 }
+
             ]
         }
 

@@ -23,23 +23,23 @@ Lunch
 
 **1:15pm – 2:00pm**  
 Developer Productivity with Spring and Pivotal
+Spring Boot on Cloud Foundry
 
 **2:00pm – 3:00pm**  
-Containerize Spring app using Docker  
-Deploy to K8  
+Spring Boot and Docker  
+Docker deploy to Cloud Foundry  
 
 **3:00pm – 3:15pm**  
 Break  
 
-**3:15pm – 5:00pm**  
-Deploy to Cloud Foundry  
-Service Bindings  
-Marketplace  
+**3:15pm – 5:00pm**
+Deploy to K8    
+Buildpacks vs. Containers  
 
 ## Day 2
 
 **9:00am – 10:30am**  
-Demo of Microservice Orchestration and Pivotal Bank  
+Microservice Orchestration and Pivotal Bank  
 
 **10:30am – 10:45am**  
 Break  
