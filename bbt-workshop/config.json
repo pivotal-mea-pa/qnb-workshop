@@ -45,16 +45,16 @@
             "type": "demos",
             "content": [
                 {
+                  "name":"Spring Boot on Cloud Foundry",
+                  "filename":"bbt-workshop/reservation-service-cf-demo"
+                },
+                {
                   "name":"Reactive HTTP Client",
                   "filename":"reactive-spring/webclient-demo"
                 },
                 {
-                  "name":"Make MVC Reactive",
+                  "name":"Reactive MVC",
                   "filename":"reactive-spring/reactive-reservation-demo"
-                },
-                {
-                  "name":"Spring Boot on Cloud Foundry",
-                  "filename":"bbt-workshop/reservation-service-cf-demo"
                 },
                 {
                   "name":"Spring Boot and Docker",
