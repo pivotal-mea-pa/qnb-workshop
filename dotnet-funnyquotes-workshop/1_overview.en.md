@@ -29,49 +29,20 @@ It also features a Kill command to simulate application failure.
 * FunnyQuotesCommon - contains list of quotes for local use.
 
 # How to build
-* Copy the `manifest.yml` from the scripts folder into the first four projects in the list above.
-* Update each file according to the requirements of its respective project. Optionally, these changes can be made in each lab.
-* Ensure that the file is output on every build.
-  * In Visual Studio, right-click the file and select Properties. Set Copy to Output Directory to Copy Always.
-  
-  * For non-Visual Studio users, open each .csproj file and search for the `'manifest.yml` file.
-  
-  ```
-    <Content Include="manifest.yml" />
-  ```
-  
-  Make the following modification to the Xml element.
-  
-  ```
-    <Content Include="manifest.yml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  ```
-  
-* Publish each product using the supplied publish profile. The two options for publishing are as follows:
-  * Open the solution in Visual Studio, right click each project and select Publish. 
-  * For non-Visual Studio users, publish each project from the command line from the root directory of each project.
-  
-    For each of the three .NET Framework projects (FunnyQuotesUIForms, FunnyQuotesLegacyService, FunnyQuotesServicesOwin):
-  
-    ```
-    
-    ```
-  
-    For the one .NET Core project (FunnyQuotesUICore):
-  
-    ```
-      dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml --output ../../publish/FunnyQuotesUICore
-    ```
-  
-* The compiled assemblies will be output to the `\publish\` folder.
+* Open the FunnyQuotes.sln file in the src folder in Visual Studio.
+* Publish each project using the supplied publish profile.
+* The compiled projects will be output to the `\publish\` folder.
 
-### Prerequisites
+## Prerequisites
+* .NET Framework SDK 4.7
+* .NET Core SDK 2.1
 * Docker with images for
   * Config server
   * Eureka
   * Hystrix dashboard
   * MySQL
+
+**SDK Downloads:** https://dotnet.microsoft.com/download/visual-studio-sdks
 
 **Source Repo:** https://github.com/Pivotal-Field-Engineering/funny-quotes-demo
 
