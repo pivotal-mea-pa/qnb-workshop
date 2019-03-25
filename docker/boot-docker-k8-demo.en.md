@@ -1,6 +1,5 @@
-# Deploy Docker container to Cloud Foundry
-In this lab we will learn to run a Spring MVC app using a embedded H2 database on Docker
-
+# Spring Boot deploy to K8
+In this lab we will learn to deploy the docker image with the reservation-service created [earlier](../boot-docker-demo) on to local K8s.
 
 ## Requirements  
 1. Java 8+ JDK Installed  
@@ -8,42 +7,70 @@ In this lab we will learn to run a Spring MVC app using a embedded H2 database o
 1. Enable Kubernetes in Docker Desktop.
 1. Donwnload and install kubectl cli for Kubernetes.  
 
-## Build the reservation-demo project
+## Confirm Kubernetes setup
 
-1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>  
+1. Set kubectl to use docker desktop
+```bash
+kubectl config use-context docker-for-desktop
+```   
 
-1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact
+1. Confirm Kubernetes and kubectl are setup correctly by running.
+```bash
+kubectl cluster-info
+```   
+
+You should see something like this.
+```bash
+Kubernetes master is running at https://localhost:6443
+KubeDNS is running at https://localhost:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```  
+## Create pod.yml and service.yml files      
+
+1. Create a text file called `pod.yml` in the `reservation-service` project directory. Copy the following text to it.    
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: reservation-app
+    deployment: reservation-service-deployment
+  name: reservation-app
+spec:
+  containers:
+  - image: foo/myfirst-boot-on-docker:latest
+    name: reservation-backend
+    ports:
+    - containerPort: 8080
+      protocol: TCP
 ```
-./mvnw package
+Make sure the `image` matches the image tag that you specified in the [earlier](../boot-docker-demo) step. This tells Kubernetes to create a container using the docker image. The service is not exposed yet as container ports are not exposed. We need to create a service.yml for that.
+
+1. Create a text file called `service.yml` in the `reservation-service` project directory. Copy the following text to it.    
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: reservation-service
+    deployment: reservation-service-deployment
+  name: reservation-service
+spec:
+  ports:
+  - port: 8080
+    name: reservation-api
+  selector:
+    app: reservation-app
+  type: LoadBalancer
 ```
-1. Create a file a text file called Dockerfile in the same directory and copy the following text to it and save it:
+This file tells Kubernetes to make the container available on a port 8080 on the local machine.
+
+1. Run the following to have Kubernetes deploy our container in a pod and expose it via port 8080.   
+```bash
+kubectl create -f pod.yml -f service.yml
 ```
-FROM openjdk:8-jdk-alpine
-COPY target/reservation-service-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["/usr/bin/java","-jar","/app.jar"]
-```
-1. Run the command below to create docker image using the build artifact.
-```
-docker build --rm -t your-docker-username/your-docker-repository:latest .
-```
-1. Confirm the image is in your local docker repository
-```
-docker images
-```
-1. Deploy docker image to Docker hub
-```
-docker push your-docker-username/your-docker-repository:latest
-```
-1. Deploy docker image to Cloud Foundry (make sure Docker support is enabled in CF install)
-```
-cf push uniquename-service --docker-image your-docker-username/your-docker-repository:latest
-```
-1. Confirm it is running
-```
-docker ps
-```
+
 1. Let's save some data to the server using curl commands
-```
+```bash
 curl --request POST \
   --url http://uniquename-service.your-cf-domain.com/reservations \
   --header 'content-type: application/json' \
@@ -55,7 +82,12 @@ curl --request POST \
 '
 ```
 1. Confirm data is saved
-```
+```bash
 curl --request GET \
   --url http://uniquename-service.your-cf-domain.com/reservations
+```
+
+1. Cleanup by stopping the pod.
+```bash 
+kubectl delete pods reservation-app
 ```
