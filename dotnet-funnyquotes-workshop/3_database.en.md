@@ -88,7 +88,6 @@
     ```
         ---
         applications:
-
         - name: FunnyQuotesServicesOwin
           random-route: true
           memory: 512M
