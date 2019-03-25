@@ -22,7 +22,7 @@ How to make a Spring MVC REST service Reactive
 Lunch  
 
 **1:15pm – 2:00pm**  
-Developer Productivity with Spring and Pivotal
+Developer Productivity with Spring and Pivotal  
 Spring Boot on Cloud Foundry
 
 **2:00pm – 3:00pm**  
