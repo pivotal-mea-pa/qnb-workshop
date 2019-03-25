@@ -6,14 +6,14 @@
 
 #### Steps
 
-1. Push the backend - FunnyQuotesServicesOwin.
+1. Push FunnyQuotesServicesOwin.
 
     ```
      > cd FunnyQuotesServicesOwin
      > cf push FunnyQuotesServicesOwin
     ``` 
 
-2.Push the .NET Core front end - FunnyQuotesUICore.
+1.Push FunnyQuotesUICore.
 
     ```
      > cd FunnyQuotesUICore

@@ -7,11 +7,12 @@ Technical Features Demonstrated:
 - Deploying and running a .NET Framework WebForms application on Windows stack.
 - Run an ASMX service using traditional ADO.NET on Windows stack.
 - Run a WCF service with Entity Framework on Windows stack.
+- Bind to a MySQL database Marketplace service.
 - OWIN bootstrap into IIS
 - Service discovery with Eureka.
 - Circuit breaker with Hystrix.
 - Config server with Git repo.
-- Bind to a MySQL database Marketplace service.
+- Overview of OAuth and SSO.
 
 # Solution Projects
 ![Architecture](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/architecture.png)
@@ -27,19 +28,55 @@ It also features a Kill command to simulate application failure.
 * FunnyQuotesCookieDatabase - encapsulates the Entity Framework context.
 * FunnyQuotesCommon - contains list of quotes for local use.
 
-# How to build
-* Open Visual Studio. 
-* Publish each product using supplied publish profile.
-* Compiled assemblies are output to `\publish\` folder.
-* Copy `manifest.yml` file into each publish folder, making necessary changes per respective apps.
-* Optional. Fork the funny-quote-config repository (see link below), change the url in gitconfig.json to point to the forked url. This will allow demonstrating different client types from the front end, for example, rest, wcf, etc...
-* For each lab, there are two options for creating services: 1) Run `create-services.bat` in `\scripts` folder to create all marketplace services needed for all labs, or 2) Create same services as you progress through each lab that requires their use.
+# Setup
+* Fork the funny-quotes-config repo (link below).
+* In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
 
-### NOTES
-* If there is a need to build and publish more than once, it is easier to add the manifest file to each project and make required changes per app. On the Properties tab, set Copy to Output Directory to Copy Always. This will add the manifest every time the app is built and published.
+  ```
+    FunnyQuotes:
+      ClientType: local
+      FailedMessage: Failure is not an option -- it comes bundled with Windows.
+  ```
+
+# How to build
+* Copy the `manifest.yml` from the scripts folder into the first four projects in the list above.
+* Update each file according to the requirements of its respective project. Optionally, these changes can be made in each lab.
+* Ensure that the file is output on every build.
+  * In Visual Studio, right-click the file and select Properties. Set Copy to Output Directory to Copy Always.
+  
+  * For non-Visual Studio users, open each .csproj file and search for the `'manifest.yml` file.
+  
+  ```
+    <Content Include="manifest.yml" />
+  ```
+  
+  Make the following modification to the Xml element.
+  
+  ```
+    <Content Include="manifest.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  ```
+  
+* Publish each product using the supplied publish profile. The two options for publishing are as follows:
+  * Open the solution in Visual Studio, right click each project and select Publish. 
+  * For non-Visual Studio users, publish each project from the command line from the root directory of each project.
+  
+    For each of the three .NET Framework projects (FunnyQuotesUIForms, FunnyQuotesLegacyService, FunnyQuotesServicesOwin):
+  
+    ```
+    
+    ```
+  
+    For the one .NET Core project (FunnyQuotesUICore):
+  
+    ```
+      dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml --output ../../publish/FunnyQuotesUICore
+    ```
+  
+* The compiled assemblies will be output to the `\publish\` folder.
 
 ### Prerequisites
-* Visual Studio 2017 with .NET core support
 * Docker with images for
   * Config server
   * Eureka
