@@ -1,6 +1,6 @@
 ## Databases
 
-### Run App locally and show db initialization via EF code first
+### Run App locally and observe Db initialization via EF code
 
 1. Run MySQL locally via docker
 
@@ -79,27 +79,33 @@
 
 ### Push to PCF
 1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
-1. Push Owin backend
 
     ```
-    > cd FunnyQuotesServicesOwin
-    > cf push FunnyQuotesServicesOwin -s windows2016 -b hwc_buildpack
+        cf create-service p.mysql db-small mysql-funnyquotes
+    ```
+1. When service has been created, bind the service in the `manifest.yml` file.
+
+    ```
+      services:
+        - mysql-funnyquotes
     ```
 
-1. Bind to MySQL service and restart.
+1. Push Owin backend.
+
+    ```
+        > cd FunnyQuotesServicesOwin
+        > cf push FunnyQuotesServicesOwin -s windows2016 -b hwc_buildpack
+    ```
+
 1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
-1. Open up `FunnyQuotesServicesOwin.Startup` class and explain use of Steeltoe Connectors to initialize db context.
-
-Highlight the following lines of code.
+1. Open up `FunnyQuotesServicesOwin.Startup` class and note the use of Steeltoe Connectors to initialize DbContext.
 
     ```csharp
-    builder.RegisterMySqlConnection(config);
-    builder.Register(ctx => // register EF context
-    {
-        var connString = ctx.Resolve<IDbConnection>().ConnectionString;
-        return new FunnyQuotesCookieDbContext(connString);
-    });
+        builder.RegisterMySqlConnection(config);
+        builder.Register(ctx => // register EF context
+        {
+            var connString = ctx.Resolve<IDbConnection>().ConnectionString;
+            return new FunnyQuotesCookieDbContext(connString);
+        });
     ```                
-  Explain that helper methods exist when registering EF Core, but EF 6.x IDbConnection gets auto configured, and we can feed it into EF registration as per above.
-
-1. Push FunnyQuotesLegacyService using manifest and explain a restart is not necessary.
+  Helper methods exist when registering EF Core, but EF 6.x IDbConnection gets auto configured, and we can feed it into EF registration as per above.
