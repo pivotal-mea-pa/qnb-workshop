@@ -1,5 +1,5 @@
-# Deploy Docker container to Cloud Foundry
-In this lab we will learn to run a Spring MVC app using a embedded H2 database on Docker
+# Docker deploy to Cloud Foundry   
+In this lab we will learn to deploy the docker image with the reservation-service created [earlier](../boot-docker-demo) on to Cloud Foundry.
 
 ## Requirements  
 1. Java 8+ JDK Installed
@@ -11,62 +11,45 @@ In this lab we will learn to run a Spring MVC app using a embedded H2 database o
 1. Authenticate with docker hub using `docker login`  
 
 
-## Build the reservation-demo project  
-
-1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>  
-
-1. Open a terminal in the **reservation-service** directory of the project and create the deployment artifact  
-```
-./mvnw package
-```
-
-1. Create a file a text file called Dockerfile in the same directory and copy the following text to it and save it:  
-```
-FROM openjdk:8-jdk-alpine
-COPY target/reservation-service-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["/usr/bin/java","-jar","/app.jar"]
-```
-
-1. Run the command below to create docker image using the build artifact.
-```
-docker build --rm -t foo/myfirst-boot-on-docker:latest .
-```
+## Upload the docker file to docker hub
 
 1. Confirm the image is in your local docker repository
-```
+```bash
 docker images
 ```
 
 1. Tag the local image created to match your docker repo name so it gets uploaded there
-```
+```bash
 docker tag foo/myfirst-boot-on-docker:latest your-docker-username/your-docker-repository:latest
 ```
 
 1. Deploy docker image to Docker hub
-```
+```bash
 docker push your-docker-username/your-docker-repository:latest
 ```
 
 1. Remove the `manifest.yml` file so it does not conflict with the docker deploy.  
-```
+```bash
 rm manifest.yml
 ```   
 
+## Deploy docker image to Cloud Foundry  
+
 1. Deploy docker image to Cloud Foundry (make sure Docker support is enabled in CF install).
-```
+```bash
 cf push uniquename-service --docker-image your-docker-username/your-docker-repository:latest
 ```
 
 1. Cloud Foundry will pull your docker image from your public repository.  
 
 1. Confirm it is running
-```
+```bash
 cf apps
 ```
-Copy the fully qaualified domain name of the deployed application.   
+Copy the fully qualified domain name of the deployed application.
 
 1. Let's save some data to the server using curl commands
-```
+```bash
 curl --request POST \
   --url http://uniquename-service.your-cf-domain.com/reservations \
   --header 'content-type: application/json' \
@@ -79,7 +62,7 @@ curl --request POST \
 ```
 
 1. Confirm data is saved
-```
+```bash
 curl --request GET \
   --url http://uniquename-service.your-cf-domain.com/reservations
 ```

@@ -1,5 +1,5 @@
-# Reactive MVC
-In this lab we will learn how to take a simple Spring MVC project and make it reactive.
+# Spring Boot on Cloud Foundry
+In this lab we will learn how to deploy to Cloud Foundry
 
 ## Requirements    
 1. Java 8+ JDK Installed  
@@ -14,24 +14,24 @@ In this lab we will learn how to take a simple Spring MVC project and make it re
 1. Open a terminal in the `reservation-service` directory of the project
 
 1. Build the `reservation-service`
-```
+```bash
 ./mvnw package
 ```
 
 1. Deploy the application to Cloud Foundry
-```
+```bash
 cf push
 ```
 This will read the `mainfest.yml` located in the directory and use that metadata for the application.
 
 1. Confirm it is running
-```
+```bash
 cf apps
 ```
 Copy the fully qaualified domain name of the deployed application.   
 
 1. Let's save some data to the server using curl commands
-```
+```bash
 curl --request POST \
   --url http://uniquename-service.your-cf-domain.com/reservations \
   --header 'content-type: application/json' \
@@ -44,7 +44,7 @@ curl --request POST \
 ```
 
 1. Confirm data is saved
-```
+```bash
 curl --request GET \
   --url http://uniquename-service.your-cf-domain.com/reservations
 ```
@@ -54,7 +54,7 @@ curl --request GET \
 1. We need to modify the URL that this project uses to connect to the reservation-service since it is using http://localhost:8080. Find the place in the code to change it to use the reservation-service we deployed earlier.    
 
 1. After making the change, build and deploy the application to Cloud Foundry
-```
+```bash
 ./mvnw package
 cf push
 ```  

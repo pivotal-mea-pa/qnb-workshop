@@ -11,11 +11,12 @@ It is useful to understand how the WebClient works in order to better understand
 ## Build the reactive-for-webmvc project
 
 1. Git Clone or download reactive-for-webmvc repo at <https://github.com/Pivotal-Field-Engineering/reactive-for-webmvc>
+
 1. Open a terminal in the `remote-service` directory of the project
 
 1. This is the backend server that the client calls. Run the server
-```
-$ spring-boot:run
+```bash
+spring-boot:run
 ```
 1. Open the project in your favorite IDE
 1. In the `main-app` project, open the files in the `demo.client` package called `Step1a.java`, `Step2a.java` etc. for examples of how to transistion to use WebClient. Run each of the files to see how the WebClient works as we start to use the API.
