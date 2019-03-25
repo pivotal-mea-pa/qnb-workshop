@@ -1,5 +1,8 @@
 # Reactive MVC
-In this lab we will learn how to take a simple Spring MVC project and make it reactive.
+In this lab we will learn how to take a simple Spring MVC project and make it reactive.  
+
+## Requirements  
+1. Java 8+ JDK Installed
 
 ## Run the reservation-service  
 1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>

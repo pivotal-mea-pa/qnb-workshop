@@ -1,9 +1,14 @@
-# WebClient Demo
+# WebClient Demo  
+
 WebClient is a non-blocking, reactive client to perform HTTP requests. It exposes a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.
 
-It is useful to understand how the WebClient works in order to better understand the other Reactive APIs.
+It is useful to understand how the WebClient works in order to better understand the other Reactive APIs.  
 
-## Download and build the reactive-for-webmvc project
+
+## Requirements  
+1. Java 8+ JDK Installed
+
+## Build the reactive-for-webmvc project
 
 1. Git Clone or download reactive-for-webmvc repo at <https://github.com/Pivotal-Field-Engineering/reactive-for-webmvc>
 1. Open a terminal in the `remote-service` directory of the project

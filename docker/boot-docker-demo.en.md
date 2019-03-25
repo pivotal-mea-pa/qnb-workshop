@@ -1,9 +1,13 @@
 # Run a Spring Boot app on Docker
 In this lab we will learn to run a Spring MVC app using a embedded H2 database on Docker
 
+## Requirements  
+1. Java 8+ JDK Installed  
+1. Install Docker for Desktop for your platform from <https://www.docker.com/products/docker-desktop>  
+
+
 ## Download the reservation-demo project
 
-1. Install Docker for Desktop for your platform from <https://www.docker.com/products/docker-desktop>
 1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>
 
 1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact

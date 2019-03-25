@@ -1,18 +1,16 @@
 # Deploy Docker container to Cloud Foundry
 In this lab we will learn to run a Spring MVC app using a embedded H2 database on Docker
 
-## Requirements
-1. Install Docker for Desktop for your platform from <https://www.docker.com/products/docker-desktop>
-1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>
-1. Install [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) on your desktop.
-1. Create a free account on [PWS](https://pws.pivotal.io) OR your organization's PAS service.
-1. Configure cf-cli to login to your PAS service.
-1. Create an account on Docker hub and a repository.
-1. Authenticate with docker hub using ```docker login```
+
+## Requirements  
+1. Java 8+ JDK Installed  
+1. Install Docker for Desktop for your platform from <https://www.docker.com/products/docker-desktop>  
+1. Enable Kubernetes in Docker Desktop.
+1. Donwnload and install kubectl cli for Kubernetes.  
 
 ## Build the reservation-demo project
 
-
+1. Git Clone or download reservation-demo repo at <https://github.com/Pivotal-Field-Engineering/reservation-demo>  
 
 1. Open a terminal in the `reservation-service` directory of the project and create the deployment artifact
 ```
