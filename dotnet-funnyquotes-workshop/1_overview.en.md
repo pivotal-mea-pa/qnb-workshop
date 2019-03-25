@@ -58,13 +58,12 @@ It also features a Kill command to simulate application failure.
   * From a command prompt, execute the following command in the root folder of the one .NET Core project.
   
     ```
-    
+      dotnet publish -c Release /p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
     ```
   
 * The compiled assemblies will be output to the `\publish\` folder.
 
 ### Prerequisites
-* Visual Studio 2017 with .NET core support
 * Docker with images for
   * Config server
   * Eureka
