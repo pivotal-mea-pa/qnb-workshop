@@ -83,11 +83,21 @@
     ```
         cf create-service p.mysql db-small mysql-funnyquotes
     ```
-1. When service has been created, bind the service in the `manifest.yml` file.
+1. When service has been created, add the following services section to the existing elements in the `manifest.yml` file.
 
     ```
-      services:
-        - mysql-funnyquotes
+        ---
+        applications:
+
+        - name: FunnyQuotesServicesOwin
+          random-route: true
+          memory: 512M
+          health-check-type: http
+          health-check-http-endpoint: /
+          buildpack: hwc_buildpack
+          stack: windows2016
+          services:
+            - mysql-funnyquotes
     ```
 
 1. Push Owin backend.
