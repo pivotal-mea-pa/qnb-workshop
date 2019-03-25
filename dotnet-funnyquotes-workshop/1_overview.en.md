@@ -33,6 +33,7 @@ It also features a Kill command to simulate application failure.
 * Update each file according to the requirements of its respective project. Optionally, these changes can be made in each lab.
 * Ensure that the file is output on every build.
   * In Visual Studio, right-click the file and select Properties. Set Copy to Output Directory to Copy Always.
+  
   * For non-Visual Studio users, open each .csproj file and search for the `'manifest.yml` file.
   
   ```
