@@ -1,0 +1,27 @@
+{
+    "workshopSubject":"Enterprise Security with CredHub",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Story of Enterprise Security & Credhub",
+                    "filename":"credhub/overview-slide"
+                },
+                {
+                    "name":"Operations Use Cases",
+                    "filename":"credhub/operations-use-cases-slide"
+                },
+                {
+                    "name":"Development Use Cases",
+                    "filename":"credhub/developer-use-cases-slide"
+                }
+            ]
+        },
+        {
+            "type": "demos",
+            "content": []
+        }
+    ]
+}
