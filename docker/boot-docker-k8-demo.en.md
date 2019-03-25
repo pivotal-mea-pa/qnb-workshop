@@ -46,7 +46,7 @@ spec:
 Make sure the `image` matches the image tag that you specified in the [earlier](../boot-docker-demo) step. This tells Kubernetes to create a container using the docker image. The service is not exposed yet as container ports are not exposed. We need to create a service.yml for that.
 
 1. Create a text file called `service.yml` in the `reservation-service` project directory. Copy the following text to it.    
-```yaml
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -88,6 +88,6 @@ curl --request GET \
 ```
 
 1. Cleanup by stopping the pod.
-```bash 
+```bash
 kubectl delete pods reservation-app
 ```
