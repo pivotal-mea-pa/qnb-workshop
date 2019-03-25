@@ -37,7 +37,8 @@
     ```
     
 1. Navigate to service dashboard.
-  - Apps Manager > Space > Services > Eureka > Manage.
+    Apps Manager > Space > Services > Eureka > Manage.
+    
 1. Confirm both apps are showing up in the registry. 
 
 Note that URL endpoints are discovered by a well-known name.
