@@ -28,7 +28,8 @@ KubeDNS is running at https://localhost:6443/api/v1/namespaces/kube-system/servi
 ## Create pod.yml and service.yml files      
 
 1. Create a text file called `pod.yml` in the `reservation-service` project directory. Copy the following text to it  
-```yaml
+
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -43,11 +44,13 @@ spec:
     ports:
     - containerPort: 8080
       protocol: TCP
-```  
+```
+  
 Make sure the `image` matches the image tag that you specified in the [earlier](../boot-docker-demo) step. This tells Kubernetes to create a container using the docker image. The service is not exposed yet as container ports are not exposed. We need to create a service.yml for that.
 
 1. Create a text file called `service.yml` in the `reservation-service` project directory. Copy the following text to it   
-```yaml
+
+```
 apiVersion: v1
 kind: Service
 metadata:
