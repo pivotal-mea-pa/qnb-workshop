@@ -28,6 +28,16 @@ It also features a Kill command to simulate application failure.
 * FunnyQuotesCookieDatabase - encapsulates the Entity Framework context.
 * FunnyQuotesCommon - contains list of quotes for local use.
 
+# Setup
+* Fork the funny-quotes-config repo (link below).
+* In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
+
+  ```
+    FunnyQuotes:
+      ClientType: local
+      FailedMessage: Failure is not an option -- it comes bundled with Windows.
+  ```
+
 # How to build
 * Copy the `manifest.yml` from the scripts folder into the first four projects in the list above.
 * Update each file according to the requirements of its respective project. Optionally, these changes can be made in each lab.
