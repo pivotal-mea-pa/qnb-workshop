@@ -52,16 +52,16 @@ It also features a Kill command to simulate application failure.
   * Open the solution in Visual Studio, right click each project and select Publish. 
   * For non-Visual Studio users, publish each project from the command line from the root directory of each project.
   
-    For each of the three .NET Framework projects:
+    For each of the three .NET Framework projects (FunnyQuotesUIForms, FunnyQuotesLegacyService, FunnyQuotesServicesOwin):
   
     ```
     
     ```
   
-    For the one .NET Core project.
+    For the one .NET Core project (FunnyQuotesUICore):
   
     ```
-      dotnet publish -c Release /p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+      dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml --output ../../publish/FunnyQuotesUICore
     ```
   
 * The compiled assemblies will be output to the `\publish\` folder.
