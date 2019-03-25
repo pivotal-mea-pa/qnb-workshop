@@ -1,5 +1,5 @@
 
-# BB&T Spring workshop
+# BB&T Spring Workshop
 
 ## Day 1  
 **9:00am – 9:30am**  
