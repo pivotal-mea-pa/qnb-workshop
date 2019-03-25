@@ -24,9 +24,10 @@ You should see something like this.
 Kubernetes master is running at https://localhost:6443
 KubeDNS is running at https://localhost:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 ```  
+
 ## Create pod.yml and service.yml files      
 
-1. Create a text file called `pod.yml` in the `reservation-service` project directory. Copy the following text to it.    
+1. Create a text file called `pod.yml` in the `reservation-service` project directory. Copy the following text to it  
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -42,11 +43,11 @@ spec:
     ports:
     - containerPort: 8080
       protocol: TCP
-```
+```  
 Make sure the `image` matches the image tag that you specified in the [earlier](../boot-docker-demo) step. This tells Kubernetes to create a container using the docker image. The service is not exposed yet as container ports are not exposed. We need to create a service.yml for that.
 
-1. Create a text file called `service.yml` in the `reservation-service` project directory. Copy the following text to it.    
-```
+1. Create a text file called `service.yml` in the `reservation-service` project directory. Copy the following text to it   
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -61,7 +62,7 @@ spec:
   selector:
     app: reservation-app
   type: LoadBalancer
-```
+```  
 This file tells Kubernetes to make the container available on a port 8080 on the local machine.
 
 1. Run the following to have Kubernetes deploy our container in a pod and expose it via port 8080.   
