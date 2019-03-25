@@ -1,6 +1,7 @@
 {
-    "workshopSubject":"BBT",
+    "workshopSubject":"BB&T",
     "workshopHomepage":"agenda.en.md",
+    "workshopHostname": "bbt-spring",
     "modules": [
         {
             "type": "concepts",
