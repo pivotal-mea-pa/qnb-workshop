@@ -6,10 +6,9 @@
 
 #### Steps
 
-1. Push the backend - FunnyQuotesServicesOwin.
+1. From the publish folder in the FunnyQuotesServicesOwin project, push the assemblies.
 
     ```
-     > cd FunnyQuotesServicesOwin
      > cf push FunnyQuotesServicesOwin
     ``` 
 
