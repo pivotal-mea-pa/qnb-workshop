@@ -1,5 +1,16 @@
 ## Service Discovery
 
+### Prerequisites
+1. Ensure only the following services are defined in the manifest.yml file of the FunnyQuotesLegacyService and/or FunnyQuotesServicesOwin project.
+
+    ```
+    services:
+        - mysql-funnyquotes
+        - config-server
+        - eureka
+        #- hystrix
+    ```
+
 ### Service discovery locally
 1. Pull down docker image.
 
