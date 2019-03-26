@@ -4,8 +4,6 @@
 1. Show how pushing .NET Framework 4.x apps and .NET Core apps work the same.
 1. Target both Linux and Windows stacks.
 
-**Note:** Proceed with this step if you want to create all the services and push all the apps at once. Otherwise, each lab has the instructions for doing both incrementally as they are needed.
-
 ### Steps
 1. Execute the `create-services.bat` file in the scripts directory. Wait until all services are created before proceeding.
 1. Push the FunnyQuotesServicesOwin backend, and the FunnyQuotesUICore frontend.
@@ -19,7 +17,7 @@
     > cf push
     ```
     
-    * Note the default stack when omitted is `cflinuxfs2` and the use of the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
+    * Note the default stack is `cflinuxfs2` when omitted, and the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
         
 1. Explain output while app is being pushed.
 1. Access the app URL, get a few funny quotes, get some laughs. :)
