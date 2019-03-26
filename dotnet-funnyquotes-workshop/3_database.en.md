@@ -6,7 +6,7 @@
 1. Provision MySql database.
 
 ### Prerequisites
-* Comment out all the services in the manifest.yml file except `mysql-funnyquotes` of the FunnyQuotesServicesOwin project.
+1. Ensure only the following services are defined in the manifest.yml file of the published FunnyQuotesServicesOwin project.
 
     ```
     services:
