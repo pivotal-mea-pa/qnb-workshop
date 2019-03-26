@@ -11,7 +11,7 @@
                 },
                 {
                     "name":"Operations Use Cases",
-                    "filename":"credhub/operations-use-cases-slide"
+                    "filename":"credhub/operator-use-cases-slide"
                 },
                 {
                     "name":"Development Use Cases",
@@ -21,7 +21,20 @@
         },
         {
             "type": "demos",
-            "content": []
+            "content": [
+                {
+                    "name":"Using Credhub with Pivotal Application Service",
+                    "filename":"credhub/credhub-servicebroker-demo"
+                },
+                {
+                    "name":"Using Credhub with Spring",
+                    "filename":"credhub/credhub-spring-demo"
+                },
+                {
+                    "name":"Using Credhub with Golang",
+                    "filename":"credhub/credhub-golang-demo"
+                }
+            ]
         }
     ]
 }
