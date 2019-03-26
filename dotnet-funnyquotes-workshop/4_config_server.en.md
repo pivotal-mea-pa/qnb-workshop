@@ -3,7 +3,7 @@
 We want to get FunnyQuotes client to use a different implementation of IFunnyQuotesService to talk to an alternative backend service. There are multiple named implementations registered into dependency injection container. The instance supplied for IFunnyQuotesService is dependent on the config value. We're going to use config settings to swap out the implementation it will use.
 
 ### Prerequisites
-* Comment out all the services in the manifest.yml file except `mysql-funnyquotes` and `config-server` in all four published applications.
+1. Ensure only the following services are defined in the manifest.yml files of all four published applications.
 
     ```
     services:
