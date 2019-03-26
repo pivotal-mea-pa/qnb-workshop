@@ -12,11 +12,11 @@
 
     ```
     > cd FunnyQuotesServicesOwin
-    > cf push FunnyQuotesServicesOwin
+    > cf push
     ```
     ```
     > cd FunnyQuotesUICore
-    > cf push FunnyQuotesUICore
+    > cf push
     ```
     
     * Note the default stack when omitted is `cflinuxfs2` and the use of the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
@@ -33,11 +33,11 @@
 
     ```
     > cd FunnyQuotesLegacyService
-    > cf push FunnyQuotesLegacyService
+    > cf push
     ```
     ```
     > cd FunnyQuotesUIForms
-    > cf push FunnyQuotesUIForms
+    > cf push
     ```
 
     * Observe the use of the `windows2016` stack and the `hwc_buildpack` in the manifest.yml file when pushing .NET Framework apps.
