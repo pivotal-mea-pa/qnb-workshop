@@ -82,8 +82,6 @@
   The Views column should now be visible and new record in migration table.
 
 ### Push to PCF
-**Note:** Ignore the first three steps if you completed lab 2.
-
 1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
 
     ```
