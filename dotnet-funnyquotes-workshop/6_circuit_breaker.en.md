@@ -1,5 +1,16 @@
 ## Hystrix
 
+### Prerequisites
+1. Ensure all the following services are defined in the manifest.yml file of the published FunnyQuotesServicesOwin project.
+
+    ```
+    services:
+        - mysql-funnyquotes
+        - config-server
+        - eureka
+        - hystrix
+    ```
+    
 1. Provision a hystrix dashboard, the standard plan, named `hystrix` from the marketplace.
 
     ```
