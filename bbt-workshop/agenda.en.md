@@ -39,13 +39,13 @@ Break
 
 ## Day 2  
 **9:00am – 10:30am**  
-[Microservice Orchestration and Pivotal Bank](../demos/pivotal-bank-demo/pivotal-bank-setup)  
+[Microservice Orchestration and Pivotal Bank](../demos/pivotal-bank-setup)  
 
 **10:30am – 10:45am**  
 Break  
 
 **10:45am – Noon**  
-[Spring Cloud Services](../demos/pivotal-bank-demo/pivotal-bank-setup)     
+[Spring Cloud Services](../demos/pivotal-bank-setup)     
   - Config Service  
   - Service Registry   
   - Circuit Breaker  
