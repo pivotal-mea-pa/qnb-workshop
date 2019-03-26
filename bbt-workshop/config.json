@@ -11,6 +11,10 @@
                     "filename":"fiserv-cs-workshop/education-slide"
                 },
                 {
+                    "name":"Pivotal Outcomes",
+                    "filename":"bbt-workshop/pivotal-corp-deck-2019"
+                },
+                {
                     "name":"Spring Boot",
                     "filename":"bbt-workshop/spring-boot-slide"
                 },
