@@ -13,7 +13,7 @@ Spring Cloud Dataflow setup on Cloud Foundry (PWS)
     vim pws_setup.sh
     
     SCDF_APP_NAME=[NEED TO SET]
-    SCDF_RELEASE=1.3.0.RELEASE
+    SCDF_RELEASE=1.7.4.RELEASE
     CF_DOMAIN=cfapps.io
     CF_USERNAME=[NEED TO SET]
     CF_PASSWORD=[NEED TO SET]
@@ -23,9 +23,17 @@ Spring Cloud Dataflow setup on Cloud Foundry (PWS)
 
 1. Run ``pws_setup.sh``
 1. Open the Dataflow dashboard (tip: cf apps to get url for SCDF), should be something like: ``https://my-scdf.cfapps.io/dashboard``
-1. Launch the dataflow shell ``java -jar spring-cloud-dataflow-shell-1.3.0.RELEASE.jar``
+1. Launch the dataflow shell ``java -jar spring-cloud-dataflow-shell-1.7.4.RELEASE.jar``
 1. Once in the shell issue: ``dataflow config server --uri <URI-FOR-SCDF>``, should be something like: ``https://my-scdf.cfapps.io``
 1. Go forth and be productive with Dataflow
+1. Done with the demo, run pws_teardown.sh
+
+    ```
+    cd scdf-pws
+    vim pws_teardown.sh
+    
+    SCDF_APP_NAME=[NEED TO SET]
+    ```
 
 ## Spring Cloud Dataflow
 1. [SCDF Project](https://cloud.spring.io/spring-cloud-dataflow/)
