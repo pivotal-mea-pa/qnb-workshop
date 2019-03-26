@@ -20,32 +20,58 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
 ### On PCF
 1. Fork the funny-quotes-config repo from https://github.com/Pivotal-Field-Engineering/funny-quotes-config.
 1. Edit gitconfig.json in scripts folder and update URL to forked repo.
-1. Provision p-config-server from the marketplace, the standard plan, and name it `config-server`.
+1. Provision p-config-server from the marketplace, the standard plan, and name it `config-server` from the scripts folder.
     
     ```
-        > cf create-service p-config-server standard config-server -c gitconfig.json
+    > cf create-service p-config-server standard config-server -c gitconfig.json
     ```
-1. Uncomment the p-config-server line in the manifest files of each project.
+    
+    If you already created this service in lab 2, run the following to update the service.
+    
+    ```
+    > cf update-service config-server -c gitconfig.json
+    ```
+    
+1. Comment out all the services in the manifest.yml file except `mysql-funnyquotes` and `config-server` in all four published applications.
+
+    ```
+    services:
+        - mysql-funnyquotes
+        - config-server
+        #- eureka
+        #- hystrix
+    ```
+    
 1. Push all four applications.
-1. Note the different provider in FunnyQuotesUICore.
-1. In the forked repo, change ClientType in the FunnyQuotesUICore.yaml file.
+1. Launch FunnyQuotesUICore and FunnyQuotesUIForms and note the provider in both.
+1. In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
 
   ```
     FunnyQuotes:
-      ClientType: rest
+      ClientType: local
       FailedMessage: Failure is not an option -- it comes bundled with Windows.
   ```
   
+  Save settings. Run git commit and push. After 10 seconds, refresh FunnyQuotesUICore.
+  Note the new provider is changed without a restart of the app.
+
+1. In the forked repo, change ClientType from wcf to asmx in the FunnyQuotesUICore.yaml file.
+
+  ```
+    FunnyQuotes:
+      ClientType: asmx
+  ```
+    
+  Save settings. Run git commit and push. After 10 seconds, refresh FunnyQuotesUIForms.
+  Note the new provider is changed without a restart of the app.
+
+  Feel free to experiment with the other client types in FunnyQuotesUIForms.
+
   Possible values include:
     - local, uses memory.
     - rest, uses FunnyQuotesServicesOwin.
     - wcf, uses FunnyQuotesLegacyService.
     - asmx, uses FunnyQuotesLegacyService.
-    
-1. Save settings, commit and push.
-1. Wait at least 10 seconds and go back to the FunnyQuotesUIForms.
-
-Observe that new provider is picked up without restart of the app.
 
 ### Things to note
 

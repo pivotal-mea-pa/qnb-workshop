@@ -82,8 +82,6 @@
   The Views column should now be visible and new record in migration table.
 
 ### Push to PCF
-**Note:** Ignore the first three steps if you completed lab 2.
-
 1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
 
     ```
@@ -92,14 +90,22 @@
     
 1. Comment out all the services in the manifest.yml file except `mysql-funnyquotes` of the FunnyQuotesServicesOwin project.
 
+    ```
+    services:
+        - mysql-funnyquotes
+        #- config-server
+        #- eureka
+        #- hystrix
+    ```
+
 1. Push FunnyQuotesServicesOwin backend.
 
     ```
     > cd FunnyQuotesServicesOwin
-    > cf push FunnyQuotesServicesOwin
+    > cf push
     ```
     
-    * Note the default stack when omitted is `cflinuxfs2` and the use of the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
+    * Note the default stack is `cflinuxfs2` when omitted and the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
 
 1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
 1. Open up `FunnyQuotesServicesOwin.Startup` class and note the use of Steeltoe Connectors to initialize DbContext.
