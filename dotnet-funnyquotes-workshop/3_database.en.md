@@ -5,6 +5,17 @@
 1. Change domain model to run migrations.
 1. Provision MySql database.
 
+### Prerequisites
+* Comment out all the services in the manifest.yml file except `mysql-funnyquotes` of the FunnyQuotesServicesOwin project.
+
+    ```
+    services:
+        - mysql-funnyquotes
+        #- config-server
+        #- eureka
+        #- hystrix
+    ```
+
 ### Steps
 1. Run MySQL locally via docker
 
@@ -86,16 +97,6 @@
 
     ```
     cf create-service p.mysql db-small mysql-funnyquotes
-    ```
-    
-1. Comment out all the services in the manifest.yml file except `mysql-funnyquotes` of the FunnyQuotesServicesOwin project.
-
-    ```
-    services:
-        - mysql-funnyquotes
-        #- config-server
-        #- eureka
-        #- hystrix
     ```
 
 1. Push FunnyQuotesServicesOwin backend.
