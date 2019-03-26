@@ -7,26 +7,27 @@ Introductions
 Agenda Review   
 [Pivotal outcomes](../concepts/pivotal-corp-deck-2019)    
 
-**9:30am – 10:30am**  
+**10:00am – 11:00am**  
 [Spring Boot Basics](../concepts/spring-boot-slide)  
-Spring Boot Demo
 
-**10:30am – 10:45am**  
+**11:00am – 11:15am**  
 Break  
 
 **10:45am – Noon**  
-[Reactive Spring](../concepts/reactive-microservices-slide)      
-[WebClient Demo](../demos/webclient-demo)  
-[How to make a Spring MVC REST service Reactive](../demos/reactive-reservation-demo/)   
+Spring Boot Demo  
 
-**Noon– 1:15pm**  
+**Noon– 12:45pm**  
 Lunch  
 
-**1:15pm – 2:00pm**  
-[Developer Productivity with Spring and Pivotal](../concepts/spring-developer-productivity-slide/)  
-[Spring Boot on Cloud Foundry](../demos/reservation-service-cf-demo)  
+**12:45pm – 2:00pm**  
+[Microservice Orchestration and Pivotal Bank](../demos/pivotal-bank-setup)   
+Spring Cloud Services     
+  - Config Service  
+  - Service Registry   
+  - Circuit Breaker
 
 **2:00pm – 3:00pm**  
+[Developer Productivity with Spring and Pivotal](../concepts/spring-developer-productivity-slide/)  
 [Spring Boot and Docker](../demos/boot-docker-demo/)   
 [Docker deploy to Cloud Foundry](../demos/boot-docker-cf-demo/)  
 
@@ -38,22 +39,21 @@ Break
 [Buildpacks vs. Containers](../concepts/buildpacks-or-containers-slide/)   
 
 ## Day 2  
-**9:00am – 10:30am**  
-[Microservice Orchestration and Pivotal Bank](../demos/pivotal-bank-setup)  
+**9:30am – 11:00am**  
+[Reactive Spring](../concepts/reactive-microservices-slide)      
+[WebClient Demo](../demos/webclient-demo)  
 
-**10:30am – 10:45am**  
+
+**11:00am – 11:15am**  
 Break  
 
-**10:45am – Noon**  
-[Spring Cloud Services](../demos/pivotal-bank-setup)     
-  - Config Service  
-  - Service Registry   
-  - Circuit Breaker  
+**11:15am – Noon**  
+[How to make a Spring MVC REST service Reactive](../demos/reactive-reservation-demo/)    
 
-**Noon– 1:15pm**  
+**Noon– 12:45pm**  
 Lunch  
 
-**1:15pm – 2:30pm**  
+**12:45pm – 2:30pm**  
 [Pivotal Gemfire/Pivotal Cloud Cache Overview](../concepts/pcc-developer-workshop-slide)    
 
 **2:30pm – 4:00pm**  
