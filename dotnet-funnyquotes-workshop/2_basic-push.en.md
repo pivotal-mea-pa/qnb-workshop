@@ -4,7 +4,7 @@
 1. Show how pushing .NET Framework 4.x apps and .NET Core apps work the same.
 1. Target both Linux and Windows stacks.
 
-**Note:** Proceed with this step if you want to create all the services at once. Otherwise, each lab has the instructions for creating each service when they are needed.
+**Note:** Proceed with this step if you want to create all the services and push all the apps at once. Otherwise, each lab has the instructions for doing both incrementally as they are needed.
 
 ### Steps
 1. Execute the `create-services.bat` file in the scripts directory. Wait until all services are created before proceeding.
