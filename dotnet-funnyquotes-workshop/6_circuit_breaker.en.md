@@ -1,4 +1,4 @@
-## Hystrix
+## Circuit Breaker - Hystrix
 
 ### Prerequisites
 1. Ensure all the following services are defined in the manifest.yml file of the published FunnyQuotesServicesOwin project.
