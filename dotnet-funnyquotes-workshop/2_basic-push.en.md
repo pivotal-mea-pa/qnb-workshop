@@ -7,10 +7,7 @@
 **Note:** Proceed with this step if you want to create all the services at once. Otherwise, each lab has the instructions for creating each service when they are needed.
 
 ### Steps
-1. Execute the `create-services.bat` file in the scripts directory.
-
-**Note:** Wait until the services are created before proceeding.
-
+1. Execute the `create-services.bat` file in the scripts directory. Wait until all services are created before proceeding.
 1. Push the FunnyQuotesServicesOwin backend, and the FunnyQuotesUICore frontend.
 
     ```
