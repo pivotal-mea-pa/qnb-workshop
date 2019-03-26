@@ -1,53 +1,52 @@
-## Pushing the apps
+# Pushing apps
  
-#### Goals 
-1. Show how pushing 4.x apps and Core apps works the same.
+# Goals
+1. Show how pushing .NET Framework 4.x apps and .NET Core apps work the same.
 1. Target both Linux and Windows stacks.
 
-#### Steps
+**Note:** Proceed with this step if you want to create all the services at once. Otherwise, each lab has the instructions for creating each service when they are needed.
 
-1. Push FunnyQuotesServicesOwin.
-
-    ```
-     > cd FunnyQuotesServicesOwin
-     > cf push FunnyQuotesServicesOwin
-    ``` 
-
-1.Push FunnyQuotesUICore.
+# Steps
+1. Execute `create-services.bat` file in the scripts directory.
+1. Push the FunnyQuotesServicesOwin backend, and the FunnyQuotesUICore frontend.
 
     ```
-     > cd FunnyQuotesUICore
-     > cf push FunnyQuotesUICore
-    ``` 
+        > cd FunnyQuotesServicesOwin
+        > cf push FunnyQuotesServicesOwin
+    ```
+    ```
+        > cd FunnyQuotesUICore
+        > cf push FunnyQuotesUICore
+    ```
     
+    * Note the default stack when omitted is `cflinuxfs2` and the use of the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
+        
 1. Explain output while app is being pushed.
 1. Access the app URL, get a few funny quotes, get some laughs. :)
-1. Show log output
+1. View log output
 
     ```
-     > cf logs FunnyQuotesUICore --recent
+        > cf logs FunnyQuotesUICore --recent
     ```
 
-1. Push the backend - FunnyQuotesLegacyService.
+1. Push the FunnyQuotesLegacyService backend, and the FunnyQuotesUIForms frontend.
 
     ```
-     > cd FunnyQuotesLegacyService
-     > cf push FunnyQuotesLegacyService -s windows2016
+        > cd FunnyQuotesLegacyService
+        > cf push FunnyQuotesLegacyService
     ```
-    
-1. Push the 4.x WebForms front end - FunnyQuotesUIForms.
-
     ```
-     > cd FunnyQuotesUIForms
-     > cf push FunnyQuotesUIForms -s windows2016
+        > cd FunnyQuotesUIForms
+        > cf push FunnyQuotesUIForms
     ```
 
-   * _Explain Hosted Web Core buildpack (kernel of IIS)
+    * Observe the use of the `windows2016` stack and the `hwc_buildpack` in the manifest.yml file when pushing .NET Framework apps.
+    * The Hosted Web Core buildpack is essentially the kernel of IIS.
 
-1. Show log tailing while pushing / starting up
+1. Show log tailing while pushing / starting up.
 
     ```
-     > cf logs FunnyQuotesUIForms
+        > cf logs FunnyQuotesUIForms
     ```
   
 1. Optional: Press Kill button and show recovery
