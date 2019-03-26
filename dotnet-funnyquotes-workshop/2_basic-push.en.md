@@ -1,12 +1,12 @@
 # Pushing apps
  
-# Goals
+## Goals
 1. Show how pushing .NET Framework 4.x apps and .NET Core apps work the same.
 1. Target both Linux and Windows stacks.
 
 **Note:** Proceed with this step if you want to create all the services at once. Otherwise, each lab has the instructions for creating each service when they are needed.
 
-# Steps
+## Steps
 1. Execute `create-services.bat` file in the scripts directory.
 1. Push the FunnyQuotesServicesOwin backend, and the FunnyQuotesUICore frontend.
 
