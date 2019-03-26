@@ -1,7 +1,11 @@
 ## Databases
 
-### Run App locally and observe Db initialization via EF code
+### Goals
+1. Run App locally and observe Db initialization.
+1. Change domain model to run migrations.
+1. Provision MySql database.
 
+### Steps
 1. Run MySQL locally via docker
 
     ```
@@ -39,7 +43,6 @@
     ```
 
 ### Demo creating new migration
-
 1. Change `FunnyQuotesCookieDatabase.FunnyQuote` class to add a new field:
 
     ```csharp
@@ -57,13 +60,14 @@
     > EntityFramework\Add-Migration -Name ViewCountField -Project FunnyQuotesCookieDatabase -StartUpProject FunnyQuotesLegacyService
     ```
 
-1. Highlight that startup project argument is used to determine the connection to the database in order to compare the schema. Web.Config must have ConnectionString section even if it's not used in normal course of the application to run this command.
-    1. Show the new migration that was added under `FunnyQuotesCookieDatabase\Migrations`.
-    1. Show that at this point the database is still based on old schema.
+1. Note that startup project argument is used to determine the connection to the database in order to compare the schema. Web.Config must have ConnectionString section even if it's not used in normal course of the application to run this command.
+    1. Check the new migration that was added under `FunnyQuotesCookieDatabase\Migrations`.
+    1. Note that at this point the database is still based on old schema.
 
     ```
     > DESCRIBE FunnyQuotes;
     ```
+    
 1. Run FunnyQuotesServiceOwin again and hit endpoint that uses the database to force migration to be applied.
 
     http://localhost:61111/api/funnyquotes/random
@@ -78,29 +82,34 @@
   The Views column should now be visible and new record in migration table.
 
 ### Push to PCF
+**Note:** Ignore the first three steps if you completed lab 2.
+
 1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
 
     ```
-        cf create-service p.mysql db-small mysql-funnyquotes
+    cf create-service p.mysql db-small mysql-funnyquotes
     ```
-1. Uncomment the `services` and `mysql-funnyquotes` section in the `manifest.yml` file of the FunnyQuotesServicesOwin project.
+    
+1. Comment out all the services in the manifest.yml file except `mysql-funnyquotes` of the FunnyQuotesServicesOwin project.
 
 1. Push FunnyQuotesServicesOwin backend.
 
     ```
-        > cd FunnyQuotesServicesOwin
-        > cf push FunnyQuotesServicesOwin -s windows2016 -b hwc_buildpack
+    > cd FunnyQuotesServicesOwin
+    > cf push FunnyQuotesServicesOwin
     ```
+    
+    * Note the default stack when omitted is `cflinuxfs2` and the use of the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
 
 1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
 1. Open up `FunnyQuotesServicesOwin.Startup` class and note the use of Steeltoe Connectors to initialize DbContext.
 
     ```csharp
-        builder.RegisterMySqlConnection(config);
-        builder.Register(ctx => // register EF context
-        {
-            var connString = ctx.Resolve<IDbConnection>().ConnectionString;
-            return new FunnyQuotesCookieDbContext(connString);
-        });
+    builder.RegisterMySqlConnection(config);
+    builder.Register(ctx => // register EF context
+    {
+        var connString = ctx.Resolve<IDbConnection>().ConnectionString;
+        return new FunnyQuotesCookieDbContext(connString);
+    });
     ```                
   Helper methods exist when registering EF Core, but EF 6.x IDbConnection gets auto configured, and we can feed it into EF registration as per above.
