@@ -16,7 +16,7 @@ In this lab we will learn how to deploy to Cloud Foundry
 1. Build the `reservation-service`
 ```bash
 ./mvnw package
-```
+```  
 
 1. Deploy the application to Cloud Foundry
 ```bash
