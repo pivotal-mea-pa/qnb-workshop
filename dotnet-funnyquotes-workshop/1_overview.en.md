@@ -19,6 +19,7 @@ Technical Features Demonstrated:
 
 The solution revolves around a simple application that displays random quotes when a button is pressed.
 It also features a Kill command to simulate application failure.
+*  FunnyQuotesBasicPush - A simple refresher .NET Core app. Fetches quotes stored in memory. 
 * FunnyQuotesUIForms - Web forms GUI. Depends on Eureka and Config Server. Depending on config value served by Config Server, the source of the messages shown will be switched between local in memory, ASMX service, WCF service, or REST.
 * FunnyQuotesLegacyService - Contains ASMX service and WCF service implementations for serving messages.
    * ASMX fetches it's data from database connectivity via classic DataSet / DataAdapter approach.
