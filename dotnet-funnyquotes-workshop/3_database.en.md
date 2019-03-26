@@ -93,7 +93,7 @@
     ```
     services:
         - mysql-funnyquotes
-    `   #- config-server
+        #- config-server
         #- eureka
         #- hystrix
     ```
