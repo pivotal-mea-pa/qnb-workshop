@@ -1,4 +1,4 @@
-## Service Discovery
+## Service Discovery - Eureka
 
 ### Prerequisites
 1. Ensure only the following services are defined in the manifest.yml file of the published FunnyQuotesLegacyService and/or FunnyQuotesServicesOwin projects.
