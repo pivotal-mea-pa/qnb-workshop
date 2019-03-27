@@ -28,13 +28,13 @@
 1. View log output
 
     ```
-    > cf logs FunnyQuotesUICore --recent
+    > cf logs FunnyQuotesBasicLinux --recent
     ```
 
 1. Show log tailing while pushing / starting up.
 
     ```
-    > cf logs FunnyQuotesUIForms
+    > cf logs FunnyQuotesBasicLinux
     ```
   
 1. Optional: Press Kill button and show recovery
