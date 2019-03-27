@@ -5,7 +5,7 @@
 1. Target both Linux and Windows stacks.
 
 ### Steps
-1. Push the FunnyQuotesBasicLinux frontend.
+1. Push the FunnyQuotesBasicLinux .NET Core frontend.
 
     ```
     > cd FunnyQuotesBasicLinux
@@ -14,7 +14,7 @@
     
     * Note the default stack is `cflinuxfs2` when omitted, and the `dotnet_core_buildpack` in the manifest.yml file when pushing .NET Core apps to Linux.
 
-1. Push the FunnyQuotesBasicWindows frontend.
+1. Push the FunnyQuotesBasicWindows .NET Framework 4.x frontend.
 
     ```
     > cd FunnyQuotesBasicWindows
