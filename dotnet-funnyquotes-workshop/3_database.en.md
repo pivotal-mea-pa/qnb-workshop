@@ -5,17 +5,6 @@
 1. Change domain model to run migrations.
 1. Provision MySql database.
 
-### Prerequisites
-1. Ensure only the following services are defined in the manifest.yml file of the published FunnyQuotesServicesOwin project.
-
-    ```
-    services:
-        - mysql-funnyquotes
-        #- config-server
-        #- eureka
-        #- hystrix
-    ```
-
 ### Steps
 1. Run MySQL locally via docker
 
@@ -99,14 +88,25 @@
     cf create-service p.mysql db-small mysql-funnyquotes
     ```
 
+1. Add the following section to the manifest file in the FunnyQuotesServicesOwin project.
+
+    ```
+    services:
+        - mysql-funnyquotes
+    ```
+    
+1. Confirm the `mysql-funnyquotes` service has been created.
+
+    ```
+    cf services
+    ```
+
 1. Push FunnyQuotesServicesOwin backend.
 
     ```
     > cd FunnyQuotesServicesOwin
     > cf push
     ```
-    
-    * Note the default stack is `cflinuxfs2` when omitted and the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
 
 1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
 1. Open up `FunnyQuotesServicesOwin.Startup` class and note the use of Steeltoe Connectors to initialize DbContext.
@@ -118,5 +118,6 @@
         var connString = ctx.Resolve<IDbConnection>().ConnectionString;
         return new FunnyQuotesCookieDbContext(connString);
     });
-    ```                
+    ```        
+    
   Helper methods exist when registering EF Core, but EF 6.x IDbConnection gets auto configured, and we can feed it into EF registration as per above.
