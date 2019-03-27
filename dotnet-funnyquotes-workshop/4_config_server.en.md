@@ -2,17 +2,6 @@
 
 We want to get FunnyQuotes client to use a different implementation of IFunnyQuotesService to talk to an alternative backend service. There are multiple named implementations registered into dependency injection container. The instance supplied for IFunnyQuotesService is dependent on the config value. We're going to use config settings to swap out the implementation it will use.
 
-### Prerequisites
-1. Ensure only the following services are defined in the manifest.yml files of all four published applications.
-
-    ```
-    services:
-        - mysql-funnyquotes
-        - config-server
-        #- eureka
-        #- hystrix
-    ```
-
 ### Explaining config server locally
 1. Create a docker instance of config server:
 
@@ -31,12 +20,33 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
 ### On PCF
 1. Fork the funny-quotes-config repo from https://github.com/Pivotal-Field-Engineering/funny-quotes-config.
 1. Edit gitconfig.json in scripts folder and update URL to forked repo.
-1. Provision p-config-server from the marketplace, the standard plan, and name it `config-server` from the scripts folder.
+1. Provision the following services from the marketplace.
     
     ```
     > cf create-service p-config-server standard config-server -c gitconfig.json
+    > cf create-service p-service-registry standard eureka
+    > cf create-service p-circuit-breaker-dashboard standard hystrix
     ```
-    
+
+1. Ensure the two backend projects, FunnyQuotesServicesOwin and FunnyQuotesLegacyService, contain the following entries in their respective manifest file.
+
+    ```
+    services:
+        - mysql-funnyquotes
+        - config-server
+        - eureka
+        - hystrix
+    ```
+
+1. Check the two frontend projects, FunnyQuotesUICore and FunnyQuotesUIForms, contain the following entries in the their respective manifest files.
+
+    ```
+    services:
+        - config-server
+        - eureka
+        - hystrix
+    ```
+
 1. Push all four applications.
 1. Launch FunnyQuotesUICore and FunnyQuotesUIForms and note the provider in both.
 1. In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
@@ -50,7 +60,7 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
   Save settings. Run git commit and push. After 10 seconds, refresh FunnyQuotesUICore.
   Note the new provider is changed without a restart of the app.
 
-1. In the forked repo, change ClientType from wcf to asmx in the FunnyQuotesUICore.yaml file.
+1. In the forked repo, change ClientType from wcf to asmx in the FunnyQuotesUIForms.yaml file.
 
   ```
     FunnyQuotes:
@@ -99,7 +109,7 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
                 
 ### Feature toggles
 1. We can push disabled code into prod and using config to activate it vs branching.
-1. Observe usage of it in codebase for security. Don't enable yet:
+1. Observe usage of it in codebase for security. Don't enable it yet:
     1. Startup.cs in FunnyQuotesUICore
 
     ```csharp
