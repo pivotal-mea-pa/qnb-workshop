@@ -37,12 +37,6 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
     > cf create-service p-config-server standard config-server -c gitconfig.json
     ```
     
-    If you already created this service in lab 2, run the following to update the service.
-    
-    ```
-    > cf update-service config-server -c gitconfig.json
-    ```
-    
 1. Push all four applications.
 1. Launch FunnyQuotesUICore and FunnyQuotesUIForms and note the provider in both.
 1. In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
