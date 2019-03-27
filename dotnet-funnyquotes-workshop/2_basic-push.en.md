@@ -5,41 +5,31 @@
 1. Target both Linux and Windows stacks.
 
 ### Steps
-1. Execute the `create-services.bat` file in the scripts directory. Wait until all services are created before proceeding.
-1. Push the FunnyQuotesServicesOwin backend, and the FunnyQuotesUICore frontend.
+1. Push the FunnyQuotesBasicLinux frontend.
 
     ```
-    > cd FunnyQuotesServicesOwin
-    > cf push
-    ```
-    ```
-    > cd FunnyQuotesUICore
+    > cd FunnyQuotesBasicLinux
     > cf push
     ```
     
-    * Note the default stack is `cflinuxfs2` when omitted, and the `dotnet_core_buildpack` when pushing .NET Core apps to Linux.
-        
-1. Explain output while app is being pushed.
+    * Note the default stack is `cflinuxfs2` when omitted, and the `dotnet_core_buildpack` in the manifest.yml file when pushing .NET Core apps to Linux.
+
+1. Push the FunnyQuotesBasicWindows frontend.
+
+    ```
+    > cd FunnyQuotesBasicWindows
+    > cf push
+    ```
+    
+    * Note the `windows2016` stack and the `hwc_buildpack` in the manifest.yml file when pushing .NET Framework 4.x apps to Windows.
+    * The Hosted Web Core buildpack is essentially the kernel of IIS.
+
 1. Access the app URL, get a few funny quotes, get some laughs. :)
 1. View log output
 
     ```
     > cf logs FunnyQuotesUICore --recent
     ```
-
-1. Push the FunnyQuotesLegacyService backend, and the FunnyQuotesUIForms frontend.
-
-    ```
-    > cd FunnyQuotesLegacyService
-    > cf push
-    ```
-    ```
-    > cd FunnyQuotesUIForms
-    > cf push
-    ```
-
-    * Observe the use of the `windows2016` stack and the `hwc_buildpack` in the manifest.yml file when pushing .NET Framework apps.
-    * The Hosted Web Core buildpack is essentially the kernel of IIS.
 
 1. Show log tailing while pushing / starting up.
 
