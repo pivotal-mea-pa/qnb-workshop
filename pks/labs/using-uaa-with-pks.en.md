@@ -58,6 +58,7 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
   1. In order to have our Local DNS system resolve the PKS Management API hostname to the correct IP lets edit the local host resolution file. Replace the IP used below with your IP noted earlier. If using the PCF Ops Manager VM use Linux below.
 
     - Mac OS X
+
     ```
     $ sudo vim /etc/hosts
 
@@ -65,14 +66,18 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
     IP Address Host
     192.0.2.1 api.pks.<INSERT DOMAIN HERE>
     ```
+
     - Windows
-      Use Notepad and open c:\Windows\System32\Drivers\etc\hosts with Administrator rights.
+        Use Notepad and open c:\Windows\System32\Drivers\etc\hosts with Administrator rights.
+
     ```
     ---
     IP Address Host
     192.0.2.1 api.pks.<INSERT DOMAIN HERE>
     ```
+
     - Linux
+    
     ```
     $ sudo vim /etc/hosts
 
@@ -84,23 +89,28 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
 ## Grant Cluster Access to a User
 
   1. Target your UAA API endpoint using `uaac target https://<PKS-API>:8443 --skip-ssl-validation`.
+
     ```
     $ uaac target https://api.pks.pivotal.io:8443 --skip-ssl-validation
     ```
+
     - Replace with the URL to your PKS API server.You configured this URL in the PKS API section of Installing PKS for your IaaS.
 
   2. Authenticate with UAA using the secret you retrieved in the previous section using `uaac token client get admin -s <INSERT GENERATED UAA ADMIN SECRET>`.
+
     ```
     $ uaac token client get admin -s generated-super-secret
     ```
 
   3. Create a user by running `uaac user add <USERNAME> --emails <USER-EMAIL> -p <USER-PASSWORD>`.
+
     ```
     $ uaac user add pks_admin --emails pks_admin@pivotal.io -p password
     ```
 
   4. Assign a scope to the user to allow them to access Kubernetes clusters. Use uaac member add <UAA-SCOPE> <USERNAME>.
-    ```
+
+  ```
     $ uaac member add pks.clusters.admin pks_admin
     ```
 
