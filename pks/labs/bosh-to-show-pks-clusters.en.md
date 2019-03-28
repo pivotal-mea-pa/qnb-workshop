@@ -69,24 +69,24 @@ To explore the PKS Cluster VMs/IPs/Logs we must dive deeper into the PCF Directo
       - Notice the `Pivotal-container-service deployment` which was deployed from the PKS tile. Also notice the `service-instance_*` which is our deployed PKS cluster, note it down.
 
     2. With the deployment name we can list the vms part of it. Notice the master IP of the PKS cluster.
-      ```
-      $ bosh -e pcf -d service-instance_2c4ca713-f66e-4837-b5e5-d91c324f8cb0 instances
-      Using environment '10.0.2.1' as user 'director' (bosh.*.read, openid, bosh.*.admin, bosh.read, bosh.admin)
+        ```
+        $ bosh -e pcf -d service-instance_2c4ca713-f66e-4837-b5e5-d91c324f8cb0 instances
+        Using environment '10.0.2.1' as user 'director' (bosh.*.read, openid, bosh.*.admin, bosh.read, bosh.admin)
 
-      Task 57. Done
+        Task 57. Done
 
-      Deployment 'service-instance_2c4ca713-f66e-4837-b5e5-d91c324f8cb0'
+        Deployment 'service-instance_2c4ca713-f66e-4837-b5e5-d91c324f8cb0'
 
-      Instance                                     Process State  AZ   IPs
-      master/40eea419-3f84-43f0-b6b4-a3c1e99b7f4f  running        AZ1  10.0.2.51
-      worker/ae7edd19-2356-4333-8b70-41d8cc7ffc9c  running        AZ1  10.0.2.52
+        Instance                                     Process State  AZ   IPs
+        master/40eea419-3f84-43f0-b6b4-a3c1e99b7f4f  running        AZ1  10.0.2.51
+        worker/ae7edd19-2356-4333-8b70-41d8cc7ffc9c  running        AZ1  10.0.2.52
 
-      2 instances
+        2 instances
 
-      Succeeded
-      ```
+        Succeeded
+        ```
 
   3. Exit out of the SSH Client
-    ```
-    $ exit
-    ```
+      ```
+      $ exit
+      ```
