@@ -46,9 +46,7 @@ Configure and deploy PCF Director Tile within PCF Ops Manager. This will be our 
     - **Ensure Enable Post Deploy Scripts** is checked.
 
 6. On the `Create Availability Zones` page we create multiple Availability Zones which allow us to provide high-availability and load balancing to our containers deployed to PKS. At least three availability zones are recommended for a highly available installation of PKS.
-
 To add **Availability Zones** run the following:
-
     - Click Add.
     - Enter a unique Name for the Availability Zone.
     - Enter the name of an existing vCenter Cluster to use as an Availability Zone.
@@ -57,7 +55,6 @@ To add **Availability Zones** run the following:
 7. On the `Create Networks` page we create virtual networks which allows the PCF Director to deploy VMs in specific networks. We will create 2 networks, one for the management of PKS, and one for the kubernetes clusters themselves.
 
 To add **Networks** run the following:
-
     - Select Enable ICMP checks to enable ICMP on your networks. Ops Manager uses ICMP checks to confirm that components within your network are reachable.
     - PKS deploys Kubernetes Clusters on demand via a CLI command. The PKS API Manager itself requires a single VM which will listen for CLI commands and then deploy the cluster. This VM will be deployed in the network we create below:
       - Click `Add Network`.
