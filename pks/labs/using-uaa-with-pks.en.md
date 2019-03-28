@@ -58,28 +58,28 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
   1. In order to have our Local DNS system resolve the PKS Management API hostname to the correct IP lets edit the local host resolution file. Replace the IP used below with your IP noted earlier. If using the PCF Ops Manager VM use Linux below.
 
     - Mac OS X
-      ```
-      $ sudo vim /etc/hosts
+    ```
+    $ sudo vim /etc/hosts
 
-      ---
-      IP Address Host
-      192.0.2.1 api.pks.<INSERT DOMAIN HERE>
-      ```
+    ---
+    IP Address Host
+    192.0.2.1 api.pks.<INSERT DOMAIN HERE>
+    ```
     - Windows
       Use Notepad and open c:\Windows\System32\Drivers\etc\hosts with Administrator rights.
-      ```
-      ---
-      IP Address Host
-      192.0.2.1 api.pks.<INSERT DOMAIN HERE>
-      ```
+    ```
+    ---
+    IP Address Host
+    192.0.2.1 api.pks.<INSERT DOMAIN HERE>
+    ```
     - Linux
-      ```
-      $ sudo vim /etc/hosts
+    ```
+    $ sudo vim /etc/hosts
 
-      ---
-      IP Address Host
-      192.0.2.1 api.pks.<INSERT DOMAIN HERE>
-      ```
+    ---
+    IP Address Host
+    192.0.2.1 api.pks.<INSERT DOMAIN HERE>
+    ```
 
 ## Grant Cluster Access to a User
 
@@ -105,7 +105,7 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
     ```
 
     - Replacing UAA-SCOPE with one of the following UAA scopes depending on the role of the user:
-      -  pks.clusters.admin: Users with this scope have full access to all clusters.
+      - pks.clusters.admin: Users with this scope have full access to all clusters.
       - pks.clusters.manage: Users with this scope can only access clusters they create.
 
 ## Login to PKS With Newly Created User
