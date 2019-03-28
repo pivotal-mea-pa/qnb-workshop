@@ -42,7 +42,7 @@ To explore the PKS Cluster VMs/IPs/Logs we must dive deeper into the PCF Directo
 ## View BOSH Deployments
 
   1. BOSH deploys our PKS clusters. Lets list those deployments.
-    ```
+      ```
       $ bosh -e pcf deployments
       Using environment '10.0.2.1' as user 'director' (bosh.*.read, openid, bosh.*.admin, bosh.read, bosh.admin)
 
@@ -64,7 +64,7 @@ To explore the PKS Cluster VMs/IPs/Logs we must dive deeper into the PCF Directo
                                                           kubo-etcd/6
                                                           pks-helpers/15.0.0
                                                           pks-nsx-t/0.1.0-dev.75                                                    
-          ```
+      ```
 
       - Notice the `Pivotal-container-service deployment` which was deployed from the PKS tile. Also notice the `service-instance_*` which is our deployed PKS cluster, note it down.
 
