@@ -5,8 +5,7 @@
 [CF Dev](../demos/cf-dev)
 
 ### .NET Core App
-[Setting Up the App in Rider](../demos/setting-up-the-app-in-rider)  
-[Setting Up the App in Visual Studio](../demos/setting-up-the-app-in-visual-studio)  
+[Setting Up the App](../demos/setting-up-the-app) 
 [Setting Up xUnit](../demos/setting-up-xunit)  
 [Creating a RESTful API](../demos/creating-a-restful-api)  
 [Introducing Fluent Assertions](../demos/introducing-fluent-assertions)  
