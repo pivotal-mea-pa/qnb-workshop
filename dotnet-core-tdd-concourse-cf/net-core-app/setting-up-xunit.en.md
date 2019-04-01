@@ -1,6 +1,6 @@
 # Setting Up xUnit
 
-**Previous:** [Setting Up the App in Rider](../setting-up-the-app-in-rider) or [Setting Up the App in Visual Studio](../setting-up-the-app-in-visual-studio)
+**Previous:** [Setting Up the App](../setting-up-the-app)
 
 In this section, we'll be adding unit tests and running them from the command line and Rider/Visual Studio.
 
