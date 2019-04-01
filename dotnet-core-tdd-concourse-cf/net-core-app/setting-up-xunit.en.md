@@ -2,9 +2,26 @@
 
 **Previous:** [Setting Up the App](../setting-up-the-app)
 
-In this section, we'll be adding unit tests and running them from the command line and Rider/Visual Studio.
+In this section, we'll be adding unit tests and running them from the dotnet CLI and Rider/Visual Studio.
 
-We'll be adding tests in a separate project called `NotesApp.Tests`. With a separate project, it will be easier to run unit tests separately from other types of tests. Right-click the `NotesApp` solution and select `Add > New Project`.
+We'll be adding tests in a separate project called `NotesApp.Tests`. With a separate project, it will be easier to run unit tests separately from other types of tests.
+
+**CLI:**
+Run the following to create your project:
+
+```bash
+dotnet new xunit "NotesApp.Tests" -o "NotesApp.Tests"
+```
+
+and to add it to your solution
+
+```bash
+dotnet sln "NotesApp.sln" add "NotesApp.Tests/NotesApp.Tests.csproj"
+```
+
+**IDEs:**
+
+Right-click the `NotesApp` solution and select `Add > New Project`.
 
 **Rider:**
 <details>
