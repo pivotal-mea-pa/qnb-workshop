@@ -122,15 +122,15 @@ Course Materials
 
         -   [**.NET** Application](/demos/lab-dotnet)
 
-    -   [Lab 2 - Binding to Cloud FoundryServices](/labs/lab2/binding-cf-services)
+    -   [Lab 2 - Binding to Cloud FoundryServices](/demos/binding-cf-services)
 
-    -   [Lab 3 - Operating Your Application](/labs/lab3/operating-your-application)
+    -   [Lab 3 - Operating Your Application](/demos/operating-your-application)
 
-    -   [Lab 4 - Monitoring Your Application](/labs/lab4/monitoring-your-application)
+    -   [Lab 4 - Monitoring Your Application](/demos/monitoring-your-application)
 
     -   Advanced Lab - Jenkins Integration
 
-        -   [Java App - Gradle Build](/labs/lab5/continuous-delivery-lab)
+        -   [Java App - Gradle Build](/demos/continuous-delivery-lab)
 
     -   For further exploration check-out these projects
 

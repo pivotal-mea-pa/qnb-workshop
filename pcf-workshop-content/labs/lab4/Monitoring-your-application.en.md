@@ -289,4 +289,4 @@ of `workshop`:
 On to the next Lab!
 ===================
 
-[Lab5 - Continuous Delivery with Jenkins](/labs/lab5/continuous-delivery-lab)
+[Lab5 - Continuous Delivery with Jenkins](/demos/continuous-delivery-lab)
