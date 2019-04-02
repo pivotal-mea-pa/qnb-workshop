@@ -21,31 +21,31 @@ Push It!
     You should see output similar to the following listing. Take a look
     at the listing callouts for a play-by-play of what’s happening:
 
-        Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/nodejs-cf-sample-app/manifest.yml 
+        Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/nodejs-cf-sample-app/manifest.yml
 
         Creating app nodejs in org TELCO / space hopper as phopper@pivotal.io...
-        OK 
+        OK
 
         Creating route nodejs-portless-lummox.vert.fe.gopivotal.com...
-        OK 
+        OK
 
         Binding nodejs-portless-lummox.vert.fe.gopivotal.com to nodejs...
-        OK 
+        OK
 
-        Uploading nodejs... 
+        Uploading nodejs...
         Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/nodejs-cf-sample-app
         Uploading 259K, 39 files
         Done uploading
         OK
 
-        Starting app nodejs in org TELCO / space hopper as phopper@pivotal.io... 
+        Starting app nodejs in org TELCO / space hopper as phopper@pivotal.io...
         -----> Downloaded app package (296K)
         -------> Buildpack version 1.2.1
         -----> Resetting git environment
         -----> Requested node range:  0.10.x
         -----> Resolved node version: 0.10.38
         -----> Downloading and installing node
-        -----> Installing dependencies 
+        -----> Installing dependencies
                npm WARN engine cryptiles@2.0.5: wanted: {"node":">=0.10.40"} (current: {"node":"0.10.38","npm":"1.4.28"})
                npm WARN engine boom@2.9.0: wanted: {"node":">=0.10.40"} (current: {"node":"0.10.38","npm":"1.4.28"})
                npm WARN engine hoek@2.16.3: wanted: {"node":">=0.10.40"} (current: {"node":"0.10.38","npm":"1.4.28"})
@@ -61,7 +61,7 @@ Push It!
                bower open-sans-fontface#~1.0.4         resolved git://github.com/FontFaceKit/open-sans.git#1.0.4
                bower open-sans-fontface#~1.0.4          install open-sans-fontface#1.0.4
                open-sans-fontface#1.0.4 bower_components/open-sans-fontface
-               express@4.12.4 node_modules/express 
+               express@4.12.4 node_modules/express
                ├── merge-descriptors@1.0.0
                ├── utils-merge@1.0.0
                ├── cookie-signature@1.0.6
@@ -86,7 +86,7 @@ Push It!
                ├── proxy-addr@1.0.8 (forwarded@0.1.0, ipaddr.js@1.0.1)
                ├── accepts@1.2.13 (negotiator@0.5.3, mime-types@2.1.7)
                └── type-is@1.6.8 (media-typer@0.3.0, mime-types@2.1.7)
-               jade@1.11.0 node_modules/jade 
+               jade@1.11.0 node_modules/jade
                ├── character-parser@1.2.1
                ├── void-elements@2.0.1
                ├── commander@2.6.0
@@ -97,7 +97,7 @@ Push It!
                ├── transformers@2.1.0 (promise@2.0.0, css@1.0.8, uglify-js@2.2.5)
                ├── uglify-js@2.4.24 (uglify-to-browserify@1.0.2, async@0.2.10, yargs@3.5.4, source-map@0.1.34)
                └── with@4.0.3 (acorn@1.2.2, acorn-globals@1.0.6)
-               bower@1.5.3 node_modules/bower 
+               bower@1.5.3 node_modules/bower
                ├── is-root@1.0.0
                ├── junk@1.0.2
                ├── stringify-object@1.0.1
@@ -151,7 +151,7 @@ Push It!
         -----> No Procfile found; Adding npm start to new Procfile
         -----> Building runtime environment
 
-        -----> Uploading droplet (17M) 
+        -----> Uploading droplet (17M)
 
         1 of 1 instances running
 
@@ -160,9 +160,9 @@ Push It!
 
         OK
 
-        App nodejs was started using this command `npm start` 
+        App nodejs was started using this command `npm start`
 
-        Showing health and status for app nodejs in org TELCO / space hopper as phopper@pivotal.io... 
+        Showing health and status for app nodejs in org TELCO / space hopper as phopper@pivotal.io...
         OK
 
         requested state: started
@@ -261,4 +261,4 @@ Interact with App from CF CLI
 On to the next Lab!
 ===================
 
-[Lab2 - Binding to Cloud Foundry Services](../../labs/lab2/README.adoc)
+[Lab2 - Binding to Cloud Foundry Services](demos/binding-cf-services)
