@@ -10,7 +10,18 @@ One thing that is really nice about this library is the ability to chain multipl
 
 ***
 
-Integration into our current setup is fairly simple. Start by going into the NuGet dependencies for `NotesApp.Tests` and searching for `FluentAssertions`. As of the writing of this guide, the latest version is `5.6.0`.
+Integration into our current setup is fairly simple. Start by going into the NuGet dependencies for `NotesApp.Tests` and searching for `FluentAssertions`. If you're using VS Code, you'll either need to manually edit `NotesApp.Tests.csproj`, adding the following:
+```xml
+<PackageReference Include="FluentAssertions" Version="5.6.0" />
+```
+or run the following command from the dotnet CLI:
+```bash
+dotnet add package FluentAssertions
+```
+
+As of the writing of this guide, the latest version is `5.6.0`.
+
+***
 
 Let's go change that test now.
 

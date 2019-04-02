@@ -73,7 +73,7 @@ The steps vary slightly based on which tools you're using, so follow along with 
 ***
 
 <details>
-    <summary>Click <strong>New > Project</strong>. The template for an <strong>Empty Solution</strong> can be found until the <strong>Other Project Types</strong> section. Select it and name the solution <strong>NotesApp</strong>.</summary>
+    <summary>Click <strong>New > Project</strong>. The template for an <strong>Blank Solution</strong> can be found under the <strong>Other Project Types</strong> section. Select it and name the solution <strong>NotesApp</strong>.</summary>
     <a href="intro-visual-studio-new-solution.png" target="_blank">
         ![intro-visual-studio-new-solution.png](intro-visual-studio-new-solution.png)
     </a>

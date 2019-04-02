@@ -20,5 +20,5 @@ An alternative to the two above IDEs, with much more of a plug-in/extension base
 
 **Up Next:** [Deploy Concourse](../deploy-concourse)
 
-**References**
+**References**  
 [Working with C# (in VS Code)](https://code.visualstudio.com/Docs/languages/csharp)

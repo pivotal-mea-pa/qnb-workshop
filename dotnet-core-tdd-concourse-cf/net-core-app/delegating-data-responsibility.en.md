@@ -2,20 +2,20 @@
 
 **Previous:** [Making the App Asynchronous](../making-the-app-asynchronous)
 
-In the previous sections, we setup a bare-bones controller that simply returned a constructed list of notes from its endpoint. We want to get our app to the point where it can create and retrieve records. Soon a means to store said records will make sense, but for the moment, let's consider the responsibilities of a our controller.
+In the previous sections, we setup a bare-bones controller that simply returned a constructed list of notes from its endpoint. We want to get our app to the point where it can create and retrieve records. Soon a means to store said records will make sense, but for the moment, let's consider the responsibilities of our controller.
 
 We communicate with our controller through our REST endpoints (currently only parameterless `GET` is available). A list of `Note` is expected back. Our controller should not need to know exactly how our data is being stored or even where. All it should really know is how to communicate with something that can handle records for us. That something should encapsulate the knowledge of how to manage data. This sort of pattern is called the **Repository Pattern**. In this guide, we will also be employing a service to communicate with the repository and process any input/output as needed.
 
 ***
 
-Let's extract methods for data access. Start by creating the interface for our repository. Make a new directory, `Repositories` and add a new file, `NoteRepository.cs` with the following interface:
+Let's extract methods for data access. Start by creating the interface for our repository. Make a new directory, `Repositories` and add a new interface, `INoteRepository`:
 ```c#
 public interface INoteRepository
 {
     Task<IEnumerable<Note>> GetNotesAsync();
 }
 ```
-and initial implementation of said interface:
+and initial implementation of said interface, the class `NoteRepository`:
 ```c#
 public class NoteRepository : INoteRepository
 {
@@ -25,6 +25,8 @@ public class NoteRepository : INoteRepository
     }
 }
 ```
+
+**Note:** The initial implementation just throws a `NotImplementedException` so that the class will compile, but it would be equally valid to not implement the method at all yet, and have the IDE or CLI complain when you try to run the tests later on. It's a good idea to write your tests first, following the paradigms of TDD.
 
 The tests for the `NoteRepository` will look similar to the `NotesController` tests, as we are moving the source of the data down to this level.
 ```c#
@@ -54,7 +56,7 @@ public Task<IEnumerable<Note>> GetNotesAsync()
 
 **Note:** At this point, we could make use of the repository directly from the controller, but as the complexity of the app increases, it's best to abstract input and output manipulation of data (your business logic) into services. 
 
-Create a new directory, `Services`, with the interface `INoteService`, defined as follows:
+Create a new directory, `Services`, with the interface `INoteService` defined as follows:
 ```c#
 public interface INoteService
 {
@@ -79,7 +81,7 @@ Open up `Startup` and find `ConfigureServices(IServiceCollection services)`. Add
 
 ***
 
-Time for TDDing this service. Create new directory in `NotesApp.Tests` called `Services` to mirror `NotesApp`. Add a new class, `NoteServiceTests`. Since our service now requires an instance of `INoteRepository`, we need to provide it with one. However, we don't want to use a real one for our tests. We're going use mocks instead. The mocking framework that will be used for this is [Moq](https://github.com/moq/moq4). It's quite flexible, clean, and the setups are understandable. The most recent version as of this writing is `4.10.1`. You can add it as a dependency to `NotesApp.Tests` in much the way you added **FluentAssertions**.
+Time for TDDing this service. Create a new directory in `NotesApp.Tests` called `Services` to mirror `NotesApp`. Add a new class, `NoteServiceTests`. Since our service now requires an instance of `INoteRepository`, we need to provide it with one. However, we don't want to use a real one for our tests. We're going use mocks instead. The mocking framework that will be used for this is [Moq](https://github.com/moq/moq4). It's quite flexible, clean, and the setups are understandable. The most recent version as of this writing is `4.10.1`. You can add it as a dependency to `NotesApp.Tests` in much the way you added **FluentAssertions**.
 
 Make a constructor for `NoteServiceTests` that instantiates the mock of `INoteRepository` and the service itself. Because of the way Moq works, the mock can be configured at any point before the method you care about is called on it.
 ```c#
