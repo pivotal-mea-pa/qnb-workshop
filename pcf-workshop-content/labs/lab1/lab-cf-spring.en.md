@@ -1,7 +1,7 @@
 Target the Environment
 ======================
 
-1.  Follow the instructions to [Get Environment Access](../README.adoc)
+1.  Follow the instructions to [Get Environment Access](/concepts/setup)
 
 Push It!
 ========
@@ -151,4 +151,4 @@ Congratulations! You have pushed your first app into Cloud Foundry!
 On to the next Lab!
 ===================
 
-[Lab1 - Push a Ruby Application](/demos/lab-ruby)
+[Push a Ruby Application](/demos/lab-ruby)

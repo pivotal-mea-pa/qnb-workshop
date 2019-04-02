@@ -57,10 +57,10 @@ Application developers can view application logs using the CF CLI.
 
     Here are two interesting subsets of one output from that command:
 
-        2015-02-13T14:45:39.40-0600 [RTR/0]      OUT cf-scale-boot-stockinged-rust.cfapps.io - [13/02/2015:20:45:39 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 304 0 "http://cf-scale-boot-stockinged-rust.cfapps.io/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" 10.10.66.88:50372 x_forwarded_for:"50.157.39.197" vcap_request_id:84cc1b7a-bb30-4355-7512-5adaf36ff767 response_time:0.013115764 app_id:7a428901-1691-4cce-b7f6-62d186c5cb55 
+        2015-02-13T14:45:39.40-0600 [RTR/0]      OUT cf-scale-boot-stockinged-rust.cfapps.io - [13/02/2015:20:45:39 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 304 0 "http://cf-scale-boot-stockinged-rust.cfapps.io/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" 10.10.66.88:50372 x_forwarded_for:"50.157.39.197" vcap_request_id:84cc1b7a-bb30-4355-7512-5adaf36ff767 response_time:0.013115764 app_id:7a428901-1691-4cce-b7f6-62d186c5cb55
         2015-02-13T14:45:39.40-0600 [RTR/1]      OUT cf-scale-boot-stockinged-rust.cfapps.io - [13/02/2015:20:45:39 +0000] "GET /img/LOGO_CloudFoundry_Large.png HTTP/1.1" 304 0 "http://cf-scale-boot-stockinged-rust.cfapps.io/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36" 10.10.66.88:24323 x_forwarded_for:"50.157.39.197" vcap_request_id:b3e2466b-6a41-4c6d-5b3d-0f70702c0ec1 response_time:0.010003444 app_id:7a428901-1691-4cce-b7f6-62d186c5cb55
-        2015-02-13T15:04:33.09-0600 [API/1]      OUT Tried to stop app that never received a start event 
-        2015-02-13T15:04:33.51-0600 [DEA/12]     OUT Starting app instance (index 2) with guid 7a428901-1691-4cce-b7f6-62d186c5cb55 
+        2015-02-13T15:04:33.09-0600 [API/1]      OUT Tried to stop app that never received a start event
+        2015-02-13T15:04:33.51-0600 [DEA/12]     OUT Starting app instance (index 2) with guid 7a428901-1691-4cce-b7f6-62d186c5cb55
         2015-02-13T15:04:33.71-0600 [DEA/4]      OUT Starting app instance (index 3) with guid 7a428901-1691-4cce-b7f6-62d186c5cb55
 
     -   An “Apache-style” access log event from the (Go)Router
@@ -187,13 +187,13 @@ of `workshop`:
 
     time                          event                 actor      description
     2015-08-11T08:58:57.00-0400   app.crash             workshop   index: 0, reason: CRASHED, exit_description: app instance exited, exit_status: 255  
-    2015-08-11T08:58:17.00-0400   audit.app.update      admin      instances: 5 
+    2015-08-11T08:58:17.00-0400   audit.app.update      admin      instances: 5
     2015-08-11T08:58:11.00-0400   audit.app.update      admin
     2015-08-11T08:58:11.00-0400   audit.app.map-route   admin
     2015-08-11T08:54:35.00-0400   audit.app.update      admin      state: STARTED  
     2015-08-11T08:54:22.00-0400   audit.app.update      admin  
     2015-08-11T08:54:22.00-0400   audit.app.map-route   admin  
-    2015-08-11T08:54:19.00-0400   audit.app.create      admin      instances: 1, memory: 512, state: STOPPED, environment_json: PRIVATE DATA HIDDEN 
+    2015-08-11T08:54:19.00-0400   audit.app.create      admin      instances: 1, memory: 512, state: STOPPED, environment_json: PRIVATE DATA HIDDEN
 
 -   Events are sorted newest to oldest, so we’ll start from the bottom.
     Here we see the `app.create` event, which created our application’s
@@ -289,4 +289,4 @@ of `workshop`:
 On to the next Lab!
 ===================
 
-[Lab5 - Continuous Delivery with Jenkins](../../labs/lab5/README.adoc)
+[Lab5 - Continuous Delivery with Jenkins](/labs/lab5/continuous-delivery-lab)
