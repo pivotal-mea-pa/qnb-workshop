@@ -4,9 +4,12 @@
 
 In this section, we'll be adding unit tests and running them from the dotnet CLI and Rider/Visual Studio.
 
+### Adding the Tests Project
+
 We'll be adding tests in a separate project called `NotesApp.Tests`. With a separate project, it will be easier to run unit tests separately from other types of tests.
 
 **CLI:**
+
 Run the following to create your project:
 
 ```bash
@@ -24,6 +27,7 @@ dotnet sln "NotesApp.sln" add "NotesApp.Tests/NotesApp.Tests.csproj"
 Right-click the `NotesApp` solution and select `Add > New Project`.
 
 **Rider:**
+
 <details>
     <summary>Select <strong>Unit Test Project</strong> under the <strong>.NET Core</strong> section.</summary>
     <a href="xunit-rider-setup-new-tests-project.png" target="_blank">
@@ -34,6 +38,7 @@ Right-click the `NotesApp` solution and select `Add > New Project`.
 ***
 
 **Visual Studio:**
+
 <details>
     <summary>Select <strong>xUnit Test Project (.NET Core)</strong> from the <strong>Visual C# > .NET Core</strong> section.</summary>
     <a href="xunit-visual-studio-setup-new-tests-project.png" target="_blank">
@@ -52,6 +57,8 @@ Right-click the `NotesApp` solution and select `Add > New Project`.
 
 ***
 
+### The Simplest Test
+
 In `UnitTest1.cs`, let's add a simple test to see the test framework running.
 ```c#
 [Fact]
@@ -61,6 +68,8 @@ public void Test1()
 }
 ```
 
+If using VS Code, you can try installing a plug-in for tests, or you can skip to [Running With the CLI](#running-with-the-cli).
+
 In Rider, run the test by right clicking on `NotesApp.Tests` and click **Run Unit Tests**.
 
 In Visual Studio, you first need to enable the **Test Explorer**. Go to the `Test` menu, and then `Windows > Test Explorer`. From there, test can be run.
@@ -69,7 +78,9 @@ In either case, verify that the test we setup succeeds.
 
 ***
 
-Now let's try it from the command line. This is important to understand since we won't be using the IDE to run the tests when we're in the CI environment.
+### Running With the CLI
+
+Now let's try it from the dotnet CLI. This is important to understand since we won't be using the IDE to run the tests when we're in the CI environment.
 
 ```bash
 cd <your user directory>/workspace/NotesApp/NotesApp.Tests
@@ -81,8 +92,8 @@ You should see something like:
 Build started, please wait...
 Build completed.
 
-Test run for <your user directory>/workspace/NotesApp/NotesApp.Tests/bin/Debug/netcoreapp2.2/NotesApp.Tests.dll(.NETCoreApp,Version=v2.2)
-Microsoft (R) Test Execution Command Line Tool Version 16.0.1
+Test run for <your user directory>/workspace/NotesApp/NotesApp.Tests/bin/Debug/netcoreapp<.NET Core version>/NotesApp.Tests.dll(.NETCoreApp,Version=v<.NET Core version>)
+Microsoft (R) Test Execution Command Line Tool Version <CLI Version>
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
@@ -98,7 +109,7 @@ With this, we'll be able to run tests from the command line in our CI environmen
 
 You may receive this error when using `dotnet test`:
 ```bash
-No test is available in <your user directory>/workspace/NotesApp/NotesApp.Tests/bin/Debug/netcoreapp2.2/NotesApp.Tests.dll.
+No test is available in <your user directory>/workspace/NotesApp/NotesApp.Tests/bin/Debug/netcoreapp<.NET Core version>/NotesApp.Tests.dll.
 Make sure that test discoverer & executors are registered and platform & framework version settings are appropriate and try again.
 ```
 
