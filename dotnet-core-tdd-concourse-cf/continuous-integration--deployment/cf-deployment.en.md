@@ -75,7 +75,7 @@ resources:
         space: {{cf-space}}
         skip_cert_check: true
 ```
-Refer to [CF Dev](../cf-dev) for credential information for your CF Dev instance. Place the substitutions in your `credentials.yml`. Also note that `skip_cert_check` is set to `true`. This is because we're running CF Dev locally without a cert. For production, remove this line.
+Refer to [CF Dev](../cf-dev) for credential information for your CF Dev instance. Place the substitutions in your `credentials.yml`. Also note that `skip_cert_check` is set to `true`. This is because we're running CF Dev locally without a cert. **For production, remove this line.**
 
 Add a task to the `build-deploy` job for deploying the app, using the `published` directory as the source:
 ```yaml
@@ -91,11 +91,22 @@ jobs:
           path: published
 ```
 
+***
+
+For deploying to Cloud Foundry, we need to specify a buildpack for it to use when running the app. In our case, we want to use `dotnet-core-buildpack` since we have a .NET Core app.
+
 `ci/manifest.yml`:
 ```yaml
 applications:
   - name: notes
-    buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git#v2.2.7
+    buildpack: <BUILDPACK_NAME>
+```
+
+If you have the `dotnet-core-buildpack` installed in you CF environment, you can just use `dotnet-core-buildpack` for `BUILDPACK_NAME`. Otherwise, you can try directly referring to a buildpack via `https://github.com/cloudfoundry/dotnet-core-buildpack.git#<TAG_NAME>` where `TAG_NAME` is the tag name from https://github.com/cloudfoundry/dotnet-core-buildpack/releases.
+
+You can see a list of available buildpacks on your CF environment by running:
+```bash
+cf buildpacks
 ```
 
 ***
@@ -112,7 +123,7 @@ and after the `.AddJsonFile(...)` lines, add
 .AddEnvironmentVariables();
 ```
 
-These will allow the app to make use of the CloudFoundry when pushed.
+These will allow the app to make use of the Cloud Foundry environment when pushed.
 
 ***
 
@@ -131,7 +142,7 @@ Then push up the changes to GitHub.
 
 ***
 
-Use postman to make an api call to `https://notes.dev.cfdev.sh/api/notes`. Instead of an HTTP `200`, we get an HTTP `500`. That indicates the app was deployed but is encountering an issue. Get the recent logs with:
+Use postman to make an `GET` call to `https://notes.dev.cfdev.sh/api/notes`. Instead of an HTTP `200`, we get an HTTP `500`. That indicates the app was deployed but is encountering an issue. Get the recent logs with:
 ```bash
 cf logs notes --recent
 ```
@@ -140,6 +151,6 @@ You should see:
 ```shell
 MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
 ```
-We need to update our hosted app, since it can't talk to our local mySQL database.
+We need to update our hosted app, since it can't talk to our local MySQL database.
 
 **Up Next:** [Connect to a DB on CF](../connect-to-a-db-on-cf)
