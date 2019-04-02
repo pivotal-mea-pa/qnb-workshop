@@ -151,4 +151,4 @@ Congratulations! You have pushed your first app into Cloud Foundry!
 On to the next Lab!
 ===================
 
-[Lab1 - Push a Ruby Application](lab-ruby)
+[Lab1 - Push a Ruby Application](/demos/lab-ruby)

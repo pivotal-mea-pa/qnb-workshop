@@ -261,4 +261,4 @@ Interact with App from CF CLI
 On to the next Lab!
 ===================
 
-[Lab2 - Binding to Cloud Foundry Services](demos/binding-cf-services)
+[Lab2 - Binding to Cloud Foundry Services](/demos/binding-cf-services)

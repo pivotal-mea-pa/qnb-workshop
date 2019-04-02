@@ -35,4 +35,4 @@ You can see the Windows container and app environment variables
 On to the next Lab!
 ===================
 
-[Lab2 - Binding to Cloud Foundry Services](../../labs/lab2/README.adoc)
+[Lab2 - Binding to Cloud Foundry Services](/demos/binding-cf-services)
