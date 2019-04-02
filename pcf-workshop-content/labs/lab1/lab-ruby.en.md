@@ -167,4 +167,4 @@ Interact with App from CF CLI
 On to the next Lab!
 ===================
 
-[Lab1 - Push a NodeJS Application](lab-node)
+[Lab1 - Push a NodeJS Application](/demos/lab-node)
