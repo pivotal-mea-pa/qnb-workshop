@@ -107,7 +107,7 @@ Course Materials
 
     -   Pre-work
 
-        -   [Get Environment Access](labs/README.adoc)
+        -   [Get Environment Access](labs/README)
 
     -   Lab 1 - From Zero to Pushing Your First Application
 
