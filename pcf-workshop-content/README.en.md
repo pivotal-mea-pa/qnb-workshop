@@ -113,8 +113,7 @@ Course Materials
 
         -   [**Java** Application](/demos/lab-cf-spring)
 
-        -   [**Spring Boot** Application
-            (start.spring.io)](labs/lab1/cloud-native-spring.adoc)
+        -   [**Spring Boot** Application (start.spring.io)](/demos/cloud-native-spring)
 
         -   [**Ruby** Application](/demos/lab-ruby)
 
