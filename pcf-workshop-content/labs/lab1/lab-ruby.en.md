@@ -17,29 +17,29 @@ Push It!
     You should see output similar to the following listing. Take a look
     at the listing callouts for a play-by-play of what’s happening:
 
-        Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/pcf-autoscale/manifest.yml 
+        Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/pcf-autoscale/manifest.yml
 
         Updating app scale-demo in org TELCO / space hopper as phopper@pivotal.io...
-        OK 
+        OK
 
         Creating route scale-nonsynodical-hartal.vert.fe.gopivotal.com...
-        OK 
+        OK
 
         Binding scale-nonsynodical-hartal.vert.fe.gopivotal.com to scale-demo...
-        OK 
+        OK
 
-        Uploading scale-demo... 
+        Uploading scale-demo...
         Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/pcf-autoscale
         Uploading 242.4K, 24 files
         Done uploading
         OK
 
-        Starting app scale-demo in org TELCO / space hopper as phopper@pivotal.io... 
+        Starting app scale-demo in org TELCO / space hopper as phopper@pivotal.io...
         -----> Downloaded app package (2.8M)
         -------> Buildpack version 1.3.1
         -----> Compiling Ruby/Rack
-        -----> Using Ruby version: ruby-2.0.0 
-        -----> Installing dependencies using 1.7.12 
+        -----> Using Ruby version: ruby-2.0.0
+        -----> Installing dependencies using 1.7.12
                Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
                Using bundler 1.7.12
                Installing tilt 1.3.3
@@ -60,7 +60,7 @@ Push It!
                No Procfile detected, using the default web server (webrick)
                https://devcenter.heroku.com/articles/ruby-default-web-server
 
-        -----> Uploading droplet (19M) 
+        -----> Uploading droplet (19M)
 
         1 of 1 instances running
 
@@ -68,9 +68,9 @@ Push It!
 
         OK
 
-        App scale-demo was started using this command `bundle exec rackup config.ru -p $PORT` 
+        App scale-demo was started using this command `bundle exec rackup config.ru -p $PORT`
 
-        Showing health and status for app scale-demo in org TELCO / space hopper as phopper@pivotal.io... 
+        Showing health and status for app scale-demo in org TELCO / space hopper as phopper@pivotal.io...
         OK
 
         requested state: started
@@ -167,4 +167,4 @@ Interact with App from CF CLI
 On to the next Lab!
 ===================
 
-[Lab1 - Push a NodeJS Application](lab-node.adoc)
+[Lab1 - Push a NodeJS Application](lab-node)
