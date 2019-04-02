@@ -4,7 +4,7 @@
 
 In this section, we'll make a Concourse pipeline to test our app. If you have not deployed Concourse locally yet, follow the instructions on [Deploy Concourse](../deploy-concourse).
 
-First, make a `ci` directory at the root of our repository. Create a `pipeline.yml` file.
+First, make a `ci` directory at the root of your repository. Create a `pipeline.yml` file.
 
 The pipeline is going to need access to the code, so add a resource:
 ```yaml
@@ -90,6 +90,11 @@ Now, using the `fly` cli from the `ci` directory, deploy the pipeline:
 fly -t targetname set-pipeline -p pipeline -c pipeline.yml -l variables.yml
 ```
 Where `targetname` is the name of the target you setup in [Deploy Concourse](../deploy-concourse). This creates a pipeline called `pipeline` using the configuration at `ci/pipeline.yml` and loads variables from `ci/variables.yml` Unpause the pipeline to start it.
+
+This can be accomplished via:
+```bash
+fly -t targetname unpause-pipeline -p pipeline
+```
 
 <details>
   <summary>Your pipeline should look like this:</summary>
