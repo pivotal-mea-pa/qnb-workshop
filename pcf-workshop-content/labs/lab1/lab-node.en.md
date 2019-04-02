@@ -1,7 +1,7 @@
 Target the Environment
 ======================
 
-1.  Follow the instructions to [Get Environment Access](../README.adoc)
+1.  Follow the instructions to [Get Environment Access](/concepts/setup)
 
 Push It!
 ========
@@ -261,4 +261,4 @@ Interact with App from CF CLI
 On to the next Lab!
 ===================
 
-[Lab2 - Binding to Cloud Foundry Services](/demos/lab-dotnet)
+[Push a .NET Application](/demos/lab-dotnet)

@@ -107,31 +107,30 @@ Course Materials
 
     -   Pre-work
 
-        -   [Get Environment Access](labs/README)
+        -   [Get Environment Access](/concepts/setup)
 
     -   Lab 1 - From Zero to Pushing Your First Application
 
-        -   [**Java** Application](labs/lab1/README.adoc)
+        -   [**Java** Application](/demos/lab-cf-spring)
 
         -   [**Spring Boot** Application
             (start.spring.io)](labs/lab1/cloud-native-spring.adoc)
 
-        -   [**Ruby** Application](labs/lab1/lab-ruby.adoc)
+        -   [**Ruby** Application](/demos/lab-ruby)
 
-        -   [**NodeJS** Application](labs/lab1/lab-node.adoc)
+        -   [**NodeJS** Application](/demos/lab-node)
 
-        -   [**.NET** Application](labs/lab1/lab-dotnet.adoc)
+        -   [**.NET** Application](/demos/lab-dotnet)
 
-    -   [Lab 2 - Binding to Cloud Foundry
-        Services](labs/lab2/README.adoc)
+    -   [Lab 2 - Binding to Cloud FoundryServices](/labs/lab2/binding-cf-services)
 
-    -   [Lab 3 - Operating Your Application](labs/lab3/README.adoc)
+    -   [Lab 3 - Operating Your Application](/labs/lab3/operating-your-application)
 
-    -   [Lab 4 - Monitoring Your Application](labs/lab4/README.adoc)
+    -   [Lab 4 - Monitoring Your Application](/labs/lab4/monitoring-your-application)
 
     -   Advanced Lab - Jenkins Integration
 
-        -   [Java App - Gradle Build](labs/lab5/README.adoc)
+        -   [Java App - Gradle Build](/labs/lab5/continuous-delivery-lab)
 
     -   For further exploration check-out these projects
 

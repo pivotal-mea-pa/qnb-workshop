@@ -146,3 +146,9 @@ Deploy *cloud-native-spring* to Pivotal Cloud Foundry
 
 **Congratulations!** You’ve just completed your first Spring Boot
 application.
+
+
+On to the next Lab!
+===================
+
+[Binding to Cloudfoundry Services](/demos/binding-cf-services)
