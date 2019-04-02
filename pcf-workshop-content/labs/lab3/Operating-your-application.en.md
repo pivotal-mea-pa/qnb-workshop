@@ -178,4 +178,4 @@ Reference:
 On to the next Lab!
 ===================
 
-[Lab4 - Monitoring your Application](/labs/lab4/monitoring-your-application)
+[Lab4 - Monitoring your Application](/demos/monitoring-your-application)

@@ -133,7 +133,7 @@ Congratulations! You have just bound your first Cloud Foundry Service!
 On to the next Lab!
 ===================
 
-[Lab3 - Operating your Application](/labs/lab3/operating-your-application)
+[Lab3 - Operating your Application](/demos/operating-your-application)
 
 [1] In this case, we could accomplish the same goal by only *restarting*
 the application via `cf restart spring-music`. A *restage* is generally
