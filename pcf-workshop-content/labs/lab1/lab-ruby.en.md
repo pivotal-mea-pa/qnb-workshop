@@ -1,7 +1,7 @@
 Target the Environment
 ======================
 
-1.  Follow the instructions to [Get Environment Access](../README.adoc)
+1.  Follow the instructions to [Get Environment Access](/concepts/setup)
 
 Push It!
 ========
