@@ -6,7 +6,7 @@ Target the Environment
 Push It!
 ========
 
-1.  Clone the repo  [nodejs-cf-sample-app](git@github.com:Pivotal-Field-Engineering/nodejs-cf-sample-app.git) :
+1.  Clone the repo  [nodejs-cf-sample-app](https://github.com/Pivotal-Field-Engineering/nodejs-cf-sample-app.git) :
 
 
         $ cd $BOOTCAMP_HOME/nodejs-cf-sample-app
