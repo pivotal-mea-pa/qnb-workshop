@@ -11,6 +11,14 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 ---
 
+**TO CONSIDER** Slides vs Whiteboard (credit RBM)
+
+**TO CONSIDER** POC Credits and Timing of a deal (credit RBM)
+
+**TO CONSIDER** Jumpbox vs OpsMan
+
+**TO CONSIDER** Ensure timing and success factor of slide/demo ratio
+
 **TODO:** Interview 2-3 customers for feedback
 
 **TODO:** Feedback from PA team on existing content
@@ -108,6 +116,6 @@ __*DAY2*__
 - __Upgrades__
   - Demo/Lab: Tile Upgrade
   - Concepts: Foundation Upgrade Planning (Upgrade Planner)
-- __SRE Concepts__
+- __SRE Concepts & Platform as a Product__
   - Concepts:
 - __Wrap Up & Retro__
