@@ -1,10 +1,7 @@
-{{ $flowhome := .Site.GetPage "/workshop" }}
 ### Development Tools
 [SDK for .NET Core and dotnet CLI](../demos/sdk-for-.net-core-and-dotnet-cli)  
 [IDEs](../demos/ides)  
-{{ if in $flowhome.Title "Concourse" }}
 [Deploy Concourse](../demos/deploy-concourse)  
-{{ end }}
 [CF Dev](../demos/cf-dev)
 
 ### .NET Core App
@@ -20,9 +17,7 @@
 [Adding a Persistence Layer](../demos/adding-a-persistence-layer)
 
 ### Continuous Integration / Deployment
-{{ if in $flowhome.Title "Concourse" }}
 [CI Setup](../demos/ci-setup)  
-{{ end }}
 [CF Deployment](../demos/cf-deployment)  
 [Connect to a DB on CF](../demos/connect-to-a-db-on-cf)  
 [Smoke Tests](../demos/smoke-tests)  
