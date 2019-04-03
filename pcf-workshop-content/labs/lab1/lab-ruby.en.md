@@ -6,7 +6,7 @@ Target the Environment
 Push It!
 ========
 
-1.  Change to the *ruby-cf-sample\_app* application directory:
+1.  Clone the repo  [ruby-cf-sample-app](https://github.com/Pivotal-Field-Engineering/ruby-cf-sample-app.git) :
 
         $ cd $BOOTCAMP_HOME/ruby-cf-sample-app
 

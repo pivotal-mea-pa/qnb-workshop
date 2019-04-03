@@ -6,7 +6,7 @@ Target the Environment
 Push It!
 ========
 
-1.  Change to the *spring-cf-sample-app* application directory:
+1.  Clone the repo  [spring-cf-sample-app](https://github.com/Pivotal-Field-Engineering/spring-cf-sample-app.git) :
 
         $ cd $BOOTCAMP_HOME/spring-cf-sample-app
 

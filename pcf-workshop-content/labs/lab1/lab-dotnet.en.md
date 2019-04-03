@@ -6,7 +6,7 @@ Target the Environment
 Push It!
 ========
 
-1.  Change to the *DotNet-cf-sample-app* sample application directory:
+1.  Clone the repo  [dotnet-cf-sample-app](https://github.com/Pivotal-Field-Engineering/dotnet-cf-sample-app.git) :
 
         $ cd $BOOTCAMP_HOME/dotnet-cf-sample-app
 
