@@ -1,4 +1,4 @@
 <br>
 <br>
 
-<iframe src="https://docs.google.com/presentation/d/1nGlLAm8IdMakkWHVnebLk-lUBU56sbWEmfG8wqhjQ-c/edit#slide=id.g2ef571162d_0_112" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="display: block;margin: auto;"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwPg6ZmrYcYCoFUMziyZKk114LVopc6vjHb2bAPKLYMmN8_v0ifcQZaWolJq7aRDfMVeIU_CeZJpYk/embed?start=true&loop=true&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="display: block;margin: auto;"></iframe>
