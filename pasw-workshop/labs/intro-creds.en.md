@@ -1,6 +1,6 @@
 # Introduction & Credentials
 
-In today's workshop you will get hands on experience creating a templated app in Visual Studio, reviewing the cloud foundry manifest, pushing the app to Pivotal Application Services, attaching an auto-scaler to the app, and trying out different routes.
+In today's workshop you will get hands on experience creating a .Net Core with Steeltoe app in Visual Studio Code, reviewing the cloud foundry manifest, pushing the app to Pivotal Application Services, attaching an auto-scaler to the app, and trying out different routes.
 
 Your workshop proctor should have provided URL's and credentials prior to beginning the labs. Please have this information handy for the next lab.
 

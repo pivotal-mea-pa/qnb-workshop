@@ -116,6 +116,8 @@ Before we switch to App Manager and see all the wonderful benefits of actuators,
 	}
 	```
 
+1. Push your application to Cloud Foundry (`cf push`) and validate that the Values endpoint (`/api/values`) still returns the options.
+
 ## Complete
 
 Along with the default Cloud Foundry health checks, we have added in the possibility to report an additional check on some custom serivce or object. You can read more about what healthchecks are built in, in the [Steeltoe health documentation](https://steeltoe.io/docs/steeltoe-management/#1-2-3-health).
