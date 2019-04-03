@@ -20,7 +20,7 @@ A Bit of Review
 ===============
 
 Your instance of the sample *Workshop MVC Demo* should not be running
-after the steps completed in [lab 1](../../labs/lab2/README.adoc). Make
+after the steps completed in [lab 1](/demos/Binding-cf-services). Make
 sure to change to the *spring-cf-sample-app* application directory. For
 this lab we will be using the Java application. Redeploy the
 application:
@@ -38,16 +38,16 @@ The Services Marketplace
 ========================
 
 There are two ways to discover what services are available on Pivotal
-Cloudfoundry. The first is available on any instance of Cloud Foundry:
+Cloud Foundry. The first is available on any instance of Cloud Foundry:
 the CLI. Just type:
 
     $ cf marketplace
 
 and you’ll get a list of services, their available plans, and
-descriptions. On Pivotal Cloudfoundry, the “free” tier of plans is
+descriptions. On Pivotal Cloud Foundry, the “free” tier of plans is
 normally the first one listed.
 
-The second way is specific to Pivotal Cloudfoundry’s Apps Manager UI. If
+The second way is specific to Pivotal Cloud Foundry’s Apps Manager UI. If
 you haven’t already, login to it by visiting
 <http://apps.sys.px-npe01.cf.t-mobile.com>
 
@@ -64,7 +64,7 @@ Creating and Binding to a Service Instance
 
 1.  Let’s begin by creating a MySQL service instance. From the Apps
     Manager UI service marketplace, select *MySQL for Pivotal
-    Cloudfoundry*, select the **100mb plan**, and provide an instance
+    Cloud Foundry*, select the **100mb plan**, and provide an instance
     name. In the drop-down list next to *Bind to App* select your
     mvc-demo application.
 

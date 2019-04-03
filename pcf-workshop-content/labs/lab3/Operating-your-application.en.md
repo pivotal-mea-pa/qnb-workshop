@@ -73,7 +73,7 @@ Scale the Application Up
     is applying a random routing algorithm to all of the application
     instances assigned to this route. As an instance reaches the
     `running` state, its
-    [DEA](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html)
+    [Diego Cell](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html)
     registers that instance in the routing table assigned to its route
     by sending a message to Cloud Foundry’s message bus. All (Go)Router
     instances are subscribed to this channel and register the routes
@@ -118,7 +118,7 @@ Scale the Application Down
 HTTP Routing
 ============
 
-There are two ways to discover what routes, or HTTP URLs, are ampped to
+There are two ways to discover what routes, or HTTP URLs, are mapped to
 an application The first is available via the CLI. Just type:
 
     $ cf app workshop

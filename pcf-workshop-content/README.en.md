@@ -25,8 +25,7 @@ PREREQUISITES
 
 Understanding of application development and deployment. This course is
 aimed at developers regardless of your development language of choice.
-No specific programming language is needed or assumed. The Boeing
-environment favors Java or .Net. The hands on Labs will primarily be
+No specific programming language is needed or assumed. The hands on Labs will primarily be
 based on languages that target the Java or .Net core runtime.
 
 COURSE OBJECTIVES
@@ -64,35 +63,35 @@ the following:
 AGENDA / SCHEDULE
 =================
 
-8:30 AM - 9:15 AM  
+8:30 AM - 9:15 AM
 -   Session 1: *Cloud Native Introduction & Building Microservices*
 
 Session 1 is an overview of Cloud Foundry and how you can support a
 multi-cloud portable strategy for applications and pipelines with
 minimal overhead.
 
-9:15 AM - 9:30 AM  
+9:15 AM - 9:30 AM
 BREAK
 
-9:30 AM - 10:30 AM  
+9:30 AM - 10:30 AM
 -   Session 2: *Cloud Foundry Architecture and Operations*
 
 Session 2 is a deep dive on Platforms, Cloud Foundry, and Containers
 from both a dev and ops perspective
 
-10:30 AM - 11:00 AM  
+10:30 AM - 11:00 AM
 -   Laptop preparation
 
 11:00 AM - 12:00 PM  
 -   Developer Workshop (Part 1): *Pushing Code w/ PCF*
 
-12:00 PM - 1:00 PM  
+12:00 PM - 1:00 PM
 LUNCH
 
-1:00 PM - 3:00 PM  
+1:00 PM - 3:00 PM
 -   Developer Workshop (Part 2): *Continued hands-on w/ PCF*
 
-3:00 PM - 3:30 PM  
+3:00 PM - 3:30 PM
 Wrap Up, Q/A, Feedback
 
 Course Materials
@@ -112,14 +111,14 @@ Course Materials
 
         -   [**Java** Application](/demos/lab-cf-spring)
 
-        -   [**Spring Boot** Application (start.spring.io)](/demos/cloud-native-spring)
-
         -   [**Ruby** Application](/demos/lab-ruby)
 
         -   [**NodeJS** Application](/demos/lab-node)
 
         -   [**.NET** Application](/demos/lab-dotnet)
 
+        -   [**Spring Boot** Application (start.spring.io)](/demos/cloud-native-spring)
+        
     -   [Lab 2 - Binding to Cloud FoundryServices](/demos/binding-cf-services)
 
     -   [Lab 3 - Operating Your Application](/demos/operating-your-application)
