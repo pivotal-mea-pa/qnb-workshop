@@ -10,12 +10,8 @@
                     "filename": "dotnet-core-tdd-concourse-cf/development-tools/sdk-for-.net-core-and-dotnet-cli"
                 },
                 {
-                    "name": "JetBrains Rider",
-                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/jetbrains-rider"
-                },
-                {
-                    "name": "Microsoft Visual Studio",
-                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/microsoft-visual-studio"
+                    "name": "IDEs",
+                    "filename": "dotnet-core-tdd-concourse-cf/development-tools/ides"
                 },
                 {
                     "name": "Deploy Concourse",
@@ -26,12 +22,8 @@
                     "filename": "dotnet-core-tdd-concourse-cf/development-tools/cf-dev"
                 },
                 {
-                    "name": "Setting Up the App in Rider",
-                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-the-app-in-rider"
-                },
-                {
-                    "name": "Setting Up the App in Visual Studio",
-                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-the-app-in-visual-studio"
+                    "name": "Setting Up the App",
+                    "filename": "dotnet-core-tdd-concourse-cf/net-core-app/setting-up-the-app"
                 },
                 {
                     "name": "Setting Up xUnit",
