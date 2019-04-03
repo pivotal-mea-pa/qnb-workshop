@@ -2,33 +2,36 @@
 
 ## Goal
 
-Assuming you have already pushed an app based on the Steeltoe Cloud Foundry templates, this lab will review what additions were made in the project to enable Actuators and the automatic benefits in App Manager.
+Assuming you have already pushed an app using User Provided Services, this lab will review what additions are necessary in the project to enable Actuators and the automatic benefits in App Manager.
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
+- Visual Studio Code
+- .Net Core 2.2
 - Internet Access
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
 
 ## Add Steeltoe Management Actuators to the app
 
+1. Add the `Steeltoe.Management.CloudFoundry` nuget package to the project `$> dotnet add package Steeltoe.Management.CloudFoundry`
+
 1. Open the `Startup.cs` file by double clicking.
 
-1. Confirm the Management package is implemented.
-	```cs
-	using Steeltoe.Management.CloudFoundry;
-	```
+1. Include the Management library.
+```cs
+using Steeltoe.Management.CloudFoundry;
+```
 
-1. In the `ConfigureServices` method, confirm the default actuator endpoints have been initialized.
-	```cs
-	public void ConfigureServices(IServiceCollection services) {
-		services.AddCloudFoundryActuators(Configuration);
+1. In the `ConfigureServices` method, add the cloud foundry actuators to the services collection.
+```cs
+public void ConfigureServices(IServiceCollection services) {
+	services.AddCloudFoundryActuators(Configuration);
 
-		...
-	}
-	```
+	...
+}
+```
 
-1. In the `Configure` method, confirm the default actuator endpoints have been implemented.
+1. In the `Configure` method, tell the application builder to use the cloud foundry actuators.
 	```cs
 	public void Configure(IApplicationBuilder app,
 			IHostingEnvironment env,

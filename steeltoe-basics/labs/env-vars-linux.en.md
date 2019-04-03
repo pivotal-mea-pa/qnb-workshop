@@ -6,32 +6,38 @@ Environment variables are a staple of cloud native best practices, but if you've
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
+- Visual Studio Code
+- .NET Core 2.2
 - Internet Access
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
-- Powershell
 
-## Create a new Visual Studio Steeltoe project
+## Create a .NET Core Microservice with a Cloud Foundry Manifest
 
-1. From the Visual Studio homepage, choose `File > New > Project`. This will bring up the "New Project" window.
+1. Open Visual Studio Code and open a new directory for your application. `File > Open...`
 
-1. Choose `Installed` in the left panel and locate the search box at the top right. Type `steeltoe` in the search box. This will filter the installed project templates, to only those published by Steeltoe.
+1. Open the Integrated Terminal provided in VS Code `Terminal > New Terminal` (Code blocks begining with `$> ` will indicate commands to be run in this terminal)
 
-1. In the main panel locate the template named `Cloud Foundry w Steeltoe (.NET Core - Linux)` and click.
+1. Initialize a new Web API project `$> dotnet new webapi`
 
-1. Choose a name and location for the new project and click `ok` to create the project.
+1. Create a `manifest.yml` file at the root of the project with the following content
 
-1. Be patient while the project is loaded and all needed packages are downloaded.
+```
+---
+application:
+-   name: <yourname>-steeltoe-app
+    buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack#v2.2.5
+    instances: 1
+    memory: 256M
+```
 
 ## Add environment variables in the app manifest
 
-1. Open the `manifest.yml` file by double clicking. This file tells PASW how to containerize and deploy the app. It also provides details like how many instances to run, what services to bind, and establishes any custom environment variables.
+1. Open the `manifest.yml` file by double clicking. This file tells PAS how to containerize and deploy the app. It also provides details like how many instances to run, what services to bind, and establishes any custom environment variables.
 
 1. Locate the `env` area to the manifest and add the `MYAPP_CONNECTION_STRING` variable. Leave the other environment variables as is.
   ```yml
   instances: 1
   memory: 512M
-  disk_quota: 512M
   ...
   env:
     MYAPP_CONNECTION_STRING: 'Server=FQDNServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;'
@@ -53,7 +59,12 @@ Environment variables are a staple of cloud native best practices, but if you've
     });
   ```
 
-1. Locate the `Controllers\ValuesController.cs` file and double click it, to open.
+1. Locate the `Controllers/ValuesController.cs` file and double click it, to open.
+
+1. Add a using statement for Microsoft.Extensions.Configuration, which will provide the standard Microsoft library for configuration.
+```cs
+using Microsoft.Extensions.Configuration;
+```
 
 1. Add a class variable to hold the app's configuration.
   ```cs
@@ -64,15 +75,10 @@ Environment variables are a staple of cloud native best practices, but if you've
 
 1. Inject configuration in to the class constructor and fill the newly created variable.
   ```cs
-  public ValuesController(IOptions<CloudFoundryApplicationOptions> appOptions,
-    IOptions<CloudFoundryServicesOptions> serviceOptions,
-    ILogger<ValuesController> logger,
-    IConfiguration configuration) {
-      ...
-      _configuration = configuration;
-
-      ...
-    }
+public ValuesController(IConfiguration configuration)
+{
+	_configuration = configuration;
+}
   ```
 
 1. Locate the `[HttpGet]` endpoint, retrieve the environment variable and return its value when the endpoint is called.
