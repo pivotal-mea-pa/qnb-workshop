@@ -14,8 +14,7 @@ Push It!
 
         $ cf push
 
-    You should see output similar to the following listing. Take a look
-    at the listing callouts for a play-by-play of what’s happening:
+    You should see output similar to the following listing. Language specific output has been omitted for clarity. Take a look at the listing callouts for a play-by-play of what's happening:
 
         Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/manifest.yml
 

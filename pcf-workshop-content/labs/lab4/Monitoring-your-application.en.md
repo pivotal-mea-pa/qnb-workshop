@@ -3,7 +3,7 @@
 > application health very easy. In the this labs we’ll continue to
 > explore Pivotal Cloudfoundry application operations.
 
-Applciation Container and Network Monitoring with PCF Metrics
+Application Container and Network Monitoring with PCF Metrics
 =============================================================
 
 PCF Metrics helps developers better understand the health and
