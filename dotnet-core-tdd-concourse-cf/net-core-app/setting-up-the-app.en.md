@@ -1,6 +1,6 @@
 # Setting Up the App
 
-**Previous:** [.NET Core App](Home#net-core-app)
+**Previous:** [.NET Core App](/workshop/#net-core-app)
 
 In this section, we'll describe how to start your first app. We'll be building a Notes RESTful API where multiple users can add and retrieve notes.
 
