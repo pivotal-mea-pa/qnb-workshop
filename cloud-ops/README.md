@@ -1,11 +1,13 @@
-### Cloud Operations Workshop
+# Pivotal Cloud Operations Workshop
 
 This is the home for all things related to the PCF presales Cloud Operations workshop. Here you will find the content being used by pace-builder to create Cloud Operastions workshops.
 
 The content is categorized into the three 'levels' of workshop to be delivered:
-- Level 1 (L1) - Cloud Operations Discovery
-- Level 2 (L2) - Cloud Operations Fundamentals
-- Level 3 (L3) - Cloud Operations Advanced
+- __Level 1__ - Cloud Operations Discovery
+- __Level 2__ - Cloud Operations Fundamentals
+- __Level 3__ - Cloud Operations Advanced
+
+Content can be shared between levels, however progressing from Level 1 to Level 3 with a core group of customers will provide maximum value.
 
 ---
 
@@ -19,81 +21,93 @@ The content is categorized into the three 'levels' of workshop to be delivered:
 
 **TODO:** Create workshop pre-reqs punchlist
 
-### Content
+---
 
-#### L1 Table of Contents
+## Level 1 - Cloud Operations Discovery
+### Table of Contents
 - __Overview__
   - Introduction
-    - Slides: *Introduction & Value Proposition
+    - Concepts: *Intro & Value Proposition
   - Who is Pivotal
-    - Slides:
+    - Concepts:
   - What is PCF
-    - Slides:
-    - Demo: Push an App - Refer to Keep notes
+    - Concepts:
+    - Demo/Lab: Push an App - Refer to Keep notes
   - Abstractions & PCF components
-    - Slides: Abstractions
-    - Slides: BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
+    - Concepts: Abstractions
+    - Concepts: BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
 - __IaC concepts__
-  - Immutable instructure
+  - BOSH CPI / Immutable instructure / Concourse / Platform Automation
     - Whiteboard: Hey customer what does your IaaS provisioning process look like?
-    - Slides: BOSH & Customer Efficiencies
+    - Concepts: BOSH Immutable Infrastructure & Customer Efficiencies
 - __Deployments__
   - Whiteboard: Hey customer what does your application deployment process look like?
-  - Slides: BOSH Deployments & Simplified path to prod
+  - Concepts: BOSH Deployments & Simplified path to prod
 - __Supporting Services__
-  - Slides: Marketplace & Ecosystem
+  - Concepts: Marketplace & Ecosystem
   - Whiteboard: Hey customer what services do you currently integrate with and support?
 - __Security Posture__
-  - Slides: R/R/R & Compliance Scanner
-  - Demo: Rotate (Service Credentials) & Repave (BOSH Recreate)
+  - Concepts: R/R/R & Compliance Scanner
+  - Demo/Lab: Rotate (Service Credentials) & Repave (BOSH Recreate)
+- __Platform as a Product__
+  - Concepts:
 - __Recap__
-  - Slides: Customer Outcomes
-  - Slides: Value Proposition
+  - Concepts: Customer Outcomes
+  - Concepts: Value Proposition
 
+---
 
-#### L2 Table of Contents
+## Level 2 - Cloud Operations Fundamentals
+### Table of Contents
 - __L1 Overview__
   - Complete or Pruned
+
 Operations (IaC & IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
+
 Automation (BOSH CPI / Platform Automation / Deployments / Upgrades)
+
 Security (RRR / CredHub / Compliance Scanner)
+
 Monitoring Platform Health (BOSH & Healthwatch)
 
-#### L3 Table of Contents
+---
+
+## Level 3 - Cloud Operations Advanced
+### Table of Contents
 __*DAY1*__
 - __L1 Overview__
   - Complete or Pruned
 - __Control-Plane concepts__
-  - Slides:
-  - Lab/Demo:
+  - Concepts:
+  - Demo/Lab:
 - __Concourse__
-  - Slides:
-  - Lab/Demo:
+  - Concepts:
+  - Demo/Lab:
 - __Platform Automation__
-  - Slides:
-  - Lab/Demo:
+  - Concepts:
+  - Demo/Lab:
 - __OpsMan & BOSH Director (some BOSH workshop material)__
-  - Slides:
-  - Lab/Demo:
+  - Concepts:
+  - Demo/Lab:
 - __Tiles__
-  - Lab/Demo: Install PAS tile
-  - Lab/Demo: Pivotal Network
-  - Slides: Marketplace
+  - Demo/Lab: Install PAS tile
+  - Demo/Lab: Pivotal Network
+  - Concepts: Marketplace
 
 __*DAY2*__
 - __Deployments__
-  - Lab/Demo: Push an app
-  - Slides: BOSH deployments and
+  - Demo/Lab: Push an app
+  - Concepts: BOSH deployments and
 - __Apps & Health__
-  - Lab/Demo: PCF Apps Manager
-  - Lab/Demo: Provision PCF HealthWatch
+  - Demo/Lab: PCF Apps Manager
+  - Demo/Lab: Provision PCF HealthWatch
 - __Security Posture & Credhub__
-  - Slides: R/R/R & Compliance Scanner
-  - Lab/Demo: Provision Compliance Scanner
-  - Lab/Demo:
+  - Concepts: R/R/R & Compliance Scanner
+  - Demo/Lab: Provision Compliance Scanner
+  - Demo/Lab:
 - __Upgrades__
-  - Lab/Demo: Tile Upgrade
-  - Slides: Foundation Upgrade Planning (Upgrade Planner)
+  - Demo/Lab: Tile Upgrade
+  - Concepts: Foundation Upgrade Planning (Upgrade Planner)
 - __SRE Concepts__
-  - Slides:
+  - Concepts:
 - __Wrap Up & Retro__

@@ -1,0 +1,76 @@
+{
+    "workshopSubject":"Cloud Operations - Level 1 - Discovery",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Intro & Value Proposition",
+                    "filename":"cloud-ops/L1/concepts/intro-and-value-prop-slides"
+                },
+                {
+                    "name":"Who is Pivotal",
+                    "filename":"cloud-ops/L1/concepts/who-is-pivotal-slides"
+                },
+                {
+                    "name":"What is PCF",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Abstractions & PCF Components",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"IaC Concepts",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Deployments",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Supporting Services",
+                    "filename":"cloud-ops/L1/concepts/"
+                }
+                {
+                    "name":"Security Posture",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Platform as a Product",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Recap",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name":"Platform Overview",
+                    "filename":"cloud-ops/L1/demo-lab"
+                },
+                {
+                    "name":"Deploy Concourse with BOSH",
+                    "filename":"cloud-ops/L1/demo-lab"
+                },
+                {
+                    "name":"Day 2 Operations with BOSH",
+                    "filename":"cloud-ops/L1/demo-lab"
+                },
+                {
+                    "name":"PAS Command Tour",
+                    "filename":"cloud-ops/L1/demo-lab"
+                },
+                {
+                    "name":"Buildpack Upgrade Command Tour",
+                    "filename":"cloud-ops/L1/demo-lab"
+                }
+            ]
+        }
+    ]
+}
