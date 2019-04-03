@@ -2,7 +2,7 @@
 
 ## Goal
 
-The labs in this workshop make use of VS Code, .NET Core 2.2 SDK (dotnet cli), and the Cloud Foundry cli (cf cli). The following steps will confirm you have the correct configuration.
+The labs in this workshop make use of Visual Studio Code, .NET Core 2.2 SDK (dotnet cli), and the Cloud Foundry cli (cf cli). The following steps will confirm you have the correct configuration.
 
 ## Prerequisites
 
@@ -21,8 +21,6 @@ The labs in this workshop make use of VS Code, .NET Core 2.2 SDK (dotnet cli), a
 
 1. Follow the installer for VS Code for your environment.
 
-1. Open a terminal (Bash, Powershell, etc) to validate your installation
-
 1. To verify the installation, open a terminal (Bash, Powershell, etc) and type `dotnet --version`.
 
 ## Download and Validate cf cli
@@ -30,23 +28,17 @@ The labs in this workshop make use of VS Code, .NET Core 2.2 SDK (dotnet cli), a
 Another option for downloading the CF CLI would be to have them login to apps manager, click on "Tools" and download. This would ensure the CLI version is lined up with the platform they are working on. 
 -->
 
-1. Download [the cli](https://cli.run.pivotal.io/stable?release=windows64&source=github).
+1. Follow the instructions to install the [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) for your operating system.
 
-1. Unpack the zip file.
+1. To verify your installation, open a Terminal (Bash, Powershell, etc) and type `cf --version`. If your installation was successful, the cf cli version is returned.
 
-1. Double click `cf-installer.exe` to begin installation.
-
-1. When prompted, click **Install**, then **Finish**
-
-1. To verify your installation, open powershell and type `cf --version`. If your installation was successful, the cf cli version is returned. You may need to restart your powershell window for the cli to work properly.
-
-#### If you don't have permission to install the cli, download the cli executable
+#### If you don't have permission to install the cli on Windows, download the cli executable
 
 1. Download the [cli exe](https://packages.cloudfoundry.org/stable?release=windows64-exe&source=github).
 
 1. Unpack the zip file.
 
-1. Copy the `cf.exe` executable to `c:\Windows\System32` folder. (this is to add `cf` to your path env variable)
+1. Add the directory where `cf.exe` exists to your local user PATH.
 
 1. To verify your installation, open powershell and type `cf`. If your installation was successful, the cf CLI help listing appears. You may need to restart the powershell window to see the cf cli help listing appear.
 

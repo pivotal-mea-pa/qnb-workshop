@@ -13,6 +13,8 @@ Environment variables are a staple of cloud native best practices, but if you've
 
 ## Create a .NET Core Microservice with a Cloud Foundry Manifest
 
+1. Skip this section if you have already created the app in a previous section.
+
 1. Open Visual Studio Code and open a new directory for your application. `File > Open...`
 
 1. Open the Integrated Terminal provided in VS Code `Terminal > New Terminal` (Code blocks begining with `$> ` will indicate commands to be run in this terminal)
@@ -23,7 +25,7 @@ Environment variables are a staple of cloud native best practices, but if you've
 
 ```
 ---
-application:
+applications:
 -   name: <yourname>-steeltoe-app
     buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack#v2.2.5
     instances: 1
@@ -34,7 +36,7 @@ application:
 
 1. Open the `manifest.yml` file by double clicking. This file tells PAS how to containerize and deploy the app. It also provides details like how many instances to run, what services to bind, and establishes any custom environment variables.
 
-1. Locate the `env` area to the manifest and add the `MYAPP_CONNECTION_STRING` variable. Leave the other environment variables as is.
+1. Create the `env` array in manifest and add the `MYAPP_CONNECTION_STRING` variable.
   ```yml
   instances: 1
   memory: 512M
@@ -43,7 +45,7 @@ application:
     MYAPP_CONNECTION_STRING: 'Server=FQDNServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;'
   ```
 
-1. Each time an instance of the app is deployed, these environment variables will be created and made available to the app. In the turn the app will use the provided values to do some work.
+1. Each time an instance of the app is deployed, these environment variables will be created and made available to the app. In turn the app will use the provided values to do some work.
 
 ## Retrieve the environment variable values in the app
 
@@ -56,7 +58,8 @@ application:
 
     .ConfigureAppConfiguration((hostingContext, config) => {
       config.AddEnvironmentVariables(prefix: "MYAPP_");
-    });
+    })
+    .UseStartup<Startup>();
   ```
 
 1. Locate the `Controllers/ValuesController.cs` file and double click it, to open.
@@ -91,6 +94,8 @@ public ValuesController(IConfiguration configuration)
     return new string[] { myConnectionString };
   }
     ```
+
+1. Push your app to the application service (`cf push`) and validate that the connection string defined in the manifest is returned when you browse to the `/api/values` endpoint.
     
 ## Complete
 

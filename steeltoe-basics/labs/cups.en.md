@@ -19,7 +19,7 @@ Note, this lab assumes you have already completed the Environment Variables lab 
 
 1. Create a User Provided Service by running the provided command.
   ```bash
-  cf create-user-provided-service 'app-connection-string' -p '{\"CONNECTION_STRING\":\"Server=FQDNServerAddress_cups;Database=myDataBase;User Id=myUsername;Password=myPassword;\"}'
+  cf create-user-provided-service 'app-connection-string' -p '{"CONNECTION_STRING":"Server=FQDNServerAddress_cups;Database=myDataBase;User Id=myUsername;Password=myPassword;"}'
   ```
 
 1. Confirm the service is available for binding by listing all services in the space `cf services`. You should see the `app-connection-string` service listed.
@@ -60,9 +60,9 @@ Note, this lab assumes you have already completed the Environment Variables lab 
     }
   ```
 
-1. Add the Steeltoe Configuraiton NuGet package to the project `$> dotnet add package Steeltoe.Extensions.Configuraiton.CloudFoundryCore`
+1. Add the Steeltoe Configuration NuGet package to the project `$> dotnet add package Steeltoe.Extensions.Configuration.CloudFoundryCore`
 
-1. Update `Startup.cs` to configuration Cloud Foundry Options
+1. Update `Startup.cs` to configure Cloud Foundry Options
 ```cs
 using Steeltoe.Extensions.Configuration.CloudFoundry;
 ...
@@ -124,17 +124,20 @@ using Newtonsoft.Json;
 
 // GET api/values
 [HttpGet]
-public ActionResult<string> Get()
+public ActionResult<IEnumerable<string>> Get()
 {
-    return JsonConvert.SerializeObject(new {
+    string myConnectionString = JsonConvert.SerializeObject(new {
         app = _appOptions,
         services = _serviceOptions,
-        connectionString = _serviceOptions.ServicesList[0].Credentials["CONNECTION_STRING"].Value
+        connectionString = _serviceOptions.ServicesList.Single(s => s.Name == "app-connection-string").Credentials["CONNECTION_STRING"].Value
     });
+    return new string[] { myConnectionString };
 }
 ```
 
 1. Steeltoe knows how Cloud Foundry makes environment variables available to apps
+
+1. Push your application to Cloud Foundry (`cf push`) and validate that when you hit the Values endpoint (`/api/values`) you see the contents of the application options, services options and the user provided service connection string.
 
 ## Complete
 
