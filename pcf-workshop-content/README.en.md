@@ -100,8 +100,7 @@ Course Materials
 
 -   Session 1: [Introduction](presentations/Intro-Pivotal.pptx)
 
--   Session 2: [Cloud Foundry Architecture and
-    Operations](presentations/PCF-Architecture.pptx)
+-   Session 2: [Cloud Foundry Architecture and Operations](presentations/PCF-Architecture.pptx)
 
 -   Developer Workshop
 

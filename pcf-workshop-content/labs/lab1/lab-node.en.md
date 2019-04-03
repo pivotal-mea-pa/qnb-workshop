@@ -6,7 +6,8 @@ Target the Environment
 Push It!
 ========
 
-1.  Change to the *nodejs-cf-sample-app* sample application directory:
+1.  Clone the repo  [nodejs-cf-sample-app](git@github.com:Pivotal-Field-Engineering/nodejs-cf-sample-app.git) :
+
 
         $ cd $BOOTCAMP_HOME/nodejs-cf-sample-app
 
