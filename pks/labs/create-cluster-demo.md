@@ -1,8 +1,8 @@
-# Manage Kubernetes Clusters
+# Create Kubernetes Clusters
 
 ## Goal
 
-Deploy a Kubernetes cluster, and setup our host to connect to it.
+Login to PKS to create a Kubernetes cluster and connect to it.
 
 ## Prerequisites
 
@@ -11,12 +11,12 @@ Deploy a Kubernetes cluster, and setup our host to connect to it.
   - Post-deploy scripts enabled
   - Deployed Pivotal Container Service Tile
   - Installed PKS CLI
-  
+
 ## Determine PKS Management API IP
 
-In order to reach the PKS Management API service we must ensure either our DNS or Load Balancer is sending us to the correct PKS Management API url. 
-We cannot utilize IPs due to the default security enforcement built into the PKS Management API. 
-**Skip this step if you deployed a load balancer and/or registered the PKS Management API hostname with your DNS.**
+In order to reach the PKS Management API service we must ensure either our DNS or Load Balancer is sending us to the correct PKS Management API url.
+We cannot utilize IPs due to the default security enforcement built into the PKS Management API.
+**Skip this step if you deployed a load balancer and/or already registered the PKS Management API hostname with your DNS.**
 
 1. Navigate to the Ops Manager FQDN (hostname).
 1. Login with the Ops Manager credentials setup earlier.
@@ -45,11 +45,11 @@ While external identity resources are supported for backing UAA this demo is foc
   API Endpoint: api.pks.<domain-name>
   User: admin
   ```
-  
+
 ## Create a Kubernetes Cluster
 
   - Lookup the PKS plans configured in the PKS Tile using `pks plans`
- 
+
     ```
     $ pks plans
     Name    ID                                    Description
@@ -73,11 +73,11 @@ While external identity resources are supported for backing UAA this demo is foc
   Worker Nodes:             3
   Kubernetes Master IP(s):  In Progress
   Network Profile Name:     
-  
+
   Use 'pks cluster pks-wmt' to monitor the state of your cluster
   ```
   - Watch the status of our cluster. It can take up to 10 minutes to create the cluster.
- 
+
   ```
   $ pks cluster pks-wmt
   Name:                     pks-wmt
@@ -92,7 +92,10 @@ While external identity resources are supported for backing UAA this demo is foc
   Kubernetes Master IP(s):  10.195.1.128
   Network Profile Name:  
   ```
-  - Once cluster if finished creating, you need to create a DNS entry for the Master IP shown in the status output to point to the `external-hostname` you indicated while creating the cluster
+
+## Access the Kubernetes Cluster
+
+  - Once cluster if finished creating, you need to create a DNS entry for the `external-hostname` you indicated while creating the cluster to point to the Master IP shown in the status output
   - Finally, you can issue `pks get-credentials <CLUSTER-NAME>`, which creates an entry in your local `~/.kube/config` file to be able to interact with Kubernetes cluster
     - Enter the `UAA-USER-PASSWORD` that we looked up previously when prompted for Password.
 
@@ -101,12 +104,12 @@ While external identity resources are supported for backing UAA this demo is foc
   Fetching credentials for cluster pks-wmt.
   Password: ******
   Context set for cluster pks-wmt.
-  
+
   You can now switch between clusters by using:
   $kubectl config use-context <cluster-name>
   ```
   - Confirm `kubectl` is working by invoking a command such as `kubectl get nodes`
- 
+
   ```
   $ kubectl get nodes -o wide
   NAME                                   STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
@@ -114,4 +117,3 @@ While external identity resources are supported for backing UAA this demo is foc
   6663dac2-ff16-4a73-909f-4a1f10be3c4a   Ready    <none>   1d    v1.11.3   172.24.0.4    172.24.0.4    Ubuntu 16.04.5 LTS   4.15.0-33-generic   docker://17.12.1-ce
   b0b26691-62ac-42ea-84ed-234cce7deea4   Ready    <none>   1d    v1.11.3   172.24.0.5    172.24.0.5    Ubuntu 16.04.5 LTS   4.15.0-33-generic   docker://17.12.1-ce
   ```
-  
