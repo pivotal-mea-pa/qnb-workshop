@@ -4,12 +4,14 @@
 
 Environment variables are a very powerful feature of cloud native applications but sometimes we need all the apps in a given space (or environment) to share settings. User provided services are a great way to accomplish this. In this lab we will create a service that is available to all apps in a given space via environment variables.
 
-Note, this lab assumes you already have the Steeltoe template app opened in Visual Studio and you have already logged in to a foundation with the cf cli.
+Note, this lab assumes you have already completed the Environment Variables lab and are using the same application code base.
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
-- Powershell
+- Lab: Environment Variables
+- Visual Studio Code
+- .NET Core 2.2
+- Cloud Foundry Cli
 
 ## Create a User Provided Service
 
@@ -28,7 +30,6 @@ Note, this lab assumes you already have the Steeltoe template app opened in Visu
   ```yml
   instances: 1
   memory: 512M
-  disk_quota: 512M
   ...
   services:
     - app-connection-string
@@ -47,32 +48,93 @@ Note, this lab assumes you already have the Steeltoe template app opened in Visu
   
   1. Remove the configuration provisions from `Controllers\ValuesController.cs`.
     ```cs
+    using Microsoft.Extensions.Configuration;
+    ```
+    ```cs
     private readonly IConfiguration _configuration;
     ```
     ```cs
-    public ValuesController(IOptions<CloudFoundryApplicationOptions> appOptions,
-        IOptions<CloudFoundryServicesOptions> serviceOptions,
-        ILogger<ValuesController> logger) {
-        ...
-      }
+    public ValuesController(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
   ```
 
-1. The Cloud Foundry Provider has already been provisioned in the `Controllers\ValuesController.cs` class. Notice the class variables `_appOptions` and `_serviceOptions`. Which makes consuming the value of the bound User Provided Service very easy!
+1. Add the Steeltoe Configuraiton NuGet package to the project `$> dotnet add package Steeltoe.Extensions.Configuraiton.CloudFoundryCore`
 
-1. Locate the `[HttpGet]` endpoint and replace the value of "myConnectionString" with a lookup using the `_serviceOptions` collection.
-  ```cs
-  [HttpGet]
-  public ActionResult<IEnumerable<string>> Get() {
+1. Update `Startup.cs` to configuration Cloud Foundry Options
+```cs
+using Steeltoe.Extensions.Configuration.CloudFoundry;
+...
+public void ConfigureServices(IServiceCollection services)
+{
     ...
-    string myConnectionString = _serviceOptions.Services["user-provided"]
-        .First(q => q.Name.Equals("app-connection-string"))
-        .Credentials["CONNECTION_STRING"].Value;
+    // Setup Options framework with DI
+    services.AddOptions();
 
-    return new string[] { myConnectionString };
-  }
-  ```
+    // Add Steeltoe Cloud Foundry Options to service container
+    services.ConfigureCloudFoundryOptions(Configuration);
+}
 
-1. Steeltoe knows how Cloud Foundry makes environment variables available to apps, 
+```
+
+1. Have the WebHost use Cloud Foundry and Cloud Foundry Hosting (`Program.cs`)
+```cs
+using Steeltoe.Extensions.Configuration;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
+...
+public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+    WebHost.CreateDefaultBuilder(args)
+        .UseCloudFoundryHosting()
+        .AddCloudFoundry()
+        .UseStartup<Startup>();
+```
+
+1. Update `ValuesController.cs` to pull in the Application Options and Service Options
+```cs
+using Microsoft.Extensions.Options;
+using Steeltoe.Extensions.Configuration;
+using Steeltoe.Extensions.Configuration.CloudFoundry;
+
+...
+
+public class ValuesController : ControllerBase
+{
+    private CloudFoundryApplicationOptions _appOptions;
+    private CloudFoundryServicesOptions _serviceOptions;
+
+    public ValuesController(IOptions<CloudFoundryApplicationOptions> appOptions, IOptions<CloudFoundryServicesOptions> serviceOptions)
+    {
+        _appOptions = appOptions.Value;
+        _serviceOptions = serviceOptions.Value;
+    }
+
+    ...
+}
+```
+
+1. Add `Newtonsoft.Json` to the project `$> dotnet add package Newtonsoft.Json`
+
+1. Return the values contained in the Application and Service Options
+
+```cs
+using Newtonsoft.Json;
+
+...
+
+// GET api/values
+[HttpGet]
+public ActionResult<string> Get()
+{
+    return JsonConvert.SerializeObject(new {
+        app = _appOptions,
+        services = _serviceOptions,
+        connectionString = _serviceOptions.ServicesList[0].Credentials["CONNECTION_STRING"].Value
+    });
+}
+```
+
+1. Steeltoe knows how Cloud Foundry makes environment variables available to apps
 
 ## Complete
 
