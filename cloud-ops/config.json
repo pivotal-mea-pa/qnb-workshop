@@ -7,7 +7,7 @@
             "content": [
                 {
                     "name":"Intro & Value Proposition",
-                    "filename":"cloud-ops/L1/concepts/intro-and-value-prop-slides.en.md"
+                    "filename":"cloud-ops/L1/concepts/intro-and-value-prop-slides"
                 },
                 {
                     "name":"Who is Pivotal",
