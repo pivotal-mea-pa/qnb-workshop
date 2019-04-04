@@ -6,97 +6,94 @@
         "type": "concepts",
         "content": [
             {
-            "name":"introduction",
-            "filename":"pks/slides/introduction-slide"
+            "name":"backup-recovery",
+            "filename":"pks/slides/backup-recovery-slide"
+            },
+            {
+            "name":"monitoring-logging",
+            "filename":"pks/slides/monitoring-logging"
             },
             {
             "name":"pks-intro",
             "filename":"pks/slides/pks-intro-slide"
             },
             {
-            "name":"architecture",
-            "filename":"pks/slides/architecture-slide"
-            },
-            {
-            "name":"kubernetes-pod-and-namespace",
-            "filename":"pks/slides/k8s-pod-and-namespace-slide"
-            },
-            {
-            "name":"kubernetes-declarative-and-services",
-            "filename":"pks/slides/k8s-declarative-config-and-svc-slide"
-            },
-            {
-            "name":"kubernetes-persistent-volume",
-            "filename":"pks/slides/k8s-persistent-volume-slide"
-            },
-            {
-            "name":"harbor",
-            "filename":"pks/slides/pks-vmware-harbor"
-            },
-            {
-            "name":"backup-recovery",
-            "filename":"pks/slides/backup-recovery-slide"
-            },
-            {
             "name":"pks-pipelines",
             "filename":"pks/slides/pks-pipelines-slide"
+            },
+            {
+            "name":"pks-inner-workings",
+            "filename":"pks/slides/pks-the-inner-workings"
             },
             {
             "name":"uaa-overview",
             "filename":"pks/slides/pks-uaa-overview-slide"
             },
             {
-            "name":"uaa-integrations",
-            "filename":"pks/slides/uaa-integrations-slide"
-            },
-            {
             "name":"upgrades",
             "filename":"pks/slides/upgrades-slide"
+            }
+            {
+            "name":"harbor",
+            "filename":"pks/slides/pks-vmware-harbor"
+            },
+            {
+            "name":"story-of-pks",
+            "filename":"pks/slides/story-of-pks-slide"
+            }
+            {
+            "name":"uaa-integrations",
+            "filename":"pks/slides/uaa-integrations-slide"
             }
         ]
     },
     {
         "type": "demos",
         "content": [
+
             {
-            "name":"install-tile",
-            "filename":"pks/labs/install-tile-demo"
+            "name":"configure-director-tile",
+            "filename":"pks/labs/configure-director-tile-demo"
             },
             {
-            "name":"pks-cli",
-            "filename":"pks/labs/pks-cli-demo"
+            "name":"create-cluster",
+            "filename":"pks/labs/create-cluster-demo"
+            },
+            {
+            "name":"harbor",
+            "filename":"pks/labs/harbor-demo"
+            },
+            {
+            "name":"install-pks-tile",
+            "filename":"pks/labs/install-pks-tile-demo"
             },
             {
             "name":"kubectl-cli",
             "filename":"pks/labs/kubectl-cli-demo"
             },
             {
-            "name":"pks-login-and-create-cluster",
-            "filename":"pks/labs/pks-login-and-create-cluster"
-            },
-            {
-            "name":"kubernetes-deploy-1st-container",
-            "filename":"pks/labs/k8s-deploy-1st-container"
-            },
-            {
-            "name":"kubernetes-declarative-config",
-            "filename":"pks/labs/k8s-pod-declarative"
-            },
-            {
-            "name":"kubernetes-deployment",
-            "filename":"pks/labs/k8s-deployment"
-            },
-            {
-            "name":"kubernetes-persistent-volume",
-            "filename":"pks/labs/k8s-statefulset-pv"
-            },
-            {
-            "name":"monitoring-and-logging",
+            "name":"monitoring-logging",
             "filename":"pks/labs/monitoring-logging-demo"
+            },
+            {
+            "name":"nsxt-for-developers",
+            "filename":"pks/labs/nsxt-for-developers-demo"
             },
             {
             "name":"pipelines",
             "filename":"pks/labs/pipelines-demo"
+            },
+            {
+            "name":"pks-cli",
+            "filename":"pks/labs/pks-cli-demo"
+            },
+            {
+            "name":"using-bosh-to-see-clusters",
+            "filename":"pks/labs/using-bosh-to-see-clusters-demo"
+            },
+            {
+            "name":"using-uaa-with-pks",
+            "filename":"pks/labs/using-uaa-with-pks"
             }
         ]
     }
