@@ -20,7 +20,7 @@ public class NotesAppDbContext : DbContext
 ### Injecting the Context
 In the previous section, we delegated responsibility for data management to the `NoteService` and `NoteRepository`. To access the data, we need to provide `NoteRepository` with the `NotesAppDbContext` we just created.
 
-Open `NoteRepository.cs` and add a constructor that takes a `NotesAppDbContext`, storing it as `_context`, and calls `context.Database.EnsureCreated();`. The `EnsureCreated` call ensures that the tables in the database are properly created before we try to access them.
+Open `NoteRepository.cs` and add a constructor that takes a `NotesAppDbContext`, storing it as `_context`, and calls `_context.Database.EnsureCreated();`. The `EnsureCreated` call ensures that the tables in the database are properly created before we try to access them.
 
 To provide this context, we must go to `Startup.cs` and register it. Add the following above the line where we registered the `INoteRepository`:
 ```c#
@@ -59,7 +59,7 @@ public void Dispose()
 }
 ```
 
-Rename `GetNotes_ShouldReturnNoteList` to `GetNotesAsync_WhenNotes_ShouldReturnNoteList` and add the following setup before the call to the repository:
+Rename `GetNotesAsync_ShouldReturnNoteList` to `GetNotesAsync_WhenNotes_ShouldReturnNoteList` and add the following setup before the call to the repository:
 ```c#
 { // Setup for test until we get around to having an Add method in the service
     _context.Notes.Add(expected[0]);
@@ -81,7 +81,7 @@ _context.Notes.AsEnumerable() ?? Enumerable.Empty<Note>()
 ```
 If obtaining the enumerable returns null, we instead return an empty enumerable.
 
-At this point, run your tests again. They should pass.
+At this point, run your tests again. They should pass. You've successfully added in in-memory database to the app!
 
 **Git Tag:** [introducing-an-in-memory-database](https://github.com/xtreme-steve-elliott/NotesApp/tree/introducing-an-in-memory-database)
 

@@ -1,0 +1,65 @@
+{
+    "workshopSubject":"Cloud Operations",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Intro / Value Proposition",
+                    "filename":"cloud-ops/intro-value-proposition-slide"
+                },
+                {
+                    "name":"Day In Life",
+                    "filename":"cloud-ops/day-in-life-slide"
+                },
+                {
+                    "name":"Platform Overview",
+                    "filename":"cloud-ops/platform-overview-slide"
+                },
+                {
+                    "name":"BOSH Overview",
+                    "filename":"cloud-ops/bosh-overview-slide"
+                },
+                {
+                    "name":"Ops Manager",
+                    "filename":"cloud-ops/ops-manager-slide"
+                },
+                {
+                    "name":"Services Marketplace",
+                    "filename":"cloud-ops/services-marketplace-slide"
+                },
+                {
+                    "name":"Automation Pipelines",
+                    "filename":"cloud-ops/automation-pipelines-slide"
+                }
+
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+                {
+                    "name":"Platform Overview",
+                    "filename":"cloud-ops/platform-overview-demo"
+                },
+                {
+                    "name":"Deploy Concourse with BOSH",
+                    "filename":"cloud-ops/deploy-concourse-bosh-demo"
+                },
+                {
+                    "name":"Day 2 Operations with BOSH",
+                    "filename":"cloud-ops/day-2-operations-bosh-demo"
+                },
+                {
+                    "name":"PAS Command Tour",
+                    "filename":"cloud-ops/paas-paap-demo"
+                },
+                {
+                    "name":"Buildpack Upgrade Command Tour",
+                    "filename":"cloud-ops/upgrade-buildpacks-demo"
+                }
+            ]
+        }
+    ]
+}

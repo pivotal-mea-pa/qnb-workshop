@@ -8,7 +8,7 @@ In this section, we'll add smoke tests to run against our deployed app.
 
 As a slight detour that will actually be of benefit later, [Swagger](https://swagger.io/) documentation will be added to this project. It generates API documentation that can be interacted with, calling the actual endpoints.
 
-For the purposes of .NET Core, a go-to library is [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore). At the time of this writing, version `4.0.1` is the latest and is what will be used here. Add the dependency to the `NotesApp` project and follow the setup instructions on their GitHub repository.
+For the purposes of .NET Core, a go-to library is [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore). At the time of this writing, version `4.0.1` is the latest and is what will be used here. Add the dependency to the `NotesApp` project, following the setup instructions on their GitHub repository.
 
 **Git Tag:** [adding-swagger](https://github.com/xtreme-steve-elliott/NotesApp/tree/adding-swagger)
 

@@ -1,0 +1,68 @@
+{
+    "workshopSubject":"PCF Workshop",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Course Overview",
+                    "filename":"pcf-workshop-content/README"
+                },
+                {
+                    "name":"Course labs",
+                    "filename":"pcf-workshop-content/labs/setup"
+                },
+                {
+                    "name":"Pivotal Introduction",
+                    "filename":"pcf-workshop-content/presentations/introduction-pivotal-slide"
+                },
+                {
+                    "name":"PCF Architecture",
+                    "filename":"pcf-workshop-content/presentations/introduction-pivotal-slide"
+                }
+            ]
+        },
+        {
+            "type": "demos",
+            "content": [
+              {
+                  "name":"lab1 -  Java",
+                  "filename":"pcf-workshop-content/labs/lab1/lab-cf-spring"
+              },
+              {
+                  "name":"lab1 - Ruby",
+                  "filename":"pcf-workshop-content/labs/lab1/lab-ruby"
+              },
+              {
+                  "name":"lab1 - NodeJS",
+                  "filename":"pcf-workshop-content/labs/lab1/lab-node"
+              },
+              {
+                  "name":"lab1 - .NET",
+                  "filename":"pcf-workshop-content/labs/lab1/lab-dotnet"
+              },
+              {
+                  "name":"lab1 - Cloud Native with Spring",
+                  "filename":"pcf-workshop-content/labs/lab1/cloud-native-spring"
+              },
+              {
+                  "name":"lab2 - Binding Cloudfoundry Services",
+                  "filename":"pcf-workshop-content/labs/lab2/Binding-cf-services"
+              },
+              {
+                  "name":"lab3 - Operating your application",
+                  "filename":"pcf-workshop-content/labs/lab3/Operating-your-application"
+              },
+              {
+                  "name":"lab4 - Monitoring your application",
+                  "filename":"pcf-workshop-content/labs/lab4/Monitoring-your-application"
+              },
+              {
+                  "name":"lab5 - Continous Delivery",
+                  "filename":"pcf-workshop-content/labs/lab5/Continuous-delivery-lab"
+              }
+            ]
+        }
+    ]
+}

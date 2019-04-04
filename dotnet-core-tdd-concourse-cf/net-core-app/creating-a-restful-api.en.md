@@ -69,6 +69,16 @@ At this point, you'll probably encounter some errors from the IDE, complaining a
 
 ***
 
+**CLI:**
+
+To resolve this, run the following:
+
+```bash
+dotnet add "NotesApp.Tests/NotesApp.Tests.csproj" reference "NotesApp/NotesApp.csproj"
+```
+
+***
+
 There's a bit of a quirk that occurs when our `NotesApp.Tests` project references our `NotesApp` project. In order for the test project to understand which version of `Microsoft.AspNetCore.App` the main project is dependent on, you will need to manually set the version in `NotesApp.csproj`. For the purposes of this guide, we will be using version `2.2.2`.
 
 <details>
@@ -131,11 +141,13 @@ public ActionResult<IEnumerable<Note>> Get()
 
 Run the test again and it should pass.
 
-If you run the main app and open `http://localhost:5000/api/notes` in your browser, you should see
+If you run the main app (either from the IDE or via `dotnet run "NotesApp/NotesApp.csproj"`) and open `http://localhost:5000/api/notes` in your browser, you should see
 
 ```json
 [{"id": 1, "body": "Note 1"}]
 ```
+
+Congratulations! You now have a working API.
 
 **Git Tag:** [creating-a-restful-api](https://github.com/xtreme-steve-elliott/NotesApp/tree/creating-a-restful-api)
 

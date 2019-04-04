@@ -1,39 +1,50 @@
 {
-    "workshopSubject":"Cloud Operations",
+    "workshopSubject":"Cloud Operations - Level 1 - Discovery",
     "workshopHomepage":"",
     "modules": [
         {
             "type": "concepts",
             "content": [
                 {
-                    "name":"Intro / Value Proposition",
-                    "filename":"cloud-ops/intro-value-proposition-slide"
+                    "name":"Intro & Value Proposition",
+                    "filename":"cloud-ops/L1/concepts/intro-and-value-prop-slides"
                 },
                 {
-                    "name":"Day In Life",
-                    "filename":"cloud-ops/day-in-life-slide"
+                    "name":"Who is Pivotal",
+                    "filename":"cloud-ops/L1/concepts/who-is-pivotal-slides"
                 },
                 {
-                    "name":"Platform Overview",
-                    "filename":"cloud-ops/platform-overview-slide"
+                    "name":"What is PCF",
+                    "filename":"cloud-ops/L1/concepts/"
                 },
                 {
-                    "name":"BOSH Overview",
-                    "filename":"cloud-ops/bosh-overview-slide"
+                    "name":"Abstractions & PCF Components",
+                    "filename":"cloud-ops/L1/concepts/"
                 },
                 {
-                    "name":"Ops Manager",
-                    "filename":"cloud-ops/ops-manager-slide"
+                    "name":"IaC Concepts",
+                    "filename":"cloud-ops/L1/concepts/"
                 },
                 {
-                    "name":"Services Marketplace",
-                    "filename":"cloud-ops/services-marketplace-slide"
+                    "name":"Deployments",
+                    "filename":"cloud-ops/L1/concepts/"
                 },
                 {
-                    "name":"Automation Pipelines",
-                    "filename":"cloud-ops/automation-pipelines-slide"
+                    "name":"Supporting Services",
+                    "filename":"cloud-ops/L1/concepts/"
                 }
-
+                {
+                    "name":"Security Posture",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Platform as a Product",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
+                {
+                    "name":"Recap",
+                    "filename":"cloud-ops/L1/concepts/"
+                },
             ]
         },
         {
@@ -41,23 +52,23 @@
             "content": [
                 {
                     "name":"Platform Overview",
-                    "filename":"cloud-ops/platform-overview-demo"
+                    "filename":"cloud-ops/L1/demo-lab"
                 },
                 {
                     "name":"Deploy Concourse with BOSH",
-                    "filename":"cloud-ops/deploy-concourse-bosh-demo"
+                    "filename":"cloud-ops/L1/demo-lab"
                 },
                 {
                     "name":"Day 2 Operations with BOSH",
-                    "filename":"cloud-ops/day-2-operations-bosh-demo"
+                    "filename":"cloud-ops/L1/demo-lab"
                 },
                 {
                     "name":"PAS Command Tour",
-                    "filename":"cloud-ops/paas-paap-demo"
+                    "filename":"cloud-ops/L1/demo-lab"
                 },
                 {
                     "name":"Buildpack Upgrade Command Tour",
-                    "filename":"cloud-ops/upgrade-buildpacks-demo"
+                    "filename":"cloud-ops/L1/demo-lab"
                 }
             ]
         }
