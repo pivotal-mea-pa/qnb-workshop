@@ -1,5 +1,5 @@
 {
-    "workshopSubject":"Cloud Operations - Level 1 - Discovery",
+    "workshopSubject":"Cloud Operations Discovery Workshop",
     "workshopHomepage":"",
     "workshopHostname":"",
     "modules": [
@@ -8,43 +8,43 @@
             "content": [
                 {
                     "name":"Intro & Value Proposition",
-                    "filename":"cloud-ops/L1/concepts/intro-and-value-prop-slides"
+                    "filename":"cloud-ops/L1/slides/intro-and-value-prop-slides"
                 },
                 {
                     "name":"Who is Pivotal",
-                    "filename":"cloud-ops/L1/concepts/who-is-pivotal-slides"
+                    "filename":"cloud-ops/L1/slides/who-is-pivotal-slides"
                 },
                 {
                     "name":"What is PCF",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"Abstractions & PCF Components",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"IaC Concepts",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"Deployments",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"Supporting Services",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 }
                 {
                     "name":"Security Posture",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"Platform as a Product",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
                 {
                     "name":"Recap",
-                    "filename":"cloud-ops/L1/concepts/"
+                    "filename":"cloud-ops/L1/slides/"
                 },
             ]
         },
