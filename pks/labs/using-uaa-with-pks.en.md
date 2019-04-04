@@ -92,6 +92,7 @@ In order to reach the UAA service we must ensure either our DNS or Load Balancer
   ```
   $ uaac target https://api.pks.pivotal.io:8443 --skip-ssl-validation
   ```
+
     - Replace with the URL to your PKS API server.You configured this URL in the PKS API section of Installing PKS for your IaaS.
 
   2. Authenticate with UAA using the secret you retrieved in the previous section using `uaac token client get admin -s <INSERT GENERATED UAA ADMIN SECRET>`.

@@ -84,7 +84,7 @@ To explore the PKS Cluster VMs/IPs/Logs we must dive deeper into the PCF Directo
         2 instances
 
         Succeeded
-        ```
+        ``` 
 
   3. Exit out of the SSH Client
       ```
