@@ -35,20 +35,23 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 ### Table of Contents
 - __Overview__
   - Introduction
-    - Concepts: *Intro & Value Proposition
-    - Slides:
+    - Concepts: Setting the stage for who we are and why PCF.
+    - Slides: intro-and-value-prop-slides.en.md
   - Who is Pivotal
-    - Concepts:
+    - Concepts: Overview of who we are.
+    - Slides: who-is-pivotal-slides.en.md
   - What is PCF
-    - Concepts:
+    - Concepts: The PCF overview.
+    - Slides:
     - Demo/Lab: Push an App - Refer to Keep notes
   - Abstractions & PCF components
-    - Concepts: Abstractions
-    - Concepts: BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
+    - Concepts: Abstractions, BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
+    - Slides:
 - __IaC concepts__
   - BOSH CPI / Immutable instructure / Concourse / Platform Automation
     - Whiteboard: Hey customer what does your IaaS provisioning process look like?
-    - Concepts: BOSH Immutable Infrastructure & Customer Efficiencies
+    - Concepts: BOSH CPI, BOSH Immutable Infrastructure, Concourse, Platform Automation, Customer Efficiencies
+    - Slides:
 - __Deployments__
   - Whiteboard: Hey customer what does your application deployment process look like?
   - Concepts: BOSH Deployments & Simplified path to prod
