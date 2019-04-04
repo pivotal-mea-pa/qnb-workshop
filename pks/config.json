@@ -32,7 +32,7 @@
             {
             "name":"upgrades",
             "filename":"pks/slides/upgrades-slide"
-            }
+            },
             {
             "name":"harbor",
             "filename":"pks/slides/pks-vmware-harbor"
@@ -40,7 +40,7 @@
             {
             "name":"story-of-pks",
             "filename":"pks/slides/story-of-pks-slide"
-            }
+            },
             {
             "name":"uaa-integrations",
             "filename":"pks/slides/uaa-integrations-slide"
@@ -50,10 +50,9 @@
     {
         "type": "demos",
         "content": [
-
             {
-            "name":"configure-director-tile",
-            "filename":"pks/labs/configure-director-tile-demo"
+            "name":"configure-director-demo",
+            "filename":"pks/labs/configure-director-demo"
             },
             {
             "name":"create-cluster",
@@ -93,7 +92,7 @@
             },
             {
             "name":"using-uaa-with-pks",
-            "filename":"pks/labs/using-uaa-with-pks"
+            "filename":"pks/labs/using-uaa-with-pks-demo"
             }
         ]
     }

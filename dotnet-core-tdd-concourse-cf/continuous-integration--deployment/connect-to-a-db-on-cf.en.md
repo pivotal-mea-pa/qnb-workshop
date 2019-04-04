@@ -38,7 +38,7 @@ or make use of service bindings in our `ci/manifest.yml`:
 ```yaml
 applications:
   - name: notes
-    buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git#v2.2.7
+    buildpack: <BUILDPACK_NAME>
     services:       # <--- Bind services
       - notes-db    # <--- The service that was just created
 ```

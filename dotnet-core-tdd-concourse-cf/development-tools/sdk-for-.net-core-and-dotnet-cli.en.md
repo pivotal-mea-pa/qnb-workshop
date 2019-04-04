@@ -17,4 +17,4 @@ On Windows:
 where dotnet
 ```
 
-**Up Next:** [JetBrains Rider](../jetbrains-rider) or [Microsoft Visual Studio](../microsoft-visual-studio)
+**Up Next:** [IDEs](../ides)

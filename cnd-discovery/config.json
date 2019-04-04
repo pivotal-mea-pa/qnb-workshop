@@ -1,0 +1,31 @@
+{
+    "workshopSubject":"Cloud Native Discovery",
+    "workshopHomepage":"",
+    "modules": [
+        {
+            "type": "concepts",
+            "content": [
+                {
+                    "name":"Why, What, How",
+                    "filename":"cnd-discovery/cloud-native-discovery-slide"
+                },
+                {
+                    "name":"State Map",
+                    "filename":"cnd-discovery/cloud-native-discovery-state-map"
+                },
+                {
+                    "name":"Best Practices",
+                    "filename":"cnd-discovery/cloud-native-best-practices-slide"
+                },
+                {
+                    "name":"Performance Measures",
+                    "filename":"cnd-discovery/cloud-native-performance-measures-slide"
+                },
+                {
+                    "name":"Next Steps",
+                    "filename":"cnd-discovery/cloud-native-discovery-next-steps"
+                }
+            ]
+        }
+    ]
+}
