@@ -41,11 +41,11 @@ Content can be shared between levels, however progressing from Level 1 to Level 
     - Concepts: Overview of who we are.
     - Slides: who-is-pivotal-slides.en.md
   - What is PCF
-    - Concepts: The PCF overview.
+    - Concepts: Workload abstractions and the PCF overview.
     - Slides: what-is-pcf.en.md
     - Demo/Lab: Push an App - Refer to Keep notes
-  - Abstractions & PCF components
-    - Concepts: Abstractions, BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
+  - PCF components
+    - Concepts: BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
     - Slides:
 - __IaC concepts__
   - BOSH CPI / Immutable instructure / Concourse / Platform Automation
