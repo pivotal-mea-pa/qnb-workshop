@@ -1,6 +1,6 @@
 # Pivotal Cloud Operations Workshop
 
-This is the home for all things related to the PCF presales Cloud Operations workshop. Here you will find the content being used by pace-builder to create Cloud Operastions workshops.
+This is the home for all things related to the Pivotal presales Cloud Operations workshop. Here you will find the content being used by pace-builder to create Cloud Operations workshops.
 
 The content is categorized into the three 'levels' of workshop to be delivered:
 - __Level 1__ - Cloud Operations Discovery
@@ -42,7 +42,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
     - Slides: who-is-pivotal-slides.en.md
   - What is PCF
     - Concepts: The PCF overview.
-    - Slides:
+    - Slides: what-is-pcf.en.md
     - Demo/Lab: Push an App - Refer to Keep notes
   - Abstractions & PCF components
     - Concepts: Abstractions, BOSH, PAS, PKS, PFS, Marketplace, Concourse, Credhub
