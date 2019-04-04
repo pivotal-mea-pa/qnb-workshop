@@ -1,6 +1,7 @@
 {
     "workshopSubject":"Cloud Operations - Level 1 - Discovery",
     "workshopHomepage":"",
+    "workshopHostname":"",
     "modules": [
         {
             "type": "concepts",
