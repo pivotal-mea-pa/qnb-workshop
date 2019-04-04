@@ -1,9 +1,9 @@
 ---
 applications:
-- name: my-pace-workshop
+- name: pks
   memory: 512M
   instances: 1
-  buildpacks: 
+  buildpacks:
   - staticfile_buildpack
   random-route: true
   path: public/
