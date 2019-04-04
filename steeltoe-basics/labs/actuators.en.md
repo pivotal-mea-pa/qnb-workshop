@@ -13,11 +13,15 @@ Assuming you have already pushed an app using User Provided Services, this lab w
 
 ## Add Steeltoe Management Actuators to the app
 
-1. Add the `Steeltoe.Management.CloudFoundry` nuget package to the project `$> dotnet add package Steeltoe.Management.CloudFoundry`
+1. Add the `Steeltoe.Management.CloudFoundryCore` and `Steeltoe.Extensions.Logging.DynamicLogger` nuget packages to the project. 
+```bash
+$> dotnet add package Steeltoe.Management.CloudFoundry
+$> dotnet add package Steeltoe.Extensions.Logging.DynamicLogger
+```
 
 1. Open the `Startup.cs` file by double clicking.
 
-1. Include the Management library.
+1. Include the Management libraries.
 ```cs
 using Steeltoe.Management.CloudFoundry;
 ```
@@ -42,6 +46,24 @@ public void ConfigureServices(IServiceCollection services) {
 		 ...
 	}
 	```
+
+1. In the project's `Program.cs` file we need to enable Dynamic Logging. This will allow us to dynamically configure logging levels via the Apps Manager.
+```cs
+WebHost.CreateDefaultBuilder(args)
+...
+    .ConfigureLogging((builderContext, loggingBuilder) => {
+        loggingBuilder.AddDynamicConsole();
+    })
+```
+
+1. In the project's `appsettings.json` file add the following section, this will set up an endpoint for App Manager to connect to.
+```json
+  "management": {
+    "endpoints": {
+      "path": "/cloudfoundryapplication"
+    }
+  }
+```
 
 1. Now say to yourself "wow that was easy", because thats all you need to do, to get the default actuators going! To lean more about what is included in the default endpoints, have a look at the [Steeltoe management usage documentation](https://steeltoe.io/docs/steeltoe-management/#1-2-usage).
 
