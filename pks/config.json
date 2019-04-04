@@ -11,7 +11,7 @@
             },
             {
             "name":"monitoring-logging",
-            "filename":"pks/slides/monitoring-logging"
+            "filename":"pks/slides/monitoring-logging-slide"
             },
             {
             "name":"pks-intro",
@@ -23,7 +23,7 @@
             },
             {
             "name":"pks-inner-workings",
-            "filename":"pks/slides/pks-the-inner-workings"
+            "filename":"pks/slides/pks-the-inner-workings-slide"
             },
             {
             "name":"uaa-overview",
@@ -35,7 +35,7 @@
             },
             {
             "name":"harbor",
-            "filename":"pks/slides/pks-vmware-harbor"
+            "filename":"pks/slides/pks-vmware-harbor-slide"
             },
             {
             "name":"story-of-pks",
@@ -51,7 +51,7 @@
         "type": "demos",
         "content": [
             {
-            "name":"configure-director-demo",
+            "name":"configure-director",
             "filename":"pks/labs/configure-director-demo"
             },
             {
