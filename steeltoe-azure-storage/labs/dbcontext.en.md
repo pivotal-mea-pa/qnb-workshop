@@ -23,6 +23,11 @@ With the Azure SQL service available for binding, create the necessary DBContext
 
 ## Add SQL DBContext
 
+1. Add the `Steeltoe.CloudFoundry.Connector.EFCore` NuGet package to your project
+```bash
+$> dotnet add package Steeltoe.CloudFoundry.Connector.EFCore
+```
+
 1. Open `Program.cs` and confirm the Cloud Foundry provider has been added. This provider gives your app the ability to locate the VCAP environment variables that are created by Cloud Foundry, and parse them.
   ```cs
   WebHost.CreateDefaultBuilder(args)
@@ -87,14 +92,10 @@ With the Azure SQL service available for binding, create the necessary DBContext
             return;
         }
 
-        AddData<TestData>(db, new TestData() { Data = "Test Data 1 - TestContext " });
-        AddData<TestData>(db, new TestData() { Data = "Test Data 2 - TestContext " });
+        db.TestData.Add(new TestData() { Data = "Test Data 1 - TestContext " });
+        db.TestData.Add(new TestData() { Data = "Test Data 2 - TestContext " });
         db.SaveChanges();
       }
-    }
-
-    private static void AddData<TData>(DbContext db, object item) where TData: class {
-      db.Entry(item).State = EntityState.Added;
     }
   }
   ```
@@ -120,6 +121,7 @@ With the Azure SQL service available for binding, create the necessary DBContext
 
     services.AddDbContext<TestContext>(options => options.UseSqlServer(Configuration));
     services.AddMvc();
+    SampleData.InitializeMyContexts(services.BuildServiceProvider());
   }
   ```
 
