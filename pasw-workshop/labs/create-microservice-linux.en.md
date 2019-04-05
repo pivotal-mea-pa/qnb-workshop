@@ -35,7 +35,7 @@ Using the `dotnet` cli, create a new app that can be deployed to a Linux Pivotal
 
 1. In the manifest, change the value of `name:` to be something authentic (like your name). Keep it alpha-numeric and use `-`(dash) as a space. Below is a minimal manifest file that you can use to build and deploy your application.
 
-```
+```yaml
 ---
 applications:
 -   name: <yourname>-steeltoe-app
@@ -46,8 +46,8 @@ applications:
 
 1. To push your application to the Pivotal Application Service use the following commands, the first authenticates your Cloud Foundry CLI against the PAS instance, the second pushes your application to PAS.
 ```bash
-cf login -a https://api.<SYSTEM_DOMAIN> -u <USERNAME> -p <PASSWORD> --skip-ssl-validation
-cf push <yourname>-steeltoe-app
+$> cf login -a https://api.<SYSTEM_DOMAIN> -u <USERNAME> -p <PASSWORD> --skip-ssl-validation
+$> cf push <yourname>-steeltoe-app
 ```
 
 1. Validate you microservice is working, navigate to the values controller GET method via the route that gets returned after the upload finishes. This url should look like `http://<yourname>-steeltoe-app.<APPS_DOMAIN>/api/values` and should return the value `["value1", "value2"]`.
