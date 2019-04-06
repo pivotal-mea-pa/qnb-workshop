@@ -48,19 +48,19 @@
               },
               {
                   "name":"lab2 - Binding Cloudfoundry Services",
-                  "filename":"pcf-workshop-content/labs/lab2/Binding-cf-services"
+                  "filename":"pcf-workshop-content/labs/lab2/binding-cf-services"
               },
               {
                   "name":"lab3 - Operating your application",
-                  "filename":"pcf-workshop-content/labs/lab3/Operating-your-application"
+                  "filename":"pcf-workshop-content/labs/lab3/operating-your-application"
               },
               {
                   "name":"lab4 - Monitoring your application",
-                  "filename":"pcf-workshop-content/labs/lab4/Monitoring-your-application"
+                  "filename":"pcf-workshop-content/labs/lab4/monitoring-your-application"
               },
               {
                   "name":"lab5 - Continous Delivery",
-                  "filename":"pcf-workshop-content/labs/lab5/Continuous-delivery-lab"
+                  "filename":"pcf-workshop-content/labs/lab5/continuous-delivery-lab"
               }
             ]
         }
