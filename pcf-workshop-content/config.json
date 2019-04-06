@@ -14,12 +14,8 @@
                     "filename":"pcf-workshop-content/labs/setup"
                 },
                 {
-                    "name":"Pivotal Introduction",
-                    "filename":"pcf-workshop-content/presentations/introduction-pivotal-slide"
-                },
-                {
-                    "name":"PCF Architecture",
-                    "filename":"pcf-workshop-content/presentations/introduction-pivotal-slide"
+                    "name":"Pivotal PAS Introduction",
+                    "filename":"pcf-workshop-content/presentations/introduction-pas-slide"
                 }
             ]
         },
