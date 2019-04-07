@@ -11,12 +11,12 @@
                   "filename":"pcf-workshop-content/presentations/introduction-pas-slide"
               },
                 {
-                    "name":"Course Overview",
-                    "filename":"pcf-workshop-content/readme"
+                    "name":"workshop Overview",
+                    "filename":"pcf-workshop-content/pcf-101-workshop-overview"
                 },
                 {
                     "name":"Environment Setup",
-                    "filename":"pcf-workshop-content/labs/setup"
+                    "filename":"pcf-workshop-content/labs/pcf-101-workshop-setup"
                 }
             ]
         },
