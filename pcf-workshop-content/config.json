@@ -5,13 +5,16 @@
         {
             "type": "concepts",
             "content": [
-
+              {
+                  "name":"Pivotal Introduction",
+                  "filename":"pcf-workshop-content/presentations/introduction-pivotal-slide"
+              },
               {
                   "name":"Pivotal PAS Introduction",
                   "filename":"pcf-workshop-content/presentations/introduction-pas-slide"
               },
                 {
-                    "name":"workshop Overview",
+                    "name":"Workshop Overview",
                     "filename":"pcf-workshop-content/pcf-101-workshop-overview"
                 },
                 {

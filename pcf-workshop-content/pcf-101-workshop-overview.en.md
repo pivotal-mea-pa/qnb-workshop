@@ -97,15 +97,15 @@ Wrap Up, Q/A, Feedback
 Course Materials
 ================
 
--   Session 1: [Introduction](presentations/Intro-Pivotal.pptx)
+-   Session 1: [Introduction](presentations/introduction-pivotal-slide.en)
 
--   Session 2: [Cloud Foundry Architecture and Operations](presentations/PCF-Architecture.pptx)
+-   Session 2: [Cloud Foundry Architecture and Operations](presentations/introduction-pas-slide)
 
 -   Developer Workshop
 
     -   Pre-work
 
-        -   [Get Environment Access](/concepts/setup)
+        -   [Get Environment Access](/concepts/pcf-101-workshop-setup)
 
     -   Lab 1 - From Zero to Pushing Your First Application
 
@@ -118,7 +118,7 @@ Course Materials
         -   [**.NET** Application](/demos/lab-dotnet)
 
         -   [**Spring Boot** Application (start.spring.io)](/demos/cloud-native-spring)
-        
+
     -   [Lab 2 - Binding to Cloud FoundryServices](/demos/binding-cf-services)
 
     -   [Lab 3 - Operating Your Application](/demos/operating-your-application)
