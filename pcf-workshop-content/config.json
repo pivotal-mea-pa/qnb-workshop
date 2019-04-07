@@ -5,17 +5,18 @@
         {
             "type": "concepts",
             "content": [
+
+              {
+                  "name":"Pivotal PAS Introduction",
+                  "filename":"pcf-workshop-content/presentations/introduction-pas-slide"
+              },
                 {
                     "name":"Course Overview",
                     "filename":"pcf-workshop-content/README"
                 },
                 {
-                    "name":"Course labs",
+                    "name":"Environment Setup",
                     "filename":"pcf-workshop-content/labs/setup"
-                },
-                {
-                    "name":"Pivotal PAS Introduction",
-                    "filename":"pcf-workshop-content/presentations/introduction-pas-slide"
                 }
             ]
         },
