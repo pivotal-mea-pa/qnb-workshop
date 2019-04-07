@@ -1,7 +1,7 @@
 Target the Environment
 ======================
 
-1.  Follow the instructions to [Get Environment Access](/concepts/setup)
+1.  Follow the instructions to [Get Environment Access](/concepts/pcf-101-workshop-setup)
 
 Push It!
 ========
