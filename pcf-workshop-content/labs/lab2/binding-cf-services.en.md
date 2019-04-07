@@ -48,8 +48,8 @@ descriptions. On Pivotal Cloud Foundry, the “free” tier of plans is
 normally the first one listed.
 
 The second way is specific to Pivotal Cloud Foundry’s Apps Manager UI. If
-you haven’t already, login to it by visiting
-<http://apps.sys.px-npe01.cf.t-mobile.com>
+you haven’t already, login to it by visiting https://{your_org_pcf_api_endpoint}
+
 
 Click on the *'Marketplace*' link:
 
