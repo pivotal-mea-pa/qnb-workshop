@@ -20,7 +20,7 @@ A Bit of Review
 ===============
 
 Your instance of the sample *Workshop MVC Demo* should not be running
-after the steps completed in [lab 1](/demos/Binding-cf-services). Make
+after the steps completed in [lab 1](/demos/binding-cf-services). Make
 sure to change to the *spring-cf-sample-app* application directory. For
 this lab we will be using the Java application. Redeploy the
 application:

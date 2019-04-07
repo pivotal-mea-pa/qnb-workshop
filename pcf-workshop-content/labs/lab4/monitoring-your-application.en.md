@@ -26,12 +26,6 @@ app and watch the data stream.
 -   App events: create, update, start, stop, and crash (updated as they
     happen)
 
-**To get started, browse to the Metrics URL:**
-
-    https://metrics.sys.px-npe01.cf.t-mobile.com
-
-![](metrics.png)
-
 Tailing Application Logs
 ========================
 
@@ -87,7 +81,7 @@ Application developers can view application logs using the CF CLI.
     the system.
 
 2.  To get a running “tail” of the application logs rather than a dump,
-    simply type:
+    simply type(replace workshop with the name of your deployed application):
 
         $ cf logs workshop
 
@@ -103,7 +97,7 @@ actively monitors the health of our application processes and will
 restart them should they crash.
 
 1.  If you don’t have one already running, start a log tail for
-    `workshop`.
+    `workshop`. replace workshop with the name of your deployed application:
 
         $ cf logs workshop
 
