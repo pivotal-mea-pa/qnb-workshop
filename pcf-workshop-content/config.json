@@ -40,10 +40,6 @@
                   "filename":"pcf-workshop-content/labs/lab1/lab-dotnet"
               },
               {
-                  "name":"Cloud Native with Spring",
-                  "filename":"pcf-workshop-content/labs/lab1/cloud-native-spring"
-              },
-              {
                   "name":"Binding Cloudfoundry Services",
                   "filename":"pcf-workshop-content/labs/lab2/binding-cf-services"
               },
