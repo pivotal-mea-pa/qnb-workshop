@@ -6,9 +6,9 @@ Target the Environment
 Push It!
 ========
 
-1.  Clone the repo  [spring-cf-sample-app](https://github.com/Pivotal-Field-Engineering/spring-cf-sample-app.git) :
+1.  Clone the repo into a path  [spring-cf-sample-app](https://github.com/Pivotal-Field-Engineering/spring-cf-sample-app.git) :
 
-        $ cd $BOOTCAMP_HOME/spring-cf-sample-app
+        $ cd $WORKSHOP_HOME/spring-cf-sample-app
 
 2.  Push the application!
 
