@@ -1,5 +1,5 @@
 {
-    "workshopSubject":"PCF Workshop",
+    "workshopSubject":"PCF 101",
     "workshopHomepage":"",
     "modules": [
         {
@@ -24,39 +24,39 @@
             "type": "demos",
             "content": [
               {
-                  "name":"lab1 -  Java",
+                  "name":"Java",
                   "filename":"pcf-workshop-content/labs/lab1/lab-cf-spring"
               },
               {
-                  "name":"lab1 - Ruby",
+                  "name":"Ruby",
                   "filename":"pcf-workshop-content/labs/lab1/lab-ruby"
               },
               {
-                  "name":"lab1 - NodeJS",
+                  "name":"NodeJS",
                   "filename":"pcf-workshop-content/labs/lab1/lab-node"
               },
               {
-                  "name":"lab1 - .NET",
+                  "name":".NET",
                   "filename":"pcf-workshop-content/labs/lab1/lab-dotnet"
               },
               {
-                  "name":"lab1 - Cloud Native with Spring",
+                  "name":"Cloud Native with Spring",
                   "filename":"pcf-workshop-content/labs/lab1/cloud-native-spring"
               },
               {
-                  "name":"lab2 - Binding Cloudfoundry Services",
+                  "name":"Binding Cloudfoundry Services",
                   "filename":"pcf-workshop-content/labs/lab2/binding-cf-services"
               },
               {
-                  "name":"lab3 - Operating your application",
+                  "name":"Operating your application",
                   "filename":"pcf-workshop-content/labs/lab3/operating-your-application"
               },
               {
-                  "name":"lab4 - Monitoring your application",
+                  "name":"Monitoring your application",
                   "filename":"pcf-workshop-content/labs/lab4/monitoring-your-application"
               },
               {
-                  "name":"lab5 - Continous Delivery",
+                  "name":"Continous Delivery",
                   "filename":"pcf-workshop-content/labs/lab5/continuous-delivery-lab"
               }
             ]
