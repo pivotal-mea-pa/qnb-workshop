@@ -35,4 +35,4 @@ You can see the Windows container and app environment variables
 On to the next Lab!
 ===================
 
-[Build a Spring boot Application](/demos/cloud-native-spring)
+[Binding to Cloudfoundry Services](/demos/binding-cf-services)
