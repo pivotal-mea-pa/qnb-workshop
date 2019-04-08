@@ -55,7 +55,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 #### PCF components
 - **Concepts:** BOSH, PAS, PKS, PFS, Marketplace, Concourse
-- **Slides:** pcf-high-level-comnponents.md
+- **Slides:** high-level-pcf-components.en.md
 
 #### IaC concepts
 - **Whiteboard:** Hey customer what does your IaaS provisioning process look like?
