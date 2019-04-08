@@ -94,12 +94,8 @@ LUNCH
 3:00 PM - 3:30 PM
 Wrap Up, Q/A, Feedback
 
-Course Materials
+Lab Materials
 ================
-
--   Session 1: [Introduction](presentations/introduction-pivotal-slide.en)
-
--   Session 2: [Cloud Foundry Architecture and Operations](presentations/introduction-pas-slide)
 
 -   Developer Workshop
 
@@ -116,8 +112,6 @@ Course Materials
         -   [**NodeJS** Application](/demos/lab-node)
 
         -   [**.NET** Application](/demos/lab-dotnet)
-
-        -   [**Spring Boot** Application (start.spring.io)](/demos/cloud-native-spring)
 
     -   [Lab 2 - Binding to Cloud FoundryServices](/demos/binding-cf-services)
 
