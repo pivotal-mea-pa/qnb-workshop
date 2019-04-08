@@ -15,7 +15,7 @@ Technical Features Demonstrated:
 - Overview of OAuth and SSO.
 
 # Solution Projects
-![Architecture](https://github.com/Pivotal-Field-Engineering/pace-workshop-content/blob/master/dotnet-funnyquotes-workshop/images/architecture.png)
+![Architecture](architecture.png)
 
 The solution revolves around a simple application that displays random quotes when a button is pressed.
 It also features a Kill command to simulate application failure.
