@@ -27,6 +27,7 @@ Note, this lab assumes you have already completed the Environment Variables lab 
 ## Bind the app to the new service
 
 1. To have the new service bound to the app, we will add the direction to the manifest. Open the `manifest.yml` file by double clicking and add the following section.
+
   ```yml
   instances: 1
   memory: 512M
@@ -124,14 +125,14 @@ using Newtonsoft.Json;
 
 // GET api/values
 [HttpGet]
-public ActionResult<IEnumerable<string>> Get()
+public ActionResult<string> Get()
 {
     string myConnectionString = JsonConvert.SerializeObject(new {
         app = _appOptions,
         services = _serviceOptions,
         connectionString = _serviceOptions.ServicesList.Single(s => s.Name == "app-connection-string").Credentials["CONNECTION_STRING"].Value
     });
-    return new string[] { myConnectionString };
+    return myConnectionString;
 }
 ```
 

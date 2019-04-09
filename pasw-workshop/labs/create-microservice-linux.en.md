@@ -47,7 +47,7 @@ applications:
 1. To push your application to the Pivotal Application Service use the following commands, the first authenticates your Cloud Foundry CLI against the PAS instance, the second pushes your application to PAS.
 ```bash
 $> cf login -a https://api.<SYSTEM_DOMAIN> -u <USERNAME> -p <PASSWORD> --skip-ssl-validation
-$> cf push <yourname>-steeltoe-app
+$> cf push
 ```
 
 1. Validate you microservice is working, navigate to the values controller GET method via the route that gets returned after the upload finishes. This url should look like `http://<yourname>-steeltoe-app.<APPS_DOMAIN>/api/values` and should return the value `["value1", "value2"]`.
