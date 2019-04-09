@@ -36,7 +36,7 @@ Locate the Azure SQL in the Marketplace and make an instance of it available for
 
 You have taken a service offered in the Marketplace and associated an instance of it, with your space. Now apps within the space can bind to the service and this consume it. Let's say you had a "Dev" space and a "QA" space. If you bound the Azure SQL Database Service to each space and named each instance the same, your app could move to either space with no config changes! All it depends on is the serivce to be available for binding, no evironment or web.config dependencies.
 
-By the way using the cf cli, we could have accomplished everything above in powershell with:
+By the way using the cf cli, we could have accomplished everything above in a terminal with:
 
 ```bash
 cf create-service azure-sqldb basic my-azure-db

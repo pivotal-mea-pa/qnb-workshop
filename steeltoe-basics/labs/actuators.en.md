@@ -2,33 +2,41 @@
 
 ## Goal
 
-Assuming you have already pushed an app based on the Steeltoe Cloud Foundry templates, this lab will review what additions were made in the project to enable Actuators and the automatic benefits in App Manager.
+Assuming you have already pushed an app using User Provided Services, this lab will review what additions are necessary in the project to enable Actuators and the automatic benefits in App Manager.
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
+- Visual Studio Code
+- .Net Core 2.2
 - Internet Access
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
 
 ## Add Steeltoe Management Actuators to the app
 
+1. Add the `Steeltoe.Management.CloudFoundryCore` and `Steeltoe.Extensions.Logging.DynamicLogger` nuget packages to the project. 
+```bash
+$> dotnet add package Steeltoe.Management.CloudFoundry
+$> dotnet add package Steeltoe.Extensions.Logging.DynamicLogger
+```
+
 1. Open the `Startup.cs` file by double clicking.
 
-1. Confirm the Management package is implemented.
-	```cs
-	using Steeltoe.Management.CloudFoundry;
-	```
+1. Include the Management and Logging libraries.
+```cs
+using Steeltoe.Management.CloudFoundry;
+using Steeltoe.Extensions.Logging;
+```
 
-1. In the `ConfigureServices` method, confirm the default actuator endpoints have been initialized.
-	```cs
-	public void ConfigureServices(IServiceCollection services) {
-		services.AddCloudFoundryActuators(Configuration);
+1. In the `ConfigureServices` method, add the cloud foundry actuators to the services collection.
+```cs
+public void ConfigureServices(IServiceCollection services) {
+	services.AddCloudFoundryActuators(Configuration);
 
-		...
-	}
-	```
+	...
+}
+```
 
-1. In the `Configure` method, confirm the default actuator endpoints have been implemented.
+1. In the `Configure` method, tell the application builder to use the cloud foundry actuators.
 	```cs
 	public void Configure(IApplicationBuilder app,
 			IHostingEnvironment env,
@@ -39,6 +47,24 @@ Assuming you have already pushed an app based on the Steeltoe Cloud Foundry temp
 		 ...
 	}
 	```
+
+1. In the project's `Program.cs` file we need to enable Dynamic Logging. This will allow us to dynamically configure logging levels via the Apps Manager.
+```cs
+WebHost.CreateDefaultBuilder(args)
+...
+    .ConfigureLogging((builderContext, loggingBuilder) => {
+        loggingBuilder.AddDynamicConsole();
+    })
+```
+
+1. In the project's `appsettings.json` file add the following section, this will set up an endpoint for App Manager to connect to.
+```json
+  "management": {
+    "endpoints": {
+      "path": "/cloudfoundryapplication"
+    }
+  }
+```
 
 1. Now say to yourself "wow that was easy", because thats all you need to do, to get the default actuators going! To lean more about what is included in the default endpoints, have a look at the [Steeltoe management usage documentation](https://steeltoe.io/docs/steeltoe-management/#1-2-usage).
 
@@ -112,6 +138,8 @@ Before we switch to App Manager and see all the wonderful benefits of actuators,
 		services.AddSingleton<IHealthContributor, CustomHealthContributor>();
 	}
 	```
+
+1. Push your application to Cloud Foundry (`cf push`) and validate that the Values endpoint (`/api/values`) still returns the options.
 
 ## Complete
 
