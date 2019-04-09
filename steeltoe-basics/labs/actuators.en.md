@@ -21,9 +21,10 @@ $> dotnet add package Steeltoe.Extensions.Logging.DynamicLogger
 
 1. Open the `Startup.cs` file by double clicking.
 
-1. Include the Management libraries.
+1. Include the Management and Logging libraries.
 ```cs
 using Steeltoe.Management.CloudFoundry;
+using Steeltoe.Extensions.Logging;
 ```
 
 1. In the `ConfigureServices` method, add the cloud foundry actuators to the services collection.
