@@ -6,23 +6,29 @@ Assuming you have already pushed an app based on the Steeltoe Cloud Foundry temp
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
+- Visual Studio Code
+- .Net Core 2.2
 - Internet Access
 - Web Browser (Chrome, Firefox, Edge, Safari)(Not Internet Explorer)
 
 ## Enable Steeltoe dynamic logging
 
-1. There are additional features that came pre-configured in the Steeltoe template app. Open the `Program.cs` file by double clicking.
+1. Add the `Steeltoe.Management.CloudFoundry` nuget package to the project: `$> dotnet add package Steeltoe.Extensions.Logging.DynamicLogger`
 
-1. Notice the `ConfigureLogging` section within `IWebHostBuilder` has an added Steeltoe DynamicLogger package to the Microsoft Console logging provider.
-  ```cs
-  .ConfigureLogging((builderContext, loggingBuilder) => {
-    // Add Steeltoe Dynamic Logging provider
-    loggingBuilder.AddDynamicConsole();
-  })
-  ```
+1. Add the following using statement and WebHost configuration to the `Program.cs` file
+```cs
+using Steeltoe.Extensions.Logging;
 
-1. Open the `ValuesController.cs` file in the "Controllers" folder, by double clicking. Note the custom log entries being written.
+...
+WebHost.CreateDefaultBuilder(args)
+...
+    .ConfigureLogging((builderContext, loggingBuilder) => {
+        // Add Steeltoe Dynamic Logging Provider
+        loggingBuilder.AddDynamicConsole();
+    })
+```
+
+1. Open the `ValuesController.cs` file in the "Controllers" folder. Add the following line to the constructor to write a log message on class initialization.
   ```cs
   _logger.LogInformation("Hi There");
   ```

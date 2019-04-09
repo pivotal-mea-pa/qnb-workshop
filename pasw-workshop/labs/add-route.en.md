@@ -12,7 +12,7 @@ From the home page of your app, in App Manager, add a second route to the app.
 
 ## Add a new a route to your app
 
-1. From the home page of your app, choose the "Route" tab. Notice there is one route attached to your app. It was created from the `Host` value in the app's manifest.
+1. From the home page of your app, choose the "Route" tab. Notice there is one route attached to your app. It was created from the `Host` or `Name` value in the app's manifest.
 
 1. Click the "Map A Route" button, to bring up the manage routes window.
 

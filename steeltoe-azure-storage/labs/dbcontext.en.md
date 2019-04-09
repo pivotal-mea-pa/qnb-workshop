@@ -6,12 +6,13 @@ With the Azure SQL service available for binding, create the necessary DBContext
 
 ## Prerequisites
 
-- Visual Studio (min 2015)
+- Visual Studio Code
+- .Net Core 2.2
 - Internet Access
 
 ## Bind the SQL service to your application
 
-1. Back in Visual Studio, open the `manifest.yml` file by double clicking and add the following to the services section (create that section if it's not there).
+1. Back in Visual Studio Code, open the `manifest.yml` file and add the following to the services section (create that section if it's not there).
   ```yml
   
     ...
@@ -21,6 +22,11 @@ With the Azure SQL service available for binding, create the necessary DBContext
   ```
 
 ## Add SQL DBContext
+
+1. Add the `Steeltoe.CloudFoundry.Connector.EFCore` NuGet package to your project
+```bash
+$> dotnet add package Steeltoe.CloudFoundry.Connector.EFCore
+```
 
 1. Open `Program.cs` and confirm the Cloud Foundry provider has been added. This provider gives your app the ability to locate the VCAP environment variables that are created by Cloud Foundry, and parse them.
   ```cs
@@ -37,7 +43,7 @@ With the Azure SQL service available for binding, create the necessary DBContext
   using Steeltoe.Extensions.Configuration.CloudFoundry;
   ```
 
-1. Create a new class file named `TestContext.cs` and replace the default class with the following code.
+1. Create a new class file named `TestContext.cs` with the following code.
   ```cs
   using Microsoft.EntityFrameworkCore;
   using System.ComponentModel.DataAnnotations;
@@ -59,7 +65,7 @@ With the Azure SQL service available for binding, create the necessary DBContext
   }
   ```
 
-1. Create a new class file named `SampleData.cs` and replace the default class with the following code. This will initialize the a database table using the TestData schema and fill it with 2 rows of data, if none exists.
+1. Create a new class file named `SampleData.cs` with the following code. This will initialize the a database table using the TestData schema and fill it with 2 rows of data, if none exists.
   ```cs
   using Microsoft.EntityFrameworkCore;
   using Microsoft.Extensions.DependencyInjection;
@@ -86,14 +92,10 @@ With the Azure SQL service available for binding, create the necessary DBContext
             return;
         }
 
-        AddData<TestData>(db, new TestData() { Data = "Test Data 1 - TestContext " });
-        AddData<TestData>(db, new TestData() { Data = "Test Data 2 - TestContext " });
+        db.TestData.Add(new TestData() { Data = "Test Data 1 - TestContext " });
+        db.TestData.Add(new TestData() { Data = "Test Data 2 - TestContext " });
         db.SaveChanges();
       }
-    }
-
-    private static void AddData<TData>(DbContext db, object item) where TData: class {
-      db.Entry(item).State = EntityState.Added;
     }
   }
   ```
@@ -119,6 +121,7 @@ With the Azure SQL service available for binding, create the necessary DBContext
 
     services.AddDbContext<TestContext>(options => options.UseSqlServer(Configuration));
     services.AddMvc();
+    SampleData.InitializeMyContexts(services.BuildServiceProvider());
   }
   ```
 
