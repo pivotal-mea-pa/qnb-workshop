@@ -1,0 +1,37 @@
+{
+	"workshopSubject":".NET Fundamentals",
+	"workshopHomepage":"",
+	"workshopHostname":"NET Fundamentals",
+	"modules": [
+		{
+			"type": "concepts",
+			"content": [
+				{
+					"name":".NET Fundamentals",
+					"filename":""
+				}
+			]
+		},
+		{
+			"type": "demos",
+			"content": [
+				{
+					"name":"Introduction & Credentials",
+					"filename":"donet-fundamentals/labs/intro"
+				},
+				{
+					"name":"Lab01",
+					"filename":"donet-fundamentals/labs/lab01"
+				},
+				{
+					"name":"Lab02",
+					"filename":"donet-fundamentals/labs/lab02"
+				},
+				{
+					"name":"Lab03",
+					"filename":"donet-fundamentals/labs/lab03"
+				}
+			]
+		}
+	]
+}
