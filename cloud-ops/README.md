@@ -9,7 +9,7 @@ The content is categorized into the three 'levels' of workshop to be delivered:
 
 Content can be shared between levels, however progressing from Level 1 to Level 3 with a core group of customers will provide maximum value.
 
-WHAT IS THE SYNOPSIS OF THIS WORKSHOP??
+Platform Architechts should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
 
 ---
 ## Curators Notes
@@ -40,7 +40,7 @@ WHAT IS THE SYNOPSIS OF THIS WORKSHOP??
 ### Table of Contents
 
 #### Prerequisites
-(((- **Pivotal PA Prep Material:** cloud-ops-l1-prereqs.en.md)))
+- **Pivotal PA Prep Material:** (((cloud-ops-l1-prereqs.en.md)))
 
 #### Introduction
 - **Concepts:** Setting the stage for who we are and why PCF.
@@ -96,6 +96,8 @@ WHAT IS THE SYNOPSIS OF THIS WORKSHOP??
 Pre-Requisite Knowledge (Control-Plance / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
 
 Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
+
+Platform Internals
 
 Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
