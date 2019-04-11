@@ -9,6 +9,8 @@ The content is categorized into the three 'levels' of workshop to be delivered:
 
 Content can be shared between levels, however progressing from Level 1 to Level 3 with a core group of customers will provide maximum value.
 
+WHAT IS THE SYNOPSIS OF THIS WORKSHOP??
+
 ---
 ## Curators Notes
 
@@ -59,7 +61,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 #### IaC concepts
 - **Whiteboard:** Hey customer what does your IaaS provisioning process look like?
-- **Concepts:** BOSH, Immutable Infrastructu, Concourse, Platform Automation, Customer Efficiencies
+- **Concepts:** BOSH, Immutable Infrastructure, Concourse, Customer Efficiencies
 - **Slides:** iac-concepts.en.md
 
 #### Deployments
@@ -68,7 +70,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 - **Slides:** (deployment-examples.en.md)
 
 #### Supporting Services
-- **Concepts:** Pivotal Network, Marketplace & Ecosystem
+- **Concepts:** Pivotal Network, Marketplace, & Ecosystem
 - **Whiteboard:** Hey customer what services do you currently integrate with and support?
 - **Demo:** Pivotal Network & Marketplace
 
@@ -93,7 +95,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 Pre-Requisite Knowledge (Control-Plance / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
 
-Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades)
+Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
 
 Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
