@@ -1,5 +1,5 @@
 <br>
-**Let's start with a little context:**
+**Organizations are learning to compete and grow in a dynamic digital world.**
 
 Our customers are looking for better ways to build and run software at scale in a multi-cloud ecosystem. We know some of the challenges you face and would like to learn more.
 
