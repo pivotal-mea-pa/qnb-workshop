@@ -2,6 +2,7 @@
 ### Prerequisites for the Pivotal PACE Cloud Operations workshop
 
 **TLDR:**
+
 - Whiteboard or Paperboard
 - Unfettered Internet access
 - PWS Account
@@ -19,6 +20,7 @@ A running Foundation with PAS installed is ideal. The **Demo/Lab: Rotate (Servic
 **Reference Material:**
 
 Unlocking Operational Efficiency with BOSH
+
 https://content.pivotal.io/white-papers/unlocking-operational-efficiency-with-bosh
 
 An introduction to immutable infrastructure
@@ -29,7 +31,8 @@ Why you should build an immutable Infrastructure
 
 https://blog.codeship.com/immutable-infrastructure/
 
-How Two Operators are Continuously Patching Pivotal Cloud Foundry\
+How Two Operators are Continuously Patching Pivotal Cloud Foundry
+
 https://content.pivotal.io/blog/how-two-operators-are-continuously-patching-pivotal-cloud-foundry
 
 Extreme Pipelines
