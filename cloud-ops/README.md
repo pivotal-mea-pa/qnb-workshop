@@ -52,6 +52,7 @@ Platform Architechts should review the **Prerequisites** documents for each work
 
 #### What is PCF
 - **Concepts:** Workload abstractions and the PCF overview.
+- **Whiteboard:** Hey customer what types of workloads are you supporting?
 - **Slides:** what-is-pcf.en.md
 - **Demo/Lab:** Push an App (Refer to Keep notes)
 
@@ -76,6 +77,7 @@ Platform Architechts should review the **Prerequisites** documents for each work
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
+- **Whiteboard:** Hey customer how are you patching and protecting your assets?
 - **Demo:** Rotate (Service Credentials) & Repave (BOSH Recreate)
 
 #### Recap
@@ -97,7 +99,7 @@ Pre-Requisite Knowledge (Control-Plance / Foundations / Orgs / Spaces / IaaS com
 
 Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
 
-Platform Internals
+Platform Internalsa
 
 Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
