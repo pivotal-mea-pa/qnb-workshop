@@ -9,6 +9,8 @@ The content is categorized into the three 'levels' of workshop to be delivered:
 
 Content can be shared between levels, however progressing from Level 1 to Level 3 with a core group of customers will provide maximum value.
 
+Platform Architects should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
+
 ---
 ## Curators Notes
 
@@ -38,7 +40,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 ### Table of Contents
 
 #### Prerequisites
-(((- **Pivotal PA Prep Material:** cloud-ops-l1-prereqs.en.md)))
+- **Pivotal PA Prep Material:** (((cloud-ops-l1-prereqs.en.md)))
 
 #### Introduction
 - **Concepts:** Setting the stage for who we are and why PCF.
@@ -50,6 +52,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 #### What is PCF
 - **Concepts:** Workload abstractions and the PCF overview.
+- **Whiteboard:** Hey customer what types of workloads are you supporting?
 - **Slides:** what-is-pcf.en.md
 - **Demo/Lab:** Push an App (Refer to Keep notes)
 
@@ -59,7 +62,7 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 #### IaC concepts
 - **Whiteboard:** Hey customer what does your IaaS provisioning process look like?
-- **Concepts:** BOSH, Immutable Infrastructu, Concourse, Platform Automation, Customer Efficiencies
+- **Concepts:** BOSH, Immutable Infrastructure, Concourse, Customer Efficiencies
 - **Slides:** iac-concepts.en.md
 
 #### Deployments
@@ -68,12 +71,13 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 - **Slides:** (deployment-examples.en.md)
 
 #### Supporting Services
-- **Concepts:** Pivotal Network, Marketplace & Ecosystem
+- **Concepts:** Pivotal Network, Marketplace, & Ecosystem
 - **Whiteboard:** Hey customer what services do you currently integrate with and support?
 - **Demo:** Pivotal Network & Marketplace
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
+- **Whiteboard:** Hey customer how are you patching and protecting your assets?
 - **Demo:** Rotate (Service Credentials) & Repave (BOSH Recreate)
 
 #### Recap
@@ -93,7 +97,9 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 
 Pre-Requisite Knowledge (Control-Plance / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
 
-Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades)
+Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
+
+Platform Internalsa
 
 Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
