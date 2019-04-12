@@ -9,7 +9,7 @@ The content is categorized into the three 'levels' of workshop to be delivered:
 
 Content can be shared between levels, however progressing from Level 1 to Level 3 with a core group of customers will provide maximum value.
 
-Platform Architechts should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
+Platform Architects should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
 
 ---
 ## Curators Notes
