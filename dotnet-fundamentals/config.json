@@ -17,19 +17,19 @@
 			"content": [
 				{
 					"name":"Introduction & Credentials",
-					"filename":"donet-fundamentals/labs/intro"
+					"filename":"dotnet-fundamentals/slides/intro"
 				},
 				{
 					"name":"Lab01",
-					"filename":"donet-fundamentals/labs/lab01"
+					"filename":"dotnet-fundamentals/slides/lab01"
 				},
 				{
 					"name":"Lab02",
-					"filename":"donet-fundamentals/labs/lab02"
+					"filename":"dotnet-fundamentals/slides/lab02"
 				},
 				{
 					"name":"Lab03",
-					"filename":"donet-fundamentals/labs/lab03"
+					"filename":"dotnet-fundamentals/slides/lab03"
 				}
 			]
 		}
