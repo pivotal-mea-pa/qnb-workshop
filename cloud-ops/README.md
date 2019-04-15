@@ -65,7 +65,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Concepts:** BOSH, Immutable Infrastructure, Concourse, Customer Efficiencies
 - **Slides:** iac-concepts.en.md
 
-#### Deployments: Apps & Products
+#### Deployments
 - **Whiteboard:** Hey customer what does your application deployment process look like?
 - **Concepts:** Concourse / Simplified path to prod
 - **Slides:** (deployment-examples.en.md)
