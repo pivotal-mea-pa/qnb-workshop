@@ -1,7 +1,5 @@
 {
 	"workshopSubject":".NET Fundamentals",
-	"workshopHomepage":"",
-	"workshopHostname":"NET Fundamentals",
 	"modules": [
 		{
 			"type": "concepts",
