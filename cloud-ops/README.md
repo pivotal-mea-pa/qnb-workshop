@@ -67,22 +67,24 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 #### Deployments
 - **Whiteboard:** Hey customer what does your application deployment process look like?
-- **Concepts:** BOSH Deployments / Concourse / Simplified path to prod
+- **Concepts:** Concourse / Simplified path to prod
 - **Slides:** (deployment-examples.en.md)
 
 #### Supporting Services
 - **Concepts:** Pivotal Network, Marketplace, & Ecosystem
 - **Whiteboard:** Hey customer what services do you currently integrate with and support?
+- **Slides:** (supporting-services.en.md)
 - **Demo:** Pivotal Network & Marketplace
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
 - **Whiteboard:** Hey customer how are you patching and protecting your assets?
+- **Slides:** (security-posture.en.md)
 - **Demo:** Rotate (Service Credentials) & Repave (BOSH Recreate)
 
 #### Recap
-- **Concepts:** Customer Outcomes
-- **Slides:** Customer Outcomes and Testimonials
+- **Concepts:** Customer Outcomes & Benefits
+- **Slides:** (customer-outcomes.en.md)
 
 ---
 
