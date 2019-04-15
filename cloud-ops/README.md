@@ -97,11 +97,11 @@ Platform Architects should review the **Prerequisites** documents for each works
 #### L1 Overview
 - Complete or Pruned
 
-Pre-Requisite Knowledge (Control-Plance / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
+Pre-Requisite Knowledge (Control-Plane / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
 
 Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
 
-Platform Internalsa
+Platform Internals
 
 Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
@@ -121,37 +121,47 @@ Monitoring Platform Health (BOSH & Healthwatch)
 _**DAY1**_
 #### L1 Overview
 - Complete or Pruned
+
 #### Control-Plane concepts
 - Concepts:
 - Demo/Lab:
-- **Concourse**
-  - Concepts:
-  - Demo/Lab:
-- **Platform Automation**
-  - Concepts:
-  - Demo/Lab:
-- **OpsMan & BOSH Director (some BOSH workshop material)**
-  - Concepts:
-  - Demo/Lab:
-- **Tiles**
-  - Concepts: Tiles & Marketplace
-  - Demo/Lab: Install PAS tile
-  - Demo/Lab: Pivotal Network
+
+#### Concourse
+- Concepts:
+- Demo/Lab:
+
+#### Platform Automation
+- Concepts:
+- Demo/Lab:
+
+#### OpsMan & BOSH Director (some BOSH workshop material)
+- Concepts:
+- Demo/Lab:
+
+#### Tiles**
+- Concepts: Tiles & Marketplace
+- Demo/Lab: Install PAS tile
+- Demo/Lab: Pivotal Network
 
 _**DAY2**_
-- **Deployments**
-  - Demo/Lab: Push an app
-  - Concepts: BOSH deployments and
-- **Apps & Health**
-  - Demo/Lab: PCF Apps Manager
-  - Demo/Lab: Provision PCF HealthWatch
-- **Security Posture & Credhub**
-  - Concepts: R/R/R & Compliance Scanner
-  - Demo/Lab: Provision Compliance Scanner
-  - Demo/Lab:
-- **Upgrades**
-  - Demo/Lab: Tile Upgrade
-  - Concepts: Foundation Upgrade Planning (Upgrade Planner)
-- **SRE Concepts & Platform as a Product**
-  - Concepts:
-- **Wrap Up & Retro**
+#### Deployments
+- Demo/Lab: Push an app
+- Concepts: BOSH deployments and
+
+#### Apps & Health
+- Demo/Lab: PCF Apps Manager
+- Demo/Lab: Provision PCF HealthWatch
+
+#### Security Posture & Credhub
+- Concepts: R/R/R & Compliance Scanner
+- Demo/Lab: Provision Compliance Scanner
+- Demo/Lab:
+
+#### Upgrades
+- Demo/Lab: Tile Upgrade
+- Concepts: Foundation Upgrade Planning (Upgrade Planner)
+
+#### SRE Concepts & Platform as a Product
+- Concepts:
+
+#### Wrap Up & Retro
