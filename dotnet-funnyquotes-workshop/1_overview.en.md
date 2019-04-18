@@ -4,11 +4,11 @@ This solution demonstrates the use of multiple microservices built using multipl
 Technical Features Demonstrated:
 - Deploying and running a .NET Core MVC application on the Linux stack.
 - Deploying and running a .NET Framework WebForms application on Windows stack.
-- Run a RESTful API service using Entity Framework.
-- Run an ASMX service using traditional ADO.NET on Windows stack.
-- Run a WCF service with Entity Framework on Windows stack.
 - Bind to a MySQL database Marketplace service.
-- OWIN bootstrap into IIS
+- Run a RESTful API service using Entity Framework.
+- Run a WCF service with Entity Framework on Windows stack.
+- Run an ASMX service using traditional ADO.NET on Windows stack.
+- OWIN bootstrap into IIS.
 - Service discovery with Eureka.
 - Circuit breaker with Hystrix.
 - Config server with Git repo.
@@ -23,8 +23,8 @@ It also features a Kill command to simulate application failure.
 * FunnyQuotesLegacyService - Contains ASMX service and WCF service implementations for serving messages.
    * ASMX fetches it's data from database connectivity via classic DataSet / DataAdapter approach.
    * WCF featches data from database using a more modern approach using Entity Framework.
-* FunnyQuotesServicesOwin - Rest based implementation using OWIN with WebAPI. Intended to be run on Windows stack with HWC.
 * FunnyQuotesUICore - Modern .NET Core version running on Linux stack. Calls backend services directly from javascript.
+* FunnyQuotesServicesOwin - Rest based implementation using OWIN with WebAPI. Intended to be run on Windows stack with HWC.
 * FunnyQuotesCookieDatabase - encapsulates the Entity Framework context.
 * FunnyQuotesCommon - contains list of quotes for local use.
 
