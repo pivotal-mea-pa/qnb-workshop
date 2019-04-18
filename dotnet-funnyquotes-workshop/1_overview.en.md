@@ -3,8 +3,8 @@ This solution demonstrates the use of multiple microservices built using multipl
 
 Technical Features Demonstrated:
 - Deploying and running a .NET Core MVC application on the Linux stack.
-- Run a RESTful API service using Entity Framework.
 - Deploying and running a .NET Framework WebForms application on Windows stack.
+- Run a RESTful API service using Entity Framework.
 - Run an ASMX service using traditional ADO.NET on Windows stack.
 - Run a WCF service with Entity Framework on Windows stack.
 - Bind to a MySQL database Marketplace service.
@@ -19,7 +19,6 @@ Technical Features Demonstrated:
 
 The solution revolves around a simple application that displays random quotes when a button is pressed.
 It also features a Kill command to simulate application failure.
-*  FunnyQuotesBasicLinux/Windows - A simple refresher for demonstrating pushing .NET Core and .NET Framework apps to both Linux and Windows servers. The funny quotes are simply retrieved from memory. 
 * FunnyQuotesUIForms - Web forms GUI. Depends on Eureka and Config Server. Depending on config value served by Config Server, the source of the messages shown will be switched between local in memory, ASMX service, WCF service, or REST.
 * FunnyQuotesLegacyService - Contains ASMX service and WCF service implementations for serving messages.
    * ASMX fetches it's data from database connectivity via classic DataSet / DataAdapter approach.
