@@ -53,7 +53,25 @@
   - hystrix
   ```
   
-  The complete manifest is as follows (for both files).
+  The complete manifest for FunnyQuotesUICore should be as follows.
+  
+  ```
+  ---
+  applications:
+
+  - name: FunnyQuotesUICore
+    random-route: true
+    memory: 512M
+    health-check-type: http
+    health-check-http-endpoint: /
+    buildpack: dotnet_core_buildpack
+    services:
+    - config-server
+    - eureka
+    - hystrix
+  ```
+
+  The complete manifest for FunnyQuotesUIForms should be as follows.
   
   ```
   ---
