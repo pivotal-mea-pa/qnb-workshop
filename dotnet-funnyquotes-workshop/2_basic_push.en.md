@@ -46,12 +46,12 @@
 1. Execute the create-services.bat file in the scripts folder.
 1. Update the manifest files in FunnyQuotesUICore and FunnyQuotesUIForms to include the services section.
 
-  ```
-  services:
-  - config-server
-  - eureka
-  - hystrix
-  ```
+   ```
+   services:
+   - config-server
+   - eureka
+   - hystrix
+   ```
   
   The complete manifest for FunnyQuotesUICore should be as follows.
   
