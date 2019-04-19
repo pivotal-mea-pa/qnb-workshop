@@ -1,23 +1,24 @@
-## Pushing apps
+## Pushing apps and creating services
  
 ### Goals
 1. Show how pushing .NET Framework 4.x apps and .NET Core apps work the same.
 1. Target both Linux and Windows stacks.
+1. Create marketplace services.
 
-### Steps
-1. Push the FunnyQuotesBasicLinux .NET Core frontend.
+### Pushing apps
+1. Push the FunnyQuotesUICore frontend from the publish folder.
 
     ```
-    > cd FunnyQuotesBasicLinux
+    > cd FunnyQuotesUICore
     > cf push
     ```
     
     * Note the default stack is `cflinuxfs2` when omitted, and the `dotnet_core_buildpack` in the manifest.yml file when pushing .NET Core apps to Linux.
 
-1. Push the FunnyQuotesBasicWindows .NET Framework 4.x frontend.
+1. Push the FunnyQuotesUIForms .NET Framework 4.x frontend from the publish folder.
 
     ```
-    > cd FunnyQuotesBasicWindows
+    > cd FunnyQuotesUIForms
     > cf push
     ```
     
@@ -28,14 +29,45 @@
 1. View log output
 
     ```
-    > cf logs FunnyQuotesBasicLinux --recent
+    > cf logs FunnyQuotesUICore --recent
     ```
 
 1. Show log tailing while pushing / starting up.
 
     ```
-    > cf logs FunnyQuotesBasicLinux
+    > cf logs FunnyQuotesUICore
     ```
   
 1. Optional: Press Kill button and show recovery
 1. Optional: Scale the app
+
+### Creating services
+
+1. Execute the create-services.bat file in the scripts folder.
+1. Update the manifest files in FunnyQuotesUICore and FunnyQuotesUIForms to include the services section.
+
+  ```
+  services:
+  - config-server
+  - eureka
+  - hystrix
+  ```
+  
+  The complete manifest is as follows (for both files).
+  
+  ```
+  ---
+  applications:
+
+  - name: FunnyQuotesUIForms
+    random-route: true
+    memory: 512M
+    health-check-type: http
+    health-check-http-endpoint: /
+    buildpack: hwc_buildpack
+    stack: windows2016
+    services:
+    - config-server
+    - eureka
+    - hystrix
+  ```
