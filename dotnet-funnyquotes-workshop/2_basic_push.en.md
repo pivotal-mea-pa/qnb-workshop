@@ -53,39 +53,39 @@
    - hystrix
    ```
   
-  The complete manifest for FunnyQuotesUICore should be as follows.
-  
-  ```
-  ---
-  applications:
+   The complete manifest for FunnyQuotesUICore should be as follows.
 
-  - name: FunnyQuotesUICore
-    random-route: true
-    memory: 512M
-    health-check-type: http
-    health-check-http-endpoint: /
-    buildpack: dotnet_core_buildpack
-    services:
-    - config-server
-    - eureka
-    - hystrix
-  ```
+   ```
+   ---
+   applications:
 
-  The complete manifest for FunnyQuotesUIForms should be as follows.
-  
-  ```
-  ---
-  applications:
+   - name: FunnyQuotesUICore
+     random-route: true
+     memory: 512M
+     health-check-type: http
+     health-check-http-endpoint: /
+     buildpack: dotnet_core_buildpack
+     services:
+     - config-server
+     - eureka
+     - hystrix
+   ```
 
-  - name: FunnyQuotesUIForms
-    random-route: true
-    memory: 512M
-    health-check-type: http
-    health-check-http-endpoint: /
-    buildpack: hwc_buildpack
-    stack: windows2016
-    services:
-    - config-server
-    - eureka
-    - hystrix
-  ```
+   The complete manifest for FunnyQuotesUIForms should be as follows.
+
+   ```
+   ---
+   applications:
+
+   - name: FunnyQuotesUIForms
+     random-route: true
+     memory: 512M
+     health-check-type: http
+     health-check-http-endpoint: /
+     buildpack: hwc_buildpack
+     stack: windows2016
+     services:
+     - config-server
+     - eureka
+     - hystrix
+   ```
