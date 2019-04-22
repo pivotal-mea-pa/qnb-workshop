@@ -1,34 +1,4 @@
 ## Circuit Breaker - Hystrix
-
-### Prerequisites
-1. Ensure all the following services are defined in the manifest.yml file of the published FunnyQuotesServicesOwin project.
-
-    ```
-    services:
-        - mysql-funnyquotes
-        - config-server
-        - eureka
-        - hystrix
-    ```
-    
-1. Provision a hystrix dashboard, the standard plan, named `hystrix` from the marketplace.
-
-    ```
-        cf create-service p-circuit-breaker-dashboard standard hystrix
-    ```
-1. Uncomment the `hystrix` line in the `manifest.yml` file of both FunnyQuotesServicesOwin & FunnyQuotesUICore projects.
-
-1. Push both applications.
-
-    ```
-        > cd FunnyQuotesServicesOwin
-        > cf push FunnyQuotesServicesOwin -s windows2016 -b hwc_buildpack
-    ```
-    ```
-        > cd FunnyQuotesUICore
-        > cf push FunnyQuotesUICore
-    ```
-
 1. Access Hystrix dashboard.
 	Apps Manager > Space > Services > Hystrix > Manage.
 	
