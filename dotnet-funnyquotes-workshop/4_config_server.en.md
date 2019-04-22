@@ -18,14 +18,12 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
 1. Note the usage of environment (second part of URL) to override settings. In .NET Core apps this value comes from `ASPNETCORE_ENVIRONMENT` environmental variable.
 
 ### On PCF
-1. Fork the funny-quotes-config repo from https://github.com/Pivotal-Field-Engineering/funny-quotes-config.
-1. Edit gitconfig.json in scripts folder and update URL to forked repo.
-1. Provision the following services from the marketplace.
+1. Fork the funny-quotes-config repository from https://github.com/Pivotal-Field-Engineering/funny-quotes-config.
+1. Edit gitconfig.json in scripts folder and update URL to forked repository.
+1. Update the config-server service with the forked repository.
     
     ```
-    > cf create-service p-config-server standard config-server -c gitconfig.json
-    > cf create-service p-service-registry standard eureka
-    > cf create-service p-circuit-breaker-dashboard standard hystrix
+    > cf update-service p-config-server standard config-server -c gitconfig.json
     ```
 
 1. Ensure the two backend projects, FunnyQuotesServicesOwin and FunnyQuotesLegacyService, contain the following entries in their respective manifest file.
@@ -38,7 +36,7 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
         - hystrix
     ```
 
-1. Check the two frontend projects, FunnyQuotesUICore and FunnyQuotesUIForms, contain the following entries in the their respective manifest files.
+1. Update the manifests in the two frontend projects, FunnyQuotesUICore and FunnyQuotesUIForms to contain the following entries in the services section.
 
     ```
     services:
@@ -49,18 +47,18 @@ We want to get FunnyQuotes client to use a different implementation of IFunnyQuo
 
 1. Push all four applications.
 1. Launch FunnyQuotesUICore and FunnyQuotesUIForms and note the provider in both.
-1. In the forked repo, change ClientType from rest to local in the FunnyQuotesUICore.yaml file.
+1. In the forked repo, change ClientType from local to rest in the FunnyQuotesUICore.yaml file.
 
   ```
     FunnyQuotes:
-      ClientType: local
+      ClientType: rest
       FailedMessage: Failure is not an option -- it comes bundled with Windows.
   ```
   
   Save settings. Run git commit and push. After 10 seconds, refresh FunnyQuotesUICore.
   Note the new provider is changed without a restart of the app.
 
-1. In the forked repo, change ClientType from wcf to asmx in the FunnyQuotesUIForms.yaml file.
+1. In the forked repo, change ClientType from local to asmx in the FunnyQuotesUIForms.yaml file.
 
   ```
     FunnyQuotes:
