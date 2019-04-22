@@ -34,7 +34,7 @@
 1. Find a log for a router logs for quote requests  (search for `GET /Home/GetQuote` keyword). Access distributed tracing. Highlight the Gantt chart. 
 1. Note: Automatic log correlation only works in .NET core apps, but you can get Gantt charts out of the box. Will be added in future version of Steeltoe. Manual correlation can be done right now by prefixing all logs with traceid/spanid in incoming headers
 
-## Highlight Code
+## Highlights
 1. Adding Actuators and enabling them in code. See Startup.cs or Global.asax.cs and search for `Actuator`. It has to be registered and activated.
 1. When using legacy stack with Autofac, adding actuators automatically registers dynamic console logger which is needed to change log levels at runtime.
 	1. For .NET core app, open up Program.cs and highlight explicit registration of dynamic console.
