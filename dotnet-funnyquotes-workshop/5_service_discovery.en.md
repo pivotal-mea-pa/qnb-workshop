@@ -1,16 +1,5 @@
 ## Service Discovery - Eureka
 
-### Prerequisites
-1. Ensure only the following services are defined in the manifest.yml file of the published FunnyQuotesLegacyService and/or FunnyQuotesServicesOwin projects.
-
-    ```
-    services:
-        - mysql-funnyquotes
-        - config-server
-        - eureka
-        #- hystrix
-    ```
-
 ### Service discovery locally
 1. Pull down docker image.
 
@@ -30,23 +19,6 @@
 1. For FunnyQuotesServicesOwin, append /funnyquotes/random to the url to observe the result.
 
 ### Service discovery on PCF
-1. Provision the p-service-registry service, the standard plan, and name it `eureka`.
-
-    ```
-        cf create-service p-service-registry standard eureka
-    ```
-1. Uncomment the eureka service in the manifest.yml file of both FunnyQuotesLegacyService & FunnyQuoteServicesOwin projects.
-1. Push both applications.
-
-    ```
-        cd publish\FunnyQuotesLegacyService
-        cf push
-    ```
-    ```
-        cd publish\FunnyQuoteServicesOwin
-        cf push
-    ```
-    
 1. Navigate to service dashboard.
     Apps Manager > Space > Services > Eureka > Manage.
     
