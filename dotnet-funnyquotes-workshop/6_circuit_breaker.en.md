@@ -11,7 +11,7 @@
 1. Keep requesting quotes until circuit is triggered.
 	1. Note fallback requests in open circuit (blue).
 
-## Show code
+## Highlights
 1. Open FunnyQuotesUICore.Clients.RestFunnyQuotesClient.
 	1. Note how commands are created.
 	1. Thread isolation based on circuit group name to avoid thread starvation scenario.
