@@ -26,7 +26,7 @@
 
 Note that URL endpoints are discovered by a well-known name.
 
-### Observations to highlight in code
+### Highlights
 1. Open appsettings.json.
   1. Note `eureka:client` section when running locally.
   1. This will be overriden when running on CloudFoundry.
