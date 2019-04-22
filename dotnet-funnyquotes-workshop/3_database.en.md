@@ -82,12 +82,6 @@
   The Views column should now be visible and new record in migration table.
 
 ### Push to PCF
-1. Provision a MySQL instance from marketplace named `mysql-funnyquotes`.
-
-    ```
-    cf create-service p.mysql db-small mysql-funnyquotes
-    ```
-
 1. Add the following section to the manifest file in the FunnyQuotesServicesOwin project.
 
     ```
