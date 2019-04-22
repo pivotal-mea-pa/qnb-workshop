@@ -99,7 +99,7 @@
 
     ```
     > cd FunnyQuotesServicesOwin
-    > cf push
+    > cf push -s windows2016 -b hwc_buildpack
     ```
 
 1. Confirm that everything works by hitting `/api/funnyquotes/random` endpoint.
