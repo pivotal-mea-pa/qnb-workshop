@@ -14,6 +14,8 @@ Platform Architects should review the **Prerequisites** documents for each works
 ---
 ## Curators Notes
 
+**TO CONSIDER** Platform Team & Platform as a Product who & where?
+
 **TO CONSIDER:** Slides vs Whiteboard (credit RBM)
 
 **TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
@@ -21,6 +23,14 @@ Platform Architects should review the **Prerequisites** documents for each works
 **TO CONSIDER:** Jumpbox vs OpsMan
 
 **TO CONSIDER:** Ensure timing and success factor of slide/demo ratio
+
+**TO CONSIDER:** I'M GOING TO MAKE YOU FAMOUS!
+
+**TO DO:** Integrate OpsMan deep dive (credit TF)
+
+**TO DO:** Integrate into Level 1 some Platform as a Product and benefits into Recap
+
+**TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
 
 **TO DO:** Interview 2-3 customers for feedback
 
@@ -107,6 +117,8 @@ Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
 Monitoring Platform Health (BOSH & Healthwatch)
 
+Platform as a product & SRE concepts
+
 #### Platform as a Product
 - Concepts:
 
@@ -138,7 +150,7 @@ _**DAY1**_
 - Concepts:
 - Demo/Lab:
 
-#### Tiles**
+#### Tiles
 - Concepts: Tiles & Marketplace
 - Demo/Lab: Install PAS tile
 - Demo/Lab: Pivotal Network
