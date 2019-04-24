@@ -1,0 +1,36 @@
+{
+  "workshopSubject": "Azure Storage from Pivotal Cloud Foundry",
+  "workshopHomepage": "",
+  "modules": [
+    {
+      "type": "concepts",
+      "content": [
+        {
+          "name": "Writing Files in the Cloud",
+          "filename": "azure-storage/file-writing-concepts"
+        }
+      ]
+    },
+    {
+      "type": "demos",
+      "content": [
+        {
+          "name": "Create Azure Storage with Azure CLI",
+          "filename": "azure-storage/azure-storage-cli-demo"
+        },
+        {
+          "name": "Spring Initializer for Azure Storage",
+          "filename": "azure-storage/spring-boot-initializer-demo"
+        },
+        {
+          "name": "Azure Storage SDK",
+          "filename": "azure-storage/azure-storage-sdk-demo"
+        },
+        {
+          "name": "Azure Storage Service Broker",
+          "filename": "azure-storage/azure-storage-service-broker-demo"
+        }
+      ]
+    }
+  ]
+}
