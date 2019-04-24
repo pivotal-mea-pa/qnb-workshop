@@ -129,8 +129,8 @@ HELP.md			mvnw			pom.xml	mvnw.cmd		src
 4. Build the app and run locally:
 
 ```
-.\mvnw clean package
-.\mvnw spring-boot:run
+./mvnw clean package
+./mvnw spring-boot:run
 ```
 
 5. Test using `POST` and `GET`:
