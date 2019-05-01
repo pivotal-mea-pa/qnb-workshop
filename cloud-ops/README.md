@@ -16,8 +16,6 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 **TO CONSIDER** Platform Team & Platform as a Product who & where?
 
-**TO CONSIDER:** Slides vs Whiteboard (credit RBM)
-
 **TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
 
 **TO CONSIDER:** Jumpbox vs OpsMan
@@ -33,10 +31,6 @@ Platform Architects should review the **Prerequisites** documents for each works
 **TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
 
 **TO DO:** Interview 2-3 customers for feedback
-
-**TO DO:** Feedback from PA team on existing content
-
-**TO DO:** Stand & Deliver during PA office hours
 
 **TO DO:** Condense S1P video notes for customer insights
 
@@ -78,7 +72,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 #### Deployments
 - **Whiteboard:** Hey customer what does your application deployment process look like?
 - **Concepts:** Concourse / Simplified path to prod
-- **Slides:** (deployment-examples.en.md)
+- **Slides:** deployment-examples.en.md
 
 #### Supporting Services
 - **Concepts:** Pivotal Network, Marketplace, & Ecosystem
