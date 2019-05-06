@@ -76,34 +76,6 @@
             "filename":"kubernetes/labs/k8s-deployment"
             },
             {
-            "name":"fortune-ui-random",
-            "filename":"kubernetes/labs/fortune-ui-random"
-            },
-            {
-            "name":"fortune-ui-fortunes",
-            "filename":"kubernetes/labs/fortune-ui-fortunes"
-            },
-            {
-            "name":"fortune-ui-default",
-            "filename":"kubernetes/labs/fortune-ui-default"
-            },
-            {
-            "name":"fortune-pod",
-            "filename":"kubernetes/labs/fortune-pod"
-            },
-            {
-            "name":"fortune-deploy",
-            "filename":"kubernetes/labs/fortune-deploy"
-            },
-            {
-            "name":"fortune-arch",
-            "filename":"kubernetes/labs/fortune-arch"
-            },
-            {
-            "name":"demo-redis-persist",
-            "filename":"kubernetes/labs/demo-redis-persist"
-            },
-            {
             "name":"k8s-statefulset-pv",
             "filename":"kubernetes/labs/k8s-statefulset-pv"
             },
