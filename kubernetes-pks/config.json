@@ -11,6 +11,14 @@
             "filename":"kubernetes/slides/k8s-persistent-volume-slide"
             },
             {
+            "name":"k8s-declarative-config-and-svc",
+            "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
+            },
+            {
+            "name":"k8s-pod-and-namespace",
+            "filename":"kubernetes/slides/k8s-pod-and-namespace-slide"
+            },
+            {
             "name":"backup-recovery",
             "filename":"pks/slides/backup-recovery-slide"
             },
@@ -60,16 +68,44 @@
             "filename":"kubernetes/labs/k8s-deploy-1st-container"
             },
             {
-            "name":"kubernetes-declarative-config",
+            "name":"k8s-pod-declarative",
             "filename":"kubernetes/labs/k8s-pod-declarative"
             },
             {
-            "name":"kubernetes-deployment",
+            "name":"k8s-deployment",
             "filename":"kubernetes/labs/k8s-deployment"
             },
             {
-            "name":"kubernetes-persistent-volume",
-            "filename":"pks/labs/k8s-statefulset-pv"
+            "name":"fortune-ui-random",
+            "filename":"kubernetes/labs/fortune-ui-random"
+            },
+            {
+            "name":"fortune-ui-fortunes",
+            "filename":"kubernetes/labs/fortune-ui-fortunes"
+            },
+            {
+            "name":"fortune-ui-default",
+            "filename":"kubernetes/labs/fortune-ui-default"
+            },
+            {
+            "name":"fortune-pod",
+            "filename":"kubernetes/labs/fortune-pod"
+            },
+            {
+            "name":"fortune-deploy",
+            "filename":"kubernetes/labs/fortune-deploy"
+            },
+            {
+            "name":"fortune-arch",
+            "filename":"kubernetes/labs/fortune-arch"
+            },
+            {
+            "name":"demo-redis-persist",
+            "filename":"kubernetes/labs/demo-redis-persist"
+            },
+            {
+            "name":"k8s-statefulset-pv",
+            "filename":"kubernetes/labs/k8s-statefulset-pv"
             },
             {
             "name":"configure-director",
