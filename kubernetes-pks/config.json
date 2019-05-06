@@ -2,70 +2,52 @@
     "workshopSubject":"PACE",
     "workshopHomepage":"",
     "modules": [
-    {
+      {
         "type": "concepts",
         "content": [
             {
-            "name":"example-slide",
-            "filename":"example/example-slide"
-            }
-        ]
-    },
-    {
-        "type": "demos",
-        "content": [
-            {
-            "name":"example-demo",
-            "filename":"example/example-demo"
-            }
-        ]
-    }
-  ]
-}ig-and-svc-slide"
-            },
-            {
             "name":"kubernetes-persistent-volume",
-            "filename":"pace-workshop-content/kubernetes/slides/k8s-persistent-volume-slide"
+            "filename":"kubernetes/slides/k8s-persistent-volume-slide"
             },
             {
             "name":"backup-recovery",
-            "filename":"pace-workshop-content/pks/slides/backup-recovery-slide"
+            "filename":"pks/slides/backup-recovery-slide"
             },
             {
             "name":"monitoring-logging",
-            "filename":"pace-workshop-content/pks/slides/monitoring-logging-slide"
+            "filename":"pks/slides/monitoring-logging-slide"
             },
             {
             "name":"pks-intro",
-            "filename":"pace-workshop-content/pks/slides/pks-intro-slide"
+            "filename":"pks/slides/pks-intro-slide"
             },
             {
             "name":"pks-pipelines",
-            "filename":"pace-workshop-content/pks/slides/pks-pipelines-slide"
+            "filename":"pks/slides/pks-pipelines-slide"
             },
             {
             "name":"pks-inner-workings",
-            "filename":"pace-workshop-content/pks/slides/pks-the-inner-workings-slide"
+            "filename":"pks/slides/pks-the-inner-workings-slide"
             },
             {
             "name":"uaa-overview",
-            "filename":"pace-workshop-content/pks/slides/pks-uaa-overview-slide"
+            "filename":"pks/slides/pks-uaa-overview-slide"
             },
             {
             "name":"upgrades",
-            "filename":"pace-workshop-content/pks/slides/upgrades-slide"
+            "filename":"pks/slides/upgrades-slide"
             },
             {
             "name":"harbor",
-            "filename":"pace-workshop-content/pks/slides/pks-vmware-harbor-slide"
+            "filename":"pks/slides/pks-vmware-harbor-slide"
             },
             {
             "name":"story-of-pks",
-            "filename":"pace-workshop-content/pks/slides/story-of-pks-slide"
+            "filename":"pks/slides/story-of-pks-slide"
             },
             {
             "name":"uaa-integrations",
-            "filename":"pace-workshop-content/pks/slides/uaa-integrations-slide"
+            "filename":"pks/slides/uaa-integrations-slide"
             }
         ]
     },
@@ -73,64 +55,64 @@
         "type": "demos",
         "content": [
             {
-            "name":"pace-workshop-content/kubernetes-deploy-1st-container",
-            "filename":"pace-workshop-content/kubernetes/labs/k8s-deploy-1st-container"
+            "name":"kubernetes-deploy-1st-container",
+            "filename":"kubernetes/labs/k8s-deploy-1st-container"
             },
             {
             "name":"kubernetes-declarative-config",
-            "filename":"pace-workshop-content/kubernetes/labs/k8s-pod-declarative"
+            "filename":"kubernetes/labs/k8s-pod-declarative"
             },
             {
             "name":"kubernetes-deployment",
-            "filename":"pace-workshop-content/kubernetes/labs/k8s-deployment"
+            "filename":"kubernetes/labs/k8s-deployment"
             },
             {
             "name":"kubernetes-persistent-volume",
-            "filename":"pace-workshop-content/pks/labs/k8s-statefulset-pv"
+            "filename":"pks/labs/k8s-statefulset-pv"
             },
             {
             "name":"configure-director",
-            "filename":"pace-workshop-content/pks/labs/configure-director-demo"
+            "filename":"pks/labs/configure-director-demo"
             },
             {
             "name":"create-cluster",
-            "filename":"pace-workshop-content/pks/labs/create-cluster-demo"
+            "filename":"pks/labs/create-cluster-demo"
             },
             {
             "name":"harbor",
-            "filename":"pace-workshop-content/pks/labs/harbor-demo"
+            "filename":"pks/labs/harbor-demo"
             },
             {
             "name":"install-pks-tile",
-            "filename":"pace-workshop-content/pks/labs/install-pks-tile-demo"
+            "filename":"pks/labs/install-pks-tile-demo"
             },
             {
             "name":"kubectl-cli",
-            "filename":"pace-workshop-content/pks/labs/kubectl-cli-demo"
+            "filename":"pks/labs/kubectl-cli-demo"
             },
             {
             "name":"monitoring-logging",
-            "filename":"pace-workshop-content/pks/labs/monitoring-logging-demo"
+            "filename":"pks/labs/monitoring-logging-demo"
             },
             {
             "name":"nsxt-for-developers",
-            "filename":"pace-workshop-content/pks/labs/nsxt-for-developers-demo"
+            "filename":"pks/labs/nsxt-for-developers-demo"
             },
             {
             "name":"pipelines",
-            "filename":"pace-workshop-content/pks/labs/pipelines-demo"
+            "filename":"pks/labs/pipelines-demo"
             },
             {
             "name":"pks-cli",
-            "filename":"pace-workshop-content/pks/labs/pks-cli-demo"
+            "filename":"pks/labs/pks-cli-demo"
             },
             {
             "name":"using-bosh-to-see-clusters",
-            "filename":"pace-workshop-content/pks/labs/using-bosh-to-see-clusters-demo"
+            "filename":"../pks/labs/using-bosh-to-see-clusters-demo"
             },
             {
             "name":"using-uaa-with-pks",
-            "filename":"pace-workshop-content/pks/labs/using-uaa-with-pks-demo"
+            "filename":"pks/labs/using-uaa-with-pks-demo"
             }
         ]
     }
