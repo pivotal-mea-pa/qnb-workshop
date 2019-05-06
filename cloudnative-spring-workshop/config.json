@@ -1,24 +1,28 @@
 {
-    "workshopSubject":"PACE Cloudnative Spring",
-    "workshopHomepage":"",
-    "modules": [
+  "workshopSubject": "PACE Cloudnative Spring",
+  "workshopHomepage": "",
+  "modules": [
     {
-        "type": "concepts",
-        "content": [
-            {
-            "name":"cloudnative-spring-slide",
-            "filename":"cloudnative-spring-workshop/01-cloud-native-applications-slide"
-            }
-        ]
+      "type": "concepts",
+      "content": [
+        {
+          "name": "cloudnative-spring-slide",
+          "filename": "cloudnative-spring-workshop/01-cloud-native-applications-slide"
+        }
+      ]
     },
     {
-        "type": "demos",
-        "content": [
-            {
-            "name":"build-a-spring-boot-application-demo",
-            "filename":"cloudnative-spring-workshop/01-building-a-spring-boot-application"
-            }
-        ]
+      "type": "demos",
+      "content": [
+        {
+          "name": "introduction-to-cli-demo",
+          "filename": "cloudnative-spring-workshop/00-introduction-to-cli"
+        },
+        {
+          "name": "build-a-spring-boot-application-demo",
+          "filename": "cloudnative-spring-workshop/01-building-a-spring-boot-application"
+        }
+      ]
     }
   ]
 }
