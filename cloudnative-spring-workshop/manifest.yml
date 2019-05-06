@@ -1,0 +1,9 @@
+---
+applications:
+- name: cloudnative-spring-workshop
+  memory: 64M
+  instances: 1
+  buildpacks:
+  - staticfile_buildpack
+  random-route: true
+  path: publicGen/

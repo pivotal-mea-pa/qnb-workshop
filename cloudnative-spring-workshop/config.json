@@ -1,0 +1,24 @@
+{
+    "workshopSubject":"PACE Cloudnative Spring",
+    "workshopHomepage":"",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+            {
+            "name":"cloudnative-spring-slide",
+            "filename":"cloudnative-spring-workshop/01-cloud-native-applications-slide"
+            }
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+            "name":"build-a-spring-boot-application-demo",
+            "filename":"cloudnative-spring-workshop/01-building-a-spring-boot-application"
+            }
+        ]
+    }
+  ]
+}
