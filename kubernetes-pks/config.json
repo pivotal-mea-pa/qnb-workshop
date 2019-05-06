@@ -1,6 +1,7 @@
 {
     "workshopSubject":"PACE",
     "workshopHomepage":"",
+    "workshopHostname": "PKS 2 day workshop",
     "modules": [
       {
         "type": "concepts",
