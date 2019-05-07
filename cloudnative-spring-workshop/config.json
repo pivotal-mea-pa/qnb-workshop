@@ -6,6 +6,10 @@
       "type": "concepts",
       "content": [
         {
+          "name": "why-pivotal-slide",
+          "filename": "cloudnative-spring-workshop/00-why-pivotal-slide"
+        },
+        {
           "name": "cloudnative-spring-slide",
           "filename": "cloudnative-spring-workshop/01-cloud-native-applications-slide"
         }
