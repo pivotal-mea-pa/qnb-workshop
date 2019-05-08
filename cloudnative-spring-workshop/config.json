@@ -25,6 +25,10 @@
         {
           "name": "build-a-spring-boot-application-demo",
           "filename": "cloudnative-spring-workshop/01-building-a-spring-boot-application"
+        },
+        {
+          "name": "adding-persistence-to-boot-application",
+          "filename": "cloudnative-spring-workshop/02-adding-persistence-to-boot-application"
         }
       ]
     }
