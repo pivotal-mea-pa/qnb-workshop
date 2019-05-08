@@ -6,11 +6,11 @@
       "type": "concepts",
       "content": [
         {
-          "name": "why-pivotal-slide",
+          "name": "Why Pivotal?",
           "filename": "cloudnative-spring-workshop/00-why-pivotal-slide"
         },
         {
-          "name": "cloudnative-spring-slide",
+          "name": "Cloud Native Spring",
           "filename": "cloudnative-spring-workshop/01-cloud-native-applications-slide"
         }
       ]
@@ -19,16 +19,20 @@
       "type": "demos",
       "content": [
         {
-          "name": "introduction-to-cli-demo",
+          "name": "Introduction to cf CLI",
           "filename": "cloudnative-spring-workshop/00-introduction-to-cli"
         },
         {
-          "name": "build-a-spring-boot-application-demo",
+          "name": "Build a Spring Boot Application",
           "filename": "cloudnative-spring-workshop/01-building-a-spring-boot-application"
         },
         {
-          "name": "adding-persistence-to-boot-application",
+          "name": "Adding Persistence to a Boot App",
           "filename": "cloudnative-spring-workshop/02-adding-persistence-to-boot-application"
+        },
+        {
+          "name": "Enhancing a Spring Boot App with Metrics",
+          "filename": "cloudnative-spring-workshop/03-enhancing_boot_application_with_metrics"
         }
       ]
     }
