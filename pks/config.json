@@ -44,6 +44,10 @@
             {
             "name":"uaa-integrations",
             "filename":"pks/slides/uaa-integrations-slide"
+            },
+            {
+            "name":"helm-kubernetes",
+            "filename":"pks/slides/kubernetes-helm-slide"
             }
         ]
     },
@@ -93,6 +97,14 @@
             {
             "name":"using-uaa-with-pks",
             "filename":"pks/labs/using-uaa-with-pks-demo"
+            },
+            {
+            "name":"pks-app-deployment",
+            "filename":"pks/labs/pks-deployment"
+            },
+            {
+            "name":"pks-helm-kubernetes",
+            "filename":"pks/labs/pks-helm"
             }
         ]
     }
