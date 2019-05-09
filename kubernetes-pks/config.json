@@ -117,7 +117,7 @@
             },
             {
             "name":"using-bosh-to-see-clusters",
-            "filename":"../pks/labs/using-bosh-to-see-clusters-demo"
+            "filename":"pks/labs/using-bosh-to-see-clusters-demo"
             },
             {
             "name":"using-uaa-with-pks",
@@ -125,11 +125,11 @@
             },
             {
             "name":"deploying-applicastion-to-pks",
-            "filename":"../pks/labs/pks-app-deployment"
+            "filename":"pks/labs/pks-app-deployment"
             },
             {
             "name":"using-helm-kuberntes",
-            "filename":"../pks/labs/pks-helm"
+            "filename":"pks/labs/pks-helm"
             }
         ]
     }
