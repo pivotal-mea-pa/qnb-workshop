@@ -1,7 +1,6 @@
 {
     "workshopSubject":"Cloud Operations",
     "workshopHomepage":"",
-    "workshopHostname":"",
     "modules": [
         {
             "type": "concepts",

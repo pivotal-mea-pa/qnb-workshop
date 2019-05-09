@@ -38,6 +38,8 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 **TO DO:** Create workshop pre-reqs punchlist
 
+**TO DO:** Check Themes and Branding across all decks
+
 ---
 
 ## Level 1 - Cloud Operations Discovery
@@ -132,15 +134,15 @@ _**DAY1**_
 - Concepts:
 - Demo/Lab:
 
+#### OpsMan & BOSH Director (some BOSH workshop material)
+- Concepts:
+- Demo/Lab:
+
 #### Concourse
 - Concepts:
 - Demo/Lab:
 
 #### Platform Automation
-- Concepts:
-- Demo/Lab:
-
-#### OpsMan & BOSH Director (some BOSH workshop material)
 - Concepts:
 - Demo/Lab:
 
