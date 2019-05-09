@@ -122,6 +122,14 @@
             {
             "name":"using-uaa-with-pks",
             "filename":"pks/labs/using-uaa-with-pks-demo"
+            },
+            {
+            "name":"deploying-applicastion-to-pks",
+            "filename":"../pks/labs/pks-app-deployment"
+            },
+            {
+            "name":"using-helm-kuberntes",
+            "filename":"../pks/labs/pks-helm"
             }
         ]
     }

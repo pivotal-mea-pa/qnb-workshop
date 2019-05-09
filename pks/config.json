@@ -100,7 +100,7 @@
             },
             {
             "name":"pks-app-deployment",
-            "filename":"pks/labs/pks-deployment"
+            "filename":"pks/labs/pks-app-deployment"
             },
             {
             "name":"pks-helm-kubernetes",
