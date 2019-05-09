@@ -16,49 +16,49 @@ To deploy an application to PKS using Helm
 
   1. Login to pks using
 
-     $ pks login -k -a {pks URL} -u ssinghal
+        $ pks login -k -a {pks URL} -u ssinghal
 
   2. CLI will prompt for the password. Enter the password.
 
   3. See all the created clusters by command:
 
-     $ pks clusters
+        $ pks clusters
 
   4. Choose the cluster name where you want to deploy the application and add that cluster name to the below command.
 
-     $ kubectl config use-context {cluster name}
+        $ kubectl config use-context {cluster name}
 
   5. Check if the helm is installed using the command:
 
-     $ which helm
+        $ which helm
 
   6. In case helm is not installed:
 
       MAC users: can install it using : brew install kubernetes-helm
-      
+
       From script:
 
-        $ curl -LO https://git.io/get_helm.sh
-        $ chmod 700 get_helm.sh
-        $ ./get_helm.sh
+            $ curl -LO https://git.io/get_helm.sh
+            $ chmod 700 get_helm.sh
+            $ ./get_helm.sh
 
   7. Create rbac-config.yml file to create the service account.
 
-     $ kuberctl create -f rbac-config.yml
+          $ kuberctl create -f rbac-config.yml
 
   8. Install tiller server on kubernetes cluster
 
   9. Initiate the tiller configuration into the cluster using command. This will install the tiller into the pods.
 
-     $ helm init --service-account tiller
+          $ helm init --service-account tiller
 
   10. To verify whether tiller configuration was successful run the below commands which will list the pods:
 
-      $ kubectl -n kube-system get pods
+          $ kubectl -n kube-system get pods
 
   11. To create helm chart configuration:
 
-      $ helm create geosearch
+          $ helm create geosearch
 
   This command will create a directory named geosearch which will have the helm chart configuration files.
   If you goto the directory there will be 2 files and 2 folders created.
@@ -72,35 +72,18 @@ To deploy an application to PKS using Helm
 
   13. To test if the changes made to the helm chart configuration were error free, you can dry run the helm installation using:
 
-      $ helm install --dry-run --name ((name of the folder where helm chart was created)) .
+          $ helm install --dry-run --name ((name of the folder where helm chart was created)) .
 
   14. On successful dry run, you can install the helm using command:
 
-      $ helm install --name geosearch .
+          $ helm install --name geosearch .
 
   15. To check the created pods:
 
-      $ kubectl get pods
+          $ kubectl get pods
 
   16. To check the created services:
 
       $ kubectl get services
 
 Now using the external IP of the service that you deployed you can access the application.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-heml
