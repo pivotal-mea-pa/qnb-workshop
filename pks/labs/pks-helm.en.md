@@ -16,21 +16,21 @@ To deploy an application to PKS using Helm
 
   1. Login to pks using
 
-        $ pks login -k -a {pks URL} -u ssinghal
+          $ pks login -k -a {pks URL} -u ssinghal
 
   2. CLI will prompt for the password. Enter the password.
 
   3. See all the created clusters by command:
 
-        $ pks clusters
+          $ pks clusters
 
   4. Choose the cluster name where you want to deploy the application and add that cluster name to the below command.
 
-        $ kubectl config use-context {cluster name}
+          $ kubectl config use-context {cluster name}
 
   5. Check if the helm is installed using the command:
 
-        $ which helm
+          $ which helm
 
   6. In case helm is not installed:
 
