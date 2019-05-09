@@ -34,7 +34,7 @@ To deploy an application to PKS using Helm
 
   6. In case helm is not installed:
 
-      MAC users: can install it using : brew install kubernetes-helm
+      MAC users can install it using : brew install kubernetes-helm
 
       From script:
 
