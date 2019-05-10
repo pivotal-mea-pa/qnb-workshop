@@ -27,7 +27,7 @@ If you want to be able to deploy these samples you must have `Go`, `Node`, `.Net
 cf api https://api.run.pivotal.io --skip-ssl-validation
 cf login
 ```
-Enter your account username and password, then select an org and space.
+* Enter your account username and password, then select an org and space.
 
 Alternatively, you can target explicitly:
 
@@ -46,15 +46,19 @@ cf target -o myorg -s myspace
   cf buildpacks
 ```
 * Peruse the services you can provision and bind your applications to
+
 ```bash
   cf marketplace
 ```
 * Time to deploy an app. How about Node.js?
+
 ```bash
   cd nodejs-sample
   cf push -c "node server.js"
 ```
+
 If you are having trouble resolving artifacts, you are likely running in a [disconnected](https://docs.cloudfoundry.org/buildpacks/node/index.html#yarn_disconnected) environment, so follow these steps and try pushing the app again.
+
 ```bash
   yarn config set yarn-offline-mirror ./npm-packages-offline-cache
   cp ~/.yarnrc .
@@ -93,6 +97,7 @@ Then execute
 Take some time to visit each of the applications you've just deployed.
 
 * Let's stop an app, then check that it has indeed been stopped
+
 ```bash
   cf stop cf-nodejs
   cf apps
@@ -104,7 +109,7 @@ Take some time to visit each of the applications you've just deployed.
 ```bash
   cf delete cf-nodejs
 ```
-Repeat `cf delete` for each app you deployed.
+* Repeat `cf delete` for each app you deployed.
 
 ## Where to go for more help
 

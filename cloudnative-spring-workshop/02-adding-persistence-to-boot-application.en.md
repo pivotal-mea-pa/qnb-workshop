@@ -49,7 +49,7 @@ Notice that we're using [JPA](http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz
 
 -> Hint: imports should start with `javax.persistence` and `lombok`
 
-* Create the package +io.pivotal.repositories+ and in that package create the interface +CityRepository+. Paste the following code and add appropriate imports:
+* Create the package `io.pivotal.repositories` and in that package create the interface `CityRepository`. Paste the following code and add appropriate imports:
 
 ```java
 package io.pivotal.repositories;
@@ -65,7 +65,7 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
 
 ## Use Flyway to manage schema
 
-* Edit `pom.xml` and add the following dependencies within the `dependencies`
+* Edit **pom.xml** and add the following dependencies within the `dependencies`
 
 ```xml
         <dependency>
@@ -80,7 +80,7 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
         </dependency>
 ```
 
-* Create a new file named +V1_0__init_database.sql+ underneath `cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration`, add the following lines and save.
+* Create a new file named `V1_0__init_database.sql` underneath **cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration**, add the following lines and save.
 
 ```sql
 CREATE TABLE city (
@@ -94,10 +94,9 @@ CREATE TABLE city (
 );
 ```
 
-+
 Spring Boot comes with out-of-the-box [integration](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup) support for [Flyway](https://flywaydb.org/documentation/plugins/springboot).  When we start the application it will execute a versioned [SQL migration](https://flywaydb.org/documentation/migrations#sql-based-migrations) that will create a new table in the database.
 
-. Add the following lines to `cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/application.yml`
+* Add the following lines to **cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/application.yml**
 
 ```yml
 spring:
@@ -157,7 +156,7 @@ Next we'll import some data.
 
 ## Importing Data
 
-* Copy the [import.sql](https://raw.githubusercontent.com/Pivotal-Field-Engineering/cloudnative-spring-workshop/master/labs/import.sql) file found in *cloudnative-spring-workshop/labs/* to `cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration`.
+* Copy the [import.sql](https://raw.githubusercontent.com/Pivotal-Field-Engineering/devops-workshop/master/labs/import.sql) file found in *cloudnative-spring-workshop/labs/* to **cloudnative-spring-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration**.
 * Rename the file to be `V1_1__seed_data.sql`. (This is a small subset of a larger dataset containing all of the postal codes in the United States and its territories).
 
 * Restart the application.
@@ -166,9 +165,9 @@ Next we'll import some data.
 mvn clean spring-boot:run
 ```
 
-* Access the application again. Notice the appropriate hypermedia is included for +next+, +previous+, and +self+. You can also select pages and page size by utilizing +?size=n&page=n+ on the URL string. Finally, you can sort the data utilizing +?sort=fieldName+ (replace fieldName with a cities attribute).
+* Access the application again. Notice the appropriate hypermedia is included for *next*, *previous*, and *self*. You can also select pages and page size by utilizing `?size=n&page=n` on the URL string. Finally, you can sort the data utilizing `?sort=fieldName` (replace fieldName with a cities attribute).
 
-```
+```bash
 http :8080/cities
 
 HTTP/1.1 200 OK
@@ -240,7 +239,7 @@ Next we'll add searching capabilities.
 
 ## Adding Search
 
-* Let's add some additional finder methods to CityRepository:
+* Let's add some additional finder methods to *CityRepository*:
 
 ```java
 @RestResource(path = "name", rel = "name")
@@ -267,9 +266,9 @@ Page<City> findByStateCode(@Param("stateCode") String stateCode, Pageable pageab
 mvn clean spring-boot:run
 ```
 
-* Access the application again. Notice that hypermedia for a new +search+ endpoint has appeared.
+* Access the application again. Notice that hypermedia for a new *search* endpoint has appeared.
 
-```
+```bash
 http :8080/cities
 
 HTTP/1.1 200 OK
@@ -311,11 +310,10 @@ Date: Tue, 27 May 2014 20:33:52 GMT
 }
 ```
 
-. Access the new +search+ endpoint:
-+
-http://localhost:8080/cities/search
-+
-```
+* Access the new **search** endpoint:
+`http://localhost:8080/cities/search`
+
+```bash
 http :8080/cities/search
 
 HTTP/1.1 200 OK
@@ -353,10 +351,10 @@ Date: Tue, 27 May 2014 20:38:32 GMT
     }
 }
 ```
-+
+
 Note that we now have new search endpoints for each of the finders that we added.
 
-* Try a few of these endpoints in https://www.getpostman.com[Postman]. Feel free to substitute your own values for the parameters.
+* Try a few of these endpoints in [Postman](https://www.getpostman.com). Feel free to substitute your own values for the parameters.
 
 http://localhost:8080/cities/search/postalCode?q=01229
 
@@ -366,16 +364,29 @@ http://localhost:8080/cities/search/nameContains?q=West&size=1
 
 -> For further details on what's possible with Spring Data JPA, consult the [reference documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#dependencies.spring-boot)
 
-
 ## Pushing to Cloud Foundry
 
 * Build the application
 
-```bash
+<details>
+<summary>_Gradle Help_</summary>
+
+```
 gradle build
 ```
+</details>
 
-* You should already have an application manifest, `manifest.yml`, created in Lab 1; this can be reused.  You'll want to add a timeout param so that our service has enough time to initialize with its data loading:
+<details>
+<summary>_Maven Help_</summary>
+
+```
+mvn package
+```
+</details>
+
+<br>
+
+* You should already have an application manifest, **manifest.yml**, created in Lab 1; this can be reused.  You'll want to add a timeout param so that our service has enough time to initialize with its data loading:
 
 ```yaml
 applications:
@@ -396,7 +407,6 @@ applications:
 
 ```bash
 cf push
-
 ...
 
 Showing health and status for app cloud-native-spring in org zoo-labs / space development as cphillipson@pivotal.io...
@@ -457,43 +467,71 @@ OK
 
 So long as the name of the service contains `mysql` the [mysql-connector](https://dev.mysql.com/downloads/connector/j/) JDBC driver will [automatically be added](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-maria_db_jdbc.md#mariadb-jdbc-framework) as a runtime dependency.
 
-However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.  Open `build.gradle` for editing and add the following to the `dependencies` section
-+
+However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.
+
+<details>
+<summary>*Gradle Help*</summary>
+
+Open **build.gradle** for editing and add the following to the *dependencies* section
+
 ```
 runtime('mysql:mysql-connector-java:8.0.14')
 ```
-And, of course we must rebuild and repackage the application to have the application recognize the new dependency at runtime
+</details>
+
+<details>
+<summary>*Maven Help*</summary>
+
+Open **pom.xml** for editing and add the following to the *dependencies* section
+
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.14</version>
+    <scope>runtime</scope>
+</dependency>
+```
+</details>
+
+* And, of course we must rebuild and repackage the application to have the application recognize the new dependency at runtime
+
 ```bash
 mvn package
 ```
 
 * Let's bind the service to the application, e.g.
-```
+
+```bash
 cf bind-service cloud-native-spring mysql-database
 ```
-Expected output:
+
+* Expected output:
 
 ```bash
 Binding service mysql-database to app cloud-native-spring in org zoo-labs / space development as cphillipson@pivotal.io...
 OK
 ```
+
 -> Tip: Use `cf restage cloud-native-spring` to ensure your env variable changes take effect
 
+<br>
 
 * Now let's push the updated application
-+
-```
+
+```bash
 cf push cloud-native-spring
 ```
 
 * You may wish to observe the logs and notice that the bound MySQL database is picked up by the application, e.g.
 
-```
+```bash
 cf logs cloud-native-spring --recent
 ```
-Sample output:
 
-```
+* Sample output:
+
+```bash
 ...
 INFO 20 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
 INFO 20 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
@@ -521,7 +559,7 @@ applications:
   services:
     - mysql-database
 ```
-+]
+
 * Attempt to push the app again after making this update
 
 ```bash
@@ -539,7 +577,7 @@ cd PivotalMySQLWeb
 ./mvnw -DskipTests=true package
 ```
 
-Then to prepare the application for deployment we'll create a manifest. Open an editor, create and save a file named `manifest.yml` with these contents:
+* Then to prepare the application for deployment we'll create a manifest. Open an editor, create and save a file named `manifest.yml` with these contents:
 
 ```yaml
 applications:
@@ -554,12 +592,12 @@ applications:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
 ```
 
-Of course, you'll want to deploy the application
+* Of course, you'll want to deploy the application
 
 ```bash
 cf push
 ```
 
-And once deployed, you can visit the appliation URL and log in with the default credentials `admin/cfmysqlweb`
+* And once deployed, you can visit the appliation URL and log in with the default credentials `admin/cfmysqlweb`
 
 Take a few moments to explore the features and see that the administrative and diagnostic functions of Pivotal MySQL*Web provide a rather simple way to interact with and keep your database instance up-to-date via an Internet browser.

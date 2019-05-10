@@ -4,7 +4,7 @@
 
 Spring Boot includes a number of additional features to help you monitor and manage your application when it’s pushed to production. These features are added by adding **spring-boot-starter-actuator** to the classpath.  Our initial project setup already included it as a dependency.
 
-* Verify the Spring Boot Actuator dependency the in following file: **cloud-native-spring/pom.xml**. you will need to add this.
+* Verify the Spring Boot Actuator dependency in the following file: **cloud-native-spring/pom.xml**. you will need to add this.
 
 ```xml
 <dependency>
@@ -30,7 +30,7 @@ management:
 mvn clean spring-boot:run
 ```
 
-Try out the following endpoints with [Postman](https://www.getpostman.com). The output is omitted here because it can be quite large:
+* Try out the following endpoints with [Postman](https://www.getpostman.com). The output is omitted here because it can be quite large:
 
 `http :8080/actuator/health`
 
@@ -53,7 +53,7 @@ Try out the following endpoints with [Postman](https://www.getpostman.com). The 
 -> Dumps the application’s shell environment as well as all Java system properties.
 
 `http :8080/actuator/mappings`
-+
+
 -> Dumps all URI request mappings and the controller methods to which they are mapped.
 
 `http :8080/actuator/threaddump`
@@ -68,7 +68,7 @@ Try out the following endpoints with [Postman](https://www.getpostman.com). The 
 
 -> Shows any Flyway database migrations that have been applied.
 
-* Stop the `cloud-native-spring` application.
+* Stop the `cloud-native-spring` application with **CTRL-c**
 
 ## Include Version Control Info
 
@@ -77,9 +77,6 @@ Spring Boot provides an endpoint (`http://localhost:8080/actuator/info`) that al
 One thing that _actuator_ does well is expose information about the specific build and version control coordinates for a given deployment.
 
 * Edit the following file: **cloud-native-spring/pom.xml**
-
-* First, you’ll need to be able to resolve the plugin so add the following to the repositories{} section of the buildscript{} block.
-
 
 ```xml
 <pluginRepositories>
@@ -142,7 +139,7 @@ http :8080/actuator/info
 
 *What Just Happened?*
 
-By including the _gradle-git-properties_ dependency, details about git commit information will be included in the */actuator/info* endpoint. Git information is captured in a _git.properties_ file that is generated with the build. Review the following file: */cloud-native-spring/build/resources/main/git.properties*
+By including the _git-commit-id-plugin_ dependency, details about git commit information will be included in the */actuator/info* endpoint. Git information is captured in a _git.properties_ file that is generated with the build. Review the following file: */cloud-native-spring/build/resources/main/git.properties*
 
 ## Include Build Info
 
@@ -157,9 +154,8 @@ info: # add this section
     version: @project.version@
 ```
 Note we're defining token delimited value-placeholders for each property.  In order to have these properties replaced, we'll need to add some further instructions to the _build.gradle_ file.
-+
--> if STS https://jira.spring.io/browse/STS-4201[reports a problem] with the application.yml due to @ character, the problem can safely be ignored.
 
+-> if STS/Eclipse [reports a problem](https://jira.spring.io/browse/STS-4201) with the application.yml due to @ character, the problem can safely be ignored.
 
 * Again we'll use httpie to verify that the Build information is now included
 
@@ -190,7 +186,7 @@ http :8080/actuator/info
 
 *What Just Happened?*
 
-We have mapped Gradle properties into the /actuator/info endpoint.
+We have mapped build properties into the /actuator/info endpoint.
 
 Read more about exposing data in the /actuator/info endpoint [here](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready)
 
@@ -205,7 +201,7 @@ Normally, the /actuator/health endpoint will only expose an UP or DOWN value.
   "status": "UP"
 }
 ```
-We want to expose more detail about the health and well-being of the application, so we're going to need a bit more configuration to _cloud-native-spring/src/main/resources/application.yml_, underneath the _management_ prefix, add
+We want to expose more detail about the health and well-being of the application, so we're going to need a bit more configuration to **cloud-native-spring/src/main/resources/application.yml**, underneath the _management_ prefix, add
 
 ```yaml
   endpoint:
@@ -251,7 +247,7 @@ Out of the box is a _DiskSpaceHealthIndicator_ that monitors health in terms of 
 
 * Stop the cloud-native-spring application.
 
-* Create the class _io.pivotal.FlappingHealthIndicator_ (/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java) and into it paste the following code:
+* Create the class _io.pivotal.FlappingHealthIndicator_ (**/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java**) and into it paste the following code:
 
 ```java
 package io.pivotal;
@@ -393,7 +389,7 @@ Spring Boot provides an endpoint http://localhost:8080/actuator/metrics that exp
 
 ## Deploy _cloud-native-spring_ to Pivotal Cloud Foundry
 
-* When running a Spring Boot application on Pivotal Cloud Foundry with the actuator endpoints enabled, you can visualize actuator management information on the Applications Manager app dashboard.  To enable this there are a few properties we need to add.  Add the following to */cloud-native-spring/src/main/resources/application.yml*:
+* When running a Spring Boot application on Pivotal Cloud Foundry with the actuator endpoints enabled, you can visualize actuator management information on the Applications Manager app dashboard.  To enable this there are a few properties we need to add.  Add the following to **/cloud-native-spring/src/main/resources/application.yml**:
 
 ```yaml
 ---

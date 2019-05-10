@@ -7,12 +7,11 @@ a standard greeting.
 
 While we could visit
 https://start.spring.io to create a new Spring Boot project, we will
-start with a skeleton . Open a Terminal (e.g., `cmd` or `bash`
-shell). Change the working directory to be
-`devops-workshop/labs/my_work/cloud-native-spring`
+start with a skeleton. Open a Terminal (e.g., *cmd* or *bash* shell). Change the working directory to be
+`cloudnative-spring-workshop/labs/my_work/cloud-native-spring`
 
 ```bash
-cd devops-workshop/labs/my_work/cloud-native-spring
+cd cloudnative-spring-workshop/labs/my_work/cloud-native-spring
 ```
 
 Open this project in your editor/IDE of choice.
@@ -48,13 +47,14 @@ _Open_ button, then click the _Finish_ button.</li>
 
 ## Add an Endpoint
 Within your editor/IDE complete the following steps:
+
 * Create a new
-package `io.pivotal.controller_ underneath _src/main/java`.
+package `io.pivotal.controller` underneath **src/main/java**.
 * Create
 a new class named `GreetingController` in the aforementioned package.
 * Add an `@RestController` annotation to the class
 `io.pivotal.controller.GreetingController` (i.e.,
-_/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java_).
+**/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java**).
 
 ```java
 package io.pivotal.controller;
@@ -130,7 +130,7 @@ CloudNativeSpringUiApplication in 7.014 seconds (JVM running for 7.814)
 Browse to http://localhost:8080/hello
 
 Stop the _cloud-native-spring_
-application. In the terminal window type `Ctrl + C`
+application. In the terminal window type **Ctrl + C**
 
 ## Deploy _cloud-native-spring_ to Pivotal Cloud Foundry
 
@@ -139,7 +139,7 @@ application locally. Now we'll deploy it to Cloud Foundry.
 
 Create an
 application manifest in the root folder
-_devops-workshop/labs/my\_work/cloud-native-spring_
+*cloudnative-spring-workshop/labs/my_work/cloud-native-spring*
 
 ```bash
 touch manifest.yml
@@ -152,7 +152,7 @@ Add application metadata, using a text editor (of choice)
   instances: 1
   path: ./target/cloud-native-spring-0.0.1-SNAPSHOT.jar
   buildpacks:
-  - java\_buildpack\_offline
+  - java_buildpack_offline
   stack: cflinuxfs3
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
@@ -163,13 +163,14 @@ JDK 8. If you built the app with JDK 11 and want to deploy it you will
 need to make an additional entry in your manifest, just below `JAVA_OPTS`, add:
 ```yaml
 ---
-  JBP\_CONFIG\_OPEN\_JDK\_JRE: '{ jre: { version: 11.+ } }'
+  JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
 ```
 
 Push application into Cloud Foundry
 ```bash
 cf push
 ```
+
 -&gt; To specify an
 alternate manifest and buildpack, you could update the above to be:
 ```bash
@@ -189,7 +190,7 @@ health status report or issue the following command to see your running apps.
 cf apps
 ```
 
-Browse to your app's `/hello` endpoint
+Browse to your app's **/hello** endpoint
 
 Check the
 log output:
