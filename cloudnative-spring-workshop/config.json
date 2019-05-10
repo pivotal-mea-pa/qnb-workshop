@@ -37,6 +37,10 @@
         {
           "name": "Adding Spring Cloud Config to a Boot App",
           "filename": "cloudnative-spring-workshop/04-adding_spring_cloud_config_to_boot_application"
+        },
+        {
+          "name": "Adding Service Registration and Discovery",
+          "filename": "cloudnative-spring-workshop/05-adding_service_registration_and_discovery_with_spring_cloud"
         }
       ]
     }
