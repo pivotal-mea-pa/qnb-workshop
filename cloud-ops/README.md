@@ -77,10 +77,10 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Slides:** deployment-examples.en.md
 
 #### Supporting Services
-- **Concepts:** Pivotal Network, Marketplace, & Ecosystem
+- **Concepts:** Pivotal Marketplace & Ecosystem
 - **Whiteboard:** Hey customer what services do you currently integrate with and support?
-- **Slides:** (supporting-services.en.md)
-- **Demo:** Pivotal Network & Marketplace
+- **Slides:** supporting-services.en.md
+- **Demo:** Pivotal Network
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
