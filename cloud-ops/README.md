@@ -45,7 +45,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 ## Level 1 - Cloud Operations Discovery
 ### Table of Contents
 
-#### Prerequisites
+#### PA Prerequisites
 - **Pivotal PA Prep Material:** (((cloud-ops-l1-prereqs.en.md)))
 
 #### Introduction
@@ -86,7 +86,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Concepts:** R/R/R & Compliance Scanner
 - **Whiteboard:** Hey customer how are you patching and protecting your assets?
 - **Slides:** (security-posture.en.md)
-- **Demo:** Rotate (Service Credentials) & Repave (BOSH Recreate)
+- **Demo:** Rotate (Runtime Encryption Keys) & Repave (BOSH Recreate)
 
 #### Platform Operations Team & Platform as a Product
 - **Concepts:** Platform as a product and operational efficiencies
@@ -103,9 +103,6 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 #### Prerequisites
 (((- **Pivotal PA Prep Material:** cloud-ops-l2-prereqs.en.md)))
-
-#### L1 Overview
-- Complete or Pruned
 
 Pre-Requisite Knowledge (Control-Plane / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
 

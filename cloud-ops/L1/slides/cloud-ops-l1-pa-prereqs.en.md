@@ -14,7 +14,7 @@ During this workshop you will need access to a whiteboard or paperboard to docum
 
 Pivotal Web Services may be used for the **Demo/Lab: Push an App** in the **What is PCF** section. If you have your own Foundation setup please by all means use that.
 
-A running Foundation with PAS installed is ideal. The **Demo/Lab: Rotate (Service Credentials) & Repave (BOSH Recreate)** in the **Security Posture** section will be easier to complete with this available.
+A running Foundation with PAS installed is ideal. The **Demo/Lab: Rotate (Runtime Encryption Keys) & Repave (BOSH Recreate)** in the **Security Posture** section will be easier to complete with this available.
 
 <br>
 **Reference Material:**
