@@ -46,7 +46,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 ### Table of Contents
 
 #### PA Prerequisites
-- **Pivotal PA Prep Material:** (((cloud-ops-l1-prereqs.en.md)))
+- **Pivotal PA Prep Material:** cloud-ops-l1-prereqs.en.md
 
 #### Introduction
 - **Concepts:** Setting the stage for who we are and why PCF.
@@ -102,11 +102,65 @@ Platform Architects should review the **Prerequisites** documents for each works
 ### Table of Contents
 
 #### Prerequisites
-(((- **Pivotal PA Prep Material:** cloud-ops-l2-prereqs.en.md)))
+- **Pivotal PA Prep Material:** ((- **Pivotal PA Prep Material:** cloud-ops-l2-prereqs.en.md))
 
-Pre-Requisite Knowledge (Control-Plane / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
+#### L1 Overview
+- Complete or Pruned
 
-Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
+#### A Day in the Life of the Platform Team
+- **Concepts:**
+- **Slides:**
+
+#### Making Your Platform a Product
+- **Concepts:** What makes a makes up a platform product and what is the journey?
+- **Slides:**
+
+#### Deploying Apps on PCF
+- **Concepts:** The pieces, parts, and steps of a `cf push`
+- **Slides:**
+- **Demo:** Push an App (UI & CLI)
+
+#### The Platform Components
+- **Concepts:** Layer cake build up to 'value line'
+- **Slides:**
+
+#### Platform Installation and Setup
+- **Concepts:** Bootstrapping, Ops Manager, and Tiles
+- **Slides:**
+
+#### Automating the Operations
+- **Concepts:**
+- **Slides:**
+
+#### BOSH Availability Concepts
+- **Concepts:**
+- **Slides:**
+
+#### Logging & Observability
+- **Concepts:**
+- **Slides:**
+
+#### Security Concepts
+- **Concepts:**
+- **Slides:**
+
+#### Supporting Services
+- **Concepts:**
+- **Slides:**
+
+#### Summary & Next Steps
+- **Concepts:**
+- **Slides:**
+
+TO BE ADDED:
+Prerequisite Knowledge
+- Control-Plane
+- Foundations
+- Orgs & Spaces
+- IaaS Components (certs, networks, vpc)
+- OpsMan & BOSH Director
+
+Operations & Automation Concourse)
 
 Platform Internals
 
@@ -114,7 +168,7 @@ Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
 
 Monitoring Platform Health (BOSH & Healthwatch)
 
-Platform as a product & SRE concepts
+Platform as a product
 
 #### Platform as a Product
 - Concepts:
