@@ -59,13 +59,13 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Slides:** security-posture.en.md
 - **Demo:** Repave (BOSH Recreate)
 
-#### Platform Operations Team & Platform as a Product
-- **Concepts:** Platform as a product and operational efficiencies
-- **Slides:** (platform-product.en.md)
+#### Platform as a Product
+- **Concepts:** Platform as a product and the platform journey
+- **Slides:** platform-product.en.md
 
-#### Recap
-- **Concepts:** Customer Outcomes & Benefits
-- **Slides:** (customer-outcomes.en.md)
+#### Customer Outcomes
+- **Concepts:** Customer Outcomes & Next Steps
+- **Slides:** customer-outcomes.en.md
 
 ---
 
