@@ -57,7 +57,7 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Concepts:** R/R/R & Compliance Scanner
 - **Whiteboard:** Hey customer how are you patching and protecting your assets?
 - **Slides:** (security-posture.en.md)
-- **Demo:** Rotate (Runtime Encryption Keys) & Repave (BOSH Recreate)
+- **Demo:** Repave (BOSH Recreate)
 
 #### Platform Operations Team & Platform as a Product
 - **Concepts:** Platform as a product and operational efficiencies
