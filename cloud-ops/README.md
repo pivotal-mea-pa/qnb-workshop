@@ -12,35 +12,6 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 Platform Architects should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
 
 ---
-## Curators Notes
-
-**TO CONSIDER** Platform Team & Platform as a Product who & where?
-
-**TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
-
-**TO CONSIDER:** Jumpbox vs OpsMan
-
-**TO CONSIDER:** Ensure timing and success factor of slide/demo ratio
-
-**TO CONSIDER:** I'M GOING TO MAKE YOU FAMOUS!
-
-**TO DO:** Integrate OpsMan deep dive (credit TF)
-
-**TO DO:** Integrate into Level 1 some Platform as a Product and benefits into Recap
-
-**TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
-
-**TO DO:** Interview 2-3 customers for feedback
-
-**TO DO:** Condense S1P video notes for customer insights
-
-**TO DO:** Build Dev & start creating demos
-
-**TO DO:** Create workshop pre-reqs punchlist
-
-**TO DO:** Check Themes and Branding across all decks
-
----
 
 ## Level 1 - Cloud Operations Discovery
 ### Table of Contents
@@ -127,32 +98,34 @@ Platform Architects should review the **Prerequisites** documents for each works
 #### Platform Installation and Setup
 - **Concepts:** Bootstrapping, Ops Manager, and Tiles
 - **Slides:**
+- **Demo:** Ops Manager functionality
 
 #### Automating the Operations
-- **Concepts:**
+- **Concepts:** Platform Automation & BOSH
 - **Slides:**
+- **Demo:** BOSH Basics
 
 #### BOSH Availability Concepts
-- **Concepts:**
+- **Concepts:** Deployment HA, Canaries, and BOSH Internals HA
 - **Slides:**
 
 #### Logging & Observability
-- **Concepts:**
+- **Concepts:** APM discussion, Logging, and Nozzles
 - **Slides:**
 
 #### Security Concepts
-- **Concepts:**
+- **Concepts:** Stemcell hardening, CVE, Credhub, and IsoSeg
 - **Slides:**
 
 #### Supporting Services
-- **Concepts:**
+- **Concepts:** What is a Service and Service Brokering
 - **Slides:**
 
 #### Summary & Next Steps
-- **Concepts:**
+- **Concepts:** Wrap up and next steps discussion
 - **Slides:**
 
-TO BE ADDED:
+##### TO BE ADDED:
 Prerequisite Knowledge
 - Control-Plane
 - Foundations
@@ -160,18 +133,12 @@ Prerequisite Knowledge
 - IaaS Components (certs, networks, vpc)
 - OpsMan & BOSH Director
 
-Operations & Automation Concourse)
+Operations & Automation
+- Concourse
 
 Platform Internals
 
-Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
-
-Monitoring Platform Health (BOSH & Healthwatch)
-
-Platform as a product
-
-#### Platform as a Product
-- Concepts:
+Logging & Observability (BOSH Diagnostics & Healthwatch)
 
 ---
 
@@ -228,3 +195,32 @@ _**DAY2**_
 - Concepts:
 
 #### Wrap Up & Retro
+
+---
+## Curators Notes
+
+**TO CONSIDER** Platform Team & Platform as a Product who & where?
+
+**TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
+
+**TO CONSIDER:** Jumpbox vs OpsMan
+
+**TO CONSIDER:** Ensure timing and success factor of slide/demo ratio
+
+**TO CONSIDER:** I'M GOING TO MAKE YOU FAMOUS!
+
+**TO DO:** Integrate OpsMan deep dive (credit TF)
+
+**TO DO:** Integrate into Level 1 some Platform as a Product and benefits into Recap
+
+**TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
+
+**TO DO:** Interview 2-3 customers for feedback
+
+**TO DO:** Condense S1P video notes for customer insights
+
+**TO DO:** Build Dev & start creating demos
+
+**TO DO:** Create workshop pre-reqs punchlist
+
+**TO DO:** Check Themes and Branding across all decks
