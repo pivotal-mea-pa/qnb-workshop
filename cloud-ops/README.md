@@ -12,39 +12,12 @@ Content can be shared between levels, however progressing from Level 1 to Level 
 Platform Architects should review the **Prerequisites** documents for each workshop level for tips and notes on content and workshop flow.
 
 ---
-## Curators Notes
-
-**TO CONSIDER** Platform Team & Platform as a Product who & where?
-
-**TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
-
-**TO CONSIDER:** Jumpbox vs OpsMan
-
-**TO CONSIDER:** Ensure timing and success factor of slide/demo ratio
-
-**TO CONSIDER:** I'M GOING TO MAKE YOU FAMOUS!
-
-**TO DO:** Integrate OpsMan deep dive (credit TF)
-
-**TO DO:** Integrate into Level 1 some Platform as a Product and benefits into Recap
-
-**TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
-
-**TO DO:** Interview 2-3 customers for feedback
-
-**TO DO:** Condense S1P video notes for customer insights
-
-**TO DO:** Build Dev & start creating demos
-
-**TO DO:** Create workshop pre-reqs punchlist
-
----
 
 ## Level 1 - Cloud Operations Discovery
 ### Table of Contents
 
-#### Prerequisites
-- **Pivotal PA Prep Material:** (((cloud-ops-l1-prereqs.en.md)))
+#### PA Prerequisites
+- **Pivotal PA Prep Material:** cloud-ops-l1-prereqs.en.md
 
 #### Introduction
 - **Concepts:** Setting the stage for who we are and why PCF.
@@ -75,16 +48,20 @@ Platform Architects should review the **Prerequisites** documents for each works
 - **Slides:** deployment-examples.en.md
 
 #### Supporting Services
-- **Concepts:** Pivotal Network, Marketplace, & Ecosystem
+- **Concepts:** Pivotal Marketplace & Ecosystem
 - **Whiteboard:** Hey customer what services do you currently integrate with and support?
-- **Slides:** (supporting-services.en.md)
-- **Demo:** Pivotal Network & Marketplace
+- **Slides:** supporting-services.en.md
+- **Demo:** Pivotal Network
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
 - **Whiteboard:** Hey customer how are you patching and protecting your assets?
-- **Slides:** (security-posture.en.md)
-- **Demo:** Rotate (Service Credentials) & Repave (BOSH Recreate)
+- **Slides:** security-posture.en.md
+- **Demo:** Repave (BOSH Recreate)
+
+#### Platform Operations Team & Platform as a Product
+- **Concepts:** Platform as a product and operational efficiencies
+- **Slides:** (platform-product.en.md)
 
 #### Recap
 - **Concepts:** Customer Outcomes & Benefits
@@ -96,25 +73,72 @@ Platform Architects should review the **Prerequisites** documents for each works
 ### Table of Contents
 
 #### Prerequisites
-(((- **Pivotal PA Prep Material:** cloud-ops-l2-prereqs.en.md)))
+- **Pivotal PA Prep Material:** ((- **Pivotal PA Prep Material:** cloud-ops-l2-prereqs.en.md))
 
 #### L1 Overview
 - Complete or Pruned
 
-Pre-Requisite Knowledge (Control-Plane / Foundations / Orgs / Spaces / IaaS components (certs, network, vpc) / OpsMan & BOSH Director)
+#### A Day in the Life of the Platform Team
+- **Concepts:**
+- **Slides:**
 
-Operations & Automation (IaC Concepts/ Immutable Infrastructure / BOSH (BOSH client) / Deployments / Upgrades / Platform Automation / Concourse)
+#### Making Your Platform a Product
+- **Concepts:** What makes a makes up a platform product and what is the journey?
+- **Slides:**
+
+#### Deploying Apps on PCF
+- **Concepts:** The pieces, parts, and steps of a `cf push`
+- **Slides:**
+- **Demo:** Push an App (UI & CLI)
+
+#### The Platform Components
+- **Concepts:** Layer cake build up to 'value line'
+- **Slides:**
+
+#### Platform Installation and Setup
+- **Concepts:** Bootstrapping, Ops Manager, and Tiles
+- **Slides:**
+- **Demo:** Ops Manager functionality
+
+#### Automating the Operations
+- **Concepts:** Platform Automation & BOSH
+- **Slides:**
+- **Demo:** BOSH Basics
+
+#### BOSH Availability Concepts
+- **Concepts:** Deployment HA, Canaries, and BOSH Internals HA
+- **Slides:**
+
+#### Logging & Observability
+- **Concepts:** APM discussion, Logging, and Nozzles
+- **Slides:**
+
+#### Security Concepts
+- **Concepts:** Stemcell hardening, CVE, Credhub, and IsoSeg
+- **Slides:**
+
+#### Supporting Services
+- **Concepts:** What is a Service and Service Brokering
+- **Slides:**
+
+#### Summary & Next Steps
+- **Concepts:** Wrap up and next steps discussion
+- **Slides:**
+
+##### TO BE ADDED:
+Prerequisite Knowledge
+- Control-Plane
+- Foundations
+- Orgs & Spaces
+- IaaS Components (certs, networks, vpc)
+- OpsMan & BOSH Director
+
+Operations & Automation
+- Concourse
 
 Platform Internals
 
-Security (RRR / CredHub (Client Setup)/ Compliance Scanner)
-
-Monitoring Platform Health (BOSH & Healthwatch)
-
-Platform as a product & SRE concepts
-
-#### Platform as a Product
-- Concepts:
+Logging & Observability (BOSH Diagnostics & Healthwatch)
 
 ---
 
@@ -132,15 +156,15 @@ _**DAY1**_
 - Concepts:
 - Demo/Lab:
 
+#### OpsMan & BOSH Director (some BOSH workshop material)
+- Concepts:
+- Demo/Lab:
+
 #### Concourse
 - Concepts:
 - Demo/Lab:
 
 #### Platform Automation
-- Concepts:
-- Demo/Lab:
-
-#### OpsMan & BOSH Director (some BOSH workshop material)
 - Concepts:
 - Demo/Lab:
 
@@ -171,3 +195,32 @@ _**DAY2**_
 - Concepts:
 
 #### Wrap Up & Retro
+
+---
+## Curators Notes
+
+**TO CONSIDER** Platform Team & Platform as a Product who & where?
+
+**TO CONSIDER:** POC Credits and Timing of a deal (credit RBM)
+
+**TO CONSIDER:** Jumpbox vs OpsMan
+
+**TO CONSIDER:** Ensure timing and success factor of slide/demo ratio
+
+**TO CONSIDER:** I'M GOING TO MAKE YOU FAMOUS!
+
+**TO DO:** Integrate OpsMan deep dive (credit TF)
+
+**TO DO:** Integrate into Level 1 some Platform as a Product and benefits into Recap
+
+**TO DO:** Integrate outcomes and benefits discussion that covers platform as a product earlier in discovery and find what the customer thinks is success for a platform team.
+
+**TO DO:** Interview 2-3 customers for feedback
+
+**TO DO:** Condense S1P video notes for customer insights
+
+**TO DO:** Build Dev & start creating demos
+
+**TO DO:** Create workshop pre-reqs punchlist
+
+**TO DO:** Check Themes and Branding across all decks
