@@ -6,15 +6,15 @@
         "type": "concepts",
         "content": [
             {
-            "name":"kubernetes-pod-and-namespace",
+            "name":"What are pods and namespace in Kubernetes",
             "filename":"kubernetes/slides/k8s-pod-and-namespace-slide"
             },
             {
-            "name":"kubernetes-declarative-and-services",
+            "name":"Kuberntes declarative and services",
             "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
             },
             {
-            "name":"kubernetes-persistent-volume",
+            "name":"Kubernetes persistent volume",
             "filename":"kubernetes/slides/k8s-persistent-volume-slide"
             }
         ]
