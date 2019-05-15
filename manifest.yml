@@ -1,9 +1,9 @@
 ---
 applications:
-- name: my-pace-workshop
+- name: ckadourah-dotnet-fundamentals
   memory: 512M
   instances: 1
   buildpacks: 
   - staticfile_buildpack
-  random-route: true
-  path: public/
+  random-route: false
+  path: dotnet-fundamentals/
