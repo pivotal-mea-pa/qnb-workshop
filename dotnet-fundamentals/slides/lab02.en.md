@@ -1,12 +1,14 @@
-# Workshop highlighting how to use [steeltoe](https://steeltoe.io) in your .net application
+# Steeltoe in .NET
 
-### 1. Create new visual studio Project (MVC and API)
+Workshop highlighting how to use [steeltoe](https://steeltoe.io) in your .net application
+
+### 1. Create new visual studio Project (MVC and API), this can be the same project used in Lab01
 
 ### 2. Add the following Nuget Packages:
 Steeltoe.Extensions.Logging.DynamicLogger
 Steeltoe.Management.EndpointWeb
 
-### 3. Add the following under app_start:
+### 3. Add the following files under app_start:
 LoggingConfig.cs
 ApplicationConfig.cs file
 
@@ -38,7 +40,7 @@ ApplicationConfig.cs file
         }
 
 ### 5. Update References in global.asax
-
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,10 +49,11 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+```
 
 ### 6. in Home cotroller add the following:
 
+```csharp
  private ILogger<HomeController> _logger;
 
 
@@ -73,6 +76,17 @@ using System.Web.Routing;
             return View();
             
         }
-### 7. cf push
+```csharp
 
-### 8. Login to app manager
+### 7. cf push as described in Lab01
+
+### 8. Once you Login to app manager, you will notice the following
+- a. Health Check-end point
+![Publish Menu Option](lab02-healthcheck.PNG)
+
+- b. Logging Levels: Ability to configure logging levels 
+![Publish Menu Option](lab02-LoggingLevels.PNG)
+
+- b. Tracing and Thread Information
+![Publish Menu Option](lab02-TraceAndThread.PNG)
+
