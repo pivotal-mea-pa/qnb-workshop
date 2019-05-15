@@ -10,7 +10,7 @@
             "filename":"kubernetes/slides/k8s-pod-and-namespace-slide"
             },
             {
-            "name":"Kuberntes declarative and services",
+            "name":"Kuberntes declarative configuration",
             "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
             },
             {
@@ -23,19 +23,19 @@
         "type": "demos",
         "content": [
             {
-            "name":"kubernetes-deploy-1st-container",
+            "name":"Deploying container on Kubernetes",
             "filename":"kubernetes/labs/k8s-deploy-1st-container"
             },
             {
-            "name":"kubernetes-declarative-config",
+            "name":"Kubernetes declarative configuration",
             "filename":"kubernetes/labs/k8s-pod-declarative"
             },
             {
-            "name":"kubernetes-deployment",
+            "name":"Deploying application",
             "filename":"kubernetes/labs/k8s-deployment"
             },
             {
-            "name":"kubernetes-persistent-volume",
+            "name":"Persistent Volumes in Kubernetes",
             "filename":"pks/labs/k8s-statefulset-pv"
             }
         ]
