@@ -1,4 +1,6 @@
-# Push a .NET Applicatio to Pivotal Application Services Platform
+# Lab 01 - Hello World 
+
+Push a .NET Application to Pivotal Application Services Platform
 
 ## Goal
 
