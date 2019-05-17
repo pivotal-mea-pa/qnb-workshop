@@ -218,6 +218,41 @@ Open pom.xml and update below maven properties. These properties are used in upl
 <distribution.management.release.url>https://api.bintray.com/maven/<your_bintray_id>/maven-repo/pace-cnd-java-fortune-service</distribution.management.release.url>
 ```
 
+Release goes through test and stage before releasing to production. Each environment maps to a space in PWS. Create 3 spaces in PWS under your org.
+
+Space names could be <workshop_id>-fortune-service for test, <workshop_id>-stage for stage, <workshop_id> for prod.
+
+```bash
+
+$ cf login -a api.run.pivotal.io
+
+$ cf create-space td-fortune-service
+$ cf create-space td-greeting-ui
+$ cf create-space td-stage
+$ cf create-space td-prod
+
+```
+
+
+Fortune Service depends on various marketplace services. Refer to cloud-pipelines.yml in this project and update config server github location.
+
+Pipeline does not create services automatically in production environment. It is recommended to create services manually, refer below.
+
+```bash
+
+$ cf login -a api.run.pivotal.io
+
+# choose org and space for production, run the below commands.
+
+$ cf create-service p-service-registry trial service-registry
+$ cf create-service p-circuit-breaker-dashboard trial circuit-breaker-dashboard
+$ cf create-service cleardb spark fortune-db
+$ cf create-service cloudamqp lemur cloud-bus
+$ cf create-service  -c '{"git": { "uri": "https://github.com/Pivotal-Field-Engineering/pace-cnd-app-config" }, "count": 1 }' p-config-server trial config-server 
+
+
+```
+
 ### pace-cnd-java-greeting-ui
 
 Discuss about greeting ui, review code and show how greeting-ui calls fortune-service. Explain about version branch.
@@ -236,6 +271,26 @@ Open pom.xml and update below maven properties. These properties are used in upl
 <distribution.management.release.url>https://api.bintray.com/maven/<your_bintray_id>/maven-repo/pace-cnd-java-greeting-ui</distribution.management.release.url>
 ```
 
+Greeting UI depends on various marketplace services. Refer to cloud-pipelines.yml in this project and update config server github location.
+
+Pipeline does not create services automatically in production environment. It is recommended to create services manually. 
+
+Greeting UI is deployed in same production space as Fortune Service, so no need to run below commands. 
+
+```bash
+
+$ cf login -a api.run.pivotal.io
+
+# choose org and space for production, run the below commands.
+
+$ cf create-service p-service-registry trial service-registry
+$ cf create-service p-circuit-breaker-dashboard trial circuit-breaker-dashboard
+$ cf create-service cloudamqp lemur cloud-bus
+$ cf create-service  -c '{"git": { "uri": "https://github.com/Pivotal-Field-Engineering/pace-cnd-app-config" }, "count": 1 }' p-config-server trial config-server 
+
+
+```
+
 ### Application Specific Pipeline Credentials
 
 Each project needs its own credentials file to use in pipeline. Let us start with base credential file and update as needed. Explain various sections of the credentials file.
@@ -247,7 +302,8 @@ $ cp $CP_HOME/concourse/src/pipeline/credentials-sample-cf.yml credentials-fortu
 $ cp $CP_HOME/concourse/src/pipeline/credentials-sample-cf.yml credentials-greeting-ui.yml
 ```
 
-Set your PAS environment, PAS credentials, bintray credentials, bintray artifact upload endpoints, git SSH private key.
+Set your PAS environment, PAS credentials, PAS spaces, bintray credentials, bintray artifact upload endpoints, git SSH private key. Space names could be <workshop_id>-fortune-service for test, <workshop_id>-stage for stage, <workshop_id> for prod.
+
 
 ## Step 4: Run Pipeline
 
@@ -292,5 +348,5 @@ $fly -t test unpause-pipeline -p greeting-ui
 
 ## Step 5: Cloud Pipelines Documentation
 
-For additional information and recipies like DB migration refer to [link](https://cloudpipelines.github.io/concourse/)
+For additional information and recipies like DB migration refer [here](https://cloudpipelines.github.io/concourse/)
 
