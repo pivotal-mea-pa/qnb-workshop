@@ -292,5 +292,5 @@ $fly -t test unpause-pipeline -p greeting-ui
 
 ## Step 5: Cloud Pipelines Documentation
 
-For additional information and recipies like DB migration refer to [link] (https://cloudpipelines.github.io/concourse/)
+For additional information and recipies like DB migration refer to [link](https://cloudpipelines.github.io/concourse/)
 
