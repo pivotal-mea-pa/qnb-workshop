@@ -1,6 +1,4 @@
-# Cloud-Pipelines-Concourse
-
-Instructions to demo CI/CD pipelines with Concourse
+# Cloud-Pipelines with Concourse
 
 ## Step 1: Initial set up
 
