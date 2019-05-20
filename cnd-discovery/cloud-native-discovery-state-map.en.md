@@ -11,15 +11,14 @@ For this session, we recommend staying in level 1 and level 2.
 We will draw System and Container diagrams on the whiteboard to get
 a high level view of your overarching systems and key containers.
 
-### Abstractions
+### Abstractions - 4 Levels
 ![](c4-abstractions.png)
 
-### System
+### System - Level 1
 ![](c4-system.png)
 
-### Container
+### Container - Level 2
 ![](c4-container.png)
-
 
 **Below are a list of subject areas that are of interest**
 
