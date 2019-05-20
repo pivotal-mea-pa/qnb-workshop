@@ -33,6 +33,10 @@
         {
           "name": "Enhancing a Spring Boot App with Metrics",
           "filename": "cloudnative-spring-workshop/03-enhancing_boot_application_with_metrics"
+        },
+        {
+          "name": "Adding Spring Cloud Config to a Boot App",
+          "filename": "cloudnative-spring-workshop/04-adding_spring_cloud_config_to_boot_application"
         }
       ]
     }

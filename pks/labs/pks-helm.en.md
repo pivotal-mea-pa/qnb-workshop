@@ -56,7 +56,7 @@ To deploy an application to PKS using Helm
 
           $ kubectl -n kube-system get pods
 
-  11. To create helm chart configuration:
+  11. To create helm chart configuration: (in the below command geosearch is my application)
 
           $ helm create geosearch
 
@@ -74,7 +74,7 @@ To deploy an application to PKS using Helm
 
           $ helm install --dry-run --name ((name of the folder where helm chart was created)) .
 
-  14. On successful dry run, you can install the helm using command:
+  14. On successful dry run, you can install the helm using command(geosearch is my folder for helm chart):
 
           $ helm install --name geosearch .
 

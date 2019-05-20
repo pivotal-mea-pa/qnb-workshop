@@ -7,56 +7,60 @@
         "type": "concepts",
         "content": [
             {
-            "name":"kubernetes-persistent-volume",
-            "filename":"kubernetes/slides/k8s-persistent-volume-slide"
-            },
-            {
-            "name":"k8s-declarative-config-and-svc",
-            "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
-            },
-            {
-            "name":"k8s-pod-and-namespace",
+            "name":"What are pods and namespace in Kubernetes",
             "filename":"kubernetes/slides/k8s-pod-and-namespace-slide"
             },
             {
-            "name":"backup-recovery",
-            "filename":"pks/slides/backup-recovery-slide"
+            "name":"Kuberntes declarative configuration",
+            "filename":"kubernetes/slides/k8s-declarative-config-and-svc-slide"
             },
             {
-            "name":"monitoring-logging",
-            "filename":"pks/slides/monitoring-logging-slide"
+            "name":"Kubernetes persistent volume",
+            "filename":"kubernetes/slides/k8s-persistent-volume-slide"
             },
             {
-            "name":"pks-intro",
-            "filename":"pks/slides/pks-intro-slide"
-            },
-            {
-            "name":"pks-pipelines",
-            "filename":"pks/slides/pks-pipelines-slide"
-            },
-            {
-            "name":"pks-inner-workings",
-            "filename":"pks/slides/pks-the-inner-workings-slide"
-            },
-            {
-            "name":"uaa-overview",
-            "filename":"pks/slides/pks-uaa-overview-slide"
-            },
-            {
-            "name":"upgrades",
-            "filename":"pks/slides/upgrades-slide"
-            },
-            {
-            "name":"harbor",
-            "filename":"pks/slides/pks-vmware-harbor-slide"
-            },
-            {
-            "name":"story-of-pks",
+            "name":"Story of PKS",
             "filename":"pks/slides/story-of-pks-slide"
             },
             {
-            "name":"uaa-integrations",
+            "name":"Introduction to PKS",
+            "filename":"pks/slides/pks-intro-slide"
+            },
+            {
+            "name":"Inner workings of PKS",
+            "filename":"pks/slides/pks-the-inner-workings-slide"
+            },
+            {
+            "name":"Vmware Harbor",
+            "filename":"pks/slides/pks-vmware-harbor-slide"
+            },
+            {
+            "name":"PKS pipelines",
+            "filename":"pks/slides/pks-pipelines-slide"
+            },
+            {
+            "name":"Monitoring and Logging with PKS",
+            "filename":"pks/slides/monitoring-logging-slide"
+            },
+            {
+            "name":"UAA Overview",
+            "filename":"pks/slides/pks-uaa-overview-slide"
+            },
+            {
+            "name":"UAA integrations",
             "filename":"pks/slides/uaa-integrations-slide"
+            },
+            {
+            "name":"Backup and Recovery",
+            "filename":"pks/slides/backup-recovery-slide"
+            },
+            {
+            "name":"PKS Upgrades",
+            "filename":"pks/slides/upgrades-slide"
+            },
+            {
+            "name":"Helm on Kubernetes and PKS",
+            "filename":"pks/slides/kubernetes-helm-slide"
             }
         ]
     },
@@ -64,64 +68,72 @@
         "type": "demos",
         "content": [
             {
-            "name":"kubernetes-deploy-1st-container",
+            "name":"Deploying container on Kubernetes",
             "filename":"kubernetes/labs/k8s-deploy-1st-container"
             },
             {
-            "name":"k8s-pod-declarative",
+            "name":"Kubernetes declarative configuration",
             "filename":"kubernetes/labs/k8s-pod-declarative"
             },
             {
-            "name":"k8s-deployment",
+            "name":"Deploying Kubernetes",
             "filename":"kubernetes/labs/k8s-deployment"
             },
             {
-            "name":"k8s-statefulset-pv",
+            "name":"Persistent Volumes in Kubernetes",
             "filename":"kubernetes/labs/k8s-statefulset-pv"
             },
             {
-            "name":"configure-director",
+            "name":"Configuring a Director",
             "filename":"pks/labs/configure-director-demo"
             },
             {
-            "name":"create-cluster",
+            "name":"Creating a cluster",
             "filename":"pks/labs/create-cluster-demo"
             },
             {
-            "name":"harbor",
+            "name":"Deploy Vmware Harbor",
             "filename":"pks/labs/harbor-demo"
             },
             {
-            "name":"install-pks-tile",
+            "name":"Installing PKS tile",
             "filename":"pks/labs/install-pks-tile-demo"
             },
             {
-            "name":"kubectl-cli",
+            "name":"Using kubectl CLI",
             "filename":"pks/labs/kubectl-cli-demo"
             },
             {
-            "name":"monitoring-logging",
+            "name":"Monitoring and logging with PKS",
             "filename":"pks/labs/monitoring-logging-demo"
             },
             {
-            "name":"nsxt-for-developers",
+            "name":"NSXT for developers",
             "filename":"pks/labs/nsxt-for-developers-demo"
             },
             {
-            "name":"pipelines",
+            "name":"Building PKS pipelines",
             "filename":"pks/labs/pipelines-demo"
             },
             {
-            "name":"pks-cli",
+            "name":"Using PKS CLI",
             "filename":"pks/labs/pks-cli-demo"
             },
             {
-            "name":"using-bosh-to-see-clusters",
-            "filename":"../pks/labs/using-bosh-to-see-clusters-demo"
+            "name":"Using BOSH to see clusters",
+            "filename":"pks/labs/using-bosh-to-see-clusters-demo"
             },
             {
-            "name":"using-uaa-with-pks",
+            "name":"Using UAA with PKS",
             "filename":"pks/labs/using-uaa-with-pks-demo"
+            },
+            {
+            "name":"Deploying application on PKS",
+            "filename":"pks/labs/pks-app-deployment"
+            },
+            {
+            "name":"Using Helm with PKS",
+            "filename":"pks/labs/pks-helm"
             }
         ]
     }
