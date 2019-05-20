@@ -1,5 +1,4 @@
-# Next Steps
-Below are a list of potential next steps
+Below are a list of potential next steps.
 
 ## Cloud Operations Discovery
 If this session was a good use of time, we should spend time with Infrastructure

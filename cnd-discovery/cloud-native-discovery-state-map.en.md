@@ -1,4 +1,3 @@
-# State Map
 We are going to whiteboard your current state application architecture. Time permitting,
 we will also delve into Future and Transition state architecture.
 
