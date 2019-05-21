@@ -15,6 +15,7 @@ Today's workshop is Focused around .NET Framework applications, during this exce
 
 ## Prerequisites
 * .NET Framework SDK 4.7
+* PCF with Windows stemcell, this important since we are using the windows stack
 
 
 **Source Repo:https://github.com/kadourah-pivotal/PCF-Workshop/tree/master/.NET%20Framework
