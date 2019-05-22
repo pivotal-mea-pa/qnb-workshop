@@ -56,7 +56,7 @@ Configure Gradle Build
 
 10.  Populate/update the script below to match your envoronment and save.
 
-11.  Jenkins host operating system (e.g. `CLI_HOST_OS="macosx64-binary"`). Other options for the binary could be: `linux32-binary`, `linux64-binary`, `macosx64-binary`, `windows32-exe`, `windows64-exe`).
+11.  Jenkins host operating system (e.g. `CLI_HOST_OS="macosx64-binary"`). Other options for the binary could be: `linux32-binary`, `linux64-binary`, `macosx64-binary`, `windows32-exe`, `windows64-exe`.
 
 12.  PCF Installation (e.g. `CLI_API=https://api.run.pivotal.io`)
 
