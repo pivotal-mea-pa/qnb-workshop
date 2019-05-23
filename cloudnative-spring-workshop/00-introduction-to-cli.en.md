@@ -1,5 +1,11 @@
 # Introduction to CF CLI
 
+## Clone the lab content
+
+```bash
+git clone https://github.com/honnuanand/cloudnative-spring-workshop.git
+```
+
 - Change the working directory to be _cloudnative-spring-workshop/labs/samples_
 
 Note the sub-directories present:

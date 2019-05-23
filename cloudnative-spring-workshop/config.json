@@ -41,6 +41,10 @@
         {
           "name": "Adding Service Registration and Discovery",
           "filename": "cloudnative-spring-workshop/05-adding_service_registration_and_discovery_with_spring_cloud"
+        },
+        {
+          "name": "Employing a Circuit Breaker",
+          "filename": "cloudnative-spring-workshop/06-employing_a_circuit_breaker"
         }
       ]
     }
