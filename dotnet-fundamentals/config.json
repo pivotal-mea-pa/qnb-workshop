@@ -1,22 +1,21 @@
 {
-	"workshopSubject":".NET Fundamentals",
+	"workshopSubject":"dot-NET Fundamentals",
+	"workshopHomepage":"",
+	"workshopHostname":"dot-NET Fundamentals",
 	"modules": [
 		{
 			"type": "concepts",
 			"content": [
 				{
 					"name":".NET Fundamentals",
-					"filename":""
+					"filename":"dotnet-fundamentals/slides/intro"
 				}
 			]
 		},
 		{
 			"type": "demos",
 			"content": [
-				{
-					"name":"Introduction & Credentials",
-					"filename":"dotnet-fundamentals/slides/intro"
-				},
+				
 				{
 					"name":"Lab01",
 					"filename":"dotnet-fundamentals/slides/lab01"

@@ -12,9 +12,10 @@ Initial Setup
 
         `https://github.com/cloudfoundry-samples/spring-music.git`
 
-2.  3.  Login to your Jenkins instance at
-    <https://jenkins-0.sys.yourcompany.com/> with the same username and
-    password that you use for CloudFoundry.
+2.  (Optional) Download/Install locally your Jenkins server https://jenkins.io/download/
+
+3.  Login to your Jenkins instance (local or remote) at
+    <https://jenkins-0.sys.yourcompany.com/> with your username and password.
 
 Create the Build Job
 ====================
@@ -35,10 +36,9 @@ Configure Gradle Build
 
 1.  Select **Add Build Step** and then **Invoke Gradle Script**.
 
-2.  Select **Use Grade Wrapper**.
+2.  Select **Use Gradle Wrapper**.
 
-3.  Check both **Make gradlew executable** and **From Root Build Script
-    Directory**.
+3.  Check **Make gradlew executable**
 
 4.  In switches, enter `-Pbuildversion=$BUILD_NUMBER`.
 
@@ -48,30 +48,33 @@ Configure Gradle Build
 
 7.  Check \*Force GRADLE\_USER\_HOME to use workspace.
 
-8.  On "Build Triggers", select "Build when a change is pushed to
-    GitHub"
+8.  On "Build Triggers", select "GitHub hook trigger for GITScm polling" and Poll SCM. 
+
+8.  In Schedule enter the polling interval (Ex. every 2 min => H/2 * * * * ).
+
+9.  Select **Add Build Step** and then **Execute Shell**.
+
+10.  Populate/update the script below to match your envoronment and save.
+
+11.  Jenkins host operating system (e.g. `CLI_HOST_OS="macosx64-binary"`). Other options for the binary could be: `linux32-binary`, `linux64-binary`, `macosx64-binary`, `windows32-exe`, `windows64-exe`.
+
+12.  PCF Installation (e.g. `CLI_API=https://api.run.pivotal.io`)
+
+13.  Populate your-username your-password your-org your-dev in the sample shell script
+
 
 Execute Shell
 =============
-
-    DEPLOYED_VERSION_CMD=$(CF_COLOR=false cf apps | grep 'mapUS.' | cut -d" " -f1)
-    export BUILD_VERSION="1.2"
-    export DEPLOYED_VERSION_CMD
-    echo DEPLOYED_VERSION_CMD
-    export ROUTE_VERSION="default"
-    echo "Deployed Version: $DEPLOYED_VERSION"
-    echo "Route Version: $ROUTE_VERSION"
-    export API=https://api.sys.yourcompany.com
-
-    wget -O cf.tgz https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.13.0&source=github-rel
-    sleep 5
+    export SCRIPT_BUILD_VERSION="1.3"
+    export CLI_HOST_OS="macosx64-binary"
+    export CLI_API=https://api.run.pivotal.io
+    wget -O cf.tgz https://cli.run.pivotal.io/stable?release=$CLI_HOST_OS&source=github-rel
+    sleep 15
     tar -zxvf ./cf.tgz
-
-    ./cf api --skip-ssl-validation $API
-    ./cf login -u <user> -p <password> -o <org> -s <space>
-
+    ./cf api --skip-ssl-validation $CLI_API
+    ./cf login -u <your-username> -p <your-password> -o <your-org> -s <your-dev>
     ./cf push -f manifest.yml
-
+    
 Execute Build Job
 =================
 
