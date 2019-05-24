@@ -1,4 +1,3 @@
-<br>
 **What is Pivotal Cloud Foundry (PCF)?**
 
 PCF is a unified platform that gives customers the freedom to continuously deliver software on a secure, reliable platform, and to transform how they do business.

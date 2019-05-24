@@ -1,4 +1,3 @@
-<br>
 **We are Pivotal.**
 
 **We are transforming how the world builds software.**

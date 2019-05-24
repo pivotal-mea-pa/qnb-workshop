@@ -55,7 +55,6 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 #### Security Posture
 - **Concepts:** R/R/R & Compliance Scanner
-- **Whiteboard:** Hey customer how are you patching and protecting your assets?
 - **Slides:** security-posture.en.md
 - **Demo:** Repave (BOSH Recreate)
 
@@ -107,10 +106,6 @@ Platform Architects should review the **Prerequisites** documents for each works
 
 #### BOSH Availability Concepts
 - **Concepts:** Deployment HA, Canaries, and BOSH Internals HA
-- **Slides:**
-
-#### Logging & Observability
-- **Concepts:** APM discussion, Logging, and Nozzles
 - **Slides:**
 
 #### Security Concepts

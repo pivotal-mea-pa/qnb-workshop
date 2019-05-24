@@ -1,4 +1,3 @@
-<br>
 **Automation and patterning of components to end the debate of modify vs replace.**
 
 Pets vs Cattle? A seemingly common discussion when folks start talking about IaC. Modify vs. replace? Another area where configuration management seems to tout it's ability to solve all operational challenges for deploying systems at scale.

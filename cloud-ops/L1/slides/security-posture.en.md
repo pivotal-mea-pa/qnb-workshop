@@ -1,4 +1,3 @@
-<br>
 **We approach security from the mindset of Security professionals and PCF Users.**
 
 Some ways that Cloud Foundry mitigates against security threats:

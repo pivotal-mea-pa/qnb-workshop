@@ -1,4 +1,3 @@
-<br>
 **Success is NOT just installation of PCF...that part is easy.**
 
 Design the product (your platform) around the needs of our customers, rather than seeking to change the user's behaviors around how a product (Pivotal Cloud Foundry) works.

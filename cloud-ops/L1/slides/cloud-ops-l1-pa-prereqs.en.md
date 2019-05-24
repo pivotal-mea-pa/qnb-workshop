@@ -1,4 +1,3 @@
-<br>
 ### Prerequisites for the Pivotal PACE Cloud Operations workshop
 
 **TLDR:**

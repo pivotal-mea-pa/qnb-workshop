@@ -1,4 +1,3 @@
-<br>
 **We are Pivotal.**
 
 With 2,900+ employees in 27 locations across the globe sharing three very important core values.

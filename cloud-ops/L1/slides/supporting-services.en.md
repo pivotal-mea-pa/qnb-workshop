@@ -1,4 +1,3 @@
-<br>
 **Extend your platform with brokered services and new capabilities all with the same minimal operational overhead.**
 
 The Pivotal Services Marketplace provides users with platform add-on services to enhance, secure, and manage applications. The catalog includes solutions from Pivotal, our Partners, and the Cloud Foundry community providing a curated selection of capabilities from data persistence, caching, messaging to continuous integration, security, and much more.
